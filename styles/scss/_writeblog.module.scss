@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
+@import './config';
+
+.cover {
+	@include flex;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+
+	.userData {
+		@include flex;
+		width: 25%;
+		height: 90vh;
+		flex-direction: column;
+		justify-content: space-between;
+		background: whitesmoke;
+		margin: 7vh 0 0 1rem;
+		border-radius: 20px;
+
+		.inputFields {
+			width: 100%;
+			margin-top: 1rem;
+
+			.data {
+				font-family: 'Baloo Bhai 2', cursive !important;
+				display: block;
+				inset: 0;
+				outline: none;
+				border: none;
+				margin: 1rem auto;
+				width: 80%;
+				height: 2rem;
+				padding: 0.7rem;
+				background: rgb(255, 255, 255);
+				border-radius: 10px;
+				transition: all 0.5s ease;
+
+				&:focus {
+					box-shadow: 0 0 10px rgba(213, 213, 213, 0.769);
+				}
+			}
+
+			.summary {
+				height: auto !important;
+				resize: none;
+			}
+		}
+
+		.submit {
+			cursor: pointer;
+			width: 80%;
+			height: 2.5rem;
+			border-radius: 10px;
+			border: none;
+			background: rgb(62, 62, 252);
+			color: white;
+			font-family: 'Baloo Bhai 2', cursive !important;
+			font-size: 1rem;
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+.main {
+	width: 99% !important;
+	max-width: 900px;
+	margin: 6vh 0.5rem 0 0.5rem;
+	padding: 1rem;
+
+	.pre {
+		@include flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100%;
+		background: whitesmoke;
+		margin: 0.8rem 0;
+		border-radius: 20px;
+		padding: 0.5rem 1rem;
+
+		.titlelbl {
+			width: 100%;
+		}
+
+		.title {
+			outline: none;
+			border: none;
+			padding: 0.5rem;
+			border-radius: 10px;
+			margin: 0.6rem;
+			width: 70%;
+
+			&:focus {
+				box-shadow: 0 0 10px rgba(213, 213, 213, 0.769);
+				background: white;
+			}
+		}
+	}
+}
+
+.editor {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Baloo Bhai 2', cursive !important;
+}
+
+.editor > div {
+	border: none !important;
+
+	&:nth-child(1) {
+		position: fixed;
+		background-color: whitesmoke !important;
+		width: 100vw !important;
+		top: 0;
+		left: 0;
+		z-index: 2;
+	}
+	&:nth-child(2) {
+		border-radius: 10px;
+		font-size: 1rem;
+
+		& > div {
+			height: 73vh;
+			overflow-y: scroll;
+			border-radius: 20px;
+			background: whitesmoke;
+			font-family: 'Baloo Bhai 2', cursive !important;
+		}
+	}
+}
+
+// span element which chooses cover image
+.coverImgChooser {
+	margin: 0 0.5rem;
+	padding: 0 0.5rem;
+	background: rgb(62, 62, 252);
+	color: white;
+	border-radius: 10px;
+	cursor: pointer;
+}

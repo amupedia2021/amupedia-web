@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap');
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Baloo Bhai 2', cursive;
+	scroll-behavior: smooth;
+}
+
+h2 {
+	margin: 100px 20px 30px 20px;
+	line-height: 55px;
+	font-size: 45px;
+	font-weight: bolder;
+	text-align: center;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+input:focus {
+	background-color: rgb(243, 239, 255);
+	box-shadow: none;
+	outline: none;
+}
+
+::placeholder {
+	color: rgb(62, 62, 252);
+	font-family: 'Baloo Bhai 2';
+}
+
+::-webkit-scrollbar {
+	width: 0;
+}
+
+.nav_active {
+	background-color: blueviolet;
+}
+
+.ql-editor {
+	padding: 1rem !important;
+}
+
+.ql-editor > h2 {
+	font-size: 2rem !important;
+	font-weight: bolder;
+	text-align: left;
+}
+
+.ql-active {
+	background: rgb(62, 62, 252) !important;
+	color: white !important;
+	border-radius: 5px;
+}
+
+.ql-snow.ql-toolbar button.ql-active .ql-fill {
+	fill: white !important;
+}
+
+.ql-snow.ql-toolbar button.ql-active .ql-stroke {
+	stroke: #fff !important;
+}
+
+.ql-tooltip {
+	position: fixed !important;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	left: 30% !important;
+	top: 7vh !important;
+	margin-top: 1rem !important;
+	max-height: 60px !important;
+	border: none !important;
+	box-shadow: 0 0 10px rgb(215, 215, 215) !important;
+}
+
+.ql-tooltip > input {
+	border: none !important;
+	outline: none !important;
+	background-color: white;
+	border-radius: 8px;
+	padding: 4px 4px 4px 6px;
+}
+
+.ql-action,
+.ql-remove {
+	color: rgb(62, 62, 252) !important;
+}
+
+.ql-formats > button {
+	margin: 0 0.2rem;
+}

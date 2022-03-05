@@ -1,0 +1,31 @@
+/* styling for our mission container  */
+.whoWeAre {
+	z-index: 30;
+	text-align: center;
+	margin: 20px 0px;
+}
+.whoWeAre h2 {
+	line-height: 55px;
+	font-size: 45px;
+	font-weight: bolder;
+	margin: 12px;
+}
+.whoWeAre p {
+	font-family: "Baloo Bhai 2", cursive;
+	max-width: 700px;
+	margin: auto;
+	padding: 14px;
+}
+
+@media only screen and (min-width: 500px) {
+	.whoWeAre {
+		background-size: 700px 2000px;
+	}
+	.whoWeAre p {
+		font-size: 30px;
+	}
+}
+
+.ourStory {
+	margin-top: 100px !important;
+}

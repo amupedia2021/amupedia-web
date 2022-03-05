@@ -1,0 +1,70 @@
+/* Footer Styling  */
+/* background overlapping footer  */
+#above_bg {
+	font-family: "Baloo Bhai 2";
+	font-size: 23px;
+	background: url("/images/footer/footer_bacg.jpeg") no-repeat center
+		center/cover;
+	z-index: 12;
+	height: 150px;
+	width: 80%;
+	margin: auto;
+	border-radius: 20px;
+	position: relative;
+	top: 80px;
+}
+
+#above_bg p {
+	text-align: center;
+	position: relative;
+	top: 15%;
+	color: white;
+	font-weight: bold;
+	transition: all 0.5s ease;
+}
+
+/* social icons  */
+#icons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	position: relative;
+	top: 30px;
+}
+
+.icon {
+	margin: auto 5px;
+	transition: all 0.5s ease;
+}
+
+.icon:hover {
+	filter: drop-shadow(0px 0px 10px white);
+	transform: scale(1.05);
+}
+
+/* footer background  */
+#ftbg {
+	background: url("/images/footer/footer_2_bg.png") no-repeat center
+		center/cover;
+	width: 100%;
+	height: 150px;
+	bottom: 0;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+}
+
+#ftbg p {
+	font-family: "Baloo Bhai 2";
+	font-size: 19px;
+	text-align: center;
+	position: relative;
+	top: 70%;
+	color: white;
+}
+
+/* for mobile phones having width less than 300px */
+@media only screen and (max-width: 299px) {
+	#ftbg {
+		font-size: 17px;
+	}
+}

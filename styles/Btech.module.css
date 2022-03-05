@@ -1,0 +1,101 @@
+/* styling for our mission container  */
+.mission {
+	z-index: 30;
+	text-align: center;
+	margin: 20px 0px;
+}
+.mission h2 {
+	line-height: 55px;
+	font-size: 45px;
+	font-weight: bolder;
+	margin: 12px;
+}
+.mission p {
+	font-family: "Baloo Bhai 2";
+	max-width: 700px;
+	margin: auto;
+	padding: 14px;
+}
+
+@media only screen and (min-width: 500px) {
+	.mission {
+		background-size: 700px 2000px;
+	}
+	.mission p {
+		font-size: 30px;
+	}
+}
+
+/* styling for branches flex box  */
+#branches {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 800px;
+	margin: auto;
+}
+
+#branches a {
+	text-decoration: none;
+}
+
+/* styling for every branch div  */
+#branches div {
+	width: 320px;
+	height: 240px;
+	margin: 20px;
+	/* background-color: black; */
+	background-size: 330px 250px;
+	box-shadow: -2px -2px 8px black;
+	border-radius: 14px;
+	cursor: pointer;
+	transition: all 0.4s linear;
+	text-shadow: -2px -2px 8px rgba(0, 0, 0, 0.906);
+}
+
+/* styling for para in branches div  */
+#branches div p {
+	width: 280px;
+	margin: auto;
+	position: relative;
+	top: 65%;
+	text-align: center;
+	color: white;
+	font-size: 27px;
+	font-weight: 900;
+	text-transform: uppercase;
+
+	font-family: "Urbanist", sans-serif;
+}
+
+/* for screens below 300px  */
+@media only screen and (max-width: 299px) {
+	#branches div p {
+		width: 100%;
+	}
+}
+
+#cs {
+	background: url("/images/btech/cs.svg") no-repeat center center;
+}
+#elb {
+	background: url("/images/btech/elb.svg") no-repeat center center;
+}
+#elec {
+	background: url("/images/btech/elec.svg") no-repeat center center;
+}
+#mech {
+	background: url("/images/btech/mech.svg") no-repeat center center;
+}
+#civil {
+	background: url("/images/btech/civil.svg") no-repeat center center;
+}
+#chem {
+	background: url("/images/btech/chem.svg") no-repeat center center;
+}
+
+.brnch:hover {
+	text-shadow: -2px -2px 8px rgba(255, 255, 255, 0.906) !important;
+	transform: scale(0.95);
+	box-shadow: none !important;
+}

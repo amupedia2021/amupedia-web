@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
+
+/* style for background on top  */
+.headerbg {
+	position: relative;
+	top: 0;
+	z-index: auto;
+	width: 100%;
+	height: 500px;
+}
+
+/* Amupedia text in the center of the page */
+.center_text {
+	font-family: "Balsamiq Sans", cursive;
+	text-transform: uppercase;
+	position: relative;
+	z-index: 30;
+	text-align: center;
+	font-size: 2.3rem;
+	font-weight: bold;
+	bottom: 300px;
+	color: white;
+	pointer-events: none !important;
+}
+
+/* subheading of amupedia text in the center  */
+.subline {
+	position: relative;
+	bottom: 2px;
+	font-size: 13px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/* Center Text when screen becomes bigger  */
+@media only screen and (min-width: 600px) {
+	.center_text {
+		font-size: 4rem;
+	}
+	.subline {
+		font-size: 23px;
+	}
+}
