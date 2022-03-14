@@ -1,10 +1,10 @@
-import Header from "components/Header";
-import styles from "@styles/Btech.module.css";
-import Link from "next/link";
-import Footer from "components/Footer";
+import Header from 'components/Header';
+import styles from '@styles/Btech.module.css';
+import Link from 'next/link';
+import Footer from 'components/Footer';
 
-export default () => {
-	const image = "/images/btech/top_bg.svg";
+export default function BTech() {
+	const image = '/images/btech/top_bg.svg';
 	return (
 		<>
 			<Header image={image} text="B.Tech" />
@@ -59,4 +59,4 @@ export default () => {
 			<Footer />
 		</>
 	);
-};
+}

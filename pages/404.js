@@ -1,6 +1,6 @@
-import styles from "@styles/scss/main.module.scss";
+import styles from '@styles/scss/main.module.scss';
 
-export default () => {
+export default function Error() {
 	return (
 		<main className={styles.main}>
 			<div id={styles.stars}></div>
@@ -13,4 +13,4 @@ export default () => {
 			</div>
 		</main>
 	);
-};
+}

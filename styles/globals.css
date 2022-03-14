@@ -46,56 +46,89 @@ input:focus {
 	background-color: blueviolet;
 }
 
-.ql-editor {
-	padding: 1rem !important;
+.sun-editor .se-toolbar {
+	outline: none !important;
+	position: fixed !important;
+	top: 0 !important;
+	left: 0 !important;
+	width: 100% !important;
+}
+.sun-editor {
+	border: none !important;
 }
 
-.ql-editor > h2 {
-	font-size: 2rem !important;
-	font-weight: bolder;
-	text-align: left;
+.se-resizing-bar {
+	display: none !important;
 }
 
-.ql-active {
+.sun-editor .se-btn:enabled.active {
 	background: rgb(62, 62, 252) !important;
 	color: white !important;
-	border-radius: 5px;
 }
-
-.ql-snow.ql-toolbar button.ql-active .ql-fill {
-	fill: white !important;
-}
-
-.ql-snow.ql-toolbar button.ql-active .ql-stroke {
-	stroke: #fff !important;
-}
-
-.ql-tooltip {
-	position: fixed !important;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	left: 30% !important;
-	top: 7vh !important;
-	margin-top: 1rem !important;
-	max-height: 60px !important;
+.sun-editor .se-btn-module-border {
 	border: none !important;
-	box-shadow: 0 0 10px rgb(215, 215, 215) !important;
 }
 
-.ql-tooltip > input {
+.se-btn-tray {
+	border: none !important;
+}
+
+.se-input-form,
+.se-input-control {
 	border: none !important;
 	outline: none !important;
-	background-color: white;
-	border-radius: 8px;
-	padding: 4px 4px 4px 6px;
+	background: whitesmoke;
+	transition: all 300ms linear !important;
 }
 
-.ql-action,
-.ql-remove {
-	color: rgb(62, 62, 252) !important;
+.se-input-form:focus,
+.se-input-control:focus {
+	box-shadow: 0 0 10px rgba(62, 62, 252, 0.123) !important;
+	background: white !important;
 }
 
-.ql-formats > button {
-	margin: 0 0.2rem;
+.se-btn-primary {
+	background-color: rgb(62, 62, 252) !important;
+	color: white !important;
+	border: none !important;
+}
+
+._se_image_file {
+	background: transparent !important;
+	margin-top: 0.5rem !important;
+	cursor: pointer;
+}
+
+._se_image_file:focus {
+	box-shadow: none !important;
+}
+
+::-webkit-file-upload-button {
+	border: none !important;
+	outline: none !important;
+	background: rgb(62, 62, 252);
+	color: white !important;
+	padding: 0.3rem 0.7rem;
+	border-radius: 14px;
+	cursor: pointer;
+}
+
+.se-dialog-body > div {
+	border: none !important;
+}
+
+.se-image-container {
+	margin-bottom: 0 !important;
+}
+.__se__float-left {
+	margin-right: 0.8rem !important;
+}
+
+.se-wrapper {
+	font-size: 5rem !important;
+	min-height: 70vh !important;
+}
+
+.sun-editor-editable {
+	font-size: 1rem !important;
 }

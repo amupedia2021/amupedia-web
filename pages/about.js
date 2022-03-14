@@ -1,10 +1,10 @@
-import Header from "components/Header";
-import styles from "@styles/scss/main.module.scss";
-import Footer from "components/Footer";
-import Team from "components/Team";
+import Header from 'components/Header';
+import styles from '@styles/scss/main.module.scss';
+import Footer from 'components/Footer';
+import Team from 'components/Team';
 
-export default () => {
-	const image = "/images/about/about_bg.svg";
+export default function About() {
+	const image = '/images/about/about_bg.svg';
 	return (
 		<>
 			<Header image={image} text="About Us" />
@@ -33,9 +33,9 @@ export default () => {
 						The life of any student is not as easy as it may look like. There
 						are so many problems of every student out there that we plan to
 						tackle single-handedly with this website. Finding all the right
-						documents and reference books (and with reference video lectures)
-						can save a lot of your time and help you check off more things than
-						you plan to. To that, we're even providing information on various
+						documents and reference books and with reference video lectures can
+						save a lot of your time and help you check off more things than you
+						plan to. To that, we're even providing information on various
 						competitive exams like GATE, SSCJE, etc.. and notify you about
 						verified sources of internships. AMUPedia is only looking out for
 						all the students out there and our sole mission is to help you in
@@ -46,4 +46,4 @@ export default () => {
 			<Footer />
 		</>
 	);
-};
+}

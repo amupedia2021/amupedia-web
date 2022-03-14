@@ -1,8 +1,8 @@
-import Footer from "components/Footer";
-import Header from "components/Header";
-import Link from "next/link";
+import Footer from 'components/Footer';
+import Header from 'components/Header';
+import Link from 'next/link';
 
-export default () => {
+export default function Blogs() {
 	return (
 		<>
 			<Header image="/images/blog/blog_bg.svg" text="Blogs" />
@@ -10,4 +10,4 @@ export default () => {
 			<Footer />
 		</>
 	);
-};
+}

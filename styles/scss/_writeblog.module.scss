@@ -13,9 +13,7 @@
 		height: 90vh;
 		flex-direction: column;
 		justify-content: space-between;
-		background: whitesmoke;
 		margin: 7vh 0 0 1rem;
-		border-radius: 20px;
 
 		.inputFields {
 			width: 100%;
@@ -62,6 +60,8 @@
 }
 
 .main {
+	height: 100vh;
+	overflow: scroll;
 	width: 99% !important;
 	max-width: 900px;
 	margin: 6vh 0.5rem 0 0.5rem;
@@ -72,68 +72,117 @@
 		flex-direction: column;
 		align-items: flex-start;
 		width: 100%;
-		background: whitesmoke;
-		margin: 0.8rem 0;
+		margin-top: 0.8rem;
 		border-radius: 20px;
-		padding: 0.5rem 1rem;
+		padding: 0rem 1rem;
+
+		// cover image drag and drop functionality
+		.coverImg {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: auto;
+			transition: all 400ms;
+
+			&::before {
+				content: '';
+				position: absolute;
+				background: #000;
+				inset: 0;
+				transition: all 0.4s ease;
+				opacity: 0;
+				z-index: 2;
+			}
+
+			&:hover,
+			&.drag {
+				&:before {
+					opacity: 0.3;
+				}
+			}
+
+			& > span {
+				font-weight: bold;
+				margin: 1rem 0;
+				font-size: 2rem;
+			}
+
+			& > input {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				opacity: 0;
+				z-index: 3;
+				cursor: pointer;
+			}
+
+			& > img {
+				object-fit: cover !important;
+				width: 100%;
+			}
+		}
 
 		.titlelbl {
 			width: 100%;
 		}
 
 		.title {
-			outline: none;
-			border: none;
-			padding: 0.5rem;
-			border-radius: 10px;
-			margin: 0.6rem;
-			width: 70%;
+			position: relative;
+			width: 100%;
+			margin-top: 1rem;
+			& > textarea {
+				position: relative;
+				z-index: 2;
+				resize: none;
+				background: transparent;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 2.2rem !important;
+				font-weight: bold;
+				outline: none;
+				border: none;
+				width: 97% !important;
+				height: 40px;
+				overflow-wrap: break-word !important;
 
-			&:focus {
-				box-shadow: 0 0 10px rgba(213, 213, 213, 0.769);
-				background: white;
+				&:focus {
+					background: transparent;
+				}
+			}
+			& > span {
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 2.2rem !important;
+				font-weight: bold;
+				color: rgb(197, 195, 195);
+				z-index: 1;
 			}
 		}
 	}
 }
 
-.editor {
-	display: flex;
-	flex-direction: column;
-	font-family: 'Baloo Bhai 2', cursive !important;
+// add the whitesmoke background when there is no cover image uploaded
+.drop {
+	background: whitesmoke;
+	min-height: 60vmin;
 }
 
-.editor > div {
-	border: none !important;
-
-	&:nth-child(1) {
-		position: fixed;
-		background-color: whitesmoke !important;
-		width: 100vw !important;
-		top: 0;
-		left: 0;
-		z-index: 2;
-	}
-	&:nth-child(2) {
-		border-radius: 10px;
-		font-size: 1rem;
-
-		& > div {
-			height: 73vh;
-			overflow-y: scroll;
-			border-radius: 20px;
-			background: whitesmoke;
-			font-family: 'Baloo Bhai 2', cursive !important;
-		}
-	}
-}
-
-// span element which chooses cover image
-.coverImgChooser {
-	margin: 0 0.5rem;
-	padding: 0 0.5rem;
-	background: rgb(62, 62, 252);
+// option to remove the cover image when it is uploaded
+.remove {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 4;
+	margin: 0.5rem 0.5rem 0 0;
+	padding: 0.3rem 0.5rem;
+	background-color: #ff0038;
 	color: white;
-	border-radius: 10px;
+	border: none;
+	outline: none;
 	cursor: pointer;
+	border-radius: 10px;
 }
