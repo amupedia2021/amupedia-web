@@ -15,9 +15,6 @@ export const initializeState = (setData) => {
 		coverImg: sessionStorage.getItem('coverImg')
 			? sessionStorage.getItem('coverImg')
 			: '',
-		coverImgName: sessionStorage.getItem('coverImgName')
-			? sessionStorage.getItem('coverImgName')
-			: '',
 		content: sessionStorage.getItem('content')
 			? sessionStorage.getItem('content')
 			: '',
@@ -25,17 +22,23 @@ export const initializeState = (setData) => {
 };
 
 export const dataChangeHandler = (e, data, setData) => {
+	// console.log(data.title);
 	if (e.target.name === 'title') {
+		if (e.target.value.length > 70) {
+			setData({ ...data, title: data.title });
+			alert('Only 70 characters are allowed');
+			return;
+		}
 		sessionStorage.setItem('title', e.target.value);
 		setData({ ...data, title: e.target.value });
 	} else if (e.target.name === 'coverImg') {
 		const file = e.target.files[0];
 		if (file == null || file == undefined) return;
 		if (file) {
+			console.log(file);
 			if (file.size > 1048576) return alert('Image is greator than 1.5mb');
-			sessionStorage.setItem('coverImgName', file.name);
 			getBase64(file).then((result) => {
-				setData({ ...data, coverImgName: file.name, coverImg: result });
+				setData({ ...data, coverImg: result });
 				sessionStorage.setItem('coverImg', result);
 			});
 		} else {
@@ -44,9 +47,4 @@ export const dataChangeHandler = (e, data, setData) => {
 			sessionStorage.setItem('coverImgName', '');
 		}
 	}
-};
-
-export const autoResizeHeight = (e) => {
-	e.target.style.height = 0;
-	e.target.style.height = e.target.scrollHeight + 'px';
 };

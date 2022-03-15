@@ -1,16 +1,15 @@
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import styles from '@styles/scss/_writeblog.module.scss';
 import {
-	autoResizeHeight,
 	dataChangeHandler,
 	initializeState,
 } from 'utils/writeblog/writeBlogUtils';
 import 'suneditor/dist/css/suneditor.min.css';
 import disableNavbar from 'utils/writeblog/disableNavbar';
 import { editorOptions, handleImageUpload } from 'utils/writeblog/editorUtils';
-import defaultImg from '@images/blog/default.svg';
+import WriteBlogDefaultImg from 'components/WriteBlogDefaultImg';
+import ContentEditable from 'react-contenteditable';
 
 const SunEditor = dynamic(import('suneditor-react'), {
 	ssr: false,
@@ -20,7 +19,6 @@ const WriteBlog = () => {
 	const [data, setData] = useState({
 		title: '',
 		coverImg: '',
-		coverImgName: '',
 		content: '',
 	});
 
@@ -31,13 +29,29 @@ const WriteBlog = () => {
 
 	const contentChanged = (val) => {
 		if (val.length > 2500000) return alert('Words limit reached');
-		setData({ ...data, content: val });
+		setData({ ...data, content: val, title: sessionStorage.getItem('title') });
 		sessionStorage.setItem('content', val);
 	};
 
 	const removeCoverImg = () => {
 		sessionStorage.setItem('coverImg', '');
-		setData({ data, coverImg: '' });
+		setData({ ...data, coverImg: '' });
+	};
+
+	const titleChangeHandler = (e) => {
+		e.target.name = 'title';
+		dataChangeHandler(e, data, setData);
+	};
+
+	const titlePasteHandler = (e) => {
+		e.preventDefault();
+		const text = e.clipboardData.getData('text/plain');
+		const selection = document.getSelection();
+		const range = selection.getRangeAt(0);
+		range.deleteContents();
+		const textNode = document.createTextNode(text);
+		range.insertNode(textNode);
+		sessionStorage.setItem('title', textNode.innerText);
 	};
 
 	return (
@@ -56,12 +70,9 @@ const WriteBlog = () => {
 						{data.coverImg === '' && (
 							<>
 								<span>Add a cover Image</span>
-								<Image
-									width="164px"
-									height="172.8px"
-									src={defaultImg}
-									alt="Upload an Image"
-								></Image>
+								<div className={styles.defaultImg}>
+									<WriteBlogDefaultImg />
+								</div>
 								<span>Drop a file or Click to add</span>
 							</>
 						)}
@@ -82,22 +93,19 @@ const WriteBlog = () => {
 						)}
 					</div>
 					<div className={styles.title}>
-						<textarea
-							type="text"
-							name="title"
+						<ContentEditable
 							id="title"
-							value={data.title}
-							onChange={(e) => {
-								dataChangeHandler(e, data, setData);
-								autoResizeHeight(e);
-							}}
-						></textarea>
+							html={data.title}
+							onChange={titleChangeHandler}
+							onPaste={titlePasteHandler}
+						></ContentEditable>
 						{data.title === '' && <span>Title...</span>}
 					</div>
 				</div>
 				<SunEditor
 					height="100%"
 					width="100%"
+					className={styles.editor}
 					onImageUploadBefore={handleImageUpload}
 					setOptions={editorOptions}
 					onChange={contentChanged}

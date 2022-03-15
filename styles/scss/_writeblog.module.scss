@@ -3,6 +3,8 @@
 
 .cover {
 	@include flex;
+	left: 0;
+	right: 0;
 	width: 100%;
 	height: 100vh;
 	overflow: hidden;
@@ -63,8 +65,8 @@
 	height: 100vh;
 	overflow: scroll;
 	width: 99% !important;
-	max-width: 900px;
-	margin: 6vh 0.5rem 0 0.5rem;
+	// max-width: 900px;
+	margin: 65px 0.5rem 0 0.5rem;
 	padding: 1rem;
 
 	.pre {
@@ -72,7 +74,8 @@
 		flex-direction: column;
 		align-items: flex-start;
 		width: 100%;
-		margin-top: 0.8rem;
+		max-width: 900px;
+		margin: auto;
 		border-radius: 20px;
 		padding: 0rem 1rem;
 
@@ -87,27 +90,22 @@
 			height: auto;
 			transition: all 400ms;
 
-			&::before {
-				content: '';
-				position: absolute;
-				background: #000;
-				inset: 0;
-				transition: all 0.4s ease;
-				opacity: 0;
-				z-index: 2;
-			}
-
 			&:hover,
 			&.drag {
-				&:before {
-					opacity: 0.3;
+				& > .defaultImg {
+					transform: scale(1.1);
+					& > svg {
+						& path {
+							fill: rgb(186, 113, 255);
+						}
+					}
 				}
 			}
 
 			& > span {
-				font-weight: bold;
+				text-align: center;
 				margin: 1rem 0;
-				font-size: 2rem;
+				font-size: 6vmin;
 			}
 
 			& > input {
@@ -123,41 +121,43 @@
 				object-fit: cover !important;
 				width: 100%;
 			}
-		}
 
-		.titlelbl {
-			width: 100%;
+			.defaultImg {
+				transition: all 300ms;
+				@include flex;
+				height: 20vmin !important;
+				width: 20vmin !important;
+
+				& > svg path {
+					transition: all 0.4s;
+				}
+			}
 		}
 
 		.title {
 			position: relative;
 			width: 100%;
-			margin-top: 1rem;
-			& > textarea {
+			margin-top: 2vmin;
+			& > div {
+				overflow: hidden;
 				position: relative;
 				z-index: 2;
-				resize: none;
 				background: transparent;
-				font-family: Arial, Helvetica, sans-serif;
-				font-size: 2.2rem !important;
+				font-family: 'Baloo Bhai 2', cursive;
+				font-size: 6vmin !important;
 				font-weight: bold;
 				outline: none;
 				border: none;
 				width: 97% !important;
-				height: 40px;
-				overflow-wrap: break-word !important;
-
-				&:focus {
-					background: transparent;
-				}
 			}
+
 			& > span {
 				position: absolute;
 				top: 0;
 				left: 0;
-				font-family: Arial, Helvetica, sans-serif;
-				font-size: 2.2rem !important;
-				font-weight: bold;
+				font-family: 'Baloo Bhai 2', cursive;
+				font-size: 6vmin !important;
+				font-weight: 700;
 				color: rgb(197, 195, 195);
 				z-index: 1;
 			}
@@ -167,7 +167,7 @@
 
 // add the whitesmoke background when there is no cover image uploaded
 .drop {
-	background: whitesmoke;
+	// background: whitesmoke;
 	min-height: 60vmin;
 }
 
@@ -185,4 +185,14 @@
 	outline: none;
 	cursor: pointer;
 	border-radius: 10px;
+}
+
+// on smaller screens when toolbar takes a lot of space
+@media only screen and (max-width: 525px) {
+	.main {
+		margin-top: 145px;
+	}
+	.drop {
+		min-height: 40vmin;
+	}
 }

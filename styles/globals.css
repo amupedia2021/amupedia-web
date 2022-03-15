@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap');
 
 html,
 body {
@@ -127,8 +127,12 @@ input:focus {
 .se-wrapper {
 	font-size: 5rem !important;
 	min-height: 70vh !important;
+	max-width: 900px !important;
+	margin: auto;
+	font-family: 'Baloo Bhai 2', cursive !important;
 }
 
 .sun-editor-editable {
-	font-size: 1rem !important;
+	font-family: 'Baloo Bhai 2', cursive !important;
+	font-size: 3.4vmin !important;
 }
