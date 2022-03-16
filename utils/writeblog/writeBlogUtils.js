@@ -21,22 +21,37 @@ export const initializeState = (setData) => {
 	});
 };
 
-export const dataChangeHandler = (e, data, setData) => {
-	// console.log(data.title);
+export const dataChangeHandler = (e, data, setData, dispatch) => {
 	if (e.target.name === 'title') {
 		if (e.target.value.length > 70) {
 			setData({ ...data, title: data.title });
-			alert('Only 70 characters are allowed');
+			dispatch({
+				type: {
+					task: 'setAlert',
+					alert: { type: 'error', message: 'Only 70 characters are allowed' },
+				},
+			});
 			return;
 		}
 		sessionStorage.setItem('title', e.target.value);
 		setData({ ...data, title: e.target.value });
 	} else if (e.target.name === 'coverImg') {
 		const file = e.target.files[0];
+		e.target.value = null;
 		if (file == null || file == undefined) return;
 		if (file) {
-			console.log(file);
-			if (file.size > 1048576) return alert('Image is greator than 1.5mb');
+			if (file.size > 1048576) {
+				dispatch({
+					type: {
+						task: 'setAlert',
+						alert: {
+							type: 'error',
+							message: 'Image size should be less than 1.5 MB',
+						},
+					},
+				});
+				return;
+			}
 			getBase64(file).then((result) => {
 				setData({ ...data, coverImg: result });
 				sessionStorage.setItem('coverImg', result);

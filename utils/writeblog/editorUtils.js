@@ -11,15 +11,31 @@ export const editorOptions = {
 	],
 };
 
-export const handleImageUpload = (files, info, uploadHandler) => {
+export const HandleImageUpload = (files, info, uploadHandler, dispatch) => {
 	const imgs = document.querySelectorAll('img');
 	if (imgs.length > 6) {
-		alert('Image Upload Limit Reached');
+		dispatch({
+			type: {
+				task: 'setAlert',
+				alert: {
+					type: 'error',
+					message: 'Blogs can have a maximum of four images',
+				},
+			},
+		});
 		uploadHandler();
 		return;
 	}
 	if (files[0].size > 1048576) {
-		alert('File is greator than 1mb');
+		dispatch({
+			type: {
+				task: 'setAlert',
+				alert: {
+					type: 'error',
+					message: 'Image Size should be less than 1.5 MB',
+				},
+			},
+		});
 		uploadHandler();
 		return;
 	}

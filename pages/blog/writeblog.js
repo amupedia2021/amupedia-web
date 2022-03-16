@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import styles from '@styles/scss/_writeblog.module.scss';
 import {
 	dataChangeHandler,
@@ -7,15 +7,18 @@ import {
 } from 'utils/writeblog/writeBlogUtils';
 import 'suneditor/dist/css/suneditor.min.css';
 import disableNavbar from 'utils/writeblog/disableNavbar';
-import { editorOptions, handleImageUpload } from 'utils/writeblog/editorUtils';
+import { editorOptions, HandleImageUpload } from 'utils/writeblog/editorUtils';
 import WriteBlogDefaultImg from 'components/WriteBlogDefaultImg';
 import ContentEditable from 'react-contenteditable';
+import { Store } from 'utils/Store/Store';
 
 const SunEditor = dynamic(import('suneditor-react'), {
 	ssr: false,
 });
 
 const WriteBlog = () => {
+	const { dispatch } = useContext(Store);
+
 	const [data, setData] = useState({
 		title: '',
 		coverImg: '',
@@ -28,7 +31,14 @@ const WriteBlog = () => {
 	}, []);
 
 	const contentChanged = (val) => {
-		if (val.length > 2500000) return alert('Words limit reached');
+		if (val.length > 2500000) {
+			dispatch({
+				type: {
+					task: 'setAlert',
+					alert: { type: 'error', message: 'Words Limit Reached' },
+				},
+			});
+		}
 		setData({ ...data, content: val, title: sessionStorage.getItem('title') });
 		sessionStorage.setItem('content', val);
 	};
@@ -40,7 +50,7 @@ const WriteBlog = () => {
 
 	const titleChangeHandler = (e) => {
 		e.target.name = 'title';
-		dataChangeHandler(e, data, setData);
+		dataChangeHandler(e, data, setData, dispatch);
 	};
 
 	const titlePasteHandler = (e) => {
@@ -82,7 +92,7 @@ const WriteBlog = () => {
 							name="coverImg"
 							id="coverImg"
 							onChange={(e) => {
-								dataChangeHandler(e, data, setData);
+								dataChangeHandler(e, data, setData, dispatch);
 							}}
 						/>
 						<img src={data.coverImg} alt="" />
@@ -106,7 +116,9 @@ const WriteBlog = () => {
 					height="100%"
 					width="100%"
 					className={styles.editor}
-					onImageUploadBefore={handleImageUpload}
+					onImageUploadBefore={(files, info, uploadHandler) => {
+						HandleImageUpload(files, info, uploadHandler, dispatch);
+					}}
 					setOptions={editorOptions}
 					onChange={contentChanged}
 					setContents={data.content}
