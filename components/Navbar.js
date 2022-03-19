@@ -1,14 +1,19 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import styles from "@styles/Navbar.module.css";
-import { useState, useEffect } from "react";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import styles from '@styles/Navbar.module.css';
+import { useState, useEffect } from 'react';
 
-export default () => {
+const Navbar = () => {
+	const router = useRouter();
 	const [navbar, setNavbar] = useState(false);
+	const [coursePath, setCoursePath] = useState(router.asPath);
 
 	useEffect(() => {
-		window.addEventListener("scroll", changeNavbar);
-	});
+		window.addEventListener('scroll', changeNavbar);
+	}, []);
+	useEffect(() => {
+		setCoursePath(router.asPath);
+	}, [router.asPath]);
 
 	const changeNavbar = () => {
 		if (window.scrollY > 500) {
@@ -16,9 +21,8 @@ export default () => {
 		} else setNavbar(false);
 	};
 
-	const router = useRouter();
 	const onClick = () => {
-		const menu = document.querySelector("#menu");
+		const menu = document.querySelector('#menu');
 		if (menu.checked) menu.click();
 	};
 
@@ -43,18 +47,18 @@ export default () => {
 				<ul className={styles.list}>
 					<li
 						className={`${styles.listitem} ${
-							router.pathname === "/" && router.asPath === "/" && navbar
+							router.pathname === '/' && router.asPath === '/' && navbar
 								? styles.navList_active
-								: ""
+								: ''
 						}`}
 					>
 						<Link href="/">
 							<a
 								onClick={onClick}
 								className={`${styles.lnk} ${
-									router.pathname === "/" && router.asPath === "/"
+									router.pathname === '/' && router.asPath === '/'
 										? styles.active
-										: ""
+										: ''
 								} ${navbar && styles.nav_active}`}
 							>
 								Home
@@ -63,16 +67,16 @@ export default () => {
 					</li>
 					<li
 						className={`${styles.listitem} ${
-							router.pathname === "/about" && navbar
+							router.pathname === '/about' && navbar
 								? styles.navList_active
-								: ""
+								: ''
 						}`}
 					>
 						<Link href="/about">
 							<a
 								onClick={onClick}
 								className={`${styles.lnk} ${
-									router.pathname === "/about" ? styles.active : ""
+									router.pathname === '/about' ? styles.active : ''
 								} ${navbar && styles.nav_active}`}
 							>
 								About
@@ -81,16 +85,14 @@ export default () => {
 					</li>
 					<li
 						className={`${styles.listitem} ${
-							router.asPath === "/#courses" && navbar
-								? styles.navList_active
-								: ""
+							coursePath === '/#courses' && navbar ? styles.navList_active : ''
 						}`}
 					>
 						<Link href="/#courses">
 							<a
 								onClick={onClick}
 								className={`${styles.lnk} ${
-									router.asPath === "/#courses" ? styles.active : ""
+									router.asPath === '/#courses' ? styles.active : ''
 								} ${navbar && styles.nav_active}`}
 							>
 								Courses
@@ -99,14 +101,14 @@ export default () => {
 					</li>
 					<li
 						className={`${styles.tem} ${styles.listitem} ${
-							router.pathname === "/team" && navbar ? styles.navList_active : ""
+							router.pathname === '/team' && navbar ? styles.navList_active : ''
 						}`}
 					>
 						<Link href="/team">
 							<a
 								onClick={onClick}
 								className={`${styles.lnk} ${
-									router.pathname === "/team" ? styles.active : ""
+									router.pathname === '/team' ? styles.active : ''
 								} ${navbar && styles.nav_active}`}
 							>
 								Team
@@ -115,14 +117,14 @@ export default () => {
 					</li>
 					<li
 						className={`${styles.blg} ${styles.listitem} ${
-							router.pathname === "/blog" && navbar ? styles.navList_active : ""
+							router.pathname === '/blog' && navbar ? styles.navList_active : ''
 						}`}
 					>
 						<Link href="/blog">
 							<a
 								onClick={onClick}
 								className={`${styles.lnk} ${
-									router.pathname === "/blog" ? styles.active : ""
+									router.pathname === '/blog' ? styles.active : ''
 								} ${navbar && styles.nav_active}`}
 							>
 								Blogs
@@ -134,3 +136,5 @@ export default () => {
 		</>
 	);
 };
+
+export default Navbar;

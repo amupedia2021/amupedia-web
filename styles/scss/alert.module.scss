@@ -25,11 +25,12 @@
 		position: relative;
 		z-index: 10;
 		background: white;
-		animation: pop 300ms ease-in-out;
+		border: 2px solid rgb(210, 210, 210);
+		animation: pop 250ms linear;
 		max-width: 250px;
 		font-size: 2.6vmin;
 		border-radius: 15px;
-		transition: all 300ms ease-in-out;
+		transition: all 250ms ease-in-out;
 		padding: 0;
 
 		& > button {

@@ -8,16 +8,19 @@ export const getBase64 = (file) => {
 };
 
 export const initializeState = (setData) => {
+	const savedTitle = sessionStorage.getItem('title');
+	const savedContent = sessionStorage.getItem('content');
+
 	setData({
-		title: sessionStorage.getItem('title')
-			? sessionStorage.getItem('title')
-			: '',
+		title:
+			savedTitle === 'undefined' || savedTitle === 'null' ? '' : savedTitle,
 		coverImg: sessionStorage.getItem('coverImg')
 			? sessionStorage.getItem('coverImg')
 			: '',
-		content: sessionStorage.getItem('content')
-			? sessionStorage.getItem('content')
-			: '',
+		content:
+			savedContent === 'undefined' || savedContent === 'null'
+				? ''
+				: savedContent,
 	});
 };
 

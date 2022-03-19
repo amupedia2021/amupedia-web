@@ -2,7 +2,7 @@ export const editorOptions = {
 	buttonList: [
 		['undo', 'redo'],
 		['bold', 'underline', 'italic'],
-		['fontColor', 'hiliteColor'],
+		['fontColor', 'hiliteColor', 'blockquote'],
 		['align', 'list'],
 		['outdent', 'indent'],
 

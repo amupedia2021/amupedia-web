@@ -135,4 +135,5 @@ input:focus {
 .sun-editor-editable {
 	font-family: 'Baloo Bhai 2', cursive !important;
 	font-size: 3.4vmin !important;
+	min-height: 50vmin !important;
 }

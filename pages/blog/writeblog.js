@@ -28,6 +28,7 @@ const WriteBlog = () => {
 	useEffect(() => {
 		initializeState(setData);
 		disableNavbar();
+		console.log('navbar disabled');
 	}, []);
 
 	const contentChanged = (val) => {
@@ -39,7 +40,13 @@ const WriteBlog = () => {
 				},
 			});
 		}
-		setData({ ...data, content: val, title: sessionStorage.getItem('title') });
+		setData((prevData) => {
+			return {
+				...prevData,
+				content: val,
+				title: sessionStorage.getItem('title'),
+			};
+		});
 		sessionStorage.setItem('content', val);
 	};
 
@@ -56,6 +63,19 @@ const WriteBlog = () => {
 	const titlePasteHandler = (e) => {
 		e.preventDefault();
 		const text = e.clipboardData.getData('text/plain');
+		const content = text + data.title;
+
+		if (content.length > 70) {
+			setData({ ...data, title: data.title });
+			dispatch({
+				type: {
+					task: 'setAlert',
+					alert: { type: 'error', message: 'Only 70 characters are allowed' },
+				},
+			});
+			return;
+		}
+
 		const selection = document.getSelection();
 		const range = selection.getRangeAt(0);
 		range.deleteContents();
