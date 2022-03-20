@@ -1,4 +1,4 @@
-import styles from '@styles/scss/main.module.scss';
+import styles from '@styles/scss/_404.module.scss';
 
 export default function Error() {
 	return (

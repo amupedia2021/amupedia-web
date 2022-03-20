@@ -13,7 +13,9 @@ export const initializeState = (setData) => {
 
 	setData({
 		title:
-			savedTitle === 'undefined' || savedTitle === 'null' ? '' : savedTitle,
+			savedTitle == null || savedTitle === 'undefined' || savedTitle === 'null'
+				? ''
+				: savedTitle,
 		coverImg: sessionStorage.getItem('coverImg')
 			? sessionStorage.getItem('coverImg')
 			: '',

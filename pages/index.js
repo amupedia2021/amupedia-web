@@ -1,27 +1,27 @@
 // import Head from "next/head";
-import { useState } from "react";
-import Image from "next/image";
-import pdf from "@images/home/pdf.svg";
-import chap_yt from "@images/home/yt.svg";
-import quiz from "@images/home/test_and_quiz.svg";
-import assign from "@images/home/assignment.svg";
-import Tilt from "react-vanilla-tilt";
-import styles from "@styles/Home.module.css";
-import Header from "components/Header";
-import Link from "next/link";
-import Footer from "components/Footer";
+import { useState } from 'react';
+import Image from 'next/image';
+import pdf from '@images/home/pdf.svg';
+import chap_yt from '@images/home/yt.svg';
+import quiz from '@images/home/test_and_quiz.svg';
+import assign from '@images/home/assignment.svg';
+import Tilt from 'react-vanilla-tilt';
+import styles from '@styles/Home.module.css';
+import Header from 'components/Header';
+import Link from 'next/link';
+import Footer from 'components/Footer';
 
 export default function Home() {
 	const emptyForm = {
-		first_name: "",
-		last_name: "",
-		email: "",
-		phone: "",
-		address: "",
-		message: "",
+		first_name: '',
+		last_name: '',
+		email: '',
+		phone: '',
+		address: '',
+		message: '',
 	};
 
-	const headerImg = "/images/home/homeback.svg";
+	const headerImg = '/images/home/homeback.svg';
 
 	const [form, setForm] = useState(emptyForm);
 
@@ -78,28 +78,28 @@ export default function Home() {
 					<div className={styles.courses} id="courses">
 						<h2 className={styles.grabh2}>Grab Your Notes Here</h2>
 						<div className={styles.grabnotes}>
-							<Link href="/btech">
+							<Link passHref href="/courses/btech">
 								<Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
 									<div className={styles.grab1}>
 										<p>B.Tech</p>
 									</div>
 								</Tilt>
 							</Link>
-							<Link href="/">
+							<Link passHref href="/">
 								<Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
 									<div className={styles.grab2}>
 										<p>B.E</p>
 									</div>
 								</Tilt>
 							</Link>
-							<Link href="/">
+							<Link passHref href="/">
 								<Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
 									<div className={styles.grab3}>
 										<p>B.Com</p>
 									</div>
 								</Tilt>
 							</Link>
-							<Link href="/">
+							<Link passHref href="/">
 								<Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
 									<div className={styles.grab4}>
 										<p>B.Sc</p>
@@ -113,21 +113,21 @@ export default function Home() {
 					{/* <!-- same css as grabnotes section  --> */}
 					<h2 className={styles.grabh2}>Recent Updates</h2>
 					<div className={styles.grabnotes}>
-						<Link href="/">
+						<Link passHref href="/">
 							<Tilt className={styles.tlt}>
 								<div className={styles.rec1}>
 									<p>App</p>
 								</div>
 							</Tilt>
 						</Link>
-						<Link href="/">
+						<Link passHref href="/">
 							<Tilt className={styles.tlt}>
 								<div className={styles.rec2}>
 									<p>Blogs</p>
 								</div>
 							</Tilt>
 						</Link>
-						<Link href="/">
+						<Link passHref href="/">
 							<Tilt className={styles.tlt}>
 								<div className={styles.rec3}>
 									<p>Competetive Exams</p>

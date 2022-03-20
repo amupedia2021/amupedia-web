@@ -28,7 +28,6 @@ const WriteBlog = () => {
 	useEffect(() => {
 		initializeState(setData);
 		disableNavbar();
-		console.log('navbar disabled');
 	}, []);
 
 	const contentChanged = (val) => {

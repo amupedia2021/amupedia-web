@@ -1,4 +1,4 @@
-@import "./config";
+@import './config';
 
 @keyframes rightleft {
 	0% {
@@ -19,6 +19,8 @@
 }
 
 .main {
+	margin: 0 !important;
+	padding: 0 !important;
 	position: fixed;
 	height: 100vh;
 	width: 100%;
@@ -68,10 +70,10 @@
 		bottom: 80px;
 		height: 120px;
 		width: 240px;
-		background: url("/images/404/UFO404.svg") no-repeat center center/cover;
+		background: url('/images/404/UFO404.svg') no-repeat center center/cover;
 		animation: rightleft 5s ease-in-out infinite;
 		&::after {
-			content: "";
+			content: '';
 			position: absolute;
 			background: rgba(255, 255, 255, 0.235);
 			height: 120px;
@@ -284,7 +286,7 @@
 	animation: animStar 50s linear infinite;
 }
 #stars:after {
-	content: " ";
+	content: ' ';
 	position: absolute;
 	top: 2000px;
 	width: 1px;
@@ -527,7 +529,7 @@
 	animation: animStar 100s linear infinite;
 }
 #stars2:after {
-	content: " ";
+	content: ' ';
 	position: absolute;
 	top: 2000px;
 	width: 2px;
@@ -619,7 +621,7 @@
 	animation: animStar 150s linear infinite;
 }
 #stars3:after {
-	content: " ";
+	content: ' ';
 	position: absolute;
 	top: 2000px;
 	width: 3px;
@@ -660,7 +662,7 @@
 	right: 0;
 	color: #fff;
 	text-align: center;
-	font-family: "lato", sans-serif;
+	font-family: 'lato', sans-serif;
 	font-weight: 300;
 	font-size: 50px;
 	letter-spacing: 10px;
