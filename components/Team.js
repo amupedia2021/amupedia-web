@@ -1,5 +1,5 @@
 import styles from '@styles/scss/main.module.scss';
-import Card from './Card';
+import Card from './Teamcard';
 
 const Team = () => {
 	return (

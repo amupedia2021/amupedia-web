@@ -1,0 +1,51 @@
+@import './config';
+
+.cover{
+  --bdr-rad: 10px;
+  --title-text-size: 4vmin;
+  --footer-text-size: 2.2vmin;
+
+  background: white;
+  text-align: center;
+  cursor: pointer;
+  border-radius: var(--bdr-rad);
+  width: 90%;
+  max-width: 280px;
+  margin: 6vmin 4.5vmin;
+
+  .image{
+    border-radius: var(--bdr-rad);
+
+    & img{
+      inset: 0;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: var(--bdr-rad);
+    }
+  }
+
+  .title{
+    font-size: var(--title-text-size);
+    text-align: left;
+    width: 100%;
+    padding: 0 5px;
+  }
+}
+
+.blogfooter {
+  @include flex;
+  justify-content: space-between;
+  padding: 0 5px;
+  font-size: var(--footer-text-size);
+
+  & .info {
+    span{
+      margin: 0 5px;
+      
+      & > .icon{
+        margin: 0 0 1px 4px;
+        color: blue;
+      }
+    }
+  }
+}

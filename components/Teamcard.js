@@ -1,12 +1,20 @@
-import styles from "@styles/scss/main.module.scss";
-import { FontAwesomeIcon } from "node_modules/@fortawesome/react-fontawesome/index";
-import { faInstagramSquare } from "node_modules/@fortawesome/free-brands-svg-icons/index";
-import { faFacebookSquare } from "node_modules/@fortawesome/free-brands-svg-icons/index";
-import { faTwitterSquare } from "node_modules/@fortawesome/free-brands-svg-icons/index";
-import { faLinkedin } from "node_modules/@fortawesome/free-brands-svg-icons/index";
-import Tilt from "react-vanilla-tilt";
+import styles from '@styles/scss/main.module.scss';
+import { FontAwesomeIcon } from 'node_modules/@fortawesome/react-fontawesome/index';
+import { faInstagramSquare } from 'node_modules/@fortawesome/free-brands-svg-icons/index';
+import { faFacebookSquare } from 'node_modules/@fortawesome/free-brands-svg-icons/index';
+import { faTwitterSquare } from 'node_modules/@fortawesome/free-brands-svg-icons/index';
+import { faLinkedin } from 'node_modules/@fortawesome/free-brands-svg-icons/index';
+import Tilt from 'react-vanilla-tilt';
 
-export default ({ facebook, insta, twitter, linkedin, name, photo, desig }) => {
+export default function Teamcard({
+	facebook,
+	insta,
+	twitter,
+	linkedin, 
+	name,
+	photo,
+	desig,
+}) {
 	return (
 		<>
 			<Tilt className={styles.tilt}>
@@ -59,4 +67,4 @@ export default ({ facebook, insta, twitter, linkedin, name, photo, desig }) => {
 			</Tilt>
 		</>
 	);
-};
+}
