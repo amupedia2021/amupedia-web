@@ -1,3 +1,7 @@
+import { useRouter } from 'next/router';
+
 export default function BlogId() {
-	return <div>Blog Id</div>;
+	const router = useRouter();
+	const { blogId } = router.query;
+	return <div>Blog number - {blogId}</div>;
 }

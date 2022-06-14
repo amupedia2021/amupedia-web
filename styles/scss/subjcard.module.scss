@@ -1,0 +1,9 @@
+@import './config';
+
+.subject{
+  background: #000;
+  color: white;
+  width: 250px;
+  @include flex;
+  flex-direction: column;
+}

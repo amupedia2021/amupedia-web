@@ -3,6 +3,7 @@ import Footer from 'components/Footer';
 import Header from 'components/Header';
 import Link from 'next/link';
 import styles from '@styles/scss/blog.module.scss';
+import blogData from '/data/blogdata';
 
 export default function Blogs() {
 	return (
@@ -10,21 +11,15 @@ export default function Blogs() {
 			<Header image="/images/blog/blog_bg.svg" text="Blogs" />
 			{/* <Link href="/blog/writeblog">Write a blog</Link> */}
 			<div className={styles.container}>
-				<BlogCard />
-				<BlogCard />
-				<BlogCard />
-				<BlogCard />
-				<BlogCard />
-				<BlogCard />
-				<BlogCard />
-				<BlogCard />
-				<BlogCard />
-				<BlogCard />
-				<BlogCard />
-				<BlogCard />
-				<BlogCard />
-				<BlogCard />
-				<BlogCard />
+				{blogData.map((blogItem) => (
+					<BlogCard
+						key={blogItem.id}
+						id={blogItem.id}
+						image={blogItem.image}
+						comments={blogItem.comments}
+						likes={blogItem.likes}
+					/>
+				))}
 			</div>
 			<Footer />
 		</>

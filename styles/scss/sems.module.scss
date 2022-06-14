@@ -13,14 +13,4 @@
 		text-align: left !important;
 		margin: 0;
 	}
-
-	.subjects {
-		padding-left: 0.5rem;
-		list-style: none;
-		.subjItem > div {
-			@include flex;
-			justify-content: space-between;
-			font-size: 4vmin !important;
-		}
-	}
 }
