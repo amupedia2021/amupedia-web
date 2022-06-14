@@ -1,14 +1,14 @@
-import styles from "@styles/Header.module.css";
-import Wave from "./Wave";
-import { motion } from "framer-motion";
+import styles from '@styles/Header.module.css';
+import Wave from './Wave';
+import { motion } from 'framer-motion';
 
-export default (props) => {
+const Header = (props) => {
 	const { image, text } = props;
 	return (
 		<>
 			<div
 				style={{
-					height: "500px",
+					height: '500px',
 				}}
 				id="header"
 			>
@@ -36,7 +36,7 @@ export default (props) => {
 					}}
 				>
 					<p>{text}</p>
-					{text === "Amupedia" && (
+					{text === 'Amupedia' && (
 						<p className={styles.subline}>Achieving excellence together</p>
 					)}
 				</motion.div>
@@ -45,3 +45,5 @@ export default (props) => {
 		</>
 	);
 };
+
+export default Header;

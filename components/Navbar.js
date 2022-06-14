@@ -99,7 +99,7 @@ const Navbar = () => {
 							</a>
 						</Link>
 					</li>
-					<li
+					{/* <li
 						className={`${styles.tem} ${styles.listitem} ${
 							router.pathname === '/team' && navbar ? styles.navList_active : ''
 						}`}
@@ -114,7 +114,7 @@ const Navbar = () => {
 								Team
 							</a>
 						</Link>
-					</li>
+					</li> */}
 					<li
 						className={`${styles.blg} ${styles.listitem} ${
 							router.pathname === '/blog' && navbar ? styles.navList_active : ''

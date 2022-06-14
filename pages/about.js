@@ -35,7 +35,7 @@ export default function About() {
 						tackle single-handedly with this website. Finding all the right
 						documents and reference books and with reference video lectures can
 						save a lot of your time and help you check off more things than you
-						plan to. To that, we're even providing information on various
+						plan to. To that, we&apos;re even providing information on various
 						competitive exams like GATE, SSCJE, etc.. and notify you about
 						verified sources of internships. AMUPedia is only looking out for
 						all the students out there and our sole mission is to help you in
