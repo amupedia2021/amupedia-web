@@ -1,7 +1,6 @@
 import BlogCard from 'components/BlogCard';
 import Footer from 'components/Footer';
 import Header from 'components/Header';
-import Link from 'next/link';
 import styles from '@styles/scss/blog.module.scss';
 import blogData from '/data/blogdata';
 

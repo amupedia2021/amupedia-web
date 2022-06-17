@@ -1,5 +1,4 @@
 import styles from '@styles/scss/sems.module.scss';
-import Link from 'next/link';
 import SubjCard from '@comp/SubjCard';
 
 const Sems = ({ data }) => {
@@ -7,18 +6,12 @@ const Sems = ({ data }) => {
 		<section className={styles.main}>
 			{data.map((sem) => {
 				return (
-					<>
-						<div className={styles.semWrapper}>
-							{sem.name && <h2 className={styles.semNum}>{sem.name}</h2>}
-							{sem.subjects.map((sub) => {
-								return (
-									<>
-										<SubjCard details={sub}></SubjCard>
-									</>
-								);
-							})}
-						</div>
-					</>
+					<div className={styles.semWrapper} key={sem.id}>
+						{sem.name && <h2 className={styles.semNum}>{sem.name}</h2>}
+						{sem.subjects.map((sub) => {
+							return <SubjCard details={sub} key={sub.id}></SubjCard>;
+						})}
+					</div>
 				);
 			})}
 		</section>

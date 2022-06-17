@@ -1,9 +1,21 @@
 @import './config';
 
 .subject{
-  background: #000;
+  position: relative;
+  background: rgb(80, 80, 80);
   color: white;
-  width: 250px;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 230px;
+  aspect-ratio: 1 / 1;
   @include flex;
   flex-direction: column;
+  justify-content: flex-end;
+  margin: 1vmin;
+  padding: 2vmin;
+
+  .name{
+    text-align: center;
+    font-size: 3.3vmin;
+  }
 }

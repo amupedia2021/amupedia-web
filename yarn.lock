@@ -2991,16 +2991,6 @@ stylis@3.5.4:
   resolved "https://registry.npmjs.org/stylis/-/stylis-3.5.4.tgz"
   integrity sha512-8/3pSmthWM7lsPBKv7NXkzn2Uc9W7NotcwGNpJaa3k7WMM1XDCA4MgT5k/8BIexd5ydZdboXtU90XH9Ec4Bv/Q==
 
-suneditor-react@^3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/suneditor-react/-/suneditor-react-3.4.0.tgz#9f4d8c706c6c8760e7081473a004cd3d06894885"
-  integrity sha512-2GkqZtrfrcF+1ujsm9ZwCOM78YghS2Dw/rJm/Pl5xEqVMtfjxCHviWBVlyuEFfPSbq5rfSp3N69nMyIV1wV/Nw==
-
-suneditor@^2.42.0:
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/suneditor/-/suneditor-2.42.0.tgz#9a8e0118113ce4065292424868485442f772dad9"
-  integrity sha512-qlZBF5dk6kSOGGPn66gPu5NhHdxyuzWQKNgmHmV/G73XAKC+oGWTRnCjNasluQM+FHsKwFvemH0hDng7trjHVA==
-
 supports-color@^5.3.0:
   version "5.5.0"
   resolved "https://registry.npmjs.org/supports-color/-/supports-color-5.5.0.tgz"

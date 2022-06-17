@@ -55,16 +55,15 @@
 
 /* styling for para in branches div  */
 #branches div p {
-	width: 280px;
+	width: 100%;
 	margin: auto;
 	position: relative;
-	top: 65%;
 	text-align: center;
 	color: white;
+  top: 65%;
 	font-size: 27px;
 	font-weight: 900;
 	text-transform: uppercase;
-
 	font-family: "Urbanist", sans-serif;
 }
 

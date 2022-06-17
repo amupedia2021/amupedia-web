@@ -1,0 +1,23 @@
+@import './config';
+
+.main{
+  background: rgb(240, 240, 240);
+  border-radius: 15px;
+  width: 100%;
+  @include flex;
+  justify-content: space-between;
+
+  & > div{
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 0.5vmin 4vmin;
+
+    &.active{
+      background: rgba(0, 0, 0, 0.057);
+    }
+    & > span{
+      font-size: 4vmin;
+      font-weight: bold;
+    }
+  }
+}

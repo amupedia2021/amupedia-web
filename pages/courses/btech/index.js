@@ -23,33 +23,41 @@ export default function BTech() {
 
 				<h2>Choose Your Branch</h2>
 				<div id={styles.branches}>
-					<Link href="/">
+					<Link passHref href="/courses/btech/first-year">
+						<a>
+							<div className={styles.brnch} id={styles.firstyear}>
+								<p>First </p>
+								<p>Year</p>
+							</div>
+						</a>
+					</Link>
+					<Link href="/" passHref>
 						<div className={styles.brnch} id={styles.cs}>
 							<p>Computer Engineering</p>
 						</div>
 					</Link>
-					<Link href="/">
+					<Link href="/" passHref>
 						<div className={styles.brnch} id={styles.elb}>
 							<p>Electronics Engineering</p>
 						</div>
 					</Link>
-					<Link href="/">
+					<Link href="/" passHref>
 						<div className={styles.brnch} id={styles.elec}>
 							<p>Electrical Engineering</p>
 						</div>
 					</Link>
-					<Link href="/">
+					<Link href="/" passHref>
 						<div className={styles.brnch} id={styles.mech}>
 							<p>Mechanical Engineering</p>
 						</div>
 					</Link>
-					<Link href="/">
+					<Link href="/" passHref>
 						<div className={styles.brnch} id={styles.civil}>
 							<p>Civil</p>
 							<p>Engineering</p>
 						</div>
 					</Link>
-					<Link href="/">
+					<Link href="/" passHref>
 						<div className={styles.brnch} id={styles.chem}>
 							<p>Chemical Engineering</p>
 						</div>

@@ -3,16 +3,12 @@ import Link from 'next/link';
 
 const SubjCard = ({ details }) => {
 	return (
-		<>
+		<Link href={details.linkToPage} passHref>
 			<div className={styles.subject}>
+				{/* <Image></Image> */}
 				<span className={styles.name}>{details.name}</span>
-				<button className={styles.visitBtn}>
-					<Link href="" passHref>
-						<a>Visit</a>
-					</Link>
-				</button>
 			</div>
-		</>
+		</Link>
 	);
 };
 

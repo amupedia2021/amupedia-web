@@ -5,7 +5,8 @@
 }
 
 .semWrapper {
-	width: 90%;
+  @include flex;
+  flex-wrap: wrap;
 	margin: 5rem auto auto auto;
 	max-width: 1000px;
 

@@ -21,9 +21,7 @@
     "react-contenteditable": "^3.3.6",
     "react-dom": "17.0.2",
     "react-vanilla-tilt": "^1.0.0",
-    "sass": "^1.45.1",
-    "suneditor": "^2.42.0",
-    "suneditor-react": "^3.4.0"
+    "sass": "^1.45.1"
   },
   "devDependencies": {
     "eslint": "8.5.0",
