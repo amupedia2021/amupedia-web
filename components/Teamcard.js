@@ -10,7 +10,7 @@ export default function Teamcard({
 	facebook,
 	insta,
 	twitter,
-	linkedin, 
+	linkedin,
 	name,
 	photo,
 	desig,

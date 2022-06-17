@@ -20,54 +20,54 @@ const Team = () => {
 					insta={'#'}
 					twitter={'#'}
 					linkedin={'#'}
-					name={'Haider Ali'}
-					photo={'/images/team/haider.jpg'}
-					desig={'Technology Lead'}
+					name={'Name Here'}
+					photo={''}
+					desig={'Designation'}
 				/>
 				<Card
 					facebook={'#'}
 					insta={'#'}
 					twitter={'#'}
 					linkedin={'#'}
-					name={'Haider Ali'}
-					photo={'/images/team/haider.jpg'}
-					desig={'Technology Lead'}
+					name={'Name Here'}
+					photo={''}
+					desig={'Designation'}
 				/>
 				<Card
 					facebook={'#'}
 					insta={'#'}
 					twitter={'#'}
 					linkedin={'#'}
-					name={'Haider Ali'}
-					photo={'/images/team/haider.jpg'}
-					desig={'Technology Lead'}
+					name={'Name Here'}
+					photo={''}
+					desig={'Designation'}
 				/>
 				<Card
 					facebook={'#'}
 					insta={'#'}
 					twitter={'#'}
 					linkedin={'#'}
-					name={'Haider Ali'}
-					photo={'/images/team/haider.jpg'}
-					desig={'Technology Lead'}
+					name={'Name Here'}
+					photo={''}
+					desig={'Designation'}
 				/>
 				<Card
 					facebook={'#'}
 					insta={'#'}
 					twitter={'#'}
 					linkedin={'#'}
-					name={'Haider Ali'}
-					photo={'/images/team/haider.jpg'}
-					desig={'Technology Lead'}
+					name={'Name Here'}
+					photo={''}
+					desig={'Designation'}
 				/>
 				<Card
 					facebook={'#'}
 					insta={'#'}
 					twitter={'#'}
 					linkedin={'#'}
-					name={'Haider Ali'}
-					photo={'/images/team/haider.jpg'}
-					desig={'Technology Lead'}
+					name={'Name Here'}
+					photo={''}
+					desig={'Designation'}
 				/>
 			</div>
 		</>
