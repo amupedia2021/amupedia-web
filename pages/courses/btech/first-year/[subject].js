@@ -1,12 +1,33 @@
 import Subject from 'components/Subject';
-import { useRouter } from 'next/router';
-import { subjectPages } from 'data/semData';
+import { getSubjectPages } from 'data/semData';
 
-const GeneralSubject = () => {
-	const router = useRouter();
-	const { subject } = router.query;
-	const data = subjectPages[subject];
+export const getStaticPaths = async () => {
+	const paths = [
+		{
+			params: {
+				subject: 'applied-mathematics-1',
+			},
+		},
+	];
 
+	return {
+		paths,
+		fallback: false,
+	};
+};
+
+export const getStaticProps = async (context) => {
+	let subject = context.params.subject;
+	const data = getSubjectPages(subject);
+
+	if (data == null || data == undefined) {
+		return { notFound: true };
+	}
+
+	return { props: { data } };
+};
+
+const GeneralSubject = ({ data }) => {
 	return (
 		<>
 			<Subject data={data}></Subject>

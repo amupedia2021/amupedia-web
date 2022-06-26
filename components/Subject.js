@@ -9,7 +9,7 @@ const Subject = ({ data }) => {
 
 	return (
 		<div>
-			{/* <Header image={data.bgImg} text={data.name} /> */}
+			<Header image={data.bgImg} text={data.name} />
 			<div className={styles.main}>
 				<Taskbar section={section} setSection={setSection} />
 			</div>

@@ -57,22 +57,26 @@ export const firstYearSems = [
 	},
 ];
 
-export const subjectPages = {
-	'applied-mathematics-1': {
-		name: 'Applied Mathematics 1',
-		bgImg: '/images/btech/firstYear/applied_maths_1.jpg',
-		units: [
-			{
-				unitNo: 1,
-				notes: [],
-				videoLectures: [],
-				assignments: [],
+export function getSubjectPages(subject) {
+	const subjectPages = {
+		'applied-mathematics-1': {
+			name: 'Applied Mathematics 1',
+			bgImg: '/images/btech/firstYear/applied_maths_1.jpg',
+			units: [
+				{
+					unitNo: 1,
+					notes: [],
+					videoLectures: [],
+					assignments: [],
+				},
+			],
+			shortNotes: [],
+			previousPapers: {
+				midSem: [],
+				endSem: [],
 			},
-		],
-		shortNotes: [],
-		previousPapers: {
-			midSem: [],
-			endSem: [],
 		},
-	},
-};
+	};
+
+	return subjectPages[subject];
+}
