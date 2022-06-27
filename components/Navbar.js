@@ -6,14 +6,28 @@ import { useState, useEffect } from 'react';
 const Navbar = () => {
 	const router = useRouter();
 	const [navbar, setNavbar] = useState(false);
-	const [coursePath, setCoursePath] = useState(router.asPath);
+	const [courseActive, setCourseActive] = useState(false);
 
 	useEffect(() => {
 		window.addEventListener('scroll', changeNavbar);
+
+		if (router.pathname !== '/') return;
+
+		const courses = document.getElementById('courses');
+		const obs = new IntersectionObserver(
+			(entries) => {
+				const entry = entries[0];
+				if (entry.isIntersecting) {
+					setCourseActive(true);
+				} else {
+					setCourseActive(false);
+				}
+			},
+			{ threshold: 0.8 }
+		);
+
+		obs.observe(courses);
 	}, []);
-	useEffect(() => {
-		setCoursePath(router.asPath);
-	}, [router.asPath]);
 
 	const changeNavbar = () => {
 		if (window.scrollY > 500) {
@@ -22,6 +36,7 @@ const Navbar = () => {
 	};
 
 	const onClick = () => {
+		// Handles mobile course click
 		const menu = document.querySelector('#menu');
 		if (menu.checked) menu.click();
 	};
@@ -47,7 +62,7 @@ const Navbar = () => {
 				<ul className={styles.list}>
 					<li
 						className={`${styles.listitem} ${
-							router.pathname === '/' && router.asPath === '/' && navbar
+							router.pathname === '/' && !courseActive && navbar
 								? styles.navList_active
 								: ''
 						}`}
@@ -56,9 +71,7 @@ const Navbar = () => {
 							<a
 								onClick={onClick}
 								className={`${styles.lnk} ${
-									router.pathname === '/' && router.asPath === '/'
-										? styles.active
-										: ''
+									router.pathname === '/' && !courseActive ? styles.active : ''
 								} ${navbar && styles.nav_active}`}
 							>
 								Home
@@ -85,14 +98,17 @@ const Navbar = () => {
 					</li>
 					<li
 						className={`${styles.listitem} ${
-							coursePath === '/#courses' && navbar ? styles.navList_active : ''
+							courseActive && navbar ? styles.navList_active : ''
 						}`}
 					>
 						<Link href="/#courses">
 							<a
-								onClick={onClick}
+								onClick={() => {
+									onClick();
+									router.push('/', undefined, { shallow: true });
+								}}
 								className={`${styles.lnk} ${
-									router.asPath === '/#courses' ? styles.active : ''
+									courseActive ? styles.active : ''
 								} ${navbar && styles.nav_active}`}
 							>
 								Courses
