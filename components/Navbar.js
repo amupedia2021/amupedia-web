@@ -105,7 +105,9 @@ const Navbar = () => {
 							<a
 								onClick={() => {
 									onClick();
-									router.push('/', undefined, { shallow: true });
+									setTimeout(() => {
+										router.push('/', undefined, { shallow: true });
+									}, 10);
 								}}
 								className={`${styles.lnk} ${
 									courseActive ? styles.active : ''
