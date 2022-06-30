@@ -13,7 +13,7 @@ const Team = () => {
 					linkedin={'#'}
 					name={'Haider Ali'}
 					photo={'/images/team/haider.jpg'}
-					desig={'Technology Lead'}
+					desig={'Co-Founder and Core Developer'}
 				/>
 				<Card
 					facebook={'#'}

@@ -141,3 +141,11 @@ input:focus {
 	font-size: 3.4vmin !important;
 	min-height: 50vmin !important;
 }
+
+/* Styling for the image that appears in header */
+.headerImage{
+  height: 100%;
+  width: 100%;
+  position: relative !important;
+  object-fit: cover;
+}

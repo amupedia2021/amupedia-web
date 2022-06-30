@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 import styles from '@styles/Navbar.module.css';
+import logo from '/public/logo.svg';
 import { useState, useEffect } from 'react';
 
 const Navbar = () => {
@@ -59,6 +61,10 @@ const Navbar = () => {
 				className={`${styles.navbar} ${navbar && styles.active}`}
 				id="navbar"
 			>
+				{/* {TODO: !Logo to be completed } */}
+				{/* <div className={styles.logo}>
+					<Image src={logo} alt="Logo"></Image>
+				</div> */}
 				<ul className={styles.list}>
 					<li
 						className={`${styles.listitem} ${

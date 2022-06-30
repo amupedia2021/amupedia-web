@@ -25,9 +25,11 @@
 			text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
 		}
 		&_desg {
+      text-align: center;
 			line-height: 19px;
 			text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
 			font-size: 1.2rem;
+      margin: 0.2rem 1rem;
 		}
 	}
 }

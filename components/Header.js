@@ -1,6 +1,7 @@
 import styles from '@styles/Header.module.css';
 import Wave from './Wave';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const Header = (props) => {
 	const { image, text } = props;
@@ -13,12 +14,14 @@ const Header = (props) => {
 				id="header"
 			>
 				{/* <!-- background on top --> */}
-				<div
-					className={styles.headerbg}
-					style={{
-						background: `url(${image}) no-repeat center center/cover`,
-					}}
-				></div>
+				<div className={styles.headerbg}>
+					<Image
+						src={image}
+						layout="fill"
+						className={'headerImage'}
+						alt="Intro to the page"
+					></Image>
+				</div>
 
 				<motion.div
 					className={styles.center_text}

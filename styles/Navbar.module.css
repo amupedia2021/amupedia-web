@@ -3,12 +3,13 @@
 
 /* style for logo  */
 .logo {
-	position: absolute;
-	width: 20%;
+  position: absolute;
 	float: left;
-	top: 2vh;
-	left: 1.5vh;
-	max-width: 105px;
+	top: 5.5vw;
+	left: 5vw;
+  z-index: 10;
+	max-width: 150px;
+  filter: drop-shadow(5px 5px 19px #fff);
 }
 
 /* navigation bar style for mobile phone */

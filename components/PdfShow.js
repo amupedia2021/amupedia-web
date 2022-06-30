@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from '@styles/scss/notes.module.scss';
+import pdfIcon from '@images/btech/firstYear/pdfIcon.svg';
 
 const PdfShow = (props) => {
 	const { link, tagLine } = props;
@@ -9,7 +10,7 @@ const PdfShow = (props) => {
 			<a href={link} target="_blank" rel="noreferrer">
 				<div className={styles.iconWrapper}>
 					<Image
-						src="/images/btech/firstYear/pdfIcon.svg"
+						src={pdfIcon}
 						alt="PdfIcon"
 						width="99"
 						height="110.4"
