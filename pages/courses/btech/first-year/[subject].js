@@ -31,6 +31,7 @@ const GeneralSubject = ({ data }) => {
 	return (
 		<>
 			<Subject data={data}></Subject>
+      
 		</>
 	);
 };
