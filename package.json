@@ -18,7 +18,6 @@
     "next-connect": "^0.12.2",
     "next-images": "^1.8.4",
     "react": "17.0.2",
-    "react-contenteditable": "^3.3.6",
     "react-dom": "17.0.2",
     "react-vanilla-tilt": "^1.0.0",
     "sass": "^1.45.1"

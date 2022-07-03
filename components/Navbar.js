@@ -15,6 +15,12 @@ const Navbar = () => {
 
 		if (router.pathname !== '/') return;
 
+		if (router.asPath === '/#courses') {
+			setTimeout(() => {
+				router.push('/', undefined, { shallow: true });
+			}, 10);
+		}
+
 		const courses = document.getElementById('courses');
 		const obs = new IntersectionObserver(
 			(entries) => {
@@ -29,7 +35,7 @@ const Navbar = () => {
 		);
 
 		obs.observe(courses);
-	}, []);
+	}, [router]);
 
 	const changeNavbar = () => {
 		if (window.scrollY > 500) {
@@ -111,9 +117,6 @@ const Navbar = () => {
 							<a
 								onClick={() => {
 									onClick();
-									setTimeout(() => {
-										router.push('/', undefined, { shallow: true });
-									}, 10);
 								}}
 								className={`${styles.lnk} ${
 									courseActive ? styles.active : ''

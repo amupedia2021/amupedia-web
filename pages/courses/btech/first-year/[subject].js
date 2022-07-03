@@ -8,6 +8,36 @@ export const getStaticPaths = async () => {
 				subject: 'applied-mathematics-1',
 			},
 		},
+		{
+			params: {
+				subject: 'applied-chemistry',
+			},
+		},
+		{
+			params: {
+				subject: 'thermo-dynamics',
+			},
+		},
+		{
+			params: {
+				subject: 'electrical-engineering',
+			},
+		},
+		{
+			params: {
+				subject: 'environmental-studies',
+			},
+		},
+		{
+			params: {
+				subject: 'applied-chemistry-lab',
+			},
+		},
+		{
+			params: {
+				subject: 'computer-programming-lab',
+			},
+		},
 	];
 
 	return {
@@ -31,7 +61,6 @@ const GeneralSubject = ({ data }) => {
 	return (
 		<>
 			<Subject data={data}></Subject>
-      
 		</>
 	);
 };
