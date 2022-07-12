@@ -14,7 +14,8 @@
 
 /* navigation bar style for mobile phone */
 .list {
-	font-family: "Baloo Bhai 2";
+	font-family: "Baloo Bhai 2",
+    sans-serif;
 	opacity: 80%;
 	background-color: rgb(255, 255, 255);
 	position: fixed;
@@ -164,7 +165,7 @@ navigation menu opens in mobile phones */
 		background: transparent;
 		height: 70px;
 		position: fixed;
-		z-index: 1000;
+		z-index: 100;
 		top: 0;
 		width: 100%;
 		transition: all 0.5s ease;

@@ -4,6 +4,7 @@ import Header from 'components/Header';
 import styles from '@styles/scss/blog.module.scss';
 import blogData from '/data/blogdata';
 
+
 export default function Blogs() {
 	return (
 		<>

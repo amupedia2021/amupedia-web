@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Footer from 'components/Footer';
 
 export default function BTech() {
-	const image = '/images/btech/top_bg.svg';
+	const image = '/images/btech/top_bg.jpg';
 	return (
 		<>
 			<Header image={image} text="B.Tech" />

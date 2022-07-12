@@ -1,0 +1,116 @@
+@import './config';
+
+.main{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1020;
+  background: rgba(0,0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  position: relative;
+  @include flex;
+  flex-direction: column;
+  background: white;
+  width: 90%;
+  max-width: 350px;
+  border-radius: 5vmin;
+  padding: 5vmin 0;
+
+  &> p{
+    font-weight: bold;
+  }
+
+  .or{
+    font-size: 3.3vmin;
+  }
+
+  .googleSignIn{
+    margin: 1.2vmin auto;
+  }
+
+  .loginForm{
+    width: 85%;
+    @include flex;
+    flex-direction: column;
+    align-items: center;
+
+    & label{
+      width: 100%;
+      position: relative;
+
+      & > span{
+        cursor: pointer;
+        position: absolute;
+        bottom: -2.7vmin;
+        left: 1vmin;
+        font-size: 2.1vmin;
+        color: #3323AA;
+      }
+    }
+
+    &  input{
+      font-family: 'Baloo Bhai 2';
+      font-size: 2.6vmin;
+      padding: 0.8vmin 2vmin;
+      margin: 0.7vmin auto;
+      width: 100%;
+      border: none;
+      outline: none;
+      background: #F1F1F1;
+      border-radius: 1.2vmin;
+      &::placeholder{
+        color: rgb(147, 147, 147);
+      }
+    }
+
+    & > button{
+      outline: none;
+      border: none;
+      color: white;
+      font-family: 'Baloo Bhai 2';
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      font-size: 2.6vmin;
+      padding: 0.7vmin 2vmin;
+      margin-top: 5vmin;
+      background: linear-gradient(91.44deg, #3323AA -6.68%, #B842A0 179.17%);
+      border-radius: 1.2vmin;
+    }
+  }
+}
+
+@media only screen and (max-width: 525px){
+  .container{
+    padding: 9vmin 0;
+    .or{
+      font-size: 5vmin;
+    }
+    .loginForm{
+
+      & label{
+        & > span{
+          bottom: -3.5vmin;
+          font-size: 3.1vmin;
+        }
+      }
+
+      & input{
+        margin: 1.2vmin auto;
+        padding: 1.6vmin 3vmin;
+        font-size: 4vmin;
+        border-radius: 1.8vmin;
+      }
+      &> button{
+        font-size: 4vmin;
+        margin-top: 6vmin;
+        border-radius: 1.8vmin;
+      }
+    }
+  }
+}
