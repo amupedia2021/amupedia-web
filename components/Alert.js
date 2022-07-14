@@ -27,6 +27,7 @@ const Alert = () => {
 			setToNull(false);
 		}, 250);
 	};
+
 	return (
 		<>
 			{alert && (

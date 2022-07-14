@@ -1,116 +1,203 @@
 @import './config';
 
-.main{
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1020;
-  background: rgba(0,0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.main {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1020;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.overlay {
+		position: absolute;
+		height: 100vh;
+		width: 100vw;
+		z-index: 1018;
+		background: rgba(0, 0, 0, 0.3);
+		transition: all 400ms ease-in-out;
+		animation: show 400ms linear;
+	}
+
+	&.closingPanel {
+		.overlay {
+			opacity: 0;
+		}
+		.container {
+			transform: translateY(2000px);
+		}
+	}
 }
 
-.container{
-  position: relative;
-  @include flex;
-  flex-direction: column;
-  background: white;
-  width: 90%;
-  max-width: 350px;
-  border-radius: 5vmin;
-  padding: 5vmin 0;
+.container {
+	position: relative;
+	@include flex;
+	flex-direction: column;
+	background: white;
+	width: 90%;
+	max-width: 350px;
+	border-radius: 5vmin;
+	padding: 5vmin 0;
+	z-index: 1020;
+	transition: all 400ms ease-in-out;
+	animation: pop 400ms ease-in-out;
 
-  &> p{
-    font-weight: bold;
-  }
+	& > p {
+		font-weight: bold;
+	}
 
-  .or{
-    font-size: 3.3vmin;
-  }
+	.or {
+		font-size: 3.3vmin;
+	}
 
-  .googleSignIn{
-    margin: 1.2vmin auto;
-  }
+	.googleSignIn {
+		margin: 1.2vmin auto;
+	}
 
-  .loginForm{
-    width: 85%;
-    @include flex;
-    flex-direction: column;
-    align-items: center;
+	.loginForm {
+		width: 85%;
+		@include flex;
+		flex-direction: column;
+		align-items: center;
 
-    & label{
-      width: 100%;
-      position: relative;
+		& label {
+			width: 100%;
+			position: relative;
 
-      & > span{
-        cursor: pointer;
-        position: absolute;
-        bottom: -2.7vmin;
-        left: 1vmin;
-        font-size: 2.1vmin;
-        color: #3323AA;
-      }
-    }
+			.icon {
+				position: absolute;
+				height: 2.5vmin;
+				width: 2.5vmin;
+				transform: translate(1.4vmin, 2.3vmin);
+				color: rgb(119, 119, 119);
+			}
 
-    &  input{
-      font-family: 'Baloo Bhai 2';
-      font-size: 2.6vmin;
-      padding: 0.8vmin 2vmin;
-      margin: 0.7vmin auto;
-      width: 100%;
-      border: none;
-      outline: none;
-      background: #F1F1F1;
-      border-radius: 1.2vmin;
-      &::placeholder{
-        color: rgb(147, 147, 147);
-      }
-    }
+			.eye {
+				-webkit-user-select: none; /* Safari */
+				-ms-user-select: none; /* IE 10 and IE 11 */
+				user-select: none;
+				cursor: pointer;
+				position: absolute;
+				height: 3vmin;
+				width: 3vmin;
+				transform: translate(-4.4vmin, 2.2vmin);
+				color: rgb(119, 119, 119);
+				z-index: -1;
+				opacity: 0;
+				transition: all 0.5s linear;
 
-    & > button{
-      outline: none;
-      border: none;
-      color: white;
-      font-family: 'Baloo Bhai 2';
-      font-weight: bold;
-      cursor: pointer;
-      width: 100%;
-      font-size: 2.6vmin;
-      padding: 0.7vmin 2vmin;
-      margin-top: 5vmin;
-      background: linear-gradient(91.44deg, #3323AA -6.68%, #B842A0 179.17%);
-      border-radius: 1.2vmin;
-    }
-  }
+				&.active {
+					opacity: 1 !important;
+					z-index: 1;
+				}
+			}
+
+			& > span {
+				-webkit-user-select: none; /* Safari */
+				-ms-user-select: none; /* IE 10 and IE 11 */
+				user-select: none;
+				cursor: pointer;
+				position: absolute;
+				bottom: -3vmin;
+				left: 1vmin;
+				font-size: 2.1vmin;
+				color: #3323aa;
+			}
+		}
+
+		& input {
+			border: none;
+			border-bottom: 1.5px solid white !important;
+			font-family: 'Baloo Bhai 2';
+			font-size: 2.6vmin;
+			padding: 0.8vmin 2vmin;
+			padding-left: 5vmin;
+			padding-right: 5vmin;
+			margin: 0.7vmin auto;
+			width: 100%;
+			outline: none;
+			background: #f1f1f1;
+			border-radius: 1.2vmin;
+			transition: all 0.3s ease-in-out;
+
+			&::placeholder {
+				color: rgb(147, 147, 147);
+				-webkit-user-select: none; /* Safari */
+				-ms-user-select: none; /* IE 10 and IE 11 */
+				user-select: none;
+			}
+
+			&:focus {
+				border-bottom: 1.5px solid #3323aa !important;
+			}
+		}
+
+		& > button {
+			outline: none;
+			border: none;
+			color: white;
+			font-family: 'Baloo Bhai 2';
+			font-weight: bold;
+			cursor: pointer;
+			width: 100%;
+			font-size: 2.6vmin;
+			padding: 0.7vmin 2vmin;
+			margin-top: 5vmin;
+			background: linear-gradient(91.44deg, #3323aa -6.68%, #b842a0 179.17%);
+			border-radius: 1.2vmin;
+		}
+	}
 }
 
-@media only screen and (max-width: 525px){
-  .container{
-    padding: 9vmin 0;
-    .or{
-      font-size: 5vmin;
-    }
-    .loginForm{
+@media only screen and (max-width: 525px) {
+	.container {
+		padding: 9vmin 0;
+		.or {
+			font-size: 5vmin;
+		}
+		.loginForm {
+			& label {
+				.icon {
+					height: 3.5vmin;
+					width: 3.5vmin;
+					transform: translate(1.9vmin, 3.9vmin);
+				}
 
-      & label{
-        & > span{
-          bottom: -3.5vmin;
-          font-size: 3.1vmin;
-        }
-      }
+				.eye {
+					height: 4.2vmin;
+					width: 4.2vmin;
+					transform: translate(-6vmin, 3.8vmin);
+				}
 
-      & input{
-        margin: 1.2vmin auto;
-        padding: 1.6vmin 3vmin;
-        font-size: 4vmin;
-        border-radius: 1.8vmin;
-      }
-      &> button{
-        font-size: 4vmin;
-        margin-top: 6vmin;
-        border-radius: 1.8vmin;
-      }
-    }
-  }
+				& > span {
+					bottom: -3.5vmin;
+					font-size: 3.1vmin;
+				}
+			}
+
+			& input {
+				margin: 1.2vmin auto;
+				padding: 1.6vmin 3vmin;
+				padding-left: 6.5vmin;
+				font-size: 4vmin;
+				border-radius: 1.8vmin;
+			}
+			& > button {
+				font-size: 4vmin;
+				margin-top: 6vmin;
+				border-radius: 1.8vmin;
+			}
+		}
+	}
+}
+
+@keyframes show {
+	0% {
+		opacity: 0;
+	}
+}
+@keyframes pop {
+	0% {
+		transform: translateY(600px);
+	}
 }
