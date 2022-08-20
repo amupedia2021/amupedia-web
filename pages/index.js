@@ -11,6 +11,8 @@ import Header from 'components/Header';
 import Link from 'next/link';
 import Footer from 'components/Footer';
 
+
+
 export default function Home() {
 	const emptyForm = {
 		first_name: '',
@@ -50,7 +52,6 @@ export default function Home() {
 							assignments. We are providing all this content for free.
 						</p>
 					</div>
-
 					{/* Our Services Section  */}
 					<div id={styles.ourserv}>
 						<h2>Our Services</h2>
