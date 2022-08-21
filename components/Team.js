@@ -19,10 +19,11 @@ const Team = () => {
 					facebook={'#'}
 					insta={'#'}
 					twitter={'#'}
-					linkedin={'#'}
-					name={'Name Here'}
+					linkedin={'https://www.linkedin.com/in/sayyed-arib-hussain-1220b5187/'}
+					github={'#'}
+					name={'Aarib'}
 					photo={''}
-					desig={'Designation'}
+					desig={'Web Developer'}
 				/>
 				<Card
 					facebook={'#'}
