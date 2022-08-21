@@ -20,7 +20,7 @@ const Team = () => {
 					insta={'#'}
 					twitter={'#'}
 					linkedin={'https://www.linkedin.com/in/sayyed-arib-hussain-1220b5187/'}
-					github={'#'}
+					github={'https://www.github.com/sayyedarib'}
 					name={'Aarib'}
 					photo={''}
 					desig={'Web Developer'}

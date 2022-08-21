@@ -10,6 +10,8 @@ import styles from '@styles/Home.module.css';
 import Header from 'components/Header';
 import Link from 'next/link';
 import Footer from 'components/Footer';
+import BlogCard from 'components/BlogCard';
+
 
 
 
@@ -41,39 +43,6 @@ export default function Home() {
 			<Header image={headerImg} text="Amupedia" />
 			<main>
 				<section id={styles.content}>
-					{/* <!-- Our Mission Container --> */}
-					<div className={styles.mission}>
-						<h2>Our Mission</h2>
-						<p>
-							We are the students of AMU, intending to provide you all the
-							quality stuff related to B.Tech, B.Com, B.E, and various other
-							courses, the pdfs related to experiment, viva, and quizzes
-							question, the mid and end semester examination as well as the
-							assignments. We are providing all this content for free.
-						</p>
-					</div>
-					{/* Our Services Section  */}
-					<div id={styles.ourserv}>
-						<h2>Our Services</h2>
-						<div id={styles.ourserimgs}>
-							<div>
-								<Image src={pdf} alt="pdfs" />
-								<p>PDFs OF ALL SUBJECTS</p>
-							</div>
-							<div>
-								<Image src={chap_yt} alt="explaination" />
-								<p>CHAPTER EXPLANATION BY YOUTUBE VIDEO</p>
-							</div>
-							<div>
-								<Image src={quiz} alt="solutions" />
-								<p>SOLUTION OF TEST AND QUIZZES</p>
-							</div>
-							<div>
-								<Image src={assign} alt="assignments" />
-								<p>ASSIGNMENTS GIVEN</p>
-							</div>
-						</div>
-					</div>
 
 					{/* <!-- grab your notes section  --> */}
 					<div className={styles.courses} id="courses">
@@ -110,6 +79,42 @@ export default function Home() {
 						</div>
 					</div>
 
+					{/* <!-- Our Mission Container --> */}
+					<div className={styles.mission}>
+						<h2>Our Mission</h2>
+						<p>
+							We are the students of AMU, intending to provide you all the
+							quality stuff related to B.Tech, B.Com, B.E, and various other
+							courses, the pdfs related to experiment, viva, and quizzes
+							question, the mid and end semester examination as well as the
+							assignments. We are providing all this content for free.
+						</p>
+					</div>
+					{/* Our Services Section  */}
+					<div id={styles.ourserv}>
+						<h2>Our Services</h2>
+						<div id={styles.ourserimgs}>
+							<div>
+								<Image src={pdf} alt="pdfs" />
+								<p>PDFs OF ALL SUBJECTS</p>
+							</div>
+							<div>
+								<Image src={chap_yt} alt="explaination" />
+								<p>CHAPTER EXPLANATION BY YOUTUBE VIDEO</p>
+							</div>
+							<div>
+								<Image src={quiz} alt="solutions" />
+								<p>SOLUTION OF TEST AND QUIZZES</p>
+							</div>
+							<div>
+								<Image src={assign} alt="assignments" />
+								<p>ASSIGNMENTS GIVEN</p>
+							</div>
+						</div>
+					</div>
+
+
+
 					{/* <!-- Recent Updates section  --> */}
 					{/* <!-- same css as grabnotes section  --> */}
 					<h2 className={styles.grabh2}>Recent Updates</h2>
@@ -121,11 +126,14 @@ export default function Home() {
 								</div>
 							</Tilt>
 						</Link>
-						<Link passHref href="/">
+						<Link passHref href="/blog">
+
 							<Tilt className={styles.tlt}>
+								<a href="">
 								<div className={styles.rec2}>
 									<p>Blogs</p>
 								</div>
+								</a>
 							</Tilt>
 						</Link>
 						<Link passHref href="/">
