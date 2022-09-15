@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps, router }) {
 		<StoreProvider>
 			{/* <div id="signInDiv"></div> */}
 			<Alert />
-			<Login />
+			{/* <Login /> */}
 			<motion.div
 				key={router.route}
 				initial="pageInitial"

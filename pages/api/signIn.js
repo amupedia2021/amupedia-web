@@ -2,6 +2,7 @@ import db from 'db/db';
 import User from 'db/models/User';
 import nextConnect from 'next-connect';
 import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
 
 const handler = nextConnect();
 
