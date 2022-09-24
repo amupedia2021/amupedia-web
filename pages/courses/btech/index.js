@@ -36,32 +36,53 @@ export default function BTech() {
 							<p>Computer Engineering</p>
 						</div>
 					</Link>
-					<Link href="/" passHref>
+					<a
+						href="https://drive.google.com/drive/folders/1zBbCWFSqLRdBudn0BZxLx6BMuhCx86eX?usp=sharing"
+						target="_blank"
+						rel="noreferrer"
+					>
 						<div className={styles.brnch} id={styles.elb}>
 							<p>Electronics Engineering</p>
 						</div>
-					</Link>
+					</a>
 					<Link href="/" passHref>
 						<div className={styles.brnch} id={styles.elec}>
 							<p>Electrical Engineering</p>
 						</div>
 					</Link>
-					<Link href="/" passHref>
+					<a
+						href="https://drive.google.com/drive/folders/1QzaqFWmk7hk7cN7CuSLhBcKYOwxeDspg?usp=sharing"
+						target="_blank"
+						rel="noreferrer"
+					>
 						<div className={styles.brnch} id={styles.mech}>
 							<p>Mechanical Engineering</p>
 						</div>
-					</Link>
-					<Link href="/" passHref>
+					</a>
+					<a
+						href="https://drive.google.com/drive/folders/1pCPek9WPzilXKngSa3FFYq-BxudXjZXg?usp=sharing"
+						target="_blank"
+						rel="noreferrer"
+					>
 						<div className={styles.brnch} id={styles.civil}>
 							<p>Civil</p>
 							<p>Engineering</p>
 						</div>
-					</Link>
+					</a>
 					<Link href="/" passHref>
 						<div className={styles.brnch} id={styles.chem}>
 							<p>Chemical Engineering</p>
 						</div>
 					</Link>
+					<a
+						href="https://drive.google.com/drive/folders/1U6XgFEsH6aMi30hDQlwBPJSOPLZUmgtM?usp=sharing"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<div className={styles.brnch} id={styles.chem}>
+							<p>Food Technology</p>
+						</div>
+					</a>
 				</div>
 			</section>
 			<Footer />
