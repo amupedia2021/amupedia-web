@@ -45,11 +45,15 @@ export default function BTech() {
 							<p>Electronics Engineering</p>
 						</div>
 					</a>
-					<Link href="/" passHref>
+					<a
+						href="https://drive.google.com/drive/folders/1cdbwEwPktPVo5ejCK37Q7NLQaawOrRxJ?usp=sharing"
+						target="_blank"
+						rel="noreferrer"
+					>
 						<div className={styles.brnch} id={styles.elec}>
 							<p>Electrical Engineering</p>
 						</div>
-					</Link>
+					</a>
 					<a
 						href="https://drive.google.com/drive/folders/1QzaqFWmk7hk7cN7CuSLhBcKYOwxeDspg?usp=sharing"
 						target="_blank"
