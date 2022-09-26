@@ -31,11 +31,15 @@ export default function BTech() {
 							</div>
 						</a>
 					</Link>
-					<Link href="/" passHref>
+					<a
+						href="https://drive.google.com/drive/folders/1qHWSIsNiYGgtXn0emPzt62cv_jI1rlDw?usp=sharing"
+						target="_blank"
+						rel="noreferrer"
+					>
 						<div className={styles.brnch} id={styles.cs}>
 							<p>Computer Engineering</p>
 						</div>
-					</Link>
+					</a>
 					<a
 						href="https://drive.google.com/drive/folders/1zBbCWFSqLRdBudn0BZxLx6BMuhCx86eX?usp=sharing"
 						target="_blank"
@@ -73,18 +77,23 @@ export default function BTech() {
 							<p>Engineering</p>
 						</div>
 					</a>
-					<Link href="/" passHref>
+					<a
+						href="https://drive.google.com/drive/folders/1fCciCZhLUx7dFFP_n1hfE0lJEBC53xq6?usp=sharing"
+						target="_blank"
+						rel="noreferrer"
+					>
 						<div className={styles.brnch} id={styles.chem}>
 							<p>Chemical Engineering</p>
 						</div>
-					</Link>
+					</a>
 					<a
 						href="https://drive.google.com/drive/folders/1U6XgFEsH6aMi30hDQlwBPJSOPLZUmgtM?usp=sharing"
 						target="_blank"
 						rel="noreferrer"
 					>
 						<div className={styles.brnch} id={styles.chem}>
-							<p>Food Technology</p>
+							<p>Food</p>
+							<p>Technology</p>
 						</div>
 					</a>
 				</div>
