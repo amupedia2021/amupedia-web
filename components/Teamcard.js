@@ -4,7 +4,6 @@ import { faInstagramSquare } from 'node_modules/@fortawesome/free-brands-svg-ico
 import { faFacebookSquare } from 'node_modules/@fortawesome/free-brands-svg-icons/index';
 import { faTwitterSquare } from 'node_modules/@fortawesome/free-brands-svg-icons/index';
 import { faLinkedin } from 'node_modules/@fortawesome/free-brands-svg-icons/index';
-import { faGithub } from 'node_modules/@fortawesome/free-brands-svg-icons/index';
 import Tilt from 'react-vanilla-tilt';
 
 export default function Teamcard({
@@ -12,7 +11,6 @@ export default function Teamcard({
 	insta,
 	twitter,
 	linkedin,
-	github,
 	name,
 	photo,
 	desig,
@@ -63,12 +61,6 @@ export default function Teamcard({
 									className={styles.icon}
 								/>
 							</a>
-							<a href={github} target="_blank" rel="noreferrer"><FontAwesomeIcon
-							icon={faGithub} 
-							size="2x"
-							inverse
-							className={styles.icon}
-							/></a>
 						</div>
 					</div>
 				</div>

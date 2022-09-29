@@ -21,9 +21,45 @@ const Team = () => {
 					twitter={'#'}
 					linkedin={'https://www.linkedin.com/in/sayyed-arib-hussain-1220b5187/'}
 					github={'https://www.github.com/sayyedarib'}
-					name={'Aarib'}
+					name={'Anmol Agrawal'}
 					photo={''}
-					desig={'Web Developer'}
+					desig={'Founder'}
+				/>
+								<Card
+					facebook={'#'}
+					insta={'#'}
+					twitter={'#'}
+					linkedin={'#'}
+					name={'Abhishek Sharma'}
+					photo={''}
+					desig={'Co-Founder'}
+				/>
+																<Card
+					facebook={'#'}
+					insta={'#'}
+					twitter={'#'}
+					linkedin={'#'}
+					name={'Muhaiyuddin Sabir'}
+					photo={''}
+					desig={'Search Engine Optimization Manager'}
+				/>
+				<Card
+					facebook={'#'}
+					insta={'#'}
+					twitter={'#'}
+					linkedin={'#'}
+					name={'Hamid Husain'}
+					photo={''}
+					desig={'Web Devloper'}
+				/>
+				<Card
+					facebook={'#'}
+					insta={'https://www.instagram.com/?hl=en'}
+					twitter={'#'}
+					linkedin={'https://www.linkedin.com/in/sayyed-arib-hussain-1220b5187/'}
+					name={'Sayyed Arib Hussain'}
+					photo={''}
+					desig={'Web Devloper'}
 				/>
 				<Card
 					facebook={'#'}
@@ -34,41 +70,69 @@ const Team = () => {
 					photo={''}
 					desig={'Designation'}
 				/>
+
 				<Card
 					facebook={'#'}
 					insta={'#'}
 					twitter={'#'}
 					linkedin={'#'}
-					name={'Name Here'}
+					name={'Mohd Huzaifa'}
 					photo={''}
 					desig={'Designation'}
 				/>
-				<Card
+								<Card
 					facebook={'#'}
 					insta={'#'}
 					twitter={'#'}
 					linkedin={'#'}
-					name={'Name Here'}
+					name={'Abdul Saboor'}
 					photo={''}
-					desig={'Designation'}
+					desig={'Management Team member'}
 				/>
-				<Card
+								<Card
 					facebook={'#'}
 					insta={'#'}
 					twitter={'#'}
 					linkedin={'#'}
-					name={'Name Here'}
+					name={'Muskan Azmi'}
 					photo={''}
-					desig={'Designation'}
+					desig={'Content Writer'}
 				/>
-				<Card
+								<Card
 					facebook={'#'}
 					insta={'#'}
 					twitter={'#'}
 					linkedin={'#'}
-					name={'Name Here'}
+					name={'Mohd Areeb Hasan Khan'}
 					photo={''}
-					desig={'Designation'}
+					desig={'Graphics Designer'}
+				/>
+												<Card
+					facebook={'#'}
+					insta={'#'}
+					twitter={'#'}
+					linkedin={'#'}
+					name={'Faisal Ahmad '}
+					photo={''}
+					desig={'Graphics Designer'}
+				/>
+												<Card
+					facebook={'#'}
+					insta={'https://instagram.com/lostincaves?r=nametag'}
+					twitter={'#'}
+					linkedin={'#'}
+					name={'Aakifah Aiman Sayyeda'}
+					photo={''}
+					desig={'Social Media Team head'}
+				/>
+												<Card
+					facebook={'#'}
+					insta={'https://instagram.com/laksh__gupta.__?igshid=YmMyMTA2M2Y='}
+					twitter={'#'}
+					linkedin={'https://www.linkedin.com/in/laksh-gupta-a35a66221'}
+					name={'Laksh Gupta '}
+					photo={''}
+					desig={'Social media member'}
 				/>
 			</div>
 		</>
