@@ -60,7 +60,7 @@ export const getStaticProps = async (context) => {
 const GeneralSubject = ({ data }) => {
 	return (
 		<>
-			<Subject data={data}></Subject>
+			<Subject data={data} />
 		</>
 	);
 };

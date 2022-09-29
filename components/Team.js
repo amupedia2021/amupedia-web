@@ -22,7 +22,7 @@ const Team = () => {
 					linkedin={'https://www.linkedin.com/in/sayyed-arib-hussain-1220b5187/'}
 					github={'https://www.github.com/sayyedarib'}
 					name={'Anmol Agrawal'}
-					photo={''}
+					photo={'https://drive.google.com/open?id=1RWAmO7-EsB9GdmQY98bv1nOum3ZjhoDD'}
 					desig={'Founder'}
 				/>
 								<Card
@@ -31,7 +31,7 @@ const Team = () => {
 					twitter={'#'}
 					linkedin={'#'}
 					name={'Abhishek Sharma'}
-					photo={''}
+					photo={'https://drive.google.com/open?id=1mZX-hxB0SELryYm67bRAEHAIzkHunM87'}
 					desig={'Co-Founder'}
 				/>
 																<Card
@@ -49,7 +49,7 @@ const Team = () => {
 					twitter={'#'}
 					linkedin={'#'}
 					name={'Hamid Husain'}
-					photo={''}
+					photo={'https://drive.google.com/open?id=16hq_9jnitCAJi7KwgQ0ZbZu9yM0n3eBt'}
 					desig={'Web Devloper'}
 				/>
 				<Card
@@ -61,15 +61,6 @@ const Team = () => {
 					photo={''}
 					desig={'Web Devloper'}
 				/>
-				<Card
-					facebook={'#'}
-					insta={'#'}
-					twitter={'#'}
-					linkedin={'#'}
-					name={'Name Here'}
-					photo={''}
-					desig={'Designation'}
-				/>
 
 				<Card
 					facebook={'#'}
@@ -77,7 +68,7 @@ const Team = () => {
 					twitter={'#'}
 					linkedin={'#'}
 					name={'Mohd Huzaifa'}
-					photo={''}
+					photo={'https://drive.google.com/open?id=1dC-R3gjQlBY0fpBcvllON81evw6QCscP'}
 					desig={'Designation'}
 				/>
 								<Card
@@ -95,7 +86,7 @@ const Team = () => {
 					twitter={'#'}
 					linkedin={'#'}
 					name={'Muskan Azmi'}
-					photo={''}
+					photo={'https://drive.google.com/open?id=1Lqd4NUWK-VIXiE6dwggEI8q4QR--9eyZ'}
 					desig={'Content Writer'}
 				/>
 								<Card
@@ -104,7 +95,7 @@ const Team = () => {
 					twitter={'#'}
 					linkedin={'#'}
 					name={'Mohd Areeb Hasan Khan'}
-					photo={''}
+					photo={'https://drive.google.com/open?id=1jI1CVdbEU_I4_LhYhIC1bKqlsPH6Th1Q'}
 					desig={'Graphics Designer'}
 				/>
 												<Card
@@ -113,7 +104,7 @@ const Team = () => {
 					twitter={'#'}
 					linkedin={'#'}
 					name={'Faisal Ahmad '}
-					photo={''}
+					photo={'https://drive.google.com/open?id=1KCQyKywheQL6ojlxfLP9tMT5ql6083Qj'}
 					desig={'Graphics Designer'}
 				/>
 												<Card
@@ -122,7 +113,7 @@ const Team = () => {
 					twitter={'#'}
 					linkedin={'#'}
 					name={'Aakifah Aiman Sayyeda'}
-					photo={''}
+					photo={'https://drive.google.com/open?id=1_VCKWtLTfFdpELXHgOnHXPVeXhrAEWFz'}
 					desig={'Social Media Team head'}
 				/>
 												<Card
@@ -131,7 +122,7 @@ const Team = () => {
 					twitter={'#'}
 					linkedin={'https://www.linkedin.com/in/laksh-gupta-a35a66221'}
 					name={'Laksh Gupta '}
-					photo={''}
+					photo={'https://drive.google.com/open?id=1_VCKWtLTfFdpELXHgOnHXPVeXhrAEWFz'}
 					desig={'Social media member'}
 				/>
 			</div>

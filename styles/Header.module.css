@@ -10,7 +10,8 @@
 
 /* Amupedia text in the center of the page */
 .center_text {
-	font-family: "Balsamiq Sans", cursive;
+	font-family: "Balsamiq Sans",
+    sans-serif;
 	text-transform: uppercase;
 	position: relative;
 	z-index: 30;

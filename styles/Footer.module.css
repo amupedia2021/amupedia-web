@@ -1,7 +1,8 @@
 /* Footer Styling  */
 /* background overlapping footer  */
 #above_bg {
-	font-family: "Baloo Bhai 2";
+	font-family: "Baloo Bhai 2",
+    sans-serif;
 	font-size: 23px;
 	background: url("/images/footer/footer_bacg.jpeg") no-repeat center
 		center/cover;
@@ -54,7 +55,8 @@
 }
 
 #ftbg p {
-	font-family: "Baloo Bhai 2";
+	font-family: "Baloo Bhai 2",
+    sans-serif;
 	font-size: 19px;
 	text-align: center;
 	position: relative;

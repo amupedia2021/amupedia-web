@@ -4,43 +4,51 @@ export const firstYearSems = [
 		subjects: [
 			{
 				name: 'Applied Mathematics 1',
+				slug: 'applied-mathematics-1',
 				img: null,
 				linkToPage: '/courses/btech/first-year/applied-mathematics-1',
 			},
 			{
 				name: 'Applied Chemistry',
+				slug: 'applied-chemistry',
 				img: null,
 				linkToPage: '/courses/btech/first-year/applied-chemistry',
 			},
 			{
 				name: 'Thermodynamics',
+				slug: 'thermo-dynamics',
 				img: null,
 				linkToPage: '/courses/btech/first-year/thermo-dynamics',
 			},
 			{
 				name: 'Electrical Engineering',
+				slug: 'electrical-engineering',
 				img: null,
 				linkToPage: '/courses/btech/first-year/electrical-engineering',
 			},
 			{
 				name: 'Environmental Studies',
+				slug: 'environmental-studies',
 				img: null,
 				linkToPage: '/courses/btech/first-year/environmental-studies',
 			},
 			{
 				name: 'Applied Chemistry Lab',
+				slug: 'applied-chemistry-lab',
 				img: null,
-				linkToPage: '/courses/btech/first-year',
+				linkToPage: '/courses/btech/first-year/applied-chemistry-lab',
 			},
 			{
 				name: 'Computer Programming Lab',
+				slug: 'computer-programming-lab',
 				img: null,
-				linkToPage: '/courses/btech/first-year',
+				linkToPage: '/courses/btech/first-year/computer-programming-lab',
 			},
 			{
 				name: 'Engineering Graphics',
+				slug: 'engineering-graphics',
 				img: null,
-				linkToPage: '/courses/btech/first-year',
+				linkToPage: '/courses/btech/first-year/engineering-graphics',
 			},
 		],
 	},
@@ -428,6 +436,24 @@ export function getSubjectPages(subject) {
 		},
 		'engineering-graphics': {
 			name: 'Engineering Graphics',
+			bgImg: '/images/btech/firstYear/applied_chemistry.jpg',
+			units: [
+				{
+					unitNo: 1,
+					unitName: '',
+					notes: [],
+					videoLectures: [],
+					assignments: [],
+				},
+			],
+			shortNotes: [],
+			previousPapers: {
+				midSem: [],
+				endSem: [],
+			},
+		},
+		'circuit-theory': {
+			name: 'Circuit Theory',
 			bgImg: '/images/btech/firstYear/applied_chemistry.jpg',
 			units: [
 				{
