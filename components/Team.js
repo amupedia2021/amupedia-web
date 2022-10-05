@@ -24,7 +24,7 @@ const Team = () => {
           }
           github={"https://www.github.com/sayyedarib"}
           name={"Anmol Agrawal"}
-          photo={"/public/images/team/Anmol Agrawal.jpg"}
+          photo={"/images/team/Anmol.jpg"}
           desig={"Founder"}
         />
         <Card
@@ -33,7 +33,7 @@ const Team = () => {
           twitter={"#"}
           linkedin={"#"}
           name={"Abhishek Sharma"}
-          photo={"/public/images/team/"}
+          photo={"/images/team/IMG-20220306-WA0033.jpg"}
           desig={"Co-Founder"}
         />
         <Card
@@ -41,7 +41,7 @@ const Team = () => {
           insta={"#"}
           twitter={"#"}
           linkedin={"#"}
-          name={"Muhaiyuddin Sabir"}
+          name={"Muhaiyuddin"}
           photo={""}
           desig={"Search Engine Optimization Manager"}
         />
@@ -51,7 +51,7 @@ const Team = () => {
           twitter={"#"}
           linkedin={"#"}
           name={"Hamid Husain"}
-          photo={"/public/images/team/Hamid Husain.jpg"}
+          photo={"/images/team/Hamid.jpg"}
           desig={"Web Devloper"}
         />
         <Card
@@ -61,8 +61,8 @@ const Team = () => {
           linkedin={
             "https://www.linkedin.com/in/sayyed-arib-hussain-1220b5187/"
           }
-          name={"Sayyed Arib Hussain"}
-          photo={"/public/images/team/Aarib.jpg"}
+          name={"Aarib"}
+          photo={"/images/team/Aarib.jpg"}
           desig={"Web Devloper"}
         />
 
@@ -72,7 +72,7 @@ const Team = () => {
           twitter={"#"}
           linkedin={"#"}
           name={"Mohd Huzaifa"}
-          photo={"/public/images/team/Mohd Huzaifa Khan.jpg"}
+          photo={"/images/team/Huzaifa.jpg"}
           desig={"Designation"}
         />
         <Card
@@ -81,7 +81,7 @@ const Team = () => {
           twitter={"#"}
           linkedin={"#"}
           name={"Abdul Saboor"}
-          photo={"/public/images/team/Abdul Saboor.jpg"}
+          photo={"/images/team/Abdul.jpg"}
           desig={"Management Team member"}
         />
         <Card
@@ -90,7 +90,7 @@ const Team = () => {
           twitter={"#"}
           linkedin={"#"}
           name={"Muskan Azmi"}
-          photo={"/public/images/team/Muskan Azmi.jpg"}
+          photo={"/images/team/Muskan.jpg"}
           desig={"Content Writer"}
         />
         <Card
@@ -98,8 +98,8 @@ const Team = () => {
           insta={"#"}
           twitter={"#"}
           linkedin={"#"}
-          name={"Mohd Areeb Hasan Khan"}
-          photo={"/public/images/team/MOHAMMAD AREEB HASAN KHAN.jpeg"}
+          name={"Mohd Areeb"}
+          photo={"/images/team/AREEB.jpeg"}
           desig={"Graphics Designer"}
         />
         <Card
@@ -107,8 +107,8 @@ const Team = () => {
           insta={"#"}
           twitter={"#"}
           linkedin={"#"}
-          name={"Faisal Ahmad "}
-          photo={"/public/images/team/FAISAL AHMAD.jpg"}
+          name={"Faisal Ahmad"}
+          photo={"/images/team/FAISAL.jpg"}
           desig={"Graphics Designer"}
         />
         <Card
@@ -116,8 +116,8 @@ const Team = () => {
           insta={"https://instagram.com/lostincaves?r=nametag"}
           twitter={"#"}
           linkedin={"#"}
-          name={"Aakifah Aiman Sayyeda"}
-          photo={"/public/images/team/Aakifah Aiman.jpeg"}
+          name={"Aakifah Aiman"}
+          photo={"/images/team/Aakifah.jpeg"}
           desig={"Social Media Team head"}
         />
         <Card
@@ -125,8 +125,8 @@ const Team = () => {
           insta={"https://instagram.com/laksh__gupta.__?igshid=YmMyMTA2M2Y="}
           twitter={"#"}
           linkedin={"https://www.linkedin.com/in/laksh-gupta-a35a66221"}
-          name={"Laksh Gupta "}
-          photo={"/public/images/team/Lakshya.jpg"}
+          name={"Laksh Gupta"}
+          photo={"/images/team/Lakshya.jpg"}
           desig={"Social media member"}
         />
       </div>
