@@ -19,9 +19,7 @@ const Team = () => {
           facebook={"#"}
           insta={"#"}
           twitter={"#"}
-          linkedin={
-            "https://www.linkedin.com/in/sayyed-arib-hussain-1220b5187/"
-          }
+          linkedin={"#"}
           github={"https://www.github.com/sayyedarib"}
           name={"Anmol Agrawal"}
           photo={"/images/team/Anmol.jpg"}
@@ -38,13 +36,16 @@ const Team = () => {
         />
         <Card
           facebook={"#"}
-          insta={"#"}
+          insta={"https://www.instagram.com/?hl=en"}
           twitter={"#"}
-          linkedin={"#"}
-          name={"Muhaiyuddin"}
-          photo={""}
-          desig={"Search Engine Optimization Manager"}
+          linkedin={
+            "https://www.linkedin.com/in/sayyed-arib-hussain-1220b5187/"
+          }
+          name={"Aarib"}
+          photo={"/images/team/Aarib.jpg"}
+          desig={"Web Devloper"}
         />
+
         <Card
           facebook={"#"}
           insta={"#"}
@@ -56,14 +57,12 @@ const Team = () => {
         />
         <Card
           facebook={"#"}
-          insta={"https://www.instagram.com/?hl=en"}
+          insta={"#"}
           twitter={"#"}
-          linkedin={
-            "https://www.linkedin.com/in/sayyed-arib-hussain-1220b5187/"
-          }
-          name={"Aarib"}
-          photo={"/images/team/Aarib.jpg"}
-          desig={"Web Devloper"}
+          linkedin={"#"}
+          name={"Muhaiyuddin"}
+          photo={""}
+          desig={"Search Engine Optimization Manager"}
         />
 
         <Card
