@@ -1,34 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Amupedia
 
-## Getting Started
+## _Simple website that will blow your mind!_
 
-First, run the development server:
+<img width="959" alt="Screenshot 2022-10-06 13-14-32" src="https://user-images.githubusercontent.com/56462749/196167807-122487df-62c4-445f-b58c-7884a26db1ba.png">
+<img width="959" alt="Screenshot 2022-10-06 13-14-19" src="https://user-images.githubusercontent.com/56462749/196167803-bc606c1c-a03f-40c0-9c51-b6f2576234c1.png">
 
-```bash
-npm run dev
-# or
-yarn dev
+## About
+
+Founded by the students of ZHCET in 2021, Amupedia is the biggest platform to help fellow students through their college program. This initiative will cater to the academic demands of the students and give assistance to them in every way possible. Everyone out there is running in the race to the top, and we here offer a push to anyone who needs it. Whether you come for the notes, read our blogs, or attend our events, you will emerge from Amupedia with new knowledge, perspective, influences, and connections.
+
+
+### How to Contribute to this repository
+
+1. Fork the repository (Click the Fork button in the top right of this page,
+   click your Profile Image)
+2. Clone the forked repository to your local machine.
+
+```markdown
+git clone https://github.com/your-username/Project-Amupedia.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. change the present working directory
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```markdown
+cd Project-Amupedia
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+5. Make your changes
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```markdown
+git add . git commit -m "Your commit Message" git push origin branch-name
+```
 
-## Learn More
+- Make a pull request.
+- Star the repository.
 
-To learn more about Next.js, take a look at the following resources:
+### NOTE
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Make Sure you commit your changes in a new branch.
+- Make Sure you Give proper name to your files describing the addition.
+- Also Make Sure you comment your code wherever necessary.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Features
 
-## Deploy on Vercel
+- Providing you all the quality stuff related to B.Tech, B.Com, B.E, and various other courses.
+- The pdfs related to experiment, viva, and quizzes question, the mid and end semester examination as well as the assignments.
+- We are providing all this content for free.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## REPO STATUS
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![GitHub PR Open](https://img.shields.io/github/issues-pr/amupedia2021/Project-Amupedia?style=for-the-badge&color=aqua)
+![GitHub PR closed](https://img.shields.io/github/issues-pr-closed-raw/amupedia2021/Project-Amupedia?style=for-the-badge&color=blue)
+![GitHub language count](https://img.shields.io/github/languages/count/amupedia2021/Project-Amupedia?style=for-the-badge&color=brightgreen)
+<br><br>
+
+## Our Contributors
+
+<a href="https://github.com/amupedia2021/Project-Amupedia/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=amupedia2021/Project-Amupedia" />
+</a>
+
+<br>
+<div align="center">
+Show some ❤️ by starring this awesome repository!
+</div>
