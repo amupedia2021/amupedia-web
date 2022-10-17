@@ -46,6 +46,18 @@ const Team = () => {
           desig={"Web Devloper"}
         />
 
+<Card
+          facebook={"#"}
+          insta={"#"}
+          twitter={"#"}
+          linkedin={
+            "https://www.linkedin.com/in/muhammad-jufri/"
+          }
+          name={"Muhammad"}
+          photo={"/images/team/muhammad.webp"}
+          desig={"Web Devloper"}
+        />
+
         <Card
           facebook={"#"}
           insta={"#"}
