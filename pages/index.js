@@ -1,16 +1,17 @@
 // import Head from "next/head";
-import { useState } from "react";
-import Image from "next/image";
-import pdf from "@images/home/pdf.svg";
-import chap_yt from "@images/home/yt.svg";
-import quiz from "@images/home/test_and_quiz.svg";
-import assign from "@images/home/assignment.svg";
-import Tilt from "react-vanilla-tilt";
-import styles from "@styles/Home.module.css";
-import Header from "components/Header";
-import Link from "next/link";
-import Footer from "components/Footer";
-import BlogCard from "components/BlogCard";
+import { useState } from 'react';
+import Image from 'next/image';
+import pdf from '@images/home/pdf.svg';
+import chap_yt from '@images/home/yt.svg';
+import quiz from '@images/home/test_and_quiz.svg';
+import assign from '@images/home/assignment.svg';
+import Tilt from 'react-vanilla-tilt';
+import styles from '@styles/Home.module.css';
+import Header from 'components/Header';
+import Link from 'next/link';
+import Footer from 'components/Footer';
+
+
 
 export default function Home() {
   const emptyForm = {
@@ -35,44 +36,44 @@ export default function Home() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  return (
-    <>
-      <Header image={headerImg} text="Amupedia" />
-      <main>
-        <section id={styles.content}>
-          {/* <!-- Our Mission Container --> */}
-          <div className={styles.mission}>
-            <h2>Our Mission</h2>
-            <p>
-              We are the students of AMU, intending to provide you all the
-              quality stuff related to B.Tech, B.Com, B.E, and various other
-              courses, the pdfs related to experiment, viva, and quizzes
-              question, the mid and end semester examination as well as the
-              assignments. We are providing all this content for free.
-            </p>
-          </div>
-          {/* Our Services Section  */}
-          <div id={styles.ourserv}>
-            <h2>Our Services</h2>
-            <div id={styles.ourserimgs}>
-              <div>
-                <Image src={pdf} alt="pdfs" />
-                <p>PDFs OF ALL SUBJECTS</p>
-              </div>
-              <div>
-                <Image src={chap_yt} alt="explaination" />
-                <p>CHAPTER EXPLANATION BY YOUTUBE VIDEO</p>
-              </div>
-              <div>
-                <Image src={quiz} alt="solutions" />
-                <p>SOLUTION OF TEST AND QUIZZES</p>
-              </div>
-              <div>
-                <Image src={assign} alt="assignments" />
-                <p>ASSIGNMENTS GIVEN</p>
-              </div>
-            </div>
-          </div>
+	return (
+		<>
+			<Header image={headerImg} text="Amupedia" />
+			<main>
+				<section id={styles.content}>
+					{/* <!-- Our Mission Container --> */}
+					<div className={styles.mission}>
+						<h2>Our Mission</h2>
+						<p>
+							We are the students of AMU, intending to provide you all the
+							quality stuff related to B.Tech, B.Com, B.E, and various other
+							courses, the pdfs related to experiment, viva, and quizzes
+							question, the mid and end semester examination as well as the
+							assignments. We are providing all this content for free.
+						</p>
+					</div>
+					{/* Our Services Section  */}
+					<div id={styles.ourserv}>
+						<h2>Our Services</h2>
+						<div id={styles.ourserimgs}>
+							<div>
+								<Image src={pdf} alt="pdfs" />
+								<p>PDFs OF ALL SUBJECTS</p>
+							</div>
+							<div>
+								<Image src={chap_yt} alt="explaination" />
+								<p>CHAPTER EXPLANATION BY YOUTUBE VIDEO</p>
+							</div>
+							<div>
+								<Image src={quiz} alt="solutions" />
+								<p>SOLUTION OF TEST AND QUIZZES</p>
+							</div>
+							<div>
+								<Image src={assign} alt="assignments" />
+								<p>ASSIGNMENTS GIVEN</p>
+							</div>
+						</div>
+					</div>
 
           {/* <!-- grab your notes section  --> */}
           <div className={styles.courses} id="courses">
