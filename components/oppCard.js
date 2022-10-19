@@ -10,11 +10,11 @@ const OppCard = (props) => {
 			</div>
 			<div className={styles.cardInfo}>
 				<div className={styles.title}>
-					<h3>Title</h3>
-					<span>Date Added -</span>
+					<h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit...</h3>
+					<span>Posted On </span>
 				</div>
 				<Link href="#">
-					<a className={styles.link}>Apply Now</a>
+					<button className={styles.link}>Detials</button>
 				</Link>
 			</div>
 		</div>
