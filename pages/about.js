@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Header from 'components/Header';
 import styles from '@styles/scss/main.module.scss';
 import Footer from 'components/Footer';
@@ -7,6 +8,13 @@ export default function About() {
 	const image = '/images/about/about_bg.svg';
 	return (
 		<>
+			<Head>
+			 <title>About | Amupedia</title>
+			  <meta
+			   name="description"
+			   content="Amupedia is the biggest platform to help fellow students through their college program."
+			  />
+			</Head>
 			<Header image={image} text="About Us" />
 			<main id={styles.content}>
 				{/* <!-- About Us Container --> */}
