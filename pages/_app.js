@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps, router }) {
 		<StoreProvider>
 			{/* <div id="signInDiv"></div> */}
 			<Alert />
-			{/* <Login /> */}
+			<Login />
 			<motion.div
 				key={router.route}
 				initial="pageInitial"
@@ -63,6 +63,11 @@ function MyApp({ Component, pageProps, router }) {
 				}}
 			>
 				<Head>
+					<script
+						async
+						src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6172950963478417"
+						crossOrigin="anonymous"
+					></script>
 					<script
 						src="https://accounts.google.com/gsi/client"
 						async

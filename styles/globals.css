@@ -176,3 +176,58 @@ input:focus {
   position: relative !important;
   object-fit: cover;
 }
+
+/* CSS for 404 pages */
+.errorWrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorWrapper>svg {
+  width: 70%;
+  height: auto;
+}
+
+/* css for error page */
+#lightLamp {
+  animation: lamp 3s linear infinite;
+}
+
+@keyframes lamp {
+  49% {
+    opacity: 0;
+  }
+
+  55% {
+    opacity: 1;
+  }
+
+  59% {
+    opacity: 0;
+  }
+
+  65% {
+    opacity: 1;
+  }
+}
+
+#hand {
+  animation: rotate 3s ease-in-out infinite;
+  transform-origin: 89.5%;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(16deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
