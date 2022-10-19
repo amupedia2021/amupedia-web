@@ -78,6 +78,36 @@ function MyApp({ Component, pageProps, router }) {
 						name="description"
 						content="Amupedia is an initiative to help college students pursuing B.Tech, B.E or B.Com, especially from AMU."
 					/>
+					<meta name="keywords" content="B.Tech, B.Com, B.E" />
+					<meta property="og:image" content="https://www.amupedia.com/og-image.jpg" />
+					<meta property="og:image:width" content="150" />
+					<meta property="og:image:height" content="150" />
+					<meta property="og:title" content="Amupedia" />
+					<meta property="og:description" content="Amupedia is an initiative to help college students pursuing B.Tech, B.E or B.Com, especially from AMU." />
+					<meta name="twitter:card" content="summary" />
+					<meta property="og:url" content="https://www.amupedia.com" />
+					<script type="application/ld+json">
+					{
+						"@context": "https://schema.org/", 
+						"@type": "BreadcrumbList", 
+						"itemListElement": [{
+							"@type": "ListItem", 
+							"position": 1, 
+							"name": "Home",
+							"item": "https://www.amupedia.com"  
+						},{
+							"@type": "ListItem", 
+							"position": 2, 
+							"name": "About",
+							"item": "https://www.amupedia.com/about"  
+						},{
+							"@type": "ListItem", 
+							"position": 3, 
+							"name": "Blogs",
+							"item": "https://www.amupedia.com/blog"  
+						}]
+					}
+					</script>
 				</Head>
 				<Navbar />
 				<Component {...pageProps} />
