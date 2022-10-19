@@ -2,53 +2,53 @@ import Navbar from '@comp/Navbar';
 import jwt from 'jsonwebtoken';
 import '@styles/globals.css';
 import Head from 'node_modules/next/head';
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { StoreProvider } from 'utils/Store/Store';
 import Alert from 'components/Alert';
-// import Login from 'components/Login';
+import Login from 'components/Login';
 
 function MyApp({ Component, pageProps, router }) {
-	// function handleCallbackResponse(response) {
-	// 	const token = response.credential;
-	// 	// got all the info from the user
-	// 	console.log(`Token : ${token}`);
-	// 	const user = jwt.decode(token);
-	// 	console.log(user);
-	// }
+	function handleCallbackResponse(response) {
+		const token = response.credential;
+		// got all the info from the user
+		console.log(`Token : ${token}`);
+		const user = jwt.decode(token);
+		console.log(user);
+	}
 
-	// useEffect(() => {
-	// 	/*global google */
-	// 	// console.log(google);
-	// 	try {
-	// 		window.onload = () => {
-	// 			google.accounts.id.initialize({
-	// 				client_id:
-	// 					'647067039859-t83enorpm9oglinm1rja79ls29ts0kvo.apps.googleusercontent.com',
-	// 				// callback function is called when someone logs in
-	// 				callback: handleCallbackResponse,
-	// 			});
+	useEffect(() => {
+		/*global google */
+		// console.log(google);
+		try {
+			window.onload = () => {
+				google.accounts.id.initialize({
+					client_id:
+						'647067039859-t83enorpm9oglinm1rja79ls29ts0kvo.apps.googleusercontent.com',
+					// callback function is called when someone logs in
+					callback: handleCallbackResponse,
+				});
 
-	// 			google.accounts.id.renderButton(
-	// 				document.getElementById('googleSignIn'),
-	// 				{
-	// 					theme: 'outline',
-	// 					size: 'large',
-	// 				}
-	// 			);
+				google.accounts.id.renderButton(
+					document.getElementById('googleSignIn'),
+					{
+						theme: 'outline',
+						size: 'large',
+					}
+				);
 
-	// 			google.accounts.id.prompt();
-	// 		};
-	// 	} catch (error) {
-	// 		console.log(error);
-	// 	}
-	// }, []);
+				google.accounts.id.prompt();
+			};
+		} catch (error) {
+			console.log(error);
+		}
+	}, []);
 
 	return (
 		<StoreProvider>
 			{/* <div id="signInDiv"></div> */}
 			<Alert />
-			{/* <Login /> */}
+			<Login />
 			<motion.div
 				key={router.route}
 				initial="pageInitial"
@@ -78,6 +78,36 @@ function MyApp({ Component, pageProps, router }) {
 						name="description"
 						content="Amupedia is an initiative to help college students pursuing B.Tech, B.E or B.Com, especially from AMU."
 					/>
+					<meta name="keywords" content="B.Tech, B.Com, B.E" />
+					<meta property="og:image" content="https://www.amupedia.com/og-image.jpg" />
+					<meta property="og:image:width" content="150" />
+					<meta property="og:image:height" content="150" />
+					<meta property="og:title" content="Amupedia" />
+					<meta property="og:description" content="Amupedia is an initiative to help college students pursuing B.Tech, B.E or B.Com, especially from AMU." />
+					<meta name="twitter:card" content="summary" />
+					<meta property="og:url" content="https://www.amupedia.com" />
+					<script type="application/ld+json">
+					{
+						"@context": "https://schema.org/", 
+						"@type": "BreadcrumbList", 
+						"itemListElement": [{
+							"@type": "ListItem", 
+							"position": 1, 
+							"name": "Home",
+							"item": "https://www.amupedia.com"  
+						},{
+							"@type": "ListItem", 
+							"position": 2, 
+							"name": "About",
+							"item": "https://www.amupedia.com/about"  
+						},{
+							"@type": "ListItem", 
+							"position": 3, 
+							"name": "Blogs",
+							"item": "https://www.amupedia.com/blog"  
+						}]
+					}
+					</script>
 				</Head>
 				<Navbar />
 				<Component {...pageProps} />

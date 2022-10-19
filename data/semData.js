@@ -391,7 +391,9 @@ export function getSubjectPages(subject) {
 				midSem: [
 					'https://drive.google.com/drive/folders/1PLy-bYg-Uje9Rhq3HRcvExVRtP2COSrQ?usp=sharing',
 				],
-				endSem: [],
+				endSem: [
+					'https://drive.google.com/drive/folders/1c-y3H786xpFyKEXn5sykLZMj7nVsN3hM?usp=sharing'
+				],
 			},
 		},
 		'applied-chemistry-lab': {
