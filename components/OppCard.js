@@ -14,7 +14,7 @@ const OppCard = (props) => {
 					<span>Posted On</span>
 				</div>
 				<Link href="#">
-					<a className={styles.link}>Details</a>
+					<button className={styles.link}>Details</button>
 				</Link>
 			</div>
 		</div>
