@@ -15,6 +15,7 @@ Founded by the students of ZHCET in 2021, Amupedia is the biggest platform to he
 1. Fork the repository (Click the Fork button in the top right of this page,
    click your Profile Image)
 2. Clone the forked repository to your local machine.
+3. Make your branch from test branch.
 
 ```markdown
 git clone https://github.com/your-username/Project-Amupedia.git
