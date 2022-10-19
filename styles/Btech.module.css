@@ -50,7 +50,7 @@
   border-radius: 14px;
   cursor: pointer;
   text-shadow: -2px -2px 8px rgba(0, 0, 0, 0.906);
-  transition: all 0.8s ease-out;
+  transition: all 0.8s ease-in-out;
 }
 
 /* styling for para in branches div  */
