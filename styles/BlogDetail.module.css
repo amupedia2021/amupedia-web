@@ -109,4 +109,12 @@
   .blogHeaderInfo {
     justify-content: center;
   }
+
+  .blogHeaderInfoLeft > ul li {
+    font-size: 18px;
+  }
+
+  .blogCards {
+    justify-content: center;
+  }
 }
