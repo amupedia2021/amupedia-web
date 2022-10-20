@@ -1,77 +1,136 @@
-import styles from '@styles/scss/main.module.scss';
-import Card from './Teamcard';
+import styles from "@styles/scss/main.module.scss";
+import Card from "./Teamcard";
 
 const Team = () => {
-	return (
-		<>
-			<h2 className={styles.heading}>Our Team</h2>
-			<div className={styles.team}>
-				<Card
-					facebook={'#'}
-					insta={'#'}
-					twitter={'#'}
-					linkedin={'#'}
-					name={'Haider Ali'}
-					photo={'/images/team/haider.jpg'}
-					desig={'Co-Founder and Core Developer'}
-				/>
-				<Card
-					facebook={'#'}
-					insta={'#'}
-					twitter={'#'}
-					linkedin={'#'}
-					name={'Name Here'}
-					photo={''}
-					desig={'Designation'}
-				/>
-				<Card
-					facebook={'#'}
-					insta={'#'}
-					twitter={'#'}
-					linkedin={'#'}
-					name={'Name Here'}
-					photo={''}
-					desig={'Designation'}
-				/>
-				<Card
-					facebook={'#'}
-					insta={'#'}
-					twitter={'#'}
-					linkedin={'#'}
-					name={'Name Here'}
-					photo={''}
-					desig={'Designation'}
-				/>
-				<Card
-					facebook={'#'}
-					insta={'#'}
-					twitter={'#'}
-					linkedin={'#'}
-					name={'Name Here'}
-					photo={''}
-					desig={'Designation'}
-				/>
-				<Card
-					facebook={'#'}
-					insta={'#'}
-					twitter={'#'}
-					linkedin={'#'}
-					name={'Name Here'}
-					photo={''}
-					desig={'Designation'}
-				/>
-				<Card
-					facebook={'#'}
-					insta={'#'}
-					twitter={'#'}
-					linkedin={'#'}
-					name={'Name Here'}
-					photo={''}
-					desig={'Designation'}
-				/>
-			</div>
-		</>
-	);
+  return (
+    <>
+      <h2 className={styles.heading}>Our Team</h2>
+      <div className={styles.team}>
+        <Card
+          facebook={"#"}
+          insta={"#"}
+          twitter={"#"}
+          linkedin={"#"}
+          name={"Haider Ali"}
+          photo={"/images/team/haider.jpg"}
+          desig={"Co-Founder and Core Developer"}
+        />
+        <Card
+          facebook={"#"}
+          insta={"#"}
+          twitter={"#"}
+          linkedin={"#"}
+          github={"https://www.github.com/sayyedarib"}
+          name={"Anmol Agrawal"}
+          photo={"/images/team/Anmol.jpg"}
+          desig={"Founder"}
+        />
+        <Card
+          facebook={"#"}
+          insta={"#"}
+          twitter={"#"}
+          linkedin={"#"}
+          name={"Abhishek Sharma"}
+          photo={"/images/team/IMG-20220306-WA0033.jpg"}
+          desig={"Co-Founder"}
+        />
+        <Card
+          facebook={"#"}
+          insta={"https://www.instagram.com/?hl=en"}
+          twitter={"#"}
+          linkedin={
+            "https://www.linkedin.com/in/sayyed-arib-hussain-1220b5187/"
+          }
+          name={"Aarib"}
+          photo={"/images/team/Aarib.jpg"}
+          desig={"Web Devloper"}
+        />
+
+        <Card
+          facebook={"#"}
+          insta={"#"}
+          twitter={"#"}
+          linkedin={"#"}
+          name={"Hamid Husain"}
+          photo={"/images/team/Hamid.jpg"}
+          desig={"Web Devloper"}
+        />
+        <Card
+          facebook={"#"}
+          insta={"#"}
+          twitter={"#"}
+          linkedin={"#"}
+          name={"Muhaiyuddin"}
+          photo={""}
+          desig={"Search Engine Optimization Manager"}
+        />
+
+        <Card
+          facebook={"#"}
+          insta={"#"}
+          twitter={"#"}
+          linkedin={"#"}
+          name={"Mohd Huzaifa"}
+          photo={"/images/team/Huzaifa.jpg"}
+          desig={"Designation"}
+        />
+        <Card
+          facebook={"#"}
+          insta={"#"}
+          twitter={"#"}
+          linkedin={"#"}
+          name={"Abdul Saboor"}
+          photo={"/images/team/Abdul.jpg"}
+          desig={"Management Team member"}
+        />
+        <Card
+          facebook={"#"}
+          insta={"#"}
+          twitter={"#"}
+          linkedin={"#"}
+          name={"Muskan Azmi"}
+          photo={"/images/team/Muskan.jpg"}
+          desig={"Content Writer"}
+        />
+        <Card
+          facebook={"#"}
+          insta={"#"}
+          twitter={"#"}
+          linkedin={"#"}
+          name={"Mohd Areeb"}
+          photo={"/images/team/AREEB.jpeg"}
+          desig={"Graphics Designer"}
+        />
+        <Card
+          facebook={"#"}
+          insta={"#"}
+          twitter={"#"}
+          linkedin={"#"}
+          name={"Faisal Ahmad"}
+          photo={"/images/team/FAISAL.jpg"}
+          desig={"Graphics Designer"}
+        />
+        <Card
+          facebook={"#"}
+          insta={"https://instagram.com/lostincaves?r=nametag"}
+          twitter={"#"}
+          linkedin={"#"}
+          name={"Aakifah Aiman"}
+          photo={"/images/team/Aakifah.jpeg"}
+          desig={"Social Media Team head"}
+        />
+        <Card
+          facebook={"#"}
+          insta={"https://instagram.com/laksh__gupta.__?igshid=YmMyMTA2M2Y="}
+          twitter={"#"}
+          linkedin={"https://www.linkedin.com/in/laksh-gupta-a35a66221"}
+          name={"Laksh Gupta"}
+          photo={"/images/team/Lakshya.jpg"}
+          desig={"Social media member"}
+        />
+      </div>
+    </>
+  );
 };
 
 export default Team;
