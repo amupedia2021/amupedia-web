@@ -88,7 +88,7 @@ function MyApp({ Component, pageProps, router }) {
 					<meta property="og:url" content="https://www.amupedia.com" />
 					<script type="application/ld+json">
 					{
-						"@context": "https://schema.org/", 
+					{	"@context": "https://schema.org/", 
 						"@type": "BreadcrumbList", 
 						"itemListElement": [{
 							"@type": "ListItem", 
@@ -105,7 +105,7 @@ function MyApp({ Component, pageProps, router }) {
 							"position": 3, 
 							"name": "Blogs",
 							"item": "https://www.amupedia.com/blog"  
-						}]
+						}]}
 					}
 					</script>
 				</Head>
