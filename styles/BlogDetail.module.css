@@ -71,7 +71,7 @@
 }
 
 .blogPicture {
-  display: 'block';
+  display: "block";
   width: 100%;
   height: 100%;
   max-width: 1700px;
@@ -101,7 +101,7 @@
 
 .blogCards {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 35px;
 }
