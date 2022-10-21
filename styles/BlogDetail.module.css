@@ -101,6 +101,7 @@
 
 .blogCards {
   display: flex;
+  justify-content:center;
   flex-wrap: wrap;
   gap: 35px;
 }
@@ -112,9 +113,5 @@
 
   .blogHeaderInfoLeft > ul li {
     font-size: 18px;
-  }
-
-  .blogCards {
-    justify-content: center;
   }
 }
