@@ -32,6 +32,7 @@ function addProductJsonLd() {
 			}`,
 	};
 }
+
 function MyApp({ Component, pageProps, router }) {
 	// function handleCallbackResponse(response) {
 	// 	const token = response.credential;

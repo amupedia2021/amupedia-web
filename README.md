@@ -39,13 +39,13 @@ git add . git commit -m "Your commit Message" git push origin branch-name
 ### NOTE
 
 - Make Sure you commit your changes in a new branch.
-- Make Sure you Give proper name to your files describing the addition.
-- Also Make Sure you comment your code wherever necessary.
+- Make Sure you Give a proper name to your files describing the addition.
+- Also Make Sure you comment on your code wherever necessary.
 
 ## Features
 
-- Providing you all the quality stuff related to B.Tech, B.Com, B.E, and various other courses.
-- The pdfs related to experiment, viva, and quizzes question, the mid and end semester examination as well as the assignments.
+- Providing you with all the quality stuff related to B.Tech, B.Com, B.E, and various other courses.
+- The pdfs related to experiment, viva, quizzes question, the mid and end semester examination as well as the assignments.
 - We are providing all this content for free.
 
 ## REPO STATUS
