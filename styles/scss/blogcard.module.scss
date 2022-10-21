@@ -1,6 +1,6 @@
-@import './config';
+@import "./config";
 
-.cover{
+.cover {
   --bdr-rad: 10px;
   --title-text-size: 4vmin;
   --footer-text-size: 2.2vmin;
@@ -13,10 +13,10 @@
   max-width: 280px;
   margin: 6vmin 4.5vmin;
 
-  .image{
+  .image {
     border-radius: var(--bdr-rad);
 
-    & img{
+    & img {
       inset: 0;
       aspect-ratio: 1 / 1;
       object-fit: cover;
@@ -24,7 +24,7 @@
     }
   }
 
-  .title{
+  .title {
     font-size: var(--title-text-size);
     text-align: left;
     width: 100%;
@@ -39,10 +39,10 @@
   font-size: var(--footer-text-size);
 
   & .info {
-    span{
+    span {
       margin: 0 5px;
-      
-      & > .icon{
+
+      & > .icon {
         margin: 0 0 1px 4px;
         color: blue;
       }

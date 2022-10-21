@@ -1,6 +1,6 @@
-@import './config';
+@import "./config";
 
-.container{
+.container {
   margin-top: var(--header-margin);
   @include flex;
   flex-wrap: wrap;

@@ -1,23 +1,23 @@
-@import './config';
+@import "./config";
 
-.main{
+.main {
   background: rgb(240, 240, 240);
   border-radius: 15px;
   width: 100%;
   @include flex;
   justify-content: space-between;
 
-  & > div{
+  & > div {
     cursor: pointer;
     border-radius: 15px;
     padding: 0.5vmin 4vmin;
     transition: all 0.5s ease-in-out;
 
-    &.active{
-      background: #6565FE;
+    &.active {
+      background: #6565fe;
       color: #fff;
     }
-    & > span{
+    & > span {
       font-size: 4vmin;
       font-weight: bold;
     }
