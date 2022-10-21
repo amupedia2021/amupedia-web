@@ -2678,7 +2678,11 @@
     "file-loader" "^6.2.0"
     "url-loader" "^4.1.0"
 
+<<<<<<< HEAD
 "next@>=10.2.0", "next@12.0.7":
+=======
+"next@^12.0.7", "next@>=10.2.0":
+>>>>>>> master
   "integrity" "sha512-sKO8GJJYfuk9c+q+zHSNumvff+wP7ufmOlwT6BuzwiYfFJ61VTTkfTcDLSJ+95ErQJiC54uS4Yg5JEE8H6jXRA=="
   "resolved" "https://registry.npmjs.org/next/-/next-12.0.7.tgz"
   "version" "12.0.7"
