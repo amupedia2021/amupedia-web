@@ -21,8 +21,8 @@ export const firstYearSems = [
 				linkToPage: '/courses/btech/first-year/thermo-dynamics',
 			},
 			{
-				name: 'Computer-S',
-				slug: 'Computer-S',
+				name: 'electrical-engineering',
+				slug: 'electrical-engineering',
 				img: null,
 				linkToPage: '/courses/btech/first-year/electrical-engineering',
 			},
