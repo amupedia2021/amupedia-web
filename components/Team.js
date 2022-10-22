@@ -70,7 +70,7 @@ const Team = () => {
           twitter={"#"}
           linkedin={"https://www.linkedin.com/in/muhaiyuddin/"}
           name={"Muhaiyuddin"}
-          photo={""}
+          photo={"/images/team/black-image.jpg"}
           desig={"Search Engine Optimization Manager"}
         />
 
