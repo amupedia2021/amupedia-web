@@ -73,6 +73,15 @@ const Team = () => {
           photo={""}
           desig={"Search Engine Optimization Manager"}
         />
+          <Card
+          facebook={"#"}
+          insta={"https://instagram.com/shalini_baghel?igshid=YmMyMTA2M2Y="}
+          twitter={"#"}
+          linkedin={"https://www.linkedin.com/in/shalini-baghel-b058b0216"}
+          name={"Shalini Baghel"}
+          photo={"/images/team/Shalini.jpeg"}
+          desig={"Search Engine Optimization Manager"}
+        />
 
         <Card
           facebook={"#"}
