@@ -53,7 +53,6 @@ export const firstYearSems = [
 		],
 	},
 ];
-
 export function getSubjectPages(subject) {
 	const subjectPages = {
 		'applied-mathematics-1': {
