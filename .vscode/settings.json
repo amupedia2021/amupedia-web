@@ -1,5 +1,3 @@
 {
-    "marquee.widgets.npm-stats.packageNames": [
-        "amupedia"
-    ]
+  "marquee.widgets.npm-stats.packageNames": ["amupedia"]
 }

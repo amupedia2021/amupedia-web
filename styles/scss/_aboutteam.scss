@@ -1,12 +1,12 @@
 .team {
-	@include flex;
-	flex-wrap: wrap;
-	max-width: 1200px;
-	margin: auto;
+  @include flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
 }
 
 @include media-xl {
-	.team {
-		max-width: 1500px;
-	}
+  .team {
+    max-width: 1500px;
+  }
 }
