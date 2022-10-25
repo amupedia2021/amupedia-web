@@ -2,7 +2,7 @@ import styles from '@styles/oppCard.module.css';
 import Link from 'node_modules/next/link';
 
 const OppCard = (props) => {
-	const { title, date, image } = props;
+	const {title,date,image} = props;
 	return (
 		<div className={styles.main}>
 			<div className={styles.picture}>
