@@ -192,7 +192,9 @@ export default function Home() {
               <input
                 value={form.phone}
                 onChange={onChange}
-                type="number"
+                pattern="[1-9]{1}[0-9]{9}"
+                maxLength="10"
+                type="text"
                 name="phone"
                 placeholder="Phone"
                 className={styles.details}
