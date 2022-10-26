@@ -1,11 +1,11 @@
-import Navbar from '@comp/Navbar';
-import jwt from 'jsonwebtoken';
-import '@styles/globals.css';
-import Head from 'node_modules/next/head';
+import Navbar from "@comp/Navbar";
+import jwt from "jsonwebtoken";
+import "@styles/globals.css";
+import Head from "node_modules/next/head";
 // import { useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { StoreProvider } from 'utils/Store/Store';
-import Alert from 'components/Alert';
+import { motion } from "framer-motion";
+import { StoreProvider } from "utils/Store/Store";
+import Alert from "components/Alert";
 // import Login from 'components/Login';
 
 function addProductJsonLd() {
@@ -104,11 +104,17 @@ function MyApp({ Component, pageProps, router }) {
 						content="Amupedia is an initiative to help college students pursuing B.Tech, B.E or B.Com, especially from AMU."
 					/>
 					<meta name="keywords" content="B.Tech, B.Com, B.E" />
-					<meta property="og:image" content="https://www.amupedia.com/og-image.jpg" />
+					<meta
+						property="og:image"
+						content="https://www.amupedia.com/og-image.jpg"
+					/>
 					<meta property="og:image:width" content="150" />
 					<meta property="og:image:height" content="150" />
 					<meta property="og:title" content="Amupedia" />
-					<meta property="og:description" content="Amupedia is an initiative to help college students pursuing B.Tech, B.E or B.Com, especially from AMU." />
+					<meta
+						property="og:description"
+						content="Amupedia is an initiative to help college students pursuing B.Tech, B.E or B.Com, especially from AMU."
+					/>
 					<meta name="twitter:card" content="summary" />
 					<meta property="og:url" content="https://www.amupedia.com" />
 					<script

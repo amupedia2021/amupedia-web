@@ -1,32 +1,32 @@
 // import Head from "next/head";
-import { useState, useContext } from 'react';
-import Image from 'next/image';
-import pdf from '@images/home/pdf.svg';
-import chap_yt from '@images/home/yt.svg';
-import quiz from '@images/home/test_and_quiz.svg';
-import assign from '@images/home/assignment.svg';
-import Tilt from 'react-vanilla-tilt';
-import styles from '@styles/Home.module.css';
-import Header from 'components/Header';
-import Link from 'next/link';
-import Footer from 'components/Footer';
-import { Store } from 'utils/Store/Store';
-import Preloader from 'components/Preloader';
-import axios from 'node_modules/axios/index';
+import { useState, useContext } from "react";
+import Image from "next/image";
+import pdf from "@images/home/pdf.svg";
+import chap_yt from "@images/home/yt.svg";
+import quiz from "@images/home/test_and_quiz.svg";
+import assign from "@images/home/assignment.svg";
+import Tilt from "react-vanilla-tilt";
+import styles from "@styles/Home.module.css";
+import Header from "components/Header";
+import Link from "next/link";
+import Footer from "components/Footer";
+import { Store } from "utils/Store/Store";
+import Preloader from "components/Preloader";
+import axios from "node_modules/axios/index";
 
 export default function Home() {
 	const { dispatch } = useContext(Store);
 
 	const emptyForm = {
-		first_name: '',
-		last_name: '',
-		email: '',
-		phone: '',
-		address: '',
-		message: '',
+		first_name: "",
+		last_name: "",
+		email: "",
+		phone: "",
+		address: "",
+		message: "",
 	};
 
-	const headerImg = '/images/home/homeback.svg';
+	const headerImg = "/images/home/homeback.svg";
 
 	const [form, setForm] = useState(emptyForm);
 	const [loading, setLoading] = useState(false);
@@ -35,13 +35,13 @@ export default function Home() {
 		e.preventDefault();
 		setLoading(true);
 		try {
-			const res = await axios.post('/api/submitForm', form);
+			const res = await axios.post("/api/submitForm", form);
 			const data = await res.data;
 			console.log(data);
 			dispatch({
 				type: {
-					task: 'setAlert',
-					alert: { type: 'noti', message: 'Form Submitted Successfully' },
+					task: "setAlert",
+					alert: { type: "noti", message: "Form Submitted Successfully" },
 				},
 			});
 		} catch (error) {
