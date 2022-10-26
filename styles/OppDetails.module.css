@@ -44,17 +44,13 @@ margin-bottom: 20px;
 }
 
 .footer a{
-    background:linear-gradient(
-		90deg,
-		rgba(67, 21, 138, 1) 52%,
-		rgba(123, 8, 154, 1) 100%,
-		rgba(109, 0, 121, 1) 100%,
-		rgba(27, 0, 36, 1) 100%
-	);
+	background: linear-gradient(90.96deg, #3323AA 36.35%, #C344AD 86.68%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
     font-size: 20px;
     font-weight: 900;
-    -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 display: flex;
 align-items: center;
 gap: 0.8rem;
@@ -62,5 +58,5 @@ gap: 0.8rem;
 
 .footer a> svg{
     font-size: 15px;
-    color: rgba(109,0,121,1);
+    color: #C344AD;
 }

@@ -1,9 +1,14 @@
-import { useRouter } from 'next/router';
-import OppDetails from 'components/OppDetails';
 
-export default function BlogId() {
+import { useRouter } from "next/router";
+import OppDetails from "components/OppDetails";
 
-	const router = useRouter();
-	const { oppId } = router.query;
-	return <div><OppDetails></OppDetails></div>;
+export default function OppDetailsId() {
+  const router = useRouter();
+  const { oppId } = router.query;
+  return (
+    <div>
+      <OppDetails></OppDetails>
+    </div>
+  );
+
 }
