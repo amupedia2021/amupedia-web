@@ -19,22 +19,14 @@ margin: auto;
 
  .applyBtn{
     border:none;
-	background: rgb(67, 21, 138);
-	background: linear-gradient(
-		90deg,
-		rgba(67, 21, 138, 1) 52%,
-		rgba(123, 8, 154, 1) 100%,
-		rgba(109, 0, 121, 1) 100%,
-		rgba(27, 0, 36, 1) 100%
-	);
+	background: linear-gradient(91.44deg, #3323AA -6.68%, #B842A0 179.17%);
+
 	font-size: 2.8vmin;
 	font-weight: 600;
-	border-radius: 12px;
+	border-radius: 13px;
 	padding: 8px 15px;
 	color: white;
-	box-shadow: 0px 0px 12px 6px rgba(14, 0, 74, 0.25);
-	-webkit-box-shadow: 0px 0px 12px 6px rgba(14, 0, 74, 0.25);
-	-moz-box-shadow: 0px 0px 12px 6px rgba(14, 0, 74, 0.25);
+	filter: drop-shadow(0px 4px 30px rgba(113, 103, 190, 0.45));
 }
 .date{
     color: grey;
