@@ -1,11 +1,13 @@
 .main{
 display: flex;
 flex-direction: column;
-padding: 100px 50px;
+padding: 100px 0;
+width: 90%;
+max-width: 950px;
+margin: auto;
 }
 
-.header{
-    
+.header{  
     display: flex;
     justify-content: space-between;
     align-items: center;
