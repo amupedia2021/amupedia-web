@@ -1,5 +1,5 @@
 // import Head from "next/head";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Image from "next/image";
 import pdf from "@images/home/pdf.svg";
 import chap_yt from "@images/home/yt.svg";
@@ -10,9 +10,13 @@ import styles from "@styles/Home.module.css";
 import Header from "components/Header";
 import Link from "next/link";
 import Footer from "components/Footer";
-import BlogCard from "components/BlogCard";
+import { Store } from "utils/Store/Store";
+import Preloader from "components/Preloader";
+import axios from "node_modules/axios/index";
 
 export default function Home() {
+  const { dispatch } = useContext(Store);
+
   const emptyForm = {
     first_name: "",
     last_name: "",
@@ -25,9 +29,26 @@ export default function Home() {
   const headerImg = "/images/home/homeback.svg";
 
   const [form, setForm] = useState(emptyForm);
+  const [loading, setLoading] = useState(false);
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    try {
+      const res = await axios.post("/api/submitForm", form);
+      const data = await res.data;
+      console.log(data);
+      dispatch({
+        type: {
+          task: "setAlert",
+          alert: { type: "noti", message: "Form Submitted Successfully" },
+        },
+      });
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
     setForm(emptyForm);
   };
 
@@ -51,6 +72,7 @@ export default function Home() {
               assignments. We are providing all this content for free.
             </p>
           </div>
+
           {/* Our Services Section  */}
           <div id={styles.ourserv}>
             <h2>Our Services</h2>
@@ -120,13 +142,11 @@ export default function Home() {
                 </div>
               </Tilt>
             </Link>
-            <Link passHref href="/blog">
+            <Link passHref href="/">
               <Tilt className={styles.tlt}>
-                <a href="">
-                  <div className={styles.rec2}>
-                    <p>Blogs</p>
-                  </div>
-                </a>
+                <div className={styles.rec2}>
+                  <p>Blogs</p>
+                </div>
               </Tilt>
             </Link>
             <Link passHref href="/">
@@ -172,7 +192,9 @@ export default function Home() {
               <input
                 value={form.phone}
                 onChange={onChange}
-                type="number"
+                pattern="[1-9]{1}[0-9]{9}"
+                maxLength="10"
+                type="text"
                 name="phone"
                 placeholder="Phone"
                 className={styles.details}
@@ -196,7 +218,9 @@ export default function Home() {
                 className={styles.msg}
               />
             </div>
-            <input type="submit" id={styles.sub} />
+            <button type="submit" id={styles.sub}>
+              {loading ? <Preloader /> : <p>Submit</p>}
+            </button>
           </form>
         </section>
       </main>

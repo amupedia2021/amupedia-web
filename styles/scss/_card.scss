@@ -1,65 +1,64 @@
 .tilt {
-	width: 250px !important;
-	border-radius: 15px !important;
-	margin: 20px !important;
-	padding: 0 !important;
+  width: 250px !important;
+  border-radius: 15px !important;
+  margin: 20px !important;
+  padding: 0 !important;
 }
 .card {
-	width: 100%;
-	color: white !important;
-	border-radius: 15px !important;
-	cursor: pointer;
-	margin: 0;
+  width: 100%;
+  color: white !important;
+  border-radius: 15px !important;
+  cursor: pointer;
+  margin: 0;
 
-	&__space {
-		height: 250px;
-	}
+  &__space {
+    height: 250px;
+  }
 
-	&__info {
-		@include flex;
-		flex-direction: column;
-    
-	  transition: all 0.4s ease-in-out;
+  &__info {
+    @include flex;
+    flex-direction: column;
 
-		&_name {
-			line-height: 24px;
-			font-size: 1.8rem;
-			font-weight: bolder;
-			text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
-		}
-		&_desg {
+    transition: all 0.4s ease-in-out;
+
+    &_name {
+      line-height: 24px;
+      font-size: 1.8rem;
+      font-weight: bolder;
+      text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+    }
+    &_desg {
       text-align: center;
-			line-height: 19px;
-			text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
-			font-size: 1.2rem;
+      line-height: 19px;
+      text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.42);
+      font-size: 1.2rem;
       margin: 0.2rem 1rem;
-		}
-	}
+    }
+  }
 }
 
 .icon {
-	margin: 5px;
-	font-size: 2.5rem;
-	filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.42));
-	transition: all 0.2s linear;
-	&:hover {
-		transform: scale(1.04);
-	}
+  margin: 5px;
+  font-size: 2.5rem;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.42));
+  transition: all 0.2s linear;
+  &:hover {
+    transform: scale(1.04);
+  }
 }
 
-@media only screen and (min-width: 768px)
-{
-  .card__info{
+@media only screen and (min-width: 768px) {
+  .card__info {
     transform: translateY(50px);
   }
-  .icon{
+  .icon {
     opacity: 0;
   }
 
-  .card:hover > .card__info{
+  .card:hover > .card__info {
     transform: translateY(0px);
   }
-  .card:hover .icon{
+  .card:hover .icon {
     opacity: 1;
   }
 }

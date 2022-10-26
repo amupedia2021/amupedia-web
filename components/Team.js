@@ -10,7 +10,7 @@ const Team = () => {
           facebook={"#"}
           insta={"#"}
           twitter={"#"}
-          linkedin={"#"}
+          linkedin={"linkedin.com/in/haider-ali-553751223"}
           name={"Haider Ali"}
           photo={"/images/team/haider.jpg"}
           desig={"Co-Founder and Core Developer"}
@@ -19,8 +19,7 @@ const Team = () => {
           facebook={"#"}
           insta={"#"}
           twitter={"#"}
-          linkedin={"#"}
-          github={"https://www.github.com/sayyedarib"}
+          linkedin={"https://www.linkedin.com/in/anmol-agrawal-748389151/"}
           name={"Anmol Agrawal"}
           photo={"/images/team/Anmol.jpg"}
           desig={"Founder"}
@@ -29,7 +28,7 @@ const Team = () => {
           facebook={"#"}
           insta={"#"}
           twitter={"#"}
-          linkedin={"#"}
+          linkedin={"https://www.linkedin.com/in/abhishek-sharma-0a483a212/"}
           name={"Abhishek Sharma"}
           photo={"/images/team/IMG-20220306-WA0033.jpg"}
           desig={"Co-Founder"}
@@ -43,25 +42,44 @@ const Team = () => {
           }
           name={"Aarib"}
           photo={"/images/team/Aarib.jpg"}
-          desig={"Web Devloper"}
+          desig={"Web Developer"}
         />
-
         <Card
           facebook={"#"}
           insta={"#"}
           twitter={"#"}
-          linkedin={"#"}
+          linkedin={
+            "https://www.linkedin.com/in/muhammad-jufri/"
+          }
+          name={"Muhammad"}
+          photo={"/images/team/Muhammad.jfif"}
+          desig={"Web Developer"}
+        />
+        <Card
+          facebook={"#"}
+          insta={"#"}
+          twitter={"#"}
+          linkedin={"https://www.linkedin.com/in/hamid17/"}
           name={"Hamid Husain"}
           photo={"/images/team/Hamid.jpg"}
-          desig={"Web Devloper"}
+          desig={"Web Developer"}
         />
         <Card
           facebook={"#"}
           insta={"#"}
           twitter={"#"}
-          linkedin={"#"}
+          linkedin={"https://www.linkedin.com/in/muhaiyuddin/"}
           name={"Muhaiyuddin"}
           photo={""}
+          desig={"Search Engine Optimization Manager"}
+        />
+          <Card
+          facebook={"#"}
+          insta={"https://instagram.com/shalini_baghel?igshid=YmMyMTA2M2Y="}
+          twitter={"#"}
+          linkedin={"https://www.linkedin.com/in/shalini-baghel-b058b0216"}
+          name={"Shalini Baghel"}
+          photo={"/images/team/Shalini.jpeg"}
           desig={"Search Engine Optimization Manager"}
         />
 
