@@ -1,78 +1,78 @@
 .main {
-  margin: 0;
-  max-width: 500px;
-  width: 90%;
-  background-color: white;
-  border-radius: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 15px;
-  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.11);
-  -webkit-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.11);
-  -moz-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.11);
-}
-
-.picture {
-  border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 300px;
-  background-color: rgb(217, 217, 217);
-}
-
-.picture > h2 {
-  margin: 0;
-}
-
-.cardInfo {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: space-between;
-  padding: 0 15px;
-}
-
-.title > span {
-  margin: 0;
-  color: grey;
-  font-size: 2.2vmin;
-}
-
-.title > h3 {
-  line-height: 20px;
-  font-size: 4.8vmin;
-}
-
-.link {
-  background: rgb(67, 21, 138);
-  background: linear-gradient(
-    90deg,
-    rgba(67, 21, 138, 1) 52%,
-    rgba(123, 8, 154, 1) 100%,
-    rgba(109, 0, 121, 1) 100%,
-    rgba(27, 0, 36, 1) 100%
-  );
-  font-size: 2.8vmin;
-  font-weight: 600;
-  border-radius: 12px;
-  padding: 8px 15px;
-  color: white;
-  box-shadow: 0px 0px 12px 6px rgba(14, 0, 74, 0.25);
-  -webkit-box-shadow: 0px 0px 12px 6px rgba(14, 0, 74, 0.25);
-  -moz-box-shadow: 0px 0px 12px 6px rgba(14, 0, 74, 0.25);
-}
-
-/* opportunites page css where all the cards will display  */
-.mainBody {
-  margin: 50px auto 20px auto;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  width: 90%;
-  max-width: 1200px;
-}
+	margin: 0;
+	max-width: 500px;
+	width: 90%;
+	background-color: white;
+	border-radius: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 15px;
+	box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.11);
+	-webkit-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.11);
+	-moz-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.11);
+  }
+  
+  .picture {
+	border-radius: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 300px;
+	background-color: rgb(217, 217, 217);
+  }
+  
+  .picture > h2 {
+	margin: 0;
+  }
+  
+  .cardInfo {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-between;
+	padding: 0 15px;
+  }
+  
+  .title > span {
+	margin: 0;
+	color: grey;
+	font-size: 2.2vmin;
+  }
+  
+  .title > h3 {
+	line-height: 20px;
+	font-size: 4.8vmin;
+  }
+  
+  .link {
+	background: rgb(67, 21, 138);
+	background: linear-gradient(
+	  90deg,
+	  rgba(67, 21, 138, 1) 52%,
+	  rgba(123, 8, 154, 1) 100%,
+	  rgba(109, 0, 121, 1) 100%,
+	  rgba(27, 0, 36, 1) 100%
+	);
+	font-size: 2.8vmin;
+	font-weight: 600;
+	border-radius: 12px;
+	padding: 8px 15px;
+	color: white;
+	box-shadow: 0px 0px 12px 6px rgba(14, 0, 74, 0.25);
+	-webkit-box-shadow: 0px 0px 12px 6px rgba(14, 0, 74, 0.25);
+	-moz-box-shadow: 0px 0px 12px 6px rgba(14, 0, 74, 0.25);
+  }
+  
+  /* opportunites page css where all the cards will display  */
+  .mainBody {
+	margin: 50px auto 20px auto;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 40px;
+	width: 90%;
+	max-width: 1200px;
+  }
