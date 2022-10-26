@@ -44,22 +44,6 @@ const Team = () => {
           photo={"/images/team/Aarib.jpg"}
           desig={"Web Developer"}
         />
-<<<<<<< HEAD
-
-<Card
-          facebook={"#"}
-          insta={"#"}
-          twitter={"#"}
-          linkedin={
-            "https://www.linkedin.com/in/muhammad-jufri/"
-          }
-          name={"Muhammad"}
-          photo={"/images/team/muhammad.webp"}
-          desig={"Web Devloper"}
-        />
-
-=======
->>>>>>> 073db4a8a5f39f3e4557b5dd7ac3a5d5b01ea25b
         <Card
           facebook={"#"}
           insta={"#"}
