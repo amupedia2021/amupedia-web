@@ -1,132 +1,132 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import Image from 'next/image';
-import styles from '@styles/Navbar.module.css';
-import logo from '/public/logo.svg';
-import { useState, useEffect } from 'react';
+import Link from "next/link";
+import { useRouter } from "next/router";
+import Image from "next/image";
+import styles from "@styles/Navbar.module.css";
+import logo from "/public/logo.svg";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
-	const router = useRouter();
-	const [navbar, setNavbar] = useState(false);
-	const [courseActive, setCourseActive] = useState(false);
+  const router = useRouter();
+  const [navbar, setNavbar] = useState(false);
+  const [courseActive, setCourseActive] = useState(false);
 
-	useEffect(() => {
-		window.addEventListener('scroll', changeNavbar);
+  useEffect(() => {
+    window.addEventListener("scroll", changeNavbar);
 
-		if (router.pathname !== '/') return;
+    if (router.pathname !== "/") return;
 
-		if (router.asPath === '/#courses') {
-			setTimeout(() => {
-				router.push('/', undefined, { shallow: true });
-			}, 10);
-		}
+    if (router.asPath === "/#courses") {
+      setTimeout(() => {
+        router.push("/", undefined, { shallow: true });
+      }, 10);
+    }
 
-		const courses = document.getElementById('courses');
-		const obs = new IntersectionObserver(
-			(entries) => {
-				const entry = entries[0];
-				if (entry.isIntersecting) {
-					setCourseActive(true);
-				} else {
-					setCourseActive(false);
-				}
-			},
-			{ threshold: 0.8 }
-		);
+    const courses = document.getElementById("courses");
+    const obs = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setCourseActive(true);
+        } else {
+          setCourseActive(false);
+        }
+      },
+      { threshold: 0.8 }
+    );
 
-		obs.observe(courses);
-	}, [router]);
+    obs.observe(courses);
+  }, [router]);
 
-	const changeNavbar = () => {
-		if (window.scrollY > 500) {
-			setNavbar(true);
-		} else setNavbar(false);
-	};
+  const changeNavbar = () => {
+    if (window.scrollY > 500) {
+      setNavbar(true);
+    } else setNavbar(false);
+  };
 
-	const onClick = () => {
-		// Handles mobile course click
-		const menu = document.querySelector('#menu');
-		if (menu.checked) menu.click();
-	};
+  const onClick = () => {
+    // Handles mobile course click
+    const menu = document.querySelector("#menu");
+    if (menu.checked) menu.click();
+  };
 
-	return (
-		<>
-			{/* <!-- hamburger menu icon (for mobile phones) --> */}
-			<input type="checkbox" className={styles.menu} id="menu" />
-			<label htmlFor="menu" className={styles.ham} id="ham">
-				<div className={`${styles.hamline} ${styles.hamline1}`}></div>
-				<div className={`${styles.hamline} ${styles.hamline2}`}></div>
-				<div className={`${styles.hamline} ${styles.hamline3}`}></div>
-			</label>
+  return (
+    <>
+      {/* <!-- hamburger menu icon (for mobile phones) --> */}
+      <input type="checkbox" className={styles.menu} id="menu" />
+      <label htmlFor="menu" className={styles.ham} id="ham">
+        <div className={`${styles.hamline} ${styles.hamline1}`}></div>
+        <div className={`${styles.hamline} ${styles.hamline2}`}></div>
+        <div className={`${styles.hamline} ${styles.hamline3}`}></div>
+      </label>
 
-			{/* <!-- overlay to be shown when nav bar becomes visible --> */}
-			<div className={styles.blackoverlay} id="overlay" onClick={onClick}></div>
+      {/* <!-- overlay to be shown when nav bar becomes visible --> */}
+      <div className={styles.blackoverlay} id="overlay" onClick={onClick}></div>
 
-			{/* <!-- navigation bar --> */}
-			<nav
-				className={`${styles.navbar} ${navbar && styles.active}`}
-				id="navbar"
-			>
-				{/* {TODO: !Logo to be completed } */}
-				{/* <div className={styles.logo}>
+      {/* <!-- navigation bar --> */}
+      <nav
+        className={`${styles.navbar} ${navbar && styles.active}`}
+        id="navbar"
+      >
+        {/* {TODO: !Logo to be completed } */}
+        {/* <div className={styles.logo}>
 					<Image src={logo} alt="Logo"></Image>
 				</div> */}
-				<ul className={styles.list}>
-					<li
-						className={`${styles.listitem} ${
-							router.pathname === '/' && !courseActive && navbar
-								? styles.navList_active
-								: ''
-						}`}
-					>
-						<Link href="/">
-							<a
-								onClick={onClick}
-								className={`${styles.lnk} ${
-									router.pathname === '/' && !courseActive ? styles.active : ''
-								} ${navbar && styles.nav_active}`}
-							>
-								Home
-							</a>
-						</Link>
-					</li>
-					<li
-						className={`${styles.listitem} ${
-							router.pathname === '/about' && navbar
-								? styles.navList_active
-								: ''
-						}`}
-					>
-						<Link href="/about">
-							<a
-								onClick={onClick}
-								className={`${styles.lnk} ${
-									router.pathname === '/about' ? styles.active : ''
-								} ${navbar && styles.nav_active}`}
-							>
-								About
-							</a>
-						</Link>
-					</li>
-					<li
-						className={`${styles.listitem} ${
-							courseActive && navbar ? styles.navList_active : ''
-						}`}
-					>
-						<Link href="/#courses">
-							<a
-								onClick={() => {
-									onClick();
-								}}
-								className={`${styles.lnk} ${
-									courseActive ? styles.active : ''
-								} ${navbar && styles.nav_active}`}
-							>
-								Courses
-							</a>
-						</Link>
-					</li>
-					{/* <li
+        <ul className={styles.list}>
+          <li
+            className={`${styles.listitem} ${
+              router.pathname === "/" && !courseActive && navbar
+                ? styles.navList_active
+                : ""
+            }`}
+          >
+            <Link href="/">
+              <a
+                onClick={onClick}
+                className={`${styles.lnk} ${
+                  router.pathname === "/" && !courseActive ? styles.active : ""
+                } ${navbar && styles.nav_active}`}
+              >
+                Home
+              </a>
+            </Link>
+          </li>
+          <li
+            className={`${styles.listitem} ${
+              router.pathname === "/about" && navbar
+                ? styles.navList_active
+                : ""
+            }`}
+          >
+            <Link href="/about">
+              <a
+                onClick={onClick}
+                className={`${styles.lnk} ${
+                  router.pathname === "/about" ? styles.active : ""
+                } ${navbar && styles.nav_active}`}
+              >
+                About
+              </a>
+            </Link>
+          </li>
+          <li
+            className={`${styles.listitem} ${
+              courseActive && navbar ? styles.navList_active : ""
+            }`}
+          >
+            <Link href="/#courses">
+              <a
+                onClick={() => {
+                  onClick();
+                }}
+                className={`${styles.lnk} ${
+                  courseActive ? styles.active : ""
+                } ${navbar && styles.nav_active}`}
+              >
+                Courses
+              </a>
+            </Link>
+          </li>
+          {/* <li
 						className={`${styles.tem} ${styles.listitem} ${
 							router.pathname === '/team' && navbar ? styles.navList_active : ''
 						}`}
@@ -142,26 +142,26 @@ const Navbar = () => {
 							</a>
 						</Link>
 					</li> */}
-					<li
-						className={`${styles.blg} ${styles.listitem} ${
-							router.pathname === '/blog' && navbar ? styles.navList_active : ''
-						}`}
-					>
-						<Link href="/blog">
-							<a
-								onClick={onClick}
-								className={`${styles.lnk} ${
-									router.pathname === '/blog' ? styles.active : ''
-								} ${navbar && styles.nav_active}`}
-							>
-								Blogs
-							</a>
-						</Link>
-					</li>
-				</ul>
-			</nav>
-		</>
-	);
+          <li
+            className={`${styles.blg} ${styles.listitem} ${
+              router.pathname === "/blog" && navbar ? styles.navList_active : ""
+            }`}
+          >
+            <Link href="/blog">
+              <a
+                onClick={onClick}
+                className={`${styles.lnk} ${
+                  router.pathname === "/blog" ? styles.active : ""
+                } ${navbar && styles.nav_active}`}
+              >
+                Blogs
+              </a>
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </>
+  );
 };
 
 export default Navbar;

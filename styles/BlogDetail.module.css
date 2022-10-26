@@ -1,0 +1,117 @@
+.blog {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 40px;
+}
+
+.blogHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blogHeaderInfo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1700px;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+.blogHeaderInfoLeft,
+.blogHeaderInfoRight {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+
+.blogHeaderInfoLeft > ul {
+  display: flex;
+  gap: 35px;
+}
+
+.blogHeaderInfoLeft > ul li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  color: rgb(68, 68, 68);
+  fill: rgb(68, 68, 68);
+  cursor: pointer;
+}
+
+.blogHeaderInfoLeft > ul li:last-child {
+  color: green;
+  fill: green;
+}
+
+.blogHeaderInfoRight {
+  gap: 50px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 30px;
+}
+
+.socialIcons > li {
+  font-size: 20px;
+  color: rgb(68, 68, 68);
+  fill: rgb(68, 68, 68);
+}
+
+.bookmark_and_more_icon {
+  display: flex;
+  gap: 30px;
+  font-size: 20px;
+  color: rgb(68, 68, 68);
+  fill: rgb(68, 68, 68);
+}
+
+.blogPicture {
+  display: "block";
+  width: 100%;
+  height: 100%;
+  max-width: 1700px;
+  max-height: 1100px;
+  margin: 20px auto;
+}
+
+.blogBody {
+  margin: 0 auto 50px;
+  width: 100%;
+  max-width: 1700px;
+}
+
+.otherBlogsCard {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  align-items: center;
+  gap: 20px;
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+.otherBlogsCard > h3 {
+  font-size: 32px;
+}
+
+.blogCards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+@media screen and (max-width: 768px) {
+  .blogHeaderInfo {
+    justify-content: center;
+  }
+
+  .blogHeaderInfoLeft > ul li {
+    font-size: 18px;
+  }
+}

@@ -1,17 +1,17 @@
-@import './config';
+@import "./config";
 
 .main {
-	width: 100%;
+  width: 100%;
 }
 
 .semWrapper {
   @include flex;
   flex-wrap: wrap;
-	margin: 5rem auto auto auto;
-	max-width: 1000px;
+  margin: 5rem auto auto auto;
+  max-width: 1000px;
 
-	.semNum {
-		text-align: left !important;
-		margin: 0;
-	}
+  .semNum {
+    text-align: left !important;
+    margin: 0;
+  }
 }

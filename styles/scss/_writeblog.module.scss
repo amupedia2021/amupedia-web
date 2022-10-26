@@ -1,198 +1,198 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
-@import './config';
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap");
+@import "./config";
 
 .cover {
-	@include flex;
-	left: 0;
-	right: 0;
-	width: 100%;
-	height: 100vh;
-	overflow: hidden;
+  @include flex;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 
-	.userData {
-		@include flex;
-		width: 25%;
-		height: 90vh;
-		flex-direction: column;
-		justify-content: space-between;
-		margin: 7vh 0 0 1rem;
+  .userData {
+    @include flex;
+    width: 25%;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 7vh 0 0 1rem;
 
-		.inputFields {
-			width: 100%;
-			margin-top: 1rem;
+    .inputFields {
+      width: 100%;
+      margin-top: 1rem;
 
-			.data {
-				font-family: 'Baloo Bhai 2', cursive !important;
-				display: block;
-				inset: 0;
-				outline: none;
-				border: none;
-				margin: 1rem auto;
-				width: 80%;
-				height: 2rem;
-				padding: 0.7rem;
-				background: rgb(255, 255, 255);
-				border-radius: 10px;
-				transition: all 0.5s ease;
+      .data {
+        font-family: "Baloo Bhai 2", cursive !important;
+        display: block;
+        inset: 0;
+        outline: none;
+        border: none;
+        margin: 1rem auto;
+        width: 80%;
+        height: 2rem;
+        padding: 0.7rem;
+        background: rgb(255, 255, 255);
+        border-radius: 10px;
+        transition: all 0.5s ease;
 
-				&:focus {
-					box-shadow: 0 0 10px rgba(213, 213, 213, 0.769);
-				}
-			}
+        &:focus {
+          box-shadow: 0 0 10px rgba(213, 213, 213, 0.769);
+        }
+      }
 
-			.summary {
-				height: auto !important;
-				resize: none;
-			}
-		}
+      .summary {
+        height: auto !important;
+        resize: none;
+      }
+    }
 
-		.submit {
-			cursor: pointer;
-			width: 80%;
-			height: 2.5rem;
-			border-radius: 10px;
-			border: none;
-			background: rgb(62, 62, 252);
-			color: white;
-			font-family: 'Baloo Bhai 2', cursive !important;
-			font-size: 1rem;
-			margin-bottom: 1rem;
-		}
-	}
+    .submit {
+      cursor: pointer;
+      width: 80%;
+      height: 2.5rem;
+      border-radius: 10px;
+      border: none;
+      background: rgb(62, 62, 252);
+      color: white;
+      font-family: "Baloo Bhai 2", cursive !important;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
 }
 
 .main {
-	height: 100vh;
-	overflow: scroll;
-	width: 99% !important;
-	// max-width: 900px;
-	margin: 65px 0.5rem 0 0.5rem;
-	padding: 1rem;
+  height: 100vh;
+  overflow: scroll;
+  width: 99% !important;
+  // max-width: 900px;
+  margin: 65px 0.5rem 0 0.5rem;
+  padding: 1rem;
 
-	.pre {
-		@include flex;
-		flex-direction: column;
-		align-items: flex-start;
-		width: 100%;
-		max-width: 900px;
-		margin: auto;
-		border-radius: 20px;
-		padding: 0rem 1rem;
+  .pre {
+    @include flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 0rem 1rem;
 
-		// cover image drag and drop functionality
-		.coverImg {
-			position: relative;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			width: 100%;
-			height: auto;
-			transition: all 400ms;
+    // cover image drag and drop functionality
+    .coverImg {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      transition: all 400ms;
 
-			&:hover,
-			&.drag {
-				& > .defaultImg {
-					transform: scale(1.1);
-					& > svg {
-						& path {
-							fill: rgb(186, 113, 255);
-						}
-					}
-				}
-			}
+      &:hover,
+      &.drag {
+        & > .defaultImg {
+          transform: scale(1.1);
+          & > svg {
+            & path {
+              fill: rgb(186, 113, 255);
+            }
+          }
+        }
+      }
 
-			& > span {
-				text-align: center;
-				margin: 1rem 0;
-				font-size: 6vmin;
-			}
+      & > span {
+        text-align: center;
+        margin: 1rem 0;
+        font-size: 6vmin;
+      }
 
-			& > input {
-				position: absolute;
-				height: 100%;
-				width: 100%;
-				opacity: 0;
-				z-index: 3;
-				cursor: pointer;
-			}
+      & > input {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        z-index: 3;
+        cursor: pointer;
+      }
 
-			& > img {
-				object-fit: cover !important;
-				width: 100%;
-			}
+      & > img {
+        object-fit: cover !important;
+        width: 100%;
+      }
 
-			.defaultImg {
-				transition: all 300ms;
-				@include flex;
-				height: 20vmin !important;
-				width: 20vmin !important;
+      .defaultImg {
+        transition: all 300ms;
+        @include flex;
+        height: 20vmin !important;
+        width: 20vmin !important;
 
-				& > svg path {
-					transition: all 0.4s;
-				}
-			}
-		}
+        & > svg path {
+          transition: all 0.4s;
+        }
+      }
+    }
 
-		.title {
-			position: relative;
-			width: 100%;
-			margin-top: 2vmin;
-			& > div {
-				overflow: hidden;
-				position: relative;
-				z-index: 2;
-				background: transparent;
-				font-family: 'Baloo Bhai 2', cursive;
-				font-size: 6vmin !important;
-				font-weight: bold;
-				outline: none;
-				border: none;
-				width: 97% !important;
-			}
+    .title {
+      position: relative;
+      width: 100%;
+      margin-top: 2vmin;
+      & > div {
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+        background: transparent;
+        font-family: "Baloo Bhai 2", cursive;
+        font-size: 6vmin !important;
+        font-weight: bold;
+        outline: none;
+        border: none;
+        width: 97% !important;
+      }
 
-			& > span {
-				position: absolute;
-				top: 0;
-				left: 0;
-				font-family: 'Baloo Bhai 2', cursive;
-				font-size: 6vmin !important;
-				font-weight: 700;
-				color: rgb(197, 195, 195);
-				z-index: 1;
-			}
-		}
-	}
+      & > span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family: "Baloo Bhai 2", cursive;
+        font-size: 6vmin !important;
+        font-weight: 700;
+        color: rgb(197, 195, 195);
+        z-index: 1;
+      }
+    }
+  }
 }
 
 // add the whitesmoke background when there is no cover image uploaded
 .drop {
-	// background: whitesmoke;
-	min-height: 60vmin;
+  // background: whitesmoke;
+  min-height: 60vmin;
 }
 
 // option to remove the cover image when it is uploaded
 .remove {
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 4;
-	margin: 0.5rem 0.5rem 0 0;
-	padding: 0.3rem 0.5rem;
-	background-color: #ff0038;
-	color: white;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	border-radius: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 4;
+  margin: 0.5rem 0.5rem 0 0;
+  padding: 0.3rem 0.5rem;
+  background-color: #ff0038;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 // on smaller screens when toolbar takes a lot of space
 @media only screen and (max-width: 525px) {
-	.main {
-		margin-top: 145px;
-	}
-	.drop {
-		min-height: 40vmin;
-	}
+  .main {
+    margin-top: 145px;
+  }
+  .drop {
+    min-height: 40vmin;
+  }
 }
