@@ -1,0 +1,74 @@
+.main{
+display: flex;
+flex-direction: column;
+padding: 100px 0;
+width: 90%;
+max-width: 950px;
+margin: auto;
+}
+
+.header{  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h2{
+    margin: 0;
+}
+
+ .applyBtn{
+    border:none;
+	background: rgb(67, 21, 138);
+	background: linear-gradient(
+		90deg,
+		rgba(67, 21, 138, 1) 52%,
+		rgba(123, 8, 154, 1) 100%,
+		rgba(109, 0, 121, 1) 100%,
+		rgba(27, 0, 36, 1) 100%
+	);
+	font-size: 2.8vmin;
+	font-weight: 600;
+	border-radius: 12px;
+	padding: 8px 15px;
+	color: white;
+	box-shadow: 0px 0px 12px 6px rgba(14, 0, 74, 0.25);
+	-webkit-box-shadow: 0px 0px 12px 6px rgba(14, 0, 74, 0.25);
+	-moz-box-shadow: 0px 0px 12px 6px rgba(14, 0, 74, 0.25);
+}
+.date{
+    color: grey;
+margin-bottom: 20px;
+}
+
+.body p{
+    line-height: 40px;
+}
+
+.footer{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer a{
+    background:linear-gradient(
+		90deg,
+		rgba(67, 21, 138, 1) 52%,
+		rgba(123, 8, 154, 1) 100%,
+		rgba(109, 0, 121, 1) 100%,
+		rgba(27, 0, 36, 1) 100%
+	);
+    font-size: 20px;
+    font-weight: 900;
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+display: flex;
+align-items: center;
+gap: 0.8rem;
+}
+
+.footer a> svg{
+    font-size: 15px;
+    color: rgba(109,0,121,1);
+}

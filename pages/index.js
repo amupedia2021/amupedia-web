@@ -158,7 +158,7 @@ export default function Home() {
 						</Link>
 					</div>
 
-					{/* <!-- Contact Form  --> */}
+          {/* <!-- Contact Form  --> */}
 					<h2 className={styles.grabh2}>Get In Touch With Us</h2>
 					<form onSubmit={onSubmit}>
 						<div className={styles.cntfrm}>
@@ -226,3 +226,4 @@ export default function Home() {
 		</>
 	);
 }
+
