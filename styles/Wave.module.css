@@ -53,7 +53,7 @@
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
   .wavediv {
-    top: 450px;
+    top: calc(100% - 50px);
     left: 0;
   }
   .waves {

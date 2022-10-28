@@ -10,6 +10,7 @@ const Header = (props) => {
       <div
         style={{
           height: "500px",
+          position: "relative"
         }}
         id="header"
       >
