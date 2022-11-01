@@ -6,6 +6,7 @@ import Head from "node_modules/next/head";
 import { motion } from "framer-motion";
 import { StoreProvider } from "utils/Store/Store";
 import Alert from "components/Alert";
+import Script from 'next/script'
 // import Login from 'components/Login';
 
 function addProductJsonLd() {
@@ -122,6 +123,7 @@ function MyApp({ Component, pageProps, router }) {
 						dangerouslySetInnerHTML={addProductJsonLd()}
 						key="product-jsonld"
 					/>
+					<Script src="./adFix.js"></Script>
 				</Head>
 				<Navbar />
 				<Component {...pageProps} />

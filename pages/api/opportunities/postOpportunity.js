@@ -9,10 +9,12 @@ handler.post(async (req, res) => {
     const data = req.body;
     console.log(data);
     const result = await Opportunities.create({
-      title: req.body.title,
-      applyNow: req.body.applyNow,
-      date: req.body.date,
-      description: req.body.description,
+      id: data.id,
+      image: data.image,
+      title: data.title,
+      date: data.date,
+      applyNow: data.applyNow,
+      description: data.description,
     });
     await db.disconnect();
     res.status(200).json({ success: true, result: result });

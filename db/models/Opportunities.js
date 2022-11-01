@@ -1,15 +1,23 @@
 import mongoose from 'mongoose';
 
-const opportunitiesSchema = new mongoose.Schema({
+const opportunitesSchema = new mongoose.Schema({
+  id: {
+    type: Number,
+    required: true,
+  },
+  image: {
+    type: String,
+    required: true,
+  },
   title: {
     type: String,
     required: true,
   },
-  applyNow: {
+  date: {
     type: String,
     required: true,
   },
-  date: {
+  applyNow: {
     type: String,
     required: true,
   },
@@ -19,5 +27,5 @@ const opportunitiesSchema = new mongoose.Schema({
   }
 })
 
-const Opportunities = mongoose.models.Opportunities || mongoose.model('Opportunities', opportunitiesSchema);
+const Opportunities = mongoose.models.Opportunities || mongoose.model('Opportunities', opportunitesSchema);
 export default Opportunities;
