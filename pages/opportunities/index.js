@@ -15,7 +15,6 @@ const Index = () => {
         <OppCard />
         <OppCard />
         <OppCard />
-        <OppCard />
       </article>
       <Footer />
     </div>

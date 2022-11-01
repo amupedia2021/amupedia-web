@@ -8,6 +8,7 @@ const Header = (props) => {
   return (
     <>
       <div
+        className={styles.headerWrapper}
         style={{
           height: "500px",
         }}

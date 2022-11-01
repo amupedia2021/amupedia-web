@@ -36,14 +36,17 @@
 }
 
 #branches a {
+  width: 100%;
+  max-width: 320px;
   text-decoration: none;
 }
 
 /* styling for every branch div  */
 #branches div {
-  width: 320px;
+  width: 90%;
+  max-width: 320px;
   height: 240px;
-  margin: 20px;
+  margin: 20px auto;
   /* background-color: black; */
   background-size: 330px 250px;
   box-shadow: -2px -2px 8px black;
