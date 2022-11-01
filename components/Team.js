@@ -1,5 +1,5 @@
-import styles from "@styles/scss/main.module.scss";
-import Card from "./Teamcard";
+import styles from '@styles/scss/main.module.scss';
+import Card from './Teamcard';
 
 const Team = () => {
   return (
@@ -73,7 +73,7 @@ const Team = () => {
           photo={""}
           desig={"Search Engine Optimization Manager"}
         />
-          <Card
+        <Card
           facebook={"#"}
           insta={"https://instagram.com/shalini_baghel?igshid=YmMyMTA2M2Y="}
           twitter={"#"}

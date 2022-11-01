@@ -11,6 +11,7 @@ const Header = (props) => {
         className={styles.headerWrapper}
         style={{
           height: "500px",
+          position: "relative"
         }}
         id="header"
       >
