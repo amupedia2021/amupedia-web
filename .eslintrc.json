@@ -4,7 +4,7 @@
       2,
       {
         "ignore": [
-          "jsx"
+          "jsx","atyles","xlink"
         ]
       }
     ]
