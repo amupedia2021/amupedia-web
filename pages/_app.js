@@ -6,6 +6,7 @@ import Head from "node_modules/next/head";
 import { motion } from "framer-motion";
 import { StoreProvider } from "utils/Store/Store";
 import Alert from "components/Alert";
+import Script from "node_modules/next/script";
 // import Login from 'components/Login';
 
 function addProductJsonLd() {
@@ -69,65 +70,72 @@ function MyApp({ Component, pageProps, router }) {
 	// 	}
 	// }, []);
 
-	return (
-		<StoreProvider>
-			{/* <div id="signInDiv"></div> */}
-			<Alert />
-			{/* <Login /> */}
-			<motion.div
-				key={router.route}
-				initial="pageInitial"
-				animate="pageAnimate"
-				variants={{
-					pageInitial: {
-						opacity: 0,
-					},
-					pageAnimate: {
-						opacity: 1,
-					},
-				}}
-			>
-				<Head>
-					<script
-						async
-						src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6172950963478417"
-						crossOrigin="anonymous"
-					></script>
-					<script
-						src="https://accounts.google.com/gsi/client"
-						async
-						defer
-					></script>
-					<title>Amupedia</title>
-					<meta
-						name="description"
-						content="Amupedia is an initiative to help college students pursuing B.Tech, B.E or B.Com, especially from AMU."
-					/>
-					<meta name="keywords" content="B.Tech, B.Com, B.E" />
-					<meta
-						property="og:image"
-						content="https://www.amupedia.com/og-image.jpg"
-					/>
-					<meta property="og:image:width" content="150" />
-					<meta property="og:image:height" content="150" />
-					<meta property="og:title" content="Amupedia" />
-					<meta
-						property="og:description"
-						content="Amupedia is an initiative to help college students pursuing B.Tech, B.E or B.Com, especially from AMU."
-					/>
-					<meta name="twitter:card" content="summary" />
-					<meta property="og:url" content="https://www.amupedia.com" />
-					<script
-						type="application/ld+json"
-						dangerouslySetInnerHTML={addProductJsonLd()}
-						key="product-jsonld"
-					/>
-				</Head>
-				<Navbar />
-				<Component {...pageProps} />
-			</motion.div>
-		</StoreProvider>
-	);
+  return (
+    <StoreProvider>
+      {/* <div id="signInDiv"></div> */}
+      <Alert />
+      {/* <Login /> */}
+      <motion.div
+        key={router.route}
+        initial="pageInitial"
+        animate="pageAnimate"
+        variants={{
+          pageInitial: {
+            opacity: 0,
+          },
+          pageAnimate: {
+            opacity: 1,
+          },
+        }}
+      >
+        <Head>
+          {/* <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6172950963478417"
+            crossOrigin="anonymous"
+          ></script> */}
+          <script
+            src="https://accounts.google.com/gsi/client"
+            async
+            defer
+          ></script>
+          <title>Amupedia</title>
+          <meta
+            name="description"
+            content="Amupedia is an initiative to help college students pursuing B.Tech, B.E or B.Com, especially from AMU."
+          />
+          <meta name="keywords" content="B.Tech, B.Com, B.E" />
+          <meta
+            property="og:image"
+            content="https://www.amupedia.com/og-image.jpg"
+          />
+          <meta property="og:image:width" content="150" />
+          <meta property="og:image:height" content="150" />
+          <meta property="og:title" content="Amupedia" />
+          <meta
+            property="og:description"
+            content="Amupedia is an initiative to help college students pursuing B.Tech, B.E or B.Com, especially from AMU."
+          />
+          <meta name="twitter:card" content="summary" />
+          <meta property="og:url" content="https://www.amupedia.com" />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={addProductJsonLd()}
+            key="product-jsonld"
+          />
+        </Head>
+        <section styles={{ position: "relative" }}>
+          <Navbar />
+          <Component {...pageProps}></Component>
+          <Script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6172950963478417"
+            crossOrigin="anonymous"
+          ></Script>
+        </section>
+      </motion.div>
+    </StoreProvider>
+  );
 }
 
 export default MyApp;

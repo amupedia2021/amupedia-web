@@ -2,10 +2,10 @@ import { useRouter } from 'next/router';
 import OppDetails from 'components/OppDetails';
 
 export default function BlogId(dataOppDetails) {
-console.log(dataOppDetails.result.result[0]);
+
 	const router = useRouter();
 	const { oppId } = router.query;
-	return <div><OppDetails data={dataOppDetails.result.result[0]}></OppDetails></div>;
+	return <div><OppDetails id={oppId} data={dataOppDetails.result.result[0]}></OppDetails></div>;
 }
 
 export const getStaticProps = async () => {
