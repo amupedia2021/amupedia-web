@@ -3,7 +3,10 @@ import Header from "components/Header";
 import OppCard from "components/OppCard";
 import styles from "@styles/oppCard.module.css";
 
-const Index = () => {
+
+
+const Index = ( dataOpp) => {
+  console.log(dataOpp);
   return (
     <div>
       <Header
@@ -11,11 +14,12 @@ const Index = () => {
         text={"Opportunities"}
       ></Header>
       <article className={styles.mainBody}>
-        <OppCard />
-        <OppCard />
-        <OppCard />
-        <OppCard />
-        <OppCard />
+        {
+        dataOpp.result.result.map((data)=>(
+          <OppCard key={data.id} data={data} />
+        )
+        )
+      }
       </article>
       <Footer />
     </div>
@@ -23,3 +27,14 @@ const Index = () => {
 };
 
 export default Index;
+
+export const getStaticProps = async () => {
+  const data = await fetch("http://localhost:3000/api/opportunities/fetchOpportunities");
+  const result = await data.json();
+console.log(result);
+  return {
+    props: {
+      result
+  }
+}
+}
