@@ -1,20 +1,30 @@
-import { useRouter } from 'next/router';
-import OppDetails from 'components/OppDetails';
+import { useRouter } from "next/router";
+import OppDetails from "components/OppDetails";
 
 export default function BlogId(dataOppDetails) {
+  console.log(dataOppDetails.result.result);
+  const router = useRouter();
+  const { oppId } = router.query;
 
-	const router = useRouter();
-	const { oppId } = router.query;
-	return <div><OppDetails id={oppId} data={dataOppDetails.result.result[0]}></OppDetails></div>;
+  const oppArr = dataOppDetails.result.result;
+
+  return (
+    <div>
+<OppDetails key={oppId} data={oppArr[oppId]}></OppDetails>;
+
+    </div>
+  );
 }
 
-export const getStaticProps = async () => {
-	const data = await fetch("http://localhost:3000/api/opportunities/fetchOpportunities");
-	const result = await data.json();
-  console.log(result);
-	return {
-	  props: {
-		result
-	}
-  }
-  }
+export const getServerSideProps = async () => {
+  const data = await fetch(
+    "http://localhost:3000/api/opportunities/fetchOpportunities"
+  );
+
+  const result = await data.json();
+  return {
+    props: {
+      result,
+    },
+  };
+};
