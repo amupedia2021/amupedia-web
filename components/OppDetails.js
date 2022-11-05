@@ -1,5 +1,9 @@
+
+                                                     
+
 import styles from "../styles/OppDetails.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons/index";
 import React from "react";
 
