@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import OppDetails from "components/OppDetails";
 
 export default function BlogId(dataOppDetails) {
-  console.log(dataOppDetails.result.result);
   const router = useRouter();
   const { oppId } = router.query;
 
