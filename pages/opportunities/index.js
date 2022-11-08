@@ -2,8 +2,9 @@ import Footer from "components/Footer";
 import Header from "components/Header";
 import OppCard from "components/OppCard";
 import styles from "@styles/oppCard.module.css";
+import Link from "node_modules/next/link";
 
-const Index = () => {
+const Index = (dataOpp) => {
   return (
     <div>
       <Header
@@ -11,10 +12,16 @@ const Index = () => {
         text={"Opportunities"}
       ></Header>
       <article className={styles.mainBody}>
-        <OppCard />
-        <OppCard />
-        <OppCard />
-        <OppCard />
+      {
+        dataOpp.result.result.map((data,index)=>(
+          <Link href={`/opportunities/${index}`}>
+            <a href={`/opportuities/${index}`}>
+          <OppCard key={data.id} data={data} />
+          </a>
+          </Link>
+        )
+        )
+      }
       </article>
       <Footer />
     </div>
@@ -22,3 +29,13 @@ const Index = () => {
 };
 
 export default Index;
+
+export const getServerSideProps = async () => {
+  const data = await fetch("http://localhost:3000/api/opportunities/fetchOpportunities");
+  const result = await data.json();
+  return {
+    props: {
+      result
+  }
+}
+}
