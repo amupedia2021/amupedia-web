@@ -6,7 +6,7 @@ import Head from "node_modules/next/head";
 import { motion } from "framer-motion";
 import { StoreProvider } from "utils/Store/Store";
 import Alert from "components/Alert";
-import Script from 'next/script'
+import Script from "node_modules/next/script";
 // import Login from 'components/Login';
 
 function addProductJsonLd() {
@@ -89,11 +89,11 @@ function MyApp({ Component, pageProps, router }) {
 				}}
 			>
 				<Head>
-					<script
-						async
-						src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6172950963478417"
-						crossOrigin="anonymous"
-					></script>
+					{/* <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6172950963478417"
+            crossOrigin="anonymous"
+          ></script> */}
 					<script
 						src="https://accounts.google.com/gsi/client"
 						async
@@ -123,10 +123,16 @@ function MyApp({ Component, pageProps, router }) {
 						dangerouslySetInnerHTML={addProductJsonLd()}
 						key="product-jsonld"
 					/>
-					<Script src="./adFix.js"></Script>
 				</Head>
-				<Navbar />
-				<Component {...pageProps} />
+				<section styles={{ position: "relative" }}>
+					<Navbar />
+					<Component {...pageProps}></Component>
+					<Script
+						async
+						src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6172950963478417"
+						crossOrigin="anonymous"
+					></Script>
+				</section>
 			</motion.div>
 		</StoreProvider>
 	);

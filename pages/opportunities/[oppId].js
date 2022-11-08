@@ -6,7 +6,7 @@ export default function OppDetailsId() {
   const { oppId } = router.query;
   return (
     <div>
-      <OppDetails></OppDetails>
+      <OppDetails id={oppId}></OppDetails>
     </div>
   );
 }
