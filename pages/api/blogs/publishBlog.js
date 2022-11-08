@@ -13,6 +13,8 @@ handler.post(async (req, res) => {
       title: req.body.title,
       coverImg: req.body.coverImg,
       content: req.body.content,
+      like: 0, // we dont need that because it will automatically set it
+      numberOfComments: 0,
     });
     await db.disconnect();
     res.status(200).json({ success: true, result: result });

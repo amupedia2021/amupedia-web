@@ -16,6 +16,14 @@ const blogSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  like: {
+    type: Number,
+    required: true,
+  },
+  numberOfComments: {
+    type: Number,
+    required: true,
+  }
 });
 
 const Blog = mongoose.models.Blog || mongoose.model("Blog", blogSchema);
