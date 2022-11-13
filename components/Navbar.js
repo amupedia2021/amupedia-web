@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Image from "next/image";
 import styles from "@styles/Navbar.module.css";
-import logo from "/public/logo.svg";
 import { useState, useEffect } from "react";
 
 const Navbar = () => {
@@ -13,15 +11,8 @@ const Navbar = () => {
   useEffect(() => {
     window.addEventListener("scroll", changeNavbar);
 
-    if (router.pathname !== "/") return;
-
-    if (router.asPath === "/#courses") {
-      setTimeout(() => {
-        router.push("/", undefined, { shallow: true });
-      }, 10);
-    }
-
     const courses = document.getElementById("courses");
+    if (!courses) return;
     const obs = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
@@ -35,7 +26,7 @@ const Navbar = () => {
     );
 
     obs.observe(courses);
-  }, [router]);
+  }, []);
 
   const changeNavbar = () => {
     if (window.scrollY > 500) {
@@ -113,10 +104,16 @@ const Navbar = () => {
               courseActive && navbar ? styles.navList_active : ""
             }`}
           >
-            <Link href="/#courses">
+            <span>
               <a
                 onClick={() => {
-                  onClick();
+                  router.push("/");
+                  setTimeout(() => {
+                    const courses = document.getElementById("courses");
+                    if (courses) courses.scrollIntoView();
+
+                    onClick();
+                  }, 10);
                 }}
                 className={`${styles.lnk} ${
                   courseActive ? styles.active : ""
@@ -124,7 +121,7 @@ const Navbar = () => {
               >
                 Courses
               </a>
-            </Link>
+            </span>
           </li>
           {/* <li
 						className={`${styles.tem} ${styles.listitem} ${
