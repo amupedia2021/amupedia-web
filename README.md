@@ -12,7 +12,7 @@ Founded by the students of ZHCET in 2021, Amupedia is the biggest platform to he
 
 ## Live Demo
 
-Here is the live view of this website. It is hosted on Netlify ![Click to redirect](https://www.amupedia.com/).
+Here is the live view of this website. It is hosted on Netlify https://www.amupedia.com/.
 
 ### How to Contribute to this repository
 
