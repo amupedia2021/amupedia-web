@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import styles from "@styles/oppCard.module.css";
 import Link from "node_modules/next/link";
 
@@ -6,7 +7,7 @@ const OppCard = (data) => {
   return (
     <div className={styles.main}>
       <div className={styles.picture}>
-        <img src={`/images/oppCard/${image}`} />
+        <image src={`/images/oppCard/${image}`} />
       </div>
       <div className={styles.cardInfo}>
         <div className={styles.title}>
