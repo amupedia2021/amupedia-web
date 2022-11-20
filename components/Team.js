@@ -109,7 +109,7 @@ const Team = () => {
           linkedin={"https://www.linkedin.com/in/shalini-baghel-b058b0216"}
           name={"Shalini Baghel"}
           photo={"/images/team/Shalini.jpeg"}
-          desig={"Search Engine Optimization Manager"}
+          desig={"Content Writer Head"}
         />
 
 
