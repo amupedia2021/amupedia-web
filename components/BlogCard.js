@@ -1,12 +1,11 @@
 import styles from "@styles/scss/blogcard.module.scss";
 import Image from "next/image";
-import dataScienceImg from "@images/blog/dataScience.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp, faComment } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
 const BlogCard = (props) => {
-  const { id, image, comments, likes } = props;
+  const { id, title, image, comments, likes } = props;
   return (
     <>
       <Link
@@ -15,10 +14,10 @@ const BlogCard = (props) => {
       >
         <div className={styles.cover}>
           <div className={styles.image}>
-            <Image src={dataScienceImg} alt="data-science-amupedia-blogs" />
+            <Image src={`/images/blog/${image}`} width={500} height={500} alt="data-science-amupedia-blogs" />
           </div>
           <h3 className={styles.title}>
-            How to become a data scientist in no time
+            {title}
           </h3>
           <div className={styles.blogfooter}>
             <span className={styles.author}>Author</span>

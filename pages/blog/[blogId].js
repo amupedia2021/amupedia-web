@@ -12,23 +12,26 @@ import { faLink } from "node_modules/@fortawesome/free-solid-svg-icons/index";
 import { faBookmark } from "node_modules/@fortawesome/free-solid-svg-icons/index";
 import { faEllipsisH } from "node_modules/@fortawesome/free-solid-svg-icons/index";
 import BlogCard from "components/BlogCard";
-import blogData from "/data/blogdata";
+// import blogData from "/data/blogdata";
 import Link from "next/link";
 
-export default function BlogId() {
+export default function BlogId({ blogsData }) {
   const router = useRouter();
   const { blogId } = router.query;
+  const blogDetail = blogsData.result[blogId];
+  const { userId, title, coverImg, content, like, numberOfComments } = blogDetail;
+  console.log(coverImg)
   return (
     <div className={styles.blog}>
       <div className={styles.blogDetail}>
         <div className={styles.blogHeader}>
-          <h2>Blog Title</h2>
+          <h2>{title}</h2>
           <div className={styles.blogHeaderInfo}>
             <div className={styles.blogHeaderInfoLeft}>
               <ul>
                 <li>
                   <FontAwesomeIcon icon={faUserCircle} />
-                  <span>Test User</span>
+                  <span>{userId}</span>
                 </li>
                 <li>
                   <FontAwesomeIcon icon={faClock} />
@@ -79,93 +82,43 @@ export default function BlogId() {
           </div>
         </div>
         <div className={styles.blogPicture}>
-          <Image
-            src="/images/blog/blogDetails/photo1.avif"
+          <Image src={`/images/blog/${coverImg}`}
             alt="blogDetailPicture"
             layout="responsive"
-            width="1500"
-            height="800"
+            width="700"
+            height="700"
           />
         </div>
         <div className={styles.blogBody}>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
-            laudantium harum optio ipsum eligendi corporis maxime facilis in
-            adipisci. Molestias tempora sapiente voluptas. Laboriosam doloribus
-            aliquid dicta quibusdam hic praesentium vitae ducimus aut.
-            Blanditiis quasi consequuntur quidem optio earum dicta? Vel, nulla.
-            Minus, cum cupiditate facere voluptas maxime exercitationem quia
-            quidem illo perferendis aut nisi, quasi repudiandae velit vero
-            ducimus! Velit non sapiente libero vitae dicta delectus? Eveniet
-            assumenda officiis numquam soluta quisquam tempore a. Nesciunt saepe
-            incidunt nostrum, maxime ex blanditiis harum reiciendis dignissimos
-            reprehenderit, labore sed numquam accusamus exercitationem
-            repellendus, soluta eum optio! Numquam adipisci mollitia soluta
-            nesciunt eaque tenetur magni, saepe id voluptatem nam eveniet.
-            Maiores beatae velit in voluptatibus quae dicta dolorum et eaque
-            blanditiis laborum? Harum, debitis repellat architecto laudantium
-            animi vero amet! Tempore, inventore earum quaerat sunt temporibus
-            magnam molestiae accusantium omnis, at rem est iusto culpa dolorem
-            sint delectus? Sed animi repudiandae veritatis!
-          </p>
-          <br />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
-            laudantium harum optio ipsum eligendi corporis maxime facilis in
-            adipisci. Molestias tempora sapiente voluptas. Laboriosam doloribus
-            aliquid dicta quibusdam hic praesentium vitae ducimus aut.
-            Blanditiis quasi consequuntur quidem optio earum dicta? Vel, nulla.
-            Minus, cum cupiditate facere voluptas maxime exercitationem quia
-            quidem illo perferendis aut nisi, quasi repudiandae velit vero
-            ducimus! Velit non sapiente libero vitae dicta delectus? Eveniet
-            assumenda officiis numquam soluta quisquam tempore a. Nesciunt saepe
-            incidunt nostrum, maxime ex blanditiis harum reiciendis dignissimos
-            reprehenderit, labore sed numquam accusamus exercitationem
-            repellendus, soluta eum optio! Numquam adipisci mollitia soluta
-            nesciunt eaque tenetur magni, saepe id voluptatem nam eveniet.
-            Maiores beatae velit in voluptatibus quae dicta dolorum et eaque
-            blanditiis laborum? Harum, debitis repellat architecto laudantium
-            animi vero amet! Tempore, inventore earum quaerat sunt temporibus
-            magnam molestiae accusantium omnis, at rem est iusto culpa dolorem
-            sint delectus? Sed animi repudiandae veritatis!
-          </p>
-          <br />
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Repellendus minus quo sed officia quod veritatis tempore molestiae
-            ab accusantium tempora necessitatibus eligendi saepe est, fugiat qui
-            sequi excepturi aspernatur nulla natus rerum quisquam officiis
-            porro! Quas tempora corrupti provident voluptas ut at amet magni
-            quia, totam quam id voluptate, omnis ipsum nesciunt vel similique
-            dicta eum! Ab molestiae modi vero consectetur ratione perspiciatis
-            ipsum, impedit iste at! Nostrum nisi eum illum sed perferendis
-            distinctio quis reprehenderit iusto, expedita animi alias labore,
-            dicta mollitia molestiae hic totam excepturi sequi? Quod, aperiam
-            delectus, quos quasi officiis quas eaque suscipit minima enim quam
-            tempore beatae aut numquam! Architecto reprehenderit rerum hic
-            voluptatem non ullam et deserunt ducimus, praesentium, voluptatibus
-            quod quae eos laborum accusantium veritatis dicta ex, quasi maiores?
-            Unde, necessitatibus debitis quos culpa porro velit, iure aut
-            dolores repudiandae veniam cupiditate. Non repudiandae quidem
-            soluta? Aspernatur quo ab corporis dicta natus facere!
+            {content}
           </p>
         </div>
       </div>
       <div className={styles.otherBlogsCard}>
         <h3>See other blog</h3>
         <div className={styles.blogCards}>
-          {blogData.map((blogItem) => (
+          {blogsData.result.map((blogItem, index) => (
             <BlogCard
-              key={blogItem.id}
-              id={blogItem.id}
-              image={blogItem.image}
-              comments={blogItem.comments}
-              likes={blogItem.likes}
+              key={blogItem.userId}
+              id={index}
+              title={blogItem.title}
+              image={blogItem.coverImg}
+              comments={blogItem.numberOfComments}
+              likes={blogItem.like}
             />
           ))}
         </div>
       </div>
     </div>
   );
+}
+
+export const getServerSideProps = async () => {
+  const res = await fetch('http://localhost:3000/api/blogs/fetchBlogs');
+  const blogsData = await res.json();
+
+  return {
+    props: { blogsData }
+  }
 }

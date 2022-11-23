@@ -10,6 +10,10 @@
 Founded by the students of ZHCET in 2021, Amupedia is the biggest platform to help fellow students through their college program. This initiative will cater to the academic demands of the students and give assistance to them in every way possible. Everyone out there is running in the race to the top, and we here offer a push to anyone who needs it. Whether you come for the notes, read our blogs, or attend our events, you will emerge from Amupedia with new knowledge, perspective, influences, and connections.
 
 
+## Live Demo
+
+Here is the live view of this website. It is hosted on Netlify https://www.amupedia.com/.
+
 ### How to Contribute to this repository
 
 1. Fork the repository (Click the Fork button in the top right of this page,
