@@ -1,5 +1,5 @@
-import styles from '@styles/scss/main.module.scss';
-import Card from './Teamcard';
+import styles from "@styles/scss/main.module.scss";
+import Card from "./Teamcard";
 
 const Team = () => {
   return (
@@ -35,6 +35,28 @@ const Team = () => {
         />
         <Card
           facebook={"#"}
+          insta={
+            "https://www.instagram.com/ashraydixitad/"
+          }
+          
+
+          twitter={"#"}
+          linkedin={"https://www.linkedin.com/in/ashray-dixit?trk=people-guest_people_search-card&originalSubdomain=in"}
+          name={"Ashray Dixit"}
+          photo={"/images/team/Ashray.jpeg"}
+          desig={"Treasurer"}
+        />
+        <Card
+          facebook={"#"}
+          insta={"https://www.instagram.com/sabahat_alig/"}
+          twitter={"#"}
+          linkedin={"https://www.linkedin.com/in/sabahatahmadkhan/"}
+          name={"Sabahat"}
+          photo={"/images/team/Sabahat.JPG"}
+          desig={"Management Head"}
+        />
+        <Card
+          facebook={"#"}
           insta={"https://www.instagram.com/?hl=en"}
           twitter={"#"}
           linkedin={
@@ -48,9 +70,7 @@ const Team = () => {
           facebook={"#"}
           insta={"#"}
           twitter={"#"}
-          linkedin={
-            "https://www.linkedin.com/in/muhammad-jufri/"
-          }
+          linkedin={"https://www.linkedin.com/in/muhammad-jufri/"}
           name={"Muhammad"}
           photo={"/images/team/Muhammad.jfif"}
           desig={"Web Developer"}
@@ -64,13 +84,22 @@ const Team = () => {
           photo={"/images/team/Hamid.jpg"}
           desig={"Web Developer"}
         />
+                <Card
+          facebook={"#"}
+          insta={"#"}
+          twitter={"#"}
+          linkedin={"#"}
+          name={"Mohd Huzaifa"}
+          photo={"/images/team/Huzaifa.jpg"}
+          desig={"Web Developer"}
+        />
         <Card
           facebook={"#"}
           insta={"#"}
           twitter={"#"}
           linkedin={"https://www.linkedin.com/in/muhaiyuddin/"}
           name={"Muhaiyuddin"}
-          photo={""}
+          photo={"/images/team/muhyuddin.jpeg"}
           desig={"Search Engine Optimization Manager"}
         />
         <Card
@@ -80,18 +109,10 @@ const Team = () => {
           linkedin={"https://www.linkedin.com/in/shalini-baghel-b058b0216"}
           name={"Shalini Baghel"}
           photo={"/images/team/Shalini.jpeg"}
-          desig={"Search Engine Optimization Manager"}
+          desig={"Content Writer Head"}
         />
 
-        <Card
-          facebook={"#"}
-          insta={"#"}
-          twitter={"#"}
-          linkedin={"#"}
-          name={"Mohd Huzaifa"}
-          photo={"/images/team/Huzaifa.jpg"}
-          desig={"Designation"}
-        />
+
         <Card
           facebook={"#"}
           insta={"#"}
@@ -144,7 +165,7 @@ const Team = () => {
           linkedin={"https://www.linkedin.com/in/laksh-gupta-a35a66221"}
           name={"Laksh Gupta"}
           photo={"/images/team/Lakshya.jpg"}
-          desig={"Social media member"}
+          desig={"Social media Team member"}
         />
       </div>
     </>

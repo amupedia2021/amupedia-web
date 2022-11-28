@@ -68,7 +68,7 @@ export function getSubjectPages(subject) {
             "https://drive.google.com/file/d/18lVA1KJT9bFKO3rQOezf5vpHOECxgmE8/view",
             "https://drive.google.com/file/d/14O3haLuwyeLygBmCTfPx4a6z29EeBY4x/view",
             "https://drive.google.com/file/d/1hGtu-ZbQu_aBM2WtOO0ts8Adc9uCQi67/view",
-            "https://drive.google.com/file/d/1hGtu-ZbQu_aBM2WtOO0ts8Adc9uCQi67/view",
+            "https://drive.google.com/file/d/1ag6rhPbcoDVHTi1VPtDNZIPc5Pl1tAAF/view?usp=sharing",
             "https://drive.google.com/file/d/1ZiWNgNdIor3Si5wSVpexDq5PCj-fzFOU/view",
             "https://drive.google.com/file/d/1ZI1UpXiCsFKP5YbjUdPaJB7T0kEXhodj/view",
           ],
