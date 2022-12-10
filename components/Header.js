@@ -2,6 +2,7 @@ import styles from "@styles/Header.module.css";
 import Wave from "./Wave";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Navbar from "./Navbar";
 
 const Header = (props) => {
   const { image, text } = props;
@@ -11,7 +12,7 @@ const Header = (props) => {
         className={styles.headerWrapper}
         style={{
           height: "500px",
-          position: "relative"
+          position: "relative",
         }}
         id="header"
       >
@@ -22,7 +23,7 @@ const Header = (props) => {
             layout="fill"
             className={"headerImage"}
             alt="Intro to the page"
-          ></Image>
+          />
         </div>
 
         <motion.div
