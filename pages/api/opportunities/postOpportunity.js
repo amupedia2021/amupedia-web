@@ -6,7 +6,7 @@ const handler = nextConnect();
 handler.post(async (req, res) => {
   try {
     await db.connect();
-    const data = req.body;
+
     console.log(data);
     const result = await Opportunities.create({
       id: data.id,
