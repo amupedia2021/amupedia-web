@@ -304,7 +304,7 @@ export function getSubjectPages(subject) {
           unitName: "",
           notes: [
             "https://drive.google.com/file/d/1oypMde_kDrSglXxcfPlt3Fuvavd7g1Y8/view?usp=sharing",
-            "https://drive.google.com/file/d/1gexZRxfDna4zRN85vVKcQi7iyeUyugYE/view?usp=sharing",
+            "https://drive.google.com/file/d/1r4VlojnjFLkcxmzTJicAmj26w3B5a8Pf/view?usp=sharing",
             "https://drive.google.com/file/d/1R-is9kXcOCxpo1qHCjMuv68SsR9YtNLZ/view?usp=sharing",
           ],
           videoLectures: [
