@@ -19,6 +19,7 @@ async function connect() {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
+
   console.log("New Connection");
   connection.isConnected = db.connections[0].readyState;
 }

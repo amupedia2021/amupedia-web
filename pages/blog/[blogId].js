@@ -1,28 +1,17 @@
-import { useRouter } from "next/router";
 import Image from "next/image";
 import styles from "@styles/BlogDetail.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserCircle } from "node_modules/@fortawesome/free-solid-svg-icons/index";
-import { faClock } from "node_modules/@fortawesome/free-solid-svg-icons/index";
-import { faPlayCircle } from "node_modules/@fortawesome/free-solid-svg-icons/index";
-import { faTwitter } from "node_modules/@fortawesome/free-brands-svg-icons/index";
-import { faFacebook } from "node_modules/@fortawesome/free-brands-svg-icons/index";
-import { faLinkedin } from "node_modules/@fortawesome/free-brands-svg-icons/index";
-import { faLink } from "node_modules/@fortawesome/free-solid-svg-icons/index";
-import { faBookmark } from "node_modules/@fortawesome/free-solid-svg-icons/index";
-import { faEllipsisH } from "node_modules/@fortawesome/free-solid-svg-icons/index";
+import { faUserCircle, faClock, faPlayCircle, faLink, faBookmark, faEllipsisH } from "@fortawesome/free-solid-svg-icons/index";
+import { faTwitter, faFacebook, faLinkedin } from "@fortawesome/free-brands-svg-icons/index";
 import BlogCard from "components/BlogCard";
 import axios from 'axios';
-// import blogData from "/data/blogdata";
 import Link from "next/link";
+import fetchBlogId from "utils/getDataFromDB/blogs/fetchBlogId";
+import fetchBlogComment from "utils/getDataFromDB/blogs/comments/fetchComments";
+import fetchBlogs from "utils/getDataFromDB/blogs/fetchBlogs";
 
-export default function BlogId({ blogsData, commentsData }) {
-  const router = useRouter();
-  const { blogId } = router.query;
-  const blogDetail = blogsData.result[blogId];
-  console.log(blogDetail)
-  const { userId, title, coverImg, content, _id } = blogDetail;
-  console.log(coverImg)
+export default function BlogId({ blogsData, blogData, commentsData }) {
+  const { userId, title, coverImg, content, _id } = blogData;
 
   const submitComment = (e) => {
     e.preventDefault();
@@ -127,7 +116,7 @@ export default function BlogId({ blogsData, commentsData }) {
             <button type="submit" onClick={(e) => submitComment(e)}>Send</button>
           </form>
           <ul>
-            {commentsData.result.map((comment, index) => {
+            {commentsData?.map((comment, index) => {
               if (comment.blogId === _id) {
                 return (
                   (
@@ -154,7 +143,7 @@ export default function BlogId({ blogsData, commentsData }) {
       <div className={styles.otherBlogsCard}>
         <h3>See other blog</h3>
         <div className={styles.blogCards}>
-          {blogsData.result.map((blogItem, index) => (
+          {blogsData?.map((blogItem, index) => (
             <BlogCard
               key={blogItem.userId}
               id={index}
@@ -170,13 +159,13 @@ export default function BlogId({ blogsData, commentsData }) {
   );
 }
 
-export const getServerSideProps = async () => {
-  const resBlogs = await fetch('http://localhost:3000/api/blogs/fetchBlogs');
-  const resBlogComments = await fetch('http://localhost:3000/api/blogs/comments/fetchComments');
-  const blogsData = await resBlogs.json();
-  const commentsData = await resBlogComments.json();
+export const getServerSideProps = async (context) => {
+  const { blogId } = context.query;
+  const blogData = await fetchBlogId(blogId);
+  const blogsData = await fetchBlogs()
+  const commentsData = await fetchBlogComment();
 
   return {
-    props: { blogsData, commentsData }
+    props: { blogsData, blogData, commentsData }
   }
 }
