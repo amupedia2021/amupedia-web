@@ -14,9 +14,9 @@ const Index = (dataOpp) => {
       <article className={styles.mainBody}>
       {
         dataOpp.result.result.map((data,index)=>(
-          <Link key={data.id} href={`/opportunities/${index}`}>
+          <Link href={`/opportunities/${index}`}>
             <a href={`/opportuities/${index}`}>
-          <OppCard data={data} />
+          <OppCard key={data.id} data={data} />
           </a>
           </Link>
         )
