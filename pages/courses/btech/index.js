@@ -1,7 +1,7 @@
-import Header from "components/Header";
+import Header from "components/common/Header";
 import styles from "@styles/Btech.module.css";
 import Link from "next/link";
-import Footer from "components/Footer";
+import Footer from "components/common/Footer";
 
 export default function BTech() {
   const image = "/images/btech/top_bg.jpg";

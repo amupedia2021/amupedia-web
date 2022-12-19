@@ -1,5 +1,5 @@
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../common/Header";
+import Footer from "../common/Footer";
 import { useState } from "react";
 import Taskbar from "./Taskbar";
 import styles from "@styles/scss/subject.module.scss";

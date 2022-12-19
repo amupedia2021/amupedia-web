@@ -8,6 +8,7 @@ const Header = (props) => {
   const { image, text } = props;
   return (
     <>
+    <Navbar />
       <div
         className={styles.headerWrapper}
         style={{
