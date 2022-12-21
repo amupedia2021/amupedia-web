@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "@styles/BlogDetail.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle, faClock, faPlayCircle, faLink, faBookmark, faEllipsisH } from "@fortawesome/free-solid-svg-icons/index";
@@ -11,13 +10,13 @@ import fetchBlogComment from "utils/getDataFromDB/blogs/comments/fetchComments";
 import fetchBlogs from "utils/getDataFromDB/blogs/fetchBlogs";
 
 export default function BlogId({ blogsData, blogData, commentsData }) {
-  const { userId, title, coverImg, content, _id } = blogData;
+  const { userId, title, coverImg, content, id } = blogData;
 
-  const submitComment = (e) => {
+  const submitComment = async (e) => {
     e.preventDefault();
     const message = document.getElementById("userCommentMessage").value;
     const userCommentName = document.querySelector(".userCommentName").value;
-    const blogId = _id;
+    const blogId = id;
     if (message.length < 3) {
       return alert("Message must longer than  3 characters")
     }
@@ -27,10 +26,12 @@ export default function BlogId({ blogsData, blogData, commentsData }) {
     if (blogId.length <= 1) {
       return alert("Blog Id must be longer than 1 characters")
     }
-    axios.post("http://localhost:3000/api/blogs/comments/publishComment", { userName: userCommentName, blogId, message }).then(res => {
-      console.log(res)
+    try {
+      await axios.post("/api/blogs/comments/publishComment", { userName: userCommentName, blogId, message });
       alert("Comment has been sent!")
-    })
+    } catch (err) {
+      console.error(err)
+    }
   }
   return (
     <div className={styles.blog}>
@@ -93,11 +94,8 @@ export default function BlogId({ blogsData, blogData, commentsData }) {
           </div>
         </div>
         <div className={styles.blogPicture}>
-          <Image src={`/images/blog/${coverImg}`}
+          <img src={`/images/blog/${coverImg}`}
             alt="blogDetailPicture"
-            layout="responsive"
-            width="700"
-            height="700"
           />
         </div>
         <div className={styles.blogBody}>
@@ -116,26 +114,20 @@ export default function BlogId({ blogsData, blogData, commentsData }) {
             <button type="submit" onClick={(e) => submitComment(e)}>Send</button>
           </form>
           <ul>
-            {commentsData?.map((comment, index) => {
-              if (comment.blogId === _id) {
-                return (
-                  (
-                    <li key={index}>
-                      <div className={styles.commentHeader}>
-                        <div className={styles.userComment}>
-                          <FontAwesomeIcon icon={faUserCircle} />
-                          <span>{comment.userName}</span>
-                        </div>
-                        <span className={styles.dateSent}>{comment.date}</span>
-                      </div>
-                      <div className={styles.userMessage}>
-                        <p>{comment.message}</p>
-                      </div>
-                    </li>
-                  )
-                )
-              }
-            })}
+            {commentsData?.map((comment, index) => (
+              <li key={index}>
+                <div className={styles.commentHeader}>
+                  <div className={styles.userComment}>
+                    <FontAwesomeIcon icon={faUserCircle} />
+                    <span>{comment.userName}</span>
+                  </div>
+                  <span className={styles.dateSent}>{comment.date}</span>
+                </div>
+                <div className={styles.userMessage}>
+                  <p>{comment.message}</p>
+                </div>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
@@ -163,9 +155,9 @@ export const getServerSideProps = async (context) => {
   const { blogId } = context.query;
   const blogData = await fetchBlogId(blogId);
   const blogsData = await fetchBlogs()
-  const commentsData = await fetchBlogComment();
+  const commentsData = await fetchBlogComment(blogId);
 
   return {
-    props: { blogsData, blogData, commentsData }
+    props: { blogsData, blogData: blogData[0], commentsData }
   }
 }

@@ -18,8 +18,8 @@ export default function Blogs({ blogsData }) {
 			<div className={styles.container}>
 				{blogsData?.map((blogItem, index) => (
 					<BlogCard
-						key={blogItem.userId}
-						id={index}
+						key={blogItem.id}
+						id={blogItem.id}
 						title={blogItem.title}
 						image={blogItem.coverImg}
 						comments={blogItem.numberOfComments}

@@ -9,6 +9,7 @@ handler.post(async (req, res) => {
     const data = req.body;
     console.log(data);
     const result = await Blog.create({
+      id: req.body.id,
       userId: req.body.userId,
       title: req.body.title,
       coverImg: req.body.coverImg,

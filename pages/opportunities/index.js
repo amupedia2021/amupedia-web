@@ -15,8 +15,8 @@ function Opportunities({ opportunities }) {
       <article className={styles.mainBody}>
         {
           opportunities?.map((data) => (
-            <Link href={`/opportunities/${data.id - 1}`} key={data.id - 1}>
-              <a href={`/opportuities/${data.id - 1}`}>
+            <Link href={`/opportunities/${data.id}`} key={data.id}>
+              <a href={`/opportuities/${data.id}`}>
                 <OppCard data={data} />
               </a>
             </Link>
