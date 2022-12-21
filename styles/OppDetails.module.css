@@ -1,62 +1,61 @@
-.main{
-	display: flex;
-	flex-direction: column;
-	padding: 100px 0;
-	width: 90%;
-	max-width: 950px;
-	margin: auto;
-	}
-	
-	.header{  
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	
-	.header h2{
-		margin: 0;
-	}
-	
-	 .applyBtn{
-		border:none;
-		background: linear-gradient(91.44deg, #3323AA -6.68%, #B842A0 179.17%);
-	
-		font-size: 2.8vmin;
-		font-weight: 600;
-		border-radius: 13px;
-		padding: 8px 15px;
-		color: white;
-		filter: drop-shadow(0px 4px 30px rgba(113, 103, 190, 0.45));
-	}
-	.date{
-		color: grey;
-	margin-bottom: 20px;
-	}
-	
-	.body p{
-		line-height: 40px;
-	}
-	
-	.footer{
-		margin-top: 20px;
-		display: flex;
-		justify-content: space-between;
-	}
-	
-	.footer a{
-		background: linear-gradient(90.96deg, #3323AA 36.35%, #C344AD 86.68%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		text-fill-color: transparent;
-		font-size: 20px;
-		font-weight: 900;
-	display: flex;
-	align-items: center;
-	gap: 0.8rem;
-	}
-	
-	.footer a> svg{
-		font-size: 15px;
-		color: #C344AD;
-	}
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0;
+  width: 90%;
+  max-width: 950px;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.applyBtn {
+  border: none;
+  background: linear-gradient(91.44deg, #3323aa -6.68%, #b842a0 179.17%);
+  font-size: 2.2vmin;
+  font-weight: 600;
+  border-radius: 13px;
+  padding: 10px 17px;
+  color: white;
+  filter: drop-shadow(0px 4px 30px rgba(113, 103, 190, 0.45));
+}
+.date {
+  color: grey;
+  margin-bottom: 20px;
+}
+
+.body p {
+  line-height: 40px;
+}
+
+.footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer a {
+  background: linear-gradient(90.96deg, #3323aa 36.35%, #c344ad 86.68%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-size: 20px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.footer a > svg {
+  font-size: 15px;
+  color: #c344ad;
+}

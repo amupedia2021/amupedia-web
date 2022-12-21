@@ -1,13 +1,13 @@
-/* eslint-disable jsx-a11y/alt-text */
 import styles from "@styles/oppCard.module.css";
-import Link from "node_modules/next/link";
+import Link from "next/link";
 
-const OppCard = (data) => {
-  const { title, date, image } = data.data;
+const OppCard = ({ data }) => {
+  const { title, date, image } = data;
+  console.log(title, date, image)
   return (
     <div className={styles.main}>
       <div className={styles.picture}>
-        <image src={`/images/oppCard/${image}`} />
+        <img src={`/images/oppCard/${image}`} alt="opportunityImage" />
       </div>
       <div className={styles.cardInfo}>
         <div className={styles.title}>

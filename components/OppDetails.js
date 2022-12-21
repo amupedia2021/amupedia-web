@@ -3,14 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons/index";
 import React from "react";
 
-function OppDetails(data) {
+function OppDetails({ data }) {
   return (
     <div className={styles.main}>
       <div className={styles.header}>
-        <h2>{data.data.title}</h2>
+        <h2>{data.title}</h2>
         <button className={styles.applyBtn}>Apply Now</button>
       </div>
-      <span className={styles.date}>{data.data.date}</span>
+      <span className={styles.date}>{data.date}</span>
 
       <div className={styles.body}>
         <p>

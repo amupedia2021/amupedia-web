@@ -2,9 +2,10 @@ import Footer from "components/Footer";
 import Header from "components/Header";
 import OppCard from "components/OppCard";
 import styles from "@styles/oppCard.module.css";
-import Link from "node_modules/next/link";
+import Link from "next/link";
+import fetchOpportunities from "utils/getDataFromDB/opportunities/fetchOpportunities";
 
-const Index = (dataOpp) => {
+function Opportunities({ opportunities }) {
   return (
     <div>
       <Header
@@ -12,30 +13,27 @@ const Index = (dataOpp) => {
         text={"Opportunities"}
       ></Header>
       <article className={styles.mainBody}>
-      {
-        dataOpp.result.result.map((data,index)=>(
-          <Link href={`/opportunities/${index}`}>
-            <a href={`/opportuities/${index}`}>
-          <OppCard key={data.id} data={data} />
-          </a>
-          </Link>
-        )
-        )
-      }
+        {
+          opportunities?.map((data) => (
+            <Link href={`/opportunities/${data.id}`} key={data.id}>
+              <a href={`/opportuities/${data.id}`}>
+                <OppCard data={data} />
+              </a>
+            </Link>
+          )
+          )
+        }
       </article>
       <Footer />
     </div>
   );
 };
 
-export default Index;
+export default Opportunities;
 
-export const getServerSideProps = async () => {
-  const data = await fetch("http://localhost:3000/api/opportunities/fetchOpportunities");
-  const result = await data.json();
+export async function getServerSideProps() {
+  const opportunities = await fetchOpportunities()
   return {
-    props: {
-      result
+    props: { opportunities },
   }
-}
 }
