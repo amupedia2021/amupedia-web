@@ -2,7 +2,6 @@ import styles from "@styles/Header.module.css";
 import Wave from "./Wave";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Navbar from "./Navbar";
 
 const Header = (props) => {
   const { image, text } = props;
