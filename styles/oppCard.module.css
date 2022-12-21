@@ -1,7 +1,7 @@
 .main {
 	margin: 0;
 	max-width: 500px;
-	width: 90%;
+	width: 350vmin;
 	background-color: white;
 	border-radius: 30px;
 	display: flex;
