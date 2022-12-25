@@ -1,7 +1,7 @@
 import Head from "next/head";
 import BlogCard from "components/Blogs/BlogCard";
 import Footer from "components/common/Footer";
-import Header from "components/common/Header";
+import Header from "components/common/Header/Header";
 import styles from "@styles/scss/blog.module.scss";
 import blogData from "/data/blogdata";
 

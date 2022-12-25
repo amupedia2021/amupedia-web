@@ -7,7 +7,7 @@ import quiz from "@images/home/test_and_quiz.svg";
 import assign from "@images/home/assignment.svg";
 import Tilt from "react-vanilla-tilt";
 import styles from "@styles/Home.module.css";
-import Header from "components/common/Header";
+import Header from "components/common/Header/Header";
 import Link from "next/link";
 import Footer from "components/common/Footer";
 import { Store } from "utils/Store/Store";
