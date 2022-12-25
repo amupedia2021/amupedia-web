@@ -1,6 +1,6 @@
-import Footer from "components/Footer";
-import Header from "components/Header";
-import OppCard from "components/OppCard";
+import Footer from "components/common/Footer";
+import Header from "components/common/Header";
+import OppCard from "components/Opportunities/oppCard";
 import styles from "@styles/oppCard.module.css";
 import Link from "node_modules/next/link";
 

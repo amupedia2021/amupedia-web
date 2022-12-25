@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import OppDetails from "components/OppDetails";
+import OppDetails from "components/Opportunities/OppDetails";
 
 export default function OppDetailsId(dataOppDetails) {
 

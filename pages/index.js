@@ -7,11 +7,11 @@ import quiz from "@images/home/test_and_quiz.svg";
 import assign from "@images/home/assignment.svg";
 import Tilt from "react-vanilla-tilt";
 import styles from "@styles/Home.module.css";
-import Header from "components/Header";
+import Header from "components/common/Header";
 import Link from "next/link";
-import Footer from "components/Footer";
+import Footer from "components/common/Footer";
 import { Store } from "utils/Store/Store";
-import Preloader from "components/Preloader";
+import Preloader from "components/common/Preloader";
 import axios from "node_modules/axios/index";
 
 export default function Home() {

@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Header from "components/Header";
+import Header from "components/common/Header";
 import styles from "@styles/scss/main.module.scss";
-import Footer from "components/Footer";
-import Team from "components/Team";
+import Footer from "components/common/Footer";
+import Team from "components/Team/Team";
 
 export default function About() {
   const image = "/images/about/about_bg.svg";
