@@ -1,9 +1,5 @@
 {
-  "extends": [
-    "plugin:react/recommended",
-    "plugin:prettier/recommended",
-    "plugin:prettier/react"
-  ],
+  "extends": ["plugin:react/recommended", "plugin:prettier/react"],
   "rules": {
     "react/no-unescaped-entities": "off",
     "@next/next/no-page-custom-font": "off",

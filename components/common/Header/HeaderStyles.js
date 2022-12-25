@@ -14,6 +14,7 @@ export const IconsDiv = styled.div`
   height: 100%;
   width: 100%;
   background-color: transparent;
+  overflow: hidden;
 `;
 export const IconContainer = styled.div`
   position: absolute;
