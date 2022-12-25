@@ -1,6 +1,6 @@
-import Footer from "components/Footer";
-import Header from "components/Header";
-import Sems from "components/Sems";
+import Footer from "components/common/Footer";
+import Header from "components/common/Header/Header";
+import Sems from "components/Curriculum/Sems";
 import { firstYearSems } from "data/semData";
 
 const FirstYear = () => {

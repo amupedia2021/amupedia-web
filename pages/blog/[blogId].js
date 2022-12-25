@@ -11,7 +11,7 @@ import { faLinkedin } from "node_modules/@fortawesome/free-brands-svg-icons/inde
 import { faLink } from "node_modules/@fortawesome/free-solid-svg-icons/index";
 import { faBookmark } from "node_modules/@fortawesome/free-solid-svg-icons/index";
 import { faEllipsisH } from "node_modules/@fortawesome/free-solid-svg-icons/index";
-import BlogCard from "components/BlogCard";
+import BlogCard from "components/Blogs/BlogCard";
 import blogData from "/data/blogdata";
 import Link from "next/link";
 
