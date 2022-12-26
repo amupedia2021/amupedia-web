@@ -1,4 +1,4 @@
-import Header from "components/common/Header";
+import Header from "components/common/Header/Header";
 import styles from "@styles/Btech.module.css";
 import Link from "next/link";
 import Footer from "components/common/Footer";

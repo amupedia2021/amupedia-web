@@ -1,5 +1,5 @@
 import Footer from "components/common/Footer";
-import Header from "components/common/Header";
+import Header from "components/common/Header/Header";
 import OppCard from "components/Opportunities/oppCard";
 import styles from "@styles/oppCard.module.css";
 import Link from "node_modules/next/link";
@@ -14,9 +14,9 @@ const Index = (dataOpp) => {
       <article className={styles.mainBody}>
       {
         dataOpp.result.result.map((data,index)=>(
-          <Link key={data.id} href={`/opportunities/${index}`}>
+          <Link href={`/opportunities/${index}`} key={index}>
             <a href={`/opportuities/${index}`}>
-          <OppCard data={data} />
+          <OppCard key={data.id} data={data} />
           </a>
           </Link>
         )

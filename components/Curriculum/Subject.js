@@ -1,4 +1,4 @@
-import Header from "../common/Header";
+import Header from "../common/Header/Header";
 import Footer from "../common/Footer";
 import { useState } from "react";
 import Taskbar from "./Taskbar";

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Header from "components/common/Header";
+import Header from "components/common/Header/Header";
 import styles from "@styles/scss/main.module.scss";
 import Footer from "components/common/Footer";
 import Team from "components/Team/Team";
