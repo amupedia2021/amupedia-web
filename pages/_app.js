@@ -1,11 +1,11 @@
-import Navbar from "@comp/Navbar";
-// import jwt from "jsonwebtoken";
+import Navbar from "@comp/common/Navbar";
+import jwt from "jsonwebtoken";
 import "@styles/globals.css";
 import Head from "node_modules/next/head";
 // import { useEffect } from 'react';
 import { motion } from "framer-motion";
 import { StoreProvider } from "utils/Store/Store";
-import Alert from "components/Alert";
+import Alert from "components/common/Alert";
 import Script from "node_modules/next/script";
 // import Login from 'components/Login';
 
@@ -121,7 +121,7 @@ function MyApp({ Component, pageProps, router }) {
 					/>
 				</Head>
 				<section styles={{ position: "relative" }}>
-					<Navbar />
+
 					<Component {...pageProps}></Component>
 					<Script
 						async
