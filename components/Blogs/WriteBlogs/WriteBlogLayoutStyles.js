@@ -1,11 +1,12 @@
-import ContentEditable from "node_modules/react-contenteditable/lib/react-contenteditable";
-import styled from "styled-components";
+import ContentEditable from 'node_modules/react-contenteditable/lib/react-contenteditable';
+import styled from 'styled-components';
 
 export const Wrapper = styled.section`
   position: relative;
   display: flex;
   height: 100vh;
   width: 100vw;
+  flex-direction: row-reverse;
 `;
 
 export const Sidebar = styled.div`
@@ -18,6 +19,7 @@ export const Main = styled.main`
   padding: 20px;
   display: flex;
   flex-direction: column;
+  flex: 1;
 `;
 export const TitleWrapper = styled.div`
   margin: 15px 0;
@@ -40,7 +42,7 @@ export const TitlePlaceholder = styled.h2`
 
 export const BlogContent = styled.div`
   overflow: auto;
-  flex-grow: 1;
+  flex: 1;
   background-color: whitesmoke;
   padding: 10px 20px;
   border-radius: 15px;
