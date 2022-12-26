@@ -1,5 +1,5 @@
-import styles from "@styles/scss/sems.module.scss";
-import SubjCard from "@comp/SubjCard";
+import styles from '@styles/scss/sems.module.scss';
+import SubjCard from './SubjCard';
 
 const Sems = ({ data }) => {
   return (

@@ -1,6 +1,6 @@
-import Footer from "components/Footer";
-import Header from "components/Header";
-import OppCard from "components/OppCard";
+import Footer from "components/common/Footer";
+import Header from "components/common/Header/Header";
+import OppCard from "components/Opportunities/oppCard";
 import styles from "@styles/oppCard.module.css";
 import Link from "next/link";
 import fetchOpportunities from "utils/getDataFromDB/opportunities/fetchOpportunities";
@@ -14,10 +14,10 @@ function Opportunities({ opportunities }) {
       ></Header>
       <article className={styles.mainBody}>
         {
-          opportunities?.map((data) => (
-            <Link href={`/opportunities/${data.id - 1}`} key={data.id - 1}>
-              <a href={`/opportuities/${data.id - 1}`}>
-                <OppCard data={data} />
+          dataOpp.result.result.map((data, index) => (
+            <Link href={`/opportunities/${index}`} key={index}>
+              <a href={`/opportuities/${index}`}>
+                <OppCard key={data.id} data={data} />
               </a>
             </Link>
           )

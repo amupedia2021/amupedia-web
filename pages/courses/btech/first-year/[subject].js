@@ -1,4 +1,4 @@
-import Subject from "components/Subject";
+import Subject from "components/Curriculum/Subject";
 import { getSubjectPages } from "data/semData";
 
 export const getStaticPaths = async () => {
