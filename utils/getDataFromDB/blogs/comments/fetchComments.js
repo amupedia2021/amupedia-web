@@ -1,4 +1,4 @@
-import db from 'db/db'
+import db from 'db/db';
 import BlogComment from 'db/models/BlogComment';
 
 export default async function fetchBlogComment() {
@@ -6,5 +6,5 @@ export default async function fetchBlogComment() {
   const data = await BlogComment.find();
   await db.disconnect();
 
-  return JSON.parse(JSON.stringify(data))
+  return JSON.parse(JSON.stringify(data));
 }

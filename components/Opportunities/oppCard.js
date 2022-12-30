@@ -1,9 +1,9 @@
-import styles from "@styles/oppCard.module.css";
-import Link from "next/link";
+import styles from '@styles/oppCard.module.css';
+import Link from 'next/link';
 
-const OppCard = ({ data }) => {
+function OppCard({ data }) {
   const { title, date, image } = data;
-  console.log(title, date, image)
+  console.log(title, date, image);
   return (
     <div className={styles.main}>
       <div className={styles.picture}>
@@ -14,12 +14,12 @@ const OppCard = ({ data }) => {
           <h3>{title}</h3>
           <span>{date}</span>
         </div>
-        <Link href="#">
-          <a className={styles.link}>Apply Now</a>
+        <Link href="#not_yet_provide">
+          <a href="#not_yet_provide" className={styles.link}>Apply Now</a>
         </Link>
       </div>
     </div>
   );
-};
+}
 
 export default OppCard;

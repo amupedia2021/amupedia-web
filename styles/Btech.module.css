@@ -11,7 +11,7 @@
   margin: 12px;
 }
 .mission p {
-  font-family: "Baloo Bhai 2", sans-serif;
+  font-family: 'Baloo Bhai 2', sans-serif;
   max-width: 700px;
   margin: auto;
   padding: 14px;
@@ -67,7 +67,7 @@
   font-size: 27px;
   font-weight: 900;
   text-transform: uppercase;
-  font-family: "Urbanist", sans-serif;
+  font-family: 'Urbanist', sans-serif;
 }
 
 /* for screens below 300px  */
@@ -78,25 +78,25 @@
 }
 
 #firstyear {
-  background: url("/images/btech/firstyear.jpg") no-repeat center center;
+  background: url('/images/btech/firstyear.jpg') no-repeat center center;
 }
 #cs {
-  background: url("/images/btech/cs.svg") no-repeat center center;
+  background: url('/images/btech/cs.svg') no-repeat center center;
 }
 #elb {
-  background: url("/images/btech/elb.svg") no-repeat center center;
+  background: url('/images/btech/elb.svg') no-repeat center center;
 }
 #elec {
-  background: url("/images/btech/elec.svg") no-repeat center center;
+  background: url('/images/btech/elec.svg') no-repeat center center;
 }
 #mech {
-  background: url("/images/btech/mech.svg") no-repeat center center;
+  background: url('/images/btech/mech.svg') no-repeat center center;
 }
 #civil {
-  background: url("/images/btech/civil.svg") no-repeat center center;
+  background: url('/images/btech/civil.svg') no-repeat center center;
 }
 #chem {
-  background: url("/images/btech/chem.svg") no-repeat center center;
+  background: url('/images/btech/chem.svg') no-repeat center center;
 }
 
 .brnch:hover {

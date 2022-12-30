@@ -1,6 +1,6 @@
-import styles from "@styles/Wave.module.css";
+import styles from '@styles/Wave.module.css';
 
-const Wave = () => {
+function Wave() {
   return (
     <div className={styles.wavediv}>
       <svg
@@ -50,6 +50,6 @@ const Wave = () => {
       </svg>
     </div>
   );
-};
+}
 
 export default Wave;

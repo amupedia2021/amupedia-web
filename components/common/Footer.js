@@ -1,11 +1,10 @@
-import styles from "@styles/Footer.module.css";
-import { FontAwesomeIcon } from "node_modules/@fortawesome/react-fontawesome/index";
-import { faInstagramSquare } from "node_modules/@fortawesome/free-brands-svg-icons/index";
-import { faFacebookSquare } from "node_modules/@fortawesome/free-brands-svg-icons/index";
-import { faTwitterSquare } from "node_modules/@fortawesome/free-brands-svg-icons/index";
-import { faLinkedin } from "node_modules/@fortawesome/free-brands-svg-icons/index";
+import styles from '@styles/Footer.module.css';
+import { FontAwesomeIcon } from 'node_modules/@fortawesome/react-fontawesome/index';
+import {
+  faInstagramSquare, faFacebookSquare, faTwitterSquare, faLinkedin,
+} from 'node_modules/@fortawesome/free-brands-svg-icons/index';
 
-const Footer = () => {
+function Footer() {
   return (
     <footer id="footer">
       <div id={styles.above_bg}>
@@ -66,6 +65,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;

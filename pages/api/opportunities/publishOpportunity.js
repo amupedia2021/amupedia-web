@@ -1,13 +1,14 @@
 import db from 'db/db';
 import Opportunities from 'db/models/Opportunities';
 import nextConnect from 'next-connect';
+
 const handler = nextConnect();
 
 handler.post(async (req, res) => {
   try {
-    await db.connect();
-
+    const data = req.body;
     console.log(data);
+    await db.connect();
     const result = await Opportunities.create({
       id: data.id,
       image: data.image,
@@ -17,7 +18,7 @@ handler.post(async (req, res) => {
       description: data.description,
     });
     await db.disconnect();
-    res.status(200).json({ success: true, result: result });
+    res.status(200).json({ success: true, result });
   } catch (error) {
     res.status(500).json({ success: false, error });
   }

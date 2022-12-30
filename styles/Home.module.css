@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap');
 
 /* styling for section container  */
 #content {
   display: flex;
   flex-direction: column;
-  font-family: "Baloo Bhai 2", sans-serif;
+  font-family: 'Baloo Bhai 2', sans-serif;
 }
 
 /* styling for our mission container  */
@@ -20,7 +20,7 @@
   margin: 12px;
 }
 .mission p {
-  font-family: "Baloo Bhai 2", sans-serif;
+  font-family: 'Baloo Bhai 2', sans-serif;
   max-width: 700px;
   margin: auto;
   padding: 14px;
@@ -132,16 +132,16 @@
   margin: 20px !important;
 }
 .grab1 {
-  background: url("/images/home/btech.svg") no-repeat center center;
+  background: url('/images/home/btech.svg') no-repeat center center;
 }
 .grab2 {
-  background: url("/images/home/be.svg") no-repeat center center/cover;
+  background: url('/images/home/be.svg') no-repeat center center/cover;
 }
 .grab3 {
-  background: url("/images/home/bcom.svg") no-repeat center center/cover;
+  background: url('/images/home/bcom.svg') no-repeat center center/cover;
 }
 .grab4 {
-  background: url("/images/home/bsc.svg") no-repeat center center/cover;
+  background: url('/images/home/bsc.svg') no-repeat center center/cover;
 }
 
 /* styling for grab your notes section for pc  */
@@ -173,13 +173,13 @@
 /* same css as grabnotes section will be given to recent updates section  */
 
 .rec1 {
-  background: url("/images/home/app.svg") no-repeat center center/cover;
+  background: url('/images/home/app.svg') no-repeat center center/cover;
 }
 .rec2 {
-  background: url("/images/home/blog.svg") no-repeat center center/cover;
+  background: url('/images/home/blog.svg') no-repeat center center/cover;
 }
 .rec3 {
-  background: url("/images/home/comp_exam.svg") no-repeat center center/cover;
+  background: url('/images/home/comp_exam.svg') no-repeat center center/cover;
 }
 
 /* Styling for contact form  */
@@ -198,7 +198,7 @@
   padding: 13px 18px;
   background-color: rgb(218, 218, 255);
   color: royalblue;
-  font-family: "Baloo Bhai 2";
+  font-family: 'Baloo Bhai 2';
   border: none;
   border-radius: 10px;
   box-shadow: 0px 2px rgb(86, 86, 255);
@@ -220,7 +220,7 @@ input:focus {
   padding: 13px 18px;
   background-color: rgb(188, 188, 250);
   color: royalblue;
-  font-family: "Baloo Bhai 2", sans-serif;
+  font-family: 'Baloo Bhai 2', sans-serif;
   border: none;
   border-radius: 10px;
   flex-basis: 41%;
@@ -233,7 +233,7 @@ input:focus {
   padding: 24px 18px;
   background-color: rgb(172, 168, 249);
   color: royalblue;
-  font-family: "Baloo Bhai 2", sans-serif;
+  font-family: 'Baloo Bhai 2', sans-serif;
   border: none;
   border-radius: 10px;
   flex-basis: 38%;

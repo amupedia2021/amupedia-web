@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
 
 /* style for background on top  */
 .headerWrapper {
@@ -14,7 +14,7 @@
 
 /* Amupedia text in the center of the page */
 .center_text {
-  font-family: "Balsamiq Sans", sans-serif;
+  font-family: 'Balsamiq Sans', sans-serif;
   text-transform: uppercase;
   position: relative;
   z-index: 30;

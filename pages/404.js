@@ -1,4 +1,4 @@
-const Err = () => {
+function Err() {
   return (
     <div className="errorWrapper">
       <svg
@@ -581,6 +581,6 @@ const Err = () => {
       </svg>
     </div>
   );
-};
+}
 
 export default Err;

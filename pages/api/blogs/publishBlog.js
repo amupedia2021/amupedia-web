@@ -1,6 +1,7 @@
-import db from "db/db";
-import Blog from "db/models/Blog";
-import nextConnect from "next-connect";
+import db from 'db/db';
+import Blog from 'db/models/Blog';
+import nextConnect from 'next-connect';
+
 const handler = nextConnect();
 
 handler.post(async (req, res) => {
@@ -17,7 +18,7 @@ handler.post(async (req, res) => {
       numberOfComments: 0,
     });
     await db.disconnect();
-    res.status(200).json({ success: true, result: result });
+    res.status(200).json({ success: true, result });
   } catch (error) {
     res.status(500).json({ success: false, error });
   }

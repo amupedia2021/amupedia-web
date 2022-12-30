@@ -1,6 +1,6 @@
-import db from "db/db";
-import nextConnect from "next-connect";
-import Form from "db/models/Form";
+import db from 'db/db';
+import nextConnect from 'next-connect';
+import Form from 'db/models/Form';
 
 const handler = nextConnect();
 

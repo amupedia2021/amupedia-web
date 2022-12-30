@@ -1,41 +1,41 @@
-import Subject from "components/Curriculum/Subject";
-import { getSubjectPages } from "data/semData";
+import Subject from 'components/Curriculum/Subject';
+import { getSubjectPages } from 'data/semData';
 
 export const getStaticPaths = async () => {
   const paths = [
     {
       params: {
-        subject: "applied-mathematics-1",
+        subject: 'applied-mathematics-1',
       },
     },
     {
       params: {
-        subject: "applied-chemistry",
+        subject: 'applied-chemistry',
       },
     },
     {
       params: {
-        subject: "thermo-dynamics",
+        subject: 'thermo-dynamics',
       },
     },
     {
       params: {
-        subject: "electrical-engineering",
+        subject: 'electrical-engineering',
       },
     },
     {
       params: {
-        subject: "environmental-studies",
+        subject: 'environmental-studies',
       },
     },
     {
       params: {
-        subject: "applied-chemistry-lab",
+        subject: 'applied-chemistry-lab',
       },
     },
     {
       params: {
-        subject: "computer-programming-lab",
+        subject: 'computer-programming-lab',
       },
     },
   ];
@@ -47,7 +47,7 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async (context) => {
-  let subject = context.params.subject;
+  const { subject } = context.params;
   const data = getSubjectPages(subject);
 
   if (data == null || data == undefined) {
@@ -57,12 +57,10 @@ export const getStaticProps = async (context) => {
   return { props: { data } };
 };
 
-const GeneralSubject = ({ data }) => {
+function GeneralSubject({ data }) {
   return (
-    <>
-      <Subject data={data} />
-    </>
+    <Subject data={data} />
   );
-};
+}
 
 export default GeneralSubject;

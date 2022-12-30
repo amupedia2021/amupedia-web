@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const blogSchema = new mongoose.Schema({
   id: {
@@ -28,8 +28,8 @@ const blogSchema = new mongoose.Schema({
   numberOfComments: {
     type: Number,
     required: true,
-  }
+  },
 });
 
-const Blog = mongoose.models.Blog || mongoose.model("Blog", blogSchema);
+const Blog = mongoose.models.Blog || mongoose.model('Blog', blogSchema);
 export default Blog;

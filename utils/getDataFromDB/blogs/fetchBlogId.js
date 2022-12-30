@@ -1,4 +1,4 @@
-import db from 'db/db'
+import db from 'db/db';
 import Blog from 'db/models/Blog';
 
 export default async function fetchBlogId(id) {
@@ -6,5 +6,5 @@ export default async function fetchBlogId(id) {
   const data = await Blog.find();
   await db.disconnect();
 
-  return JSON.parse(JSON.stringify(data[id]))
+  return JSON.parse(JSON.stringify(data[id]));
 }

@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const blogCommentSchema = new mongoose.Schema({
   userName: {
@@ -15,8 +15,9 @@ const blogCommentSchema = new mongoose.Schema({
   date: {
     type: String,
     required: true,
-  }
+  },
 });
 
-const BlogComment = mongoose.models.BlogComment || mongoose.model("BlogComment", blogCommentSchema);
+const BlogComment = mongoose.models.BlogComment
+  || mongoose.model('BlogComment', blogCommentSchema);
 export default BlogComment;

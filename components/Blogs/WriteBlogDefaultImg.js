@@ -1,4 +1,4 @@
-const WriteBlogDefaultImg = () => {
+function WriteBlogDefaultImg() {
   return (
     <svg
       width="410"
@@ -26,6 +26,6 @@ const WriteBlogDefaultImg = () => {
       </g>
     </svg>
   );
-};
+}
 
 export default WriteBlogDefaultImg;

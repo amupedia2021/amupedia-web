@@ -1,4 +1,4 @@
-import db from 'db/db'
+import db from 'db/db';
 import Opportunities from 'db/models/Opportunities';
 
 export default async function fetchOpportunities() {
@@ -6,5 +6,5 @@ export default async function fetchOpportunities() {
   const data = await Opportunities.find();
   await db.disconnect();
 
-  return JSON.parse(JSON.stringify(data))
+  return JSON.parse(JSON.stringify(data));
 }

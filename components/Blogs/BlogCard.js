@@ -1,47 +1,50 @@
-import styles from "@styles/scss/blogcard.module.scss";
-import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faThumbsUp, faComment } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
+import styles from '@styles/scss/blogcard.module.scss';
+import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faThumbsUp, faComment } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
-const BlogCard = (props) => {
-  const { id, title, image, comments, likes } = props;
+function BlogCard(props) {
+  const {
+    id, title, image, comments, likes,
+  } = props;
   return (
-    <>
-      <Link
-        href={`/blog/${id == undefined ? (id == null ? "" : id) : id}`}
-        passHref
-      >
-        <div className={styles.cover}>
-          <div className={styles.image}>
-            <Image src={`/images/blog/${image}`} width={500} height={500} alt="data-science-amupedia-blogs" />
-          </div>
-          <h3 className={styles.title}>
-            {title}
-          </h3>
-          <div className={styles.blogfooter}>
-            <span className={styles.author}>Author</span>
-            <div className={styles.info}>
-              <span className={styles.likes}>
-                {likes}
-                <FontAwesomeIcon
-                  icon={faThumbsUp}
-                  className={`${styles.icon} ${styles.likesIcon}`}
-                />
-              </span>
-              <span className={styles.comments}>
-                {comments}
-                <FontAwesomeIcon
-                  icon={faComment}
-                  className={`${styles.icon} ${styles.commentsIcon}`}
-                />
-              </span>
-            </div>
+    <Link
+      href={`/blog/${id == undefined ? (id == null ? '' : id) : id}`}
+      passHref
+    >
+      <div className={styles.cover}>
+        <div className={styles.image}>
+          <Image
+            src={`/images/blog/${image}`}
+            width={500}
+            height={500}
+            alt="data-science-amupedia-blogs"
+          />
+        </div>
+        <h3 className={styles.title}>{title}</h3>
+        <div className={styles.blogfooter}>
+          <span className={styles.author}>Author</span>
+          <div className={styles.info}>
+            <span className={styles.likes}>
+              {likes}
+              <FontAwesomeIcon
+                icon={faThumbsUp}
+                className={`${styles.icon} ${styles.likesIcon}`}
+              />
+            </span>
+            <span className={styles.comments}>
+              {comments}
+              <FontAwesomeIcon
+                icon={faComment}
+                className={`${styles.icon} ${styles.commentsIcon}`}
+              />
+            </span>
           </div>
         </div>
-      </Link>
-    </>
+      </div>
+    </Link>
   );
-};
+}
 
 export default BlogCard;

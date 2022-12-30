@@ -4,7 +4,7 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons/index';
 import React from 'react';
 import { isNil, isEmpty } from 'lodash';
 
-function OppDetails(data) {
+function OppDetails({ data }) {
   return (
     <div className={styles.main}>
       <div className={styles.header}>
@@ -21,7 +21,7 @@ function OppDetails(data) {
       </div>
       <div className={styles.footer}>
         <button className={styles.applyBtn}>Apply Now</button>
-        <a href='#'>
+        <a href="#not_yet_provide">
           Explore More Opportunities
           <FontAwesomeIcon icon={faChevronRight} />
         </a>

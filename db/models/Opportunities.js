@@ -24,8 +24,9 @@ const opportunitesSchema = new mongoose.Schema({
   description: {
     type: String,
     required: true,
-  }
-})
+  },
+});
 
-const Opportunities = mongoose.models.Opportunities || mongoose.model('Opportunities', opportunitesSchema);
+const Opportunities = mongoose.models.Opportunities
+  || mongoose.model('Opportunities', opportunitesSchema);
 export default Opportunities;

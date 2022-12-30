@@ -1,11 +1,39 @@
 {
-  "extends": ["plugin:react/recommended", "plugin:prettier/react"],
-  "rules": {
-    "react/no-unescaped-entities": "off",
-    "@next/next/no-page-custom-font": "off",
-    "react/react-in-jsx-scope": "off"
+  "env": {
+    "browser": true,
+    "es2021": true
   },
-  "globals": {
-    "React": "writable"
+  "extends": ["plugin:react/recommended", "airbnb"],
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-curly-brace-presence": "off",
+    "react/jsx-no-constructed-context-values": "off",
+    "react/jsx-filename-extension": "off",
+    "react/destructuring-assignment": "off",
+    "import/no-unresolved": "off",
+    "eqeqeq": "off",
+    "react/no-unknown-property": "off",
+    "no-tabs": "off",
+    "no-unused-vars": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "consistent-return": "off",
+    "array-callback-return": "off",
+    "react/no-array-index-key": "off",
+    "camelcase": "off",
+    "react/jsx-no-useless-fragment": "off",
+    "react/button-has-type": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "no-nested-ternary": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "no-use-before-define": "off",
+    "indent": "off"
   }
 }

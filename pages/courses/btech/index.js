@@ -1,10 +1,10 @@
-import Header from "components/common/Header/Header";
-import styles from "@styles/Btech.module.css";
-import Link from "next/link";
-import Footer from "components/common/Footer";
+import Header from 'components/common/Header/Header';
+import styles from '@styles/Btech.module.css';
+import Link from 'next/link';
+import Footer from 'components/common/Footer';
 
 export default function BTech() {
-  const image = "/images/btech/top_bg.jpg";
+  const image = '/images/btech/top_bg.jpg';
   return (
     <>
       <Header image={image} text="B.Tech" />
@@ -24,7 +24,7 @@ export default function BTech() {
         <h2>Choose Your Branch</h2>
         <div id={styles.branches}>
           <Link passHref href="/courses/btech/first-year">
-            <a>
+            <a href="#not_yet_provide">
               <div className={styles.brnch} id={styles.firstyear}>
                 <p>First </p>
                 <p>Year</p>

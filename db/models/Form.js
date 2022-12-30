@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const formSchema = new mongoose.Schema({
   first_name: {
@@ -26,5 +26,5 @@ const formSchema = new mongoose.Schema({
   },
 });
 
-const Form = mongoose.models.Form || mongoose.model("Form", formSchema);
+const Form = mongoose.models.Form || mongoose.model('Form', formSchema);
 export default Form;
