@@ -10,16 +10,19 @@ import { faLink } from "node_modules/@fortawesome/free-solid-svg-icons/index";
 import { faBookmark } from "node_modules/@fortawesome/free-solid-svg-icons/index";
 import { faEllipsisH } from "node_modules/@fortawesome/free-solid-svg-icons/index";
 import BlogCard from "components/Blogs/BlogCard";
-import blogData from "/data/blogdata";
+// import blogData from "/data/blogdata";
 import Link from "next/link";
 import fetchBlogId from "utils/getDataFromDB/blogs/fetchBlogId";
 import fetchBlogComment from "utils/getDataFromDB/blogs/comments/fetchComments";
 import fetchBlogs from "utils/getDataFromDB/blogs/fetchBlogs";
+import { useState } from "react";
+import axios from "node_modules/axios/index";
 
 export default function BlogId({ blogsData, blogData, commentsData }) {
   const { userId, title, coverImg, content, id } = blogData;
+  const [blogComments, setBlogComments] = useState(commentsData);
 
-  const submitComment = async (e) => {
+  const submitComment = (e) => {
     e.preventDefault();
     const message = document.getElementById("userCommentMessage").value;
     const userCommentName = document.querySelector(".userCommentName").value;
@@ -33,12 +36,12 @@ export default function BlogId({ blogsData, blogData, commentsData }) {
     if (blogId.length <= 1) {
       return alert("Blog Id must be longer than 1 characters")
     }
-    try {
-      await axios.post("/api/blogs/comments/publishComment", { userName: userCommentName, blogId, message });
-      alert("Comment has been sent!")
-    } catch (err) {
-      console.error(err)
-    }
+    console.log("sending data...")
+    axios.post("/api/blogs/comments/publishComment", { userName: userCommentName, blogId, message }).then(response => {
+      setBlogComments([...blogComments, response.data.result])
+    });
+    alert("Comment has been sent!")
+    console.log("data has been sent!...")
   }
   return (
     <div className={styles.blog}>
@@ -121,7 +124,7 @@ export default function BlogId({ blogsData, blogData, commentsData }) {
             <button type="submit" onClick={(e) => submitComment(e)}>Send</button>
           </form>
           <ul>
-            {commentsData?.map((comment, index) => (
+            {blogComments?.map((comment, index) => (
               <li key={index}>
                 <div className={styles.commentHeader}>
                   <div className={styles.userComment}>
