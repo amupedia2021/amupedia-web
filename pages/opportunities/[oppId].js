@@ -1,5 +1,5 @@
-import OppDetails from "components/OppDetails";
-import fetchOpportunityById from "utils/getDataFromDB/opportunities/fetchOpportunityId";
+import { useRouter } from "next/router";
+import OppDetails from "components/Opportunities/OppDetails";
 
 export default function OppDetailsId({ opportunityDetail }) {
   return (
