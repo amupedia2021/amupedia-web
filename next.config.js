@@ -1,8 +1,10 @@
 const withImages = require("next-images");
 module.exports = withImages();
-module.exports = {
-  reactStrictMode: true,
-};
+module.exports = withImages({
+  webpack(config, options) {
+    return config
+  }
+});
 
 const path = require("path");
 

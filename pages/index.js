@@ -13,6 +13,8 @@ import Footer from "components/common/Footer";
 import { Store } from "utils/Store/Store";
 import Preloader from "components/common/Preloader";
 import axios from "node_modules/axios/index";
+import ComingSoon from "./ComingSoon";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home() {
   const { dispatch } = useContext(Store);
@@ -107,21 +109,21 @@ export default function Home() {
                   </div>
                 </Tilt>
               </Link>
-              <Link passHref href="/">
+              <Link passHref href="/ComingSoon">
                 <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
                   <div className={styles.grab2}>
                     <p>B.E</p>
                   </div>
                 </Tilt>
               </Link>
-              <Link passHref href="/">
+              <Link passHref href="/ComingSoon">
                 <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
                   <div className={styles.grab3}>
                     <p>B.Com</p>
                   </div>
                 </Tilt>
               </Link>
-              <Link passHref href="/">
+              <Link passHref href="/ComingSoon">
                 <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
                   <div className={styles.grab4}>
                     <p>B.Sc</p>
