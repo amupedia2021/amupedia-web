@@ -13,6 +13,7 @@ import Footer from "components/common/Footer";
 import { Store } from "utils/Store/Store";
 import Preloader from "components/common/Preloader";
 import axios from "node_modules/axios/index";
+import GoToTop from "components/GoToTop";
 
 export default function Home() {
   const { dispatch } = useContext(Store);
@@ -58,6 +59,7 @@ export default function Home() {
 
   return (
     <>
+      <GoToTop />
       <Header image={headerImg} text="Amupedia" />
       <main>
         <section id={styles.content}>

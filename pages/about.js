@@ -3,11 +3,13 @@ import Header from "components/common/Header/Header";
 import styles from "@styles/scss/main.module.scss";
 import Footer from "components/common/Footer";
 import Team from "components/Team/Team";
+import GoToTop from "components/GoToTop";
 
 export default function About() {
   const image = "/images/about/about_bg.svg";
   return (
     <>
+      <GoToTop />
       <Head>
         <title>About | Amupedia</title>
         <meta
