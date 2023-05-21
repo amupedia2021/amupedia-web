@@ -101,10 +101,10 @@ const Navbar = () => {
           </li>
           <li
             className={`${styles.listitem} ${
-              courseActive && navbar ? styles.navList_active : ""
+             courseActive && navbar ? styles.navList_active : ""
             }`}
           >
-            <span>
+            <Link href='/'>
               <a
                 onClick={() => {
                   router.push("/");
@@ -115,13 +115,13 @@ const Navbar = () => {
                     onClick();
                   }, 10);
                 }}
-                className={`${styles.lnk} ${
+                  className={`${styles.lnk} ${
                   courseActive ? styles.active : ""
                 } ${navbar && styles.nav_active}`}
               >
                 Courses
               </a>
-            </span>
+            </Link>
           </li>
           {/* <li
 						className={`${styles.tem} ${styles.listitem} ${
