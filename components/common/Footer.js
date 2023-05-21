@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer id="footer">
       <div id={styles.above_bg}>
-        <p>Folow Us On</p>
+        <p>Follow Us On</p>
         <div id={styles.icons}>
           <a
             href="https://www.instagram.com/amu.pedia/?hl=am-et"
