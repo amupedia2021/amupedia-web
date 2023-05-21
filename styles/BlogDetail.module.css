@@ -70,12 +70,12 @@
   fill: rgb(68, 68, 68);
 }
 
-.blogPicture {
-  display: "block";
+.blogPicture img {
+  display: block;
   width: 100%;
   height: 100%;
-  max-width: 1700px;
-  max-height: 1100px;
+  max-width: 700px;
+  max-height: 700px;
   margin: 20px auto;
 }
 
@@ -83,6 +83,79 @@
   margin: 0 auto 50px;
   width: 100%;
   max-width: 1700px;
+}
+
+.blogCommentSection {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sendComment {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 1700px;
+  margin-bottom: 30px;
+}
+
+.userComment {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  width: 100%;
+}
+
+.userMessageInput {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.userMessageInput input,
+.userMessageInput textarea {
+  width: 100%;
+  max-width: 1700px;
+  border: 1px solid black;
+  background-color: white;
+  padding: 15px;
+  font-size: 17px;
+  outline: none;
+}
+
+.sendComment button {
+  padding: 15px 50px;
+  background-color: rgb(22, 81, 211);
+  border: none;
+  color: white;
+  border-radius: 30px;
+  width: fit-content;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.userMessageInput input::placeholder,
+.userMessageInput textarea::placeholder {
+  color: #121212;
+}
+
+.blogCommentSection ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 1700px;
+}
+
+.blogCommentSection ul li {
+  width: 100%;
+  border: 1px solid grey;
+  padding: 10px 15px;
+  cursor: pointer;
 }
 
 .otherBlogsCard {

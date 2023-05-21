@@ -9,10 +9,13 @@ handler.post(async (req, res) => {
     const data = req.body;
     console.log(data);
     const result = await Blog.create({
+      id: req.body.id,
       userId: req.body.userId,
       title: req.body.title,
       coverImg: req.body.coverImg,
       content: req.body.content,
+      like: 0, // we dont need that because it will automatically set it
+      numberOfComments: 0,
     });
     await db.disconnect();
     res.status(200).json({ success: true, result: result });

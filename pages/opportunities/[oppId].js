@@ -1,28 +1,18 @@
 import { useRouter } from "next/router";
 import OppDetails from "components/Opportunities/OppDetails";
 
-export default function OppDetailsId(dataOppDetails) {
-
-  const router = useRouter();
-  const { oppId } = router.query;
+export default function OppDetailsId({ opportunityDetail }) {
   return (
-    <div>
-      <OppDetails
-        key={oppId}
-        data={dataOppDetails.result.result[oppId]}
-      ></OppDetails>
-    </div>
+    <OppDetails
+      data={opportunityDetail}
+    ></OppDetails>
   );
 }
 
-export const getServerSideProps = async () => {
-  const data = await fetch(
-    "http://localhost:3000/api/opportunities/fetchOpportunities"
-  );
-  const result = await data.json();
+export const getServerSideProps = async (context) => {
+  const { oppId } = context.query;
+  const opportunityDetail = await fetchOpportunityById(oppId)
   return {
-    props: {
-      result,
-    },
-  };
+    props: { opportunityDetail },
+  }
 };
