@@ -1,5 +1,8 @@
 {
   "marquee.widgets.npm-stats.packageNames": ["amupedia"],
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "always"
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  }
 }

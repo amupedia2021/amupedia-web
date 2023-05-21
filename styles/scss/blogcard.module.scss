@@ -2,19 +2,28 @@
 
 .cover {
   --bdr-rad: 10px;
-  --title-text-size: 4vmin;
-  --footer-text-size: 2.2vmin;
-
+  --title-text-size: 1.5rem;
+  --footer-text-size: 1rem;
+  
   background: white;
   text-align: center;
   cursor: pointer;
+  box-shadow: 0px 0px 20px 0px hsla(0deg, 0%, 0%, 0.090);
+  padding: 2vmin;
   border-radius: var(--bdr-rad);
   width: 90%;
   max-width: 280px;
-  margin: 6vmin 4.5vmin;
+  margin: 1rem;
+  transition: all 200ms;
+
+  &:hover {
+    transform:scale(1.025);
+    box-shadow: 2px 2px 40px 0px hsla(0deg, 0%, 0%, 0.1);
+  }
 
   .image {
-    border-radius: var(--bdr-rad);
+    border-radius: var(--bdr-rad) var(--bdr-rad) 0 0;
+    margin-bottom: 0.25rem;
 
     & img {
       inset: 0;
@@ -26,9 +35,10 @@
 
   .title {
     font-size: var(--title-text-size);
-    text-align: left;
+    line-height: 100%;
+    text-align: Left;
     width: 100%;
-    padding: 0 5px;
+    padding: 0 5px 10px 5px;
   }
 }
 
@@ -44,7 +54,7 @@
 
       & > .icon {
         margin: 0 0 1px 4px;
-        color: blue;
+        color: #7B5EDE;
       }
     }
   }
