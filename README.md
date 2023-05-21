@@ -6,7 +6,25 @@
 <img width="959" alt="Screenshot 2022-10-06 13-14-19" src="https://user-images.githubusercontent.com/56462749/196167803-bc606c1c-a03f-40c0-9c51-b6f2576234c1.png">
 
 ## About
+<div align="center">
+<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+   <br>
+   <img src="https://img.shields.io/github/repo-size/amupedia2021/Project-Amupedia?style=for-the-badge" />
+   <img src="https://img.shields.io/github/issues/amupedia2021/Project-Amupedia?style=for-the-badge" />
+   <img src="https://img.shields.io/github/issues-closed-raw/amupedia2021/Project-Amupedia?style=for-the-badge" />
+    <img src="https://img.shields.io/github/license/amupedia2021/Project-Amupedia?style=for-the-badge" />
 
+   <img src="https://img.shields.io/github/issues-pr/amupedia2021/Project-Amupedia?style=for-the-badge" />
+    <img src="https://img.shields.io/github/contributors/amupedia2021/Project-Amupedia?style=for-the-badge" />
+    <img src="https://img.shields.io/github/stars/amupedia2021/Project-Amupedia?style=for-the-badge" />
+  
+   <img src="https://img.shields.io/github/issues-pr-closed-raw/amupedia2021/Project-Amupedia?style=for-the-badge" />
+   <img src="https://img.shields.io/github/forks/amupedia2021/Project-Amupedia?style=for-the-badge" />
+  <img src="https://img.shields.io/github/last-commit/amupedia2021/Project-Amupedia?style=for-the-badge" />
+     </div>
+     <br>
 Founded by the students of ZHCET in 2021, Amupedia is the biggest platform to help fellow students through their college program. This initiative will cater to the academic demands of the students and give assistance to them in every way possible. Everyone out there is running in the race to the top, and we here offer a push to anyone who needs it. Whether you come for the notes, read our blogs, or attend our events, you will emerge from Amupedia with new knowledge, perspective, influences, and connections.
 
 
