@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const blogSchema = new mongoose.Schema({
   userId: {
-    type: String,
+    type: mongoose.SchemaTypes.ObjectId,
   },
   title: {
     type: String,
