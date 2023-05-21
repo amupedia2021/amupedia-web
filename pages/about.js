@@ -38,7 +38,15 @@ export default function About() {
         <div className={`${styles.whoWeAre} ${styles.ourStory}`}>
           <h2>Our Story</h2>
           <p>
-            The life of any student is not as easy as it may seem. There are numerous challenges faced by students, and we aim to address them through this website. Finding the correct documents, reference books, and video lectures can save you a significant amount of time and allow you to accomplish more than you initially planned. Additionally, we provide information on competitive exams such as GATE and SSCJE, as well as notify you about verified internship opportunities. AMUPedia is dedicated to supporting all students and our primary mission is to assist you in building a bright future for yourself.
+            The life of any student is not as easy as it may seem. There are 
+            numerous challenges faced by students, and we aim to address them 
+            through this website. Finding the correct documents, reference books, 
+            and video lectures can save you a significant amount of time and allow 
+            you to accomplish more than you initially planned. Additionally, we 
+            provide information on competitive exams such as GATE and SSCJE, as 
+            well as notify you about verified internship opportunities. AMUPedia 
+            is dedicated to supporting all students and our primary mission is to 
+            assist you in building a bright future for yourself.
           </p>
         </div>
       </main>
