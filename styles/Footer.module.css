@@ -44,17 +44,20 @@
 
 /* contribution background */
 #above_ftbg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Baloo Bhai 2", sans-serif;
   font-size: 21px;
   background: url("/images/footer/footer_2_bg.png") no-repeat center
     right/cover;
   z-index: 15;
-  height: 50px;
-  width: 15%;
+  height: auto;     /*changed height to auto*/
+  width: 20%;
   margin: auto;
   border-radius: 20px;
   position: relative;
-  top: 80px;
+  top: 90px;
 }
 
 #above_ftbg p {
@@ -62,8 +65,8 @@
   font-size: 21px;
   font-weight: bolder;
   text-align: center;
-  position: relative;
-  top: 20%;
+  /* position: relative;
+  top: 20%; */
   color: white;
 }
 
@@ -89,7 +92,19 @@
 
 /* for mobile phones having width less than 300px */
 @media only screen and (max-width: 299px) {
-  #ftbg {
+  #ftbg{
     font-size: 17px;
+  }
+}
+
+/* changing the font size to fit the contribution div*/
+@media (max-width:901px){         
+  #above_ftbg p{
+    font-size: 15px;
+  }
+}
+@media (max-width:491px){
+  #above_ftbg p{
+    font-size: 12px;
   }
 }
