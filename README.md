@@ -21,7 +21,7 @@
    <img src="https://img.shields.io/github/issues-pr/amupedia2021/Project-Amupedia?style=for-the-badge" />
     <img src="https://img.shields.io/github/contributors/amupedia2021/Project-Amupedia?style=for-the-badge" />
     <img src="https://img.shields.io/github/stars/amupedia2021/Project-Amupedia?style=for-the-badge" />
-  
+
    <img src="https://img.shields.io/github/issues-pr-closed-raw/amupedia2021/Project-Amupedia?style=for-the-badge" />
    <img src="https://img.shields.io/github/forks/amupedia2021/Project-Amupedia?style=for-the-badge" />
   <img src="https://img.shields.io/github/last-commit/amupedia2021/Project-Amupedia?style=for-the-badge" />
@@ -88,15 +88,34 @@ Happy coding :)
 ![GitHub language count](https://img.shields.io/github/languages/count/amupedia2021/Project-Amupedia?style=for-the-badge&color=brightgreen)
 <br><br>
 
-## Our Contributors
+<!-- ## Our Contributors -->
 
-<a href="https://github.com/amupedia2021/Project-Amupedia/graphs/contributors">
+<!-- <a href="https://github.com/amupedia2021/Project-Amupedia/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=amupedia2021/Project-Amupedia" />
 </a>
 
 <br>
 <div align="center">
 Show some ❤️ by starring this awesome repository!
-</div>
+</div> -->
+## OUR CONTRIBUTORS
+
+[![Contributors](https://contrib.rocks/image?repo=amupedia2021/Project-Amupedia)](https://github.com/amupedia2021/Project-Amupedia/graphs/contributors)
+
+Thank you to all the amazing contributors who have made this project possible!
+Show some ❤️ by starring this awesome repository!
+
+
+## 🔗 CONNECT WITH PROJECT ADMIN
+<!-- [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/anmode)
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anmol-agrawal-748389151/)
+
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/A2_AnmolAgrawal) -->
+
+| [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/anmode) | [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anmol-agrawal-748389151/) | [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/A2_AnmolAgrawal) |
+|---|---|---|
+
+
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
