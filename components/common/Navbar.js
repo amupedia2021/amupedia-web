@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "@styles/Navbar.module.css";
 import { useState, useEffect } from "react";
-// import { entries } from "lodash";
+import { entries } from "lodash";
 
 
 const Navbar = () => {
