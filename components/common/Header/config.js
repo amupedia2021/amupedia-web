@@ -40,54 +40,25 @@ export const icons = [
 
 const backgrounds = [
   {
-    backgroundColor: '#c099ff',
-    backgroundImage: `radial-gradient(at 2% 10%, hsla(285,85%,79%,1) 0px, transparent 50%),
-  radial-gradient(at 83% 15%, hsla(332,95%,65%,1) 0px, transparent 50%),
-  radial-gradient(at 63% 5%, hsla(239,80%,68%,1) 0px, transparent 50%),
-  radial-gradient(at 0% 61%, hsla(328,80%,77%,1) 0px, transparent 50%),
-  radial-gradient(at 39% 31%, hsla(356,80%,70%,1) 0px, transparent 50%),
-  radial-gradient(at 92% 33%, hsla(344,84%,70%,1) 0px, transparent 50%),
-  radial-gradient(at 9% 14%, hsla(197,61%,68%,1) 0px, transparent 50%);`
+  backgroundColor: 'rgb(120,2,6)',
+  backgroundImage: `linear-gradient(99deg, rgba(120,2,6,1) 21%, rgba(64,5,33,1) 49%, rgba(21,27,69,1) 89%);`
   },
   {
-    backgroundColor: '#ff99fd',
-    backgroundImage: `radial-gradient(at 27% 21%, hsla(310,75%,73%,1) 0px, transparent 50%),
-    radial-gradient(at 65% 82%, hsla(266,61%,71%,1) 0px, transparent 50%),
-    radial-gradient(at 21% 49%, hsla(343,84%,72%,1) 0px, transparent 50%),
-    radial-gradient(at 84% 92%, hsla(359,78%,73%,1) 0px, transparent 50%),
-    radial-gradient(at 39% 54%, hsla(90,90%,69%,1) 0px, transparent 50%),
-    radial-gradient(at 38% 13%, hsla(97,93%,70%,1) 0px, transparent 50%),
-    radial-gradient(at 93% 52%, hsla(81,85%,78%,1) 0px, transparent 50%);`
+    backgroundColor: 'rgb(196,88,153);',
+    backgroundImage: `linear-gradient(195deg, rgba(196,88,153,1) 19%, rgba(83,14,115,1) 56%, rgba(0,0,0,1) 98%, rgba(173,83,137,1) 100%);`
+   
   },
   {
-    backgroundColor: '#99c3ff',
-    backgroundImage: `radial-gradient(at 87% 66%, hsla(157,77%,76%,1) 0px, transparent 50%),
-    radial-gradient(at 0% 6%, hsla(116,94%,75%,1) 0px, transparent 50%),
-    radial-gradient(at 71% 9%, hsla(182,80%,70%,1) 0px, transparent 50%),
-    radial-gradient(at 93% 41%, hsla(67,87%,64%,1) 0px, transparent 50%),
-    radial-gradient(at 46% 27%, hsla(203,79%,67%,1) 0px, transparent 50%),
-    radial-gradient(at 31% 97%, hsla(289,69%,65%,1) 0px, transparent 50%),
-    radial-gradient(at 47% 84%, hsla(267,73%,63%,1) 0px, transparent 50%);`
+    backgroundColor: 'rgb(203,180,212)',
+    backgroundImage: `linear-gradient(202deg, rgba(203,180,212,1) 2%, rgba(103,86,139,1) 40%, rgba(32,0,44,1) 91%);`
   },
   {
-    backgroundColor: '#df99ff',
-    backgroundImage: `radial-gradient(at 68% 83%, hsla(250,65%,60%,1) 0px, transparent 50%),
-    radial-gradient(at 23% 13%, hsla(221,93%,75%,1) 0px, transparent 50%),
-    radial-gradient(at 63% 28%, hsla(231,62%,71%,1) 0px, transparent 50%),
-    radial-gradient(at 37% 53%, hsla(92,79%,72%,1) 0px, transparent 50%),
-    radial-gradient(at 56% 99%, hsla(276,92%,61%,1) 0px, transparent 50%),
-    radial-gradient(at 17% 19%, hsla(43,79%,73%,1) 0px, transparent 50%),
-    radial-gradient(at 0% 17%, hsla(80,74%,63%,1) 0px, transparent 50%);`
+    backgroundColor: 'rgb(158,35,84)',
+    backgroundImage: ` linear-gradient(261deg, rgba(158,35,84,1) 18%, rgba(17,16,16,1) 83%)`
   },
   {
-    backgroundColor: '#f899ff',
-    backgroundImage: `radial-gradient(at 84% 32%, hsla(193,80%,64%,1) 0px, transparent 50%),
-    radial-gradient(at 47% 6%, hsla(272,85%,61%,1) 0px, transparent 50%),
-    radial-gradient(at 32% 15%, hsla(216,69%,70%,1) 0px, transparent 50%),
-    radial-gradient(at 25% 5%, hsla(325,85%,74%,1) 0px, transparent 50%),
-    radial-gradient(at 66% 61%, hsla(179,64%,73%,1) 0px, transparent 50%),
-    radial-gradient(at 13% 76%, hsla(273,90%,63%,1) 0px, transparent 50%),
-    radial-gradient(at 64% 49%, hsla(312,73%,77%,1) 0px, transparent 50%);`
+    backgroundColor: 'rgb(49,71,85)',
+    backgroundImage: ` linear-gradient(261deg, rgba(49,71,85,1) 18%, rgba(33,93,121,1) 43%, rgba(27,154,168,1) 70%)`
   }
 ];
 

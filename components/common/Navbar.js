@@ -2,17 +2,21 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "@styles/Navbar.module.css";
 import { useState, useEffect } from "react";
+// import { entries } from "lodash";
+
 
 const Navbar = () => {
   const router = useRouter();
   const [navbar, setNavbar] = useState(false);
   const [courseActive, setCourseActive] = useState(false);
+  const [contactActive,setContactActive]=useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", changeNavbar);
-
+    // window.addEventListener("scroll",changeNavbar);
+    const contact=document.getElementById("contact");
     const courses = document.getElementById("courses");
-    if (!courses) return;
+    if (!courses || !contact) return;
     const obs = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
@@ -27,6 +31,32 @@ const Navbar = () => {
 
     obs.observe(courses);
   }, []);
+
+
+
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNavbar);
+    // window.addEventListener("scroll",changeNavbar);
+    const contact=document.getElementById("contact");
+    // const courses = document.getElementById("courses");
+    if (!contact) return;
+    const obs = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setContactActive(true);
+        } else {
+          setContactActive(false);
+        }
+      },
+      { threshold: 0.8 }
+    );
+
+    obs.observe(contact);
+  }, []);
+
+
 
   const changeNavbar = () => {
     if (window.scrollY > 500) {
@@ -60,12 +90,12 @@ const Navbar = () => {
       >
         {/* {TODO: !Logo to be completed } */}
         {/* <div className={styles.logo}>
-					<Image src={logo} alt="Logo"></Image>
+					// <Image src={logo} alt="Logo"></Image>
 				</div> */}
         <ul className={styles.list}>
           <li
             className={`${styles.listitem} ${
-              router.pathname === "/" && !courseActive && navbar
+              router.pathname === "/" && !courseActive && !contactActive && navbar
                 ? styles.navList_active
                 : ""
             }`}
@@ -74,13 +104,14 @@ const Navbar = () => {
               <a
                 onClick={onClick}
                 className={`${styles.lnk} ${
-                  router.pathname === "/" && !courseActive ? styles.active : ""
+                  router.pathname === "/" && !courseActive && !contactActive ? styles.active : ""
                 } ${navbar && styles.nav_active}`}
               >
                 Home
               </a>
             </Link>
           </li>
+         
           <li
             className={`${styles.listitem} ${
               router.pathname === "/about" && navbar
@@ -123,22 +154,32 @@ const Navbar = () => {
               </a>
             </span>
           </li>
-          {/* <li
-						className={`${styles.tem} ${styles.listitem} ${
-							router.pathname === '/team' && navbar ? styles.navList_active : ''
-						}`}
-					>
-						<Link href="/team">
-							<a
-								onClick={onClick}
-								className={`${styles.lnk} ${
-									router.pathname === '/team' ? styles.active : ''
-								} ${navbar && styles.nav_active}`}
-							>
-								Team
-							</a>
-						</Link>
-					</li> */}
+
+          <li
+            className={`${styles.listitem} ${
+              contactActive && navbar ? styles.navList_active : ""
+            }`}
+          >
+            <span>
+              <a
+                onClick={() => {
+                  router.push("/");
+                  setTimeout(() => {
+                    const contact = document.getElementById("contact");
+                    if (contact) contact.scrollIntoView();
+
+                    onClick();
+                  }, 10);
+                }}
+                className={`${styles.lnk} ${
+                  contactActive ? styles.active : ""
+                } ${navbar && styles.nav_active}`}
+              >
+                Contact Us
+              </a>
+            </span>
+          </li>
+         
           <li
             className={`${styles.blg} ${styles.listitem} ${
               router.pathname === "/blog" && navbar ? styles.navList_active : ""

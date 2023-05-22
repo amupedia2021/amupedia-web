@@ -9,7 +9,7 @@
   left: 5vw;
   z-index: 10;
   max-width: 150px;
-  filter: drop-shadow(5px 5px 19px #fff);
+  filter: drop-shadow(5px 5px 19px #090707);
 }
 
 /* navigation bar style for mobile phone */
@@ -18,11 +18,11 @@
   opacity: 80%;
   background-color: rgb(255, 255, 255);
   position: fixed;
-  width: 40%;
+  width: 60%;
   top: 100px;
   right: -700px;
   list-style: none;
-  padding: 15px;
+  padding: 65px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   transition: all 0.5s cubic-bezier(0, 1.21, 1, 0.97);
@@ -167,6 +167,7 @@ navigation menu opens in mobile phones */
     z-index: 100;
     top: 0;
     width: 100%;
+    font-size: medium;
     transition: all 0.5s ease;
   }
   .navbar.active {
@@ -186,6 +187,7 @@ navigation menu opens in mobile phones */
   }
   .listitem {
     background-color: transparent;
+    /* font-size: larger; */
     font-weight: bold;
     width: 100px;
     border-radius: 20px;
@@ -197,12 +199,16 @@ navigation menu opens in mobile phones */
   }
   .lnk {
     width: 100%;
-    font-size: 22px;
+    font-size: 17px;
     color: rgb(255, 255, 255);
     text-shadow: 2px -2px 8px rgba(0, 0, 0, 0.228);
   }
-  .listitem:hover > .lnk {
+  .listitem:hover > .lnk{
     text-shadow: white 2px 2px 10px;
+  }
+
+  .lnk:hover{
+    
   }
   .lnk.active {
     text-shadow: white 0px 0px 10px !important;
@@ -212,6 +218,7 @@ navigation menu opens in mobile phones */
     color: rgb(12, 12, 12);
     text-shadow: none !important;
   }
+  
 
   .nav_active.active {
     color: white;
@@ -219,6 +226,6 @@ navigation menu opens in mobile phones */
   }
 
   .navList_active {
-    background-color: rgb(62, 62, 252);
+    background-color: rgb(153, 120, 223);
   }
 }

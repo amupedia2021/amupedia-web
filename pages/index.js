@@ -159,12 +159,13 @@ export default function Home() {
           </div>
 
           {/* <!-- Contact Form  --> */}
+          <div id="contact">
           <h2 className={styles.grabh2}>Get In Touch With Us</h2>
           <form onSubmit={onSubmit}>
             <div className={styles.cntfrm}>
               <input
                 value={form.first_name}
-                onChange={onChange}
+                onChange={onChange} 
                 required
                 type="text"
                 name="first_name"
@@ -220,6 +221,7 @@ export default function Home() {
               {loading ? <Preloader /> : <p>Submit</p>}
             </button>
           </form>
+          </div>
         </section>
       </main>
       <Footer />
