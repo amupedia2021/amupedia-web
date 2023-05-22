@@ -89,12 +89,11 @@ Happy coding :)
 <br><br>
 
 ## Our Contributors
-
 <a href="https://github.com/amupedia2021/Project-Amupedia/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=amupedia2021/Project-Amupedia" />
-</a>
+  <img align="center" src="https://contrib.rocks/image?max=100&repo=amupedia2021/Project-Amupedia" />
+</a> 
 
-<br>
+<br><br>
 <div align="center">
 Show some ❤️ by starring this awesome repository!
 </div>
