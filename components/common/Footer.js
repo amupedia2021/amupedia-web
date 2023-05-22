@@ -1,6 +1,6 @@
 import styles from "@styles/Footer.module.css";
 import { FontAwesomeIcon } from "node_modules/@fortawesome/react-fontawesome/index";
-import { faInstagramSquare } from "node_modules/@fortawesome/free-brands-svg-icons/index";
+import { faGithub, faInstagramSquare } from "node_modules/@fortawesome/free-brands-svg-icons/index";
 import { faFacebookSquare } from "node_modules/@fortawesome/free-brands-svg-icons/index";
 import { faTwitterSquare } from "node_modules/@fortawesome/free-brands-svg-icons/index";
 import { faLinkedin } from "node_modules/@fortawesome/free-brands-svg-icons/index";
@@ -61,6 +61,18 @@ const Footer = () => {
           </a>
         </div>
       </div>
+      <div id={styles.above_ftbg}>
+       <p><a href="https://github.com/amupedia2021/Project-Amupedia">
+            Contribute to the project
+            <FontAwesomeIcon
+              icon={faGithub}
+              size="1x"
+              inverse
+              className={styles.icon}
+            />
+            </a>
+            </p>
+            </div>
       <div id={styles.ftbg}>
         <p>Copyright2021@amupedia.com</p>
       </div>
