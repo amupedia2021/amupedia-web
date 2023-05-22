@@ -1,3 +1,5 @@
+<div id="top"></div>
+
 # Amupedia
 
 ## _Simple website that will blow your mind!_
@@ -96,3 +98,5 @@ Happy coding :)
 <div align="center">
 Show some ❤️ by starring this awesome repository!
 </div>
+
+<p align="right">(<a href="#top">Back to top</a>)</p>
