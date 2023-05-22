@@ -106,7 +106,7 @@ Thank you to all the amazing contributors who have made this project possible!
 Show some ❤️ by starring this awesome repository!
 
 
-## 🔗 LINKS
+## 🔗 CONNECT WITH PROJECT ADMIN
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/anmode)
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anmol-agrawal-748389151/)
