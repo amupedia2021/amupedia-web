@@ -208,7 +208,7 @@ navigation menu opens in mobile phones */
   }
 
   .lnk:hover{
-    
+    text-shadow: white 2px 2px 10px;
   }
   .lnk.active {
     text-shadow: white 0px 0px 10px !important;
