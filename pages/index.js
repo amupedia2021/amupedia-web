@@ -170,6 +170,8 @@ export default function Home() {
                 name="first_name"
                 placeholder="First Name"
                 className={styles.details}
+                pattern="[a-zA-Z]+"
+                title="Please enter Alphabets"
               />
               <input
                 value={form.last_name}
@@ -179,6 +181,8 @@ export default function Home() {
                 type="text"
                 placeholder="Last Name"
                 className={styles.details}
+                pattern="[a-zA-Z]+"
+                title="Please enter Alphabets"
               />
               <input
                 value={form.email}
