@@ -1,3 +1,5 @@
+<div id="top"></div>
+
 # Amupedia
 
 ## _Simple website that will blow your mind!_
@@ -58,6 +60,15 @@ git add . git commit -m "Your commit Message" git push origin branch-name
 - Make a pull request.
 - Star the repository.
 
+### Building Amupedia
+
+1. Install npm from browser(windows), using ``sudo apt install npm``(linux) in the terminal
+2. In the root directory: `npm install` for downloading all the dependencies needed for the project
+3. Run `npm run build` for building the project
+4. Run `npm start` for starting the server (Amupedia is currently running on `localhost:3000`)
+
+Happy coding :)
+
 ### NOTE
 
 - Make Sure you commit your changes in a new branch.
@@ -87,3 +98,5 @@ git add . git commit -m "Your commit Message" git push origin branch-name
 <div align="center">
 Show some ❤️ by starring this awesome repository!
 </div>
+
+<p align="right">(<a href="#top">Back to top</a>)</p>
