@@ -152,7 +152,7 @@ export default function Home() {
             <Link passHref href="/">
               <Tilt className={styles.tlt}>
                 <div className={styles.rec3}>
-                  <p>Competetive Exams</p>
+                  <p>Competitive Exams</p>
                 </div>
               </Tilt>
             </Link>
