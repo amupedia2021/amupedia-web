@@ -97,7 +97,7 @@ Happy coding :)
 <br><br>
 
 
-## OUR CONTRIBUTERS
+## OUR CONTRIBUTORS
 
 <a href="https://github.com/amupedia2021/Project-Amupedia/graphs/contributors">
   <img align="center" src="https://contrib.rocks/image?max=100&repo=amupedia2021/Project-Amupedia" />
