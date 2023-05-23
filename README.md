@@ -110,11 +110,6 @@ Happy coding :)
   <img align="center" src="https://contrib.rocks/image?max=100&repo=amupedia2021/Project-Amupedia" />
 </a> 
 
-
-## OUR CONTRIBUTORS
-
-[![Contributors](https://contrib.rocks/image?repo=amupedia2021/Project-Amupedia)](https://github.com/amupedia2021/Project-Amupedia/graphs/contributors)
-
 Thank you to all the amazing contributors who have made this project possible!
 Show some ❤️ by starring this awesome repository!
 
