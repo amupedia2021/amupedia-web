@@ -68,8 +68,7 @@ export default function Home() {
             <p>
               We are the students of AMU, intending to provide you all the
               quality stuff related to B.Tech, B.Com, B.E, and various other
-              courses, the pdfs related to experiment, viva, and quizzes
-              question, the mid and end semester examination as well as the
+              courses, the pdfs related to experiments, viva, and quizzes, the mid and end semester examinations as well as the
               assignments. We are providing all this content for free.
             </p>
           </div>
