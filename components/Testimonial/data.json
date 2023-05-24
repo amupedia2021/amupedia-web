@@ -1,0 +1,25 @@
+[
+    {   "id": 1,
+        "name":"Matthew Wright",
+        "role":"Backend Engineer",
+        "message":"I can't thank this teaching website enough. The courses are well-structured, making it easy to grasp complex concepts. My coding skills have improved significantly. Highly recommended!"
+    },
+    {
+        "id": 2,
+        "name":"Jonathan Lee",
+        "role":"Senior DevOps Engineer",
+        "message":"This teaching website is a game-changer. The courses provide practical insights and real-world scenarios, enabling me to excel in my role. I highly recommend it to fellow developers"
+    },
+    {
+        "id": 3,
+        "name":"Michael Carter",
+        "role":"Product Engineer",
+        "message":"I'm impressed! This teaching website has concise and effective courses. My coding abilities have improved significantly. I highly recommend it for developers at any level."
+    },
+    {
+        "id": 4,
+        "name":"Sophia Martinez",
+        "role":"Front-end Developer",
+        "message":"The teaching resources on this website are invaluable. The instructors explain complex concepts brilliantly, and the practical exercises have honed my skills. I'm grateful for this platform!"
+    }
+]
