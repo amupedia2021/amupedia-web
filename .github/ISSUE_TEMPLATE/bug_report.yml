@@ -35,8 +35,8 @@ body:
   - type: textarea
     id: instructions
     attributes:
-      label: Provide breif description to get to the expect behaviour.
-      description: Enter the breif description on how you plan to find the bug's solution
+      label: Give a brief description to get the expect behaviour.
+      description: Enter the brief description on how you plan to find the bug's solution
       placeholder: Please include a summary, also include relevant motivation and context. 
       value: "Description"
     validations:
