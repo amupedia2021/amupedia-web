@@ -29,7 +29,6 @@ body:
       options:
         - GSSoC23
         - Other
-        - None
         
         
   - type: checkboxes
