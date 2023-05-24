@@ -116,7 +116,7 @@ const Navbar = () => {
               courseActive && navbar ? styles.navList_active : ''
             }`}
           >
-            <span>
+            <Link href='/'>
               <a
                 onClick={() => {
                   router.push('/');
@@ -133,7 +133,7 @@ const Navbar = () => {
               >
                 Courses
               </a>
-            </span>
+            </Link>
           </li>
 
           <li
