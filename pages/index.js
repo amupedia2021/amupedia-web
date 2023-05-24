@@ -13,6 +13,7 @@ import Footer from "components/common/Footer";
 import { Store } from "utils/Store/Store";
 import Preloader from "components/common/Preloader";
 import axios from "node_modules/axios/index";
+import TestimonialCard from "components/Testimonial/Testimonial";
 
 export default function Home() {
   const { dispatch } = useContext(Store);
@@ -226,6 +227,7 @@ export default function Home() {
           </form>
         </section>
       </main>
+      <TestimonialCard/>
       <Footer />
     </>
   );
