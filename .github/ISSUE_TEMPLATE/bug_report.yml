@@ -49,7 +49,7 @@ body:
       label: Are you contributing for a program?
       multiple: true
       options:
-        - label : ["GSSoC2023"];
+        - label : ["GSSoC2023"]
         - Other
         
         
