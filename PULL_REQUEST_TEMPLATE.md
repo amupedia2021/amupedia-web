@@ -1,10 +1,6 @@
-## Checklist before requesting a review
+## Description
 
-- [ ] I have performed a self-review of my code.
-- [ ] Starred the repository.
-- [ ] Added My Name to the Contributor's List.
-- [ ] Followed the repository's [Contributing Guidelines](/CONTRIBUTING.md).
-- [ ] I ran the app and tested it locally to verify that it works as expected.
+Please provide a brief description of the changes introduced in this pull request. Explain the problem you are solving or the feature you are adding.
 
 ## Pull Request Checklist
 
@@ -14,10 +10,6 @@ Please make sure that your PR meets the following requirements:
 - [ ] The app is responsive and displays properly on different screen sizes and devices.
 - [ ] The changes are thoroughly documented in the appropriate files or documentation sections.
 - [ ] The coding conventions and style guidelines are followed consistently.
-
-## Description
-
-Please provide a brief description of the changes introduced in this pull request. Explain the problem you are solving or the feature you are adding.
 
 ## Checklist
 
@@ -31,6 +23,11 @@ Please check all applicable boxes and provide any additional information if need
 - [ ] I have considered the performance implications of the changes made.
 - [ ] I have considered the security implications of the changes made.
 - [ ] I have checked for any potential regressions or side effects caused by the changes.
+- [ ] I have performed a self-review of my code.
+- [ ] Starred the repository.
+- [ ] Added My Name to the Contributor's List.
+- [ ] Followed the repository's [Contributing Guidelines](/CONTRIBUTING.md).
+- [ ] I ran the app and tested it locally to verify that it works as expected.
 
 # Screenshots - If Any (Optional)
 
