@@ -29,10 +29,16 @@
      <br>
 Founded by the students of ZHCET in 2021, Amupedia is the biggest platform to help fellow students through their college program. This initiative will cater to the academic demands of the students and give assistance to them in every way possible. Everyone out there is running in the race to the top, and we here offer a push to anyone who needs it. Whether you come for the notes, read our blogs, or attend our events, you will emerge from Amupedia with new knowledge, perspective, influences, and connections.
 
-
 ## Live Demo
 
 Here is the live view of this website. It is hosted on Netlify https://www.amupedia.com/.
+
+## Setup Video
+
+
+https://github.com/amupedia2021/Project-Amupedia/assets/88332977/62ebc514-9d71-4f39-9a47-1dc7eded0653
+
+
 
 ### How to Contribute to this repository
 
@@ -81,6 +87,15 @@ Happy coding :)
 - The pdfs related to experiment, viva, quizzes question, the mid and end semester examination as well as the assignments.
 - We are providing all this content for free.
 
+## Technology Stack
+
+![JAVASCRIPT](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS5](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![NextJS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+
 ## REPO STATUS
 
 ![GitHub PR Open](https://img.shields.io/github/issues-pr/amupedia2021/Project-Amupedia?style=for-the-badge&color=aqua)
@@ -88,34 +103,14 @@ Happy coding :)
 ![GitHub language count](https://img.shields.io/github/languages/count/amupedia2021/Project-Amupedia?style=for-the-badge&color=brightgreen)
 <br><br>
 
-<!-- ## Our Contributors -->
 
-<!-- <a href="https://github.com/amupedia2021/Project-Amupedia/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=amupedia2021/Project-Amupedia" />
-</a>
-
-<br>
-<div align="center">
-Show some ❤️ by starring this awesome repository!
-</div> -->
 ## OUR CONTRIBUTORS
 
-[![Contributors](https://contrib.rocks/image?repo=amupedia2021/Project-Amupedia)](https://github.com/amupedia2021/Project-Amupedia/graphs/contributors)
+<a href="https://github.com/amupedia2021/Project-Amupedia/graphs/contributors">
+  <img align="center" src="https://contrib.rocks/image?max=100&repo=amupedia2021/Project-Amupedia" />
+</a> 
 
 Thank you to all the amazing contributors who have made this project possible!
 Show some ❤️ by starring this awesome repository!
-
-
-## 🔗 CONNECT WITH PROJECT ADMIN
-<!-- [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/anmode)
-
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anmol-agrawal-748389151/)
-
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/A2_AnmolAgrawal) -->
-
-| [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/anmode) | [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anmol-agrawal-748389151/) | [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/A2_AnmolAgrawal) |
-|---|---|---|
-
-
 
 <p align="right">(<a href="#top">Back to top</a>)</p>
