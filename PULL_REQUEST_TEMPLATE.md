@@ -1,3 +1,11 @@
+## Checklist before requesting a review
+
+- [ ] I have performed a self-review of my code.
+- [ ] Starred the repository.
+- [ ] Added My Name to the Contributor's List.
+- [ ] Followed the repository's [Contributing Guidelines](/CONTRIBUTING.md).
+- [ ] I ran the app and tested it locally to verify that it works as expected.
+
 ## Pull Request Checklist
 
 Please make sure that your PR meets the following requirements:
@@ -24,7 +32,9 @@ Please check all applicable boxes and provide any additional information if need
 - [ ] I have considered the security implications of the changes made.
 - [ ] I have checked for any potential regressions or side effects caused by the changes.
 
-## Additional Notes
+# Screenshots - If Any (Optional)
+
+## Additional Notes(Optional)
 
 Please provide any additional information or context that may be helpful for reviewing the pull request.
 
