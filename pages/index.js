@@ -13,6 +13,7 @@ import Footer from "components/common/Footer";
 import { Store } from "utils/Store/Store";
 import Preloader from "components/common/Preloader";
 import axios from "node_modules/axios/index";
+import TestimonialCard from "components/Testimonial/Testimonial";
 
 export default function Home() {
   const { dispatch } = useContext(Store);
@@ -67,8 +68,7 @@ export default function Home() {
             <p>
               We are the students of AMU, intending to provide you all the
               quality stuff related to B.Tech, B.Com, B.E, and various other
-              courses, the pdfs related to experiment, viva, and quizzes
-              question, the mid and end semester examination as well as the
+              courses, the pdfs related to experiments, viva, and quizzes, the mid and end semester examinations as well as the
               assignments. We are providing all this content for free.
             </p>
           </div>
@@ -152,7 +152,7 @@ export default function Home() {
             <Link passHref href="/">
               <Tilt className={styles.tlt}>
                 <div className={styles.rec3}>
-                  <p>Competetive Exams</p>
+                  <p>Competitive Exams</p>
                 </div>
               </Tilt>
             </Link>
@@ -170,6 +170,8 @@ export default function Home() {
                 name="first_name"
                 placeholder="First Name"
                 className={styles.details}
+                pattern="[a-zA-Z]+"
+                title="Please enter Alphabets"
               />
               <input
                 value={form.last_name}
@@ -179,6 +181,8 @@ export default function Home() {
                 type="text"
                 placeholder="Last Name"
                 className={styles.details}
+                pattern="[a-zA-Z]+"
+                title="Please enter Alphabets"
               />
               <input
                 value={form.email}
@@ -222,6 +226,7 @@ export default function Home() {
           </form>
         </section>
       </main>
+      <TestimonialCard/>
       <Footer />
     </>
   );

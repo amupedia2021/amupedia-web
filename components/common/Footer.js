@@ -76,6 +76,18 @@ const Footer = () => {
           </a>
         </div>
       </div>
+      <div id={styles.above_ftbg}>
+        <p><a href="https://github.com/amupedia2021/Project-Amupedia">
+          Contribute to the project <br />
+          <FontAwesomeIcon
+            icon={faGithub}
+            size="1x"
+            inverse
+            className={styles.icon}
+          />
+        </a>
+        </p>
+      </div>
       <div id={styles.ftbg}>
         <p>Copyright2021@amupedia.com</p>
       </div>

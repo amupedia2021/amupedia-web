@@ -3,6 +3,7 @@ import jwt from "jsonwebtoken";
 import "@styles/globals.css";
 import Head from "node_modules/next/head";
 // import { useEffect } from 'react';
+import "../styles/tailwind.css" //importing Tailwind CSS utilities
 import { motion } from "framer-motion";
 import { StoreProvider } from "utils/Store/Store";
 import Alert from "components/common/Alert";
