@@ -74,7 +74,7 @@ const Footer = () => {
         </p>
       </div>
       <div id={styles.ftbg}>
-        <p>Copyright2021@amupedia.com</p>
+        <p>Copyright2021  @amupedia.com</p>
       </div>
     </footer>
   );
