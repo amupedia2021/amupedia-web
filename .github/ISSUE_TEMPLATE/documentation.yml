@@ -1,8 +1,9 @@
-name: 📚 Documentation
+name: "📚 Documentation"
 description: Report an issue in the project's documentation or README.md file.
-title: "[Documentation Addition]: "
-labels: ["documentation", "No Code" ]
-
+title: "📚 [Documentation] - Title"
+labels: [
+  "documentation"
+]
 body:
   - type: markdown
     attributes:
@@ -16,25 +17,24 @@ body:
         :link: [CONTRIBUTING GUIDELINES](https://github.com/amupedia2021/Project-Amupedia/blob/master/CONTRIBUTING.md)
 
   - type: textarea
-    id: documentation-description
+    id: description
     attributes:
-      label: Also, describe the documentation you want to add. ✍️
+      label: "Description ✍️"
       description: Enter a brief description about the deficit documentation that you want to add.
-      placeholder: Please include a summary, also include relevant motivation and context. 
-      value: "Description"
-      render: bash
+      placeholder: Please include a summary, also include any relevant links.
     validations:
       required: true
-      
   - type: dropdown
     id: contribution
     attributes:
-      label: Are you contributing for a program?
+      label: Are you contributing for a program ?
+      description: Please select the program you are contributing for.
       multiple: true
       options:
-        - GSSoC23
+        - GSSoC2023
         - Other
-        
+    validations:
+      required: true
   - type: checkboxes
     id: terms
     attributes:

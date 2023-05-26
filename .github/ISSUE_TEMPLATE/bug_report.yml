@@ -1,6 +1,6 @@
-name: "🐛 Bug Report"
+name: "🐞 Bug Report"
 description: Create a new ticket for a bug.
-title: "🐛 [BUG] - <title>"
+title: "🐞 [BUG] - Title"
 labels: [
   "bug"
 ]
@@ -8,7 +8,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        :bug: **Bug Report**
+        🐞 **Bug Report**
 
         Thanks for taking the time to fill out this bug report! :memo:
 
@@ -100,7 +100,7 @@ body:
   - type: dropdown
     id: contribution
     attributes:
-      label: Are you contributing for a program?
+      label: Are you contributing for a program ?
       multiple: true
       options:
         - GSSoC2023
