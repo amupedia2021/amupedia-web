@@ -1,48 +1,102 @@
-name: Bug Report
-description: File a bug report
-title: "[Bug]: "
-labels: ["bug"]
-
+name: "🐛 Bug Report"
+description: Create a new ticket for a bug.
+title: "🐛 [BUG] - <title>"
+labels: [
+  "bug"
+]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
-        
-        
+        :bug: **Bug Report**
+
+        Thanks for taking the time to fill out this bug report! :memo:
+
+        :information_source: Before submitting the report, please make sure to read our contributing guidelines. By submitting this issue, you agree to follow our guidelines. :book:
+
+        :link: [CONTRIBUTING GUIDELINES](https://github.com/amupedia2021/Project-Amupedia/blob/master/CONTRIBUTING.md)
+
   - type: textarea
-    id: bug-description
+    id: description
     attributes:
-      label: Give a brief about the bug discovered✍
-      description: Enter a brief description about the bug report
-      placeholder: Please include a summary, also include relevant motivation and context. 
-      value: "Description"
+      label: "Description"
+      description: Please enter an explicit description of your issue
+      placeholder: Short and explicit description of your incident...
     validations:
       required: true
-      
-      
   - type: textarea
-    id: behaviors
+    id: currentBehavior
     attributes:
-      label: What is the expected behavior?
-      description: Also tell us, what did you expect to happen, if bug was not present?
-      placeholder: Please include a summary, also include relevant motivation and context. 
-      value: "Description"
+      label: "Current behaviour"
+      description: What happens, e.g. "The price shown on the button is £400"
+      placeholder: Short and explicit description of current senario...
     validations:
       required: true
-      
-      
   - type: textarea
-    id: instructions
+    id: expectedBehaviour
     attributes:
-      label: Give a brief description to get the expect behaviour.
-      description: Enter the brief description on how you plan to find the bug's solution
-      placeholder: Please include a summary, also include relevant motivation and context. 
-      value: "Description"
+      label: "Expected behaviour"
+      description: What should happen, e.g. "The price shown on the button is £4"
+      placeholder: Short and explicit description of what should happen...
     validations:
       required: true
-      
-      
+  - type: textarea
+    id: reprod
+    attributes:
+      label: "Reproduction steps"
+      description: Please enter an explicit description of your issue
+      value: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+      render: bash
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: "Screenshots"
+      description: If applicable, add screenshots to help explain your problem.
+      value: |
+        ![DESCRIPTION](LINK.png)  
+      render: bash
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs"
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: bash
+    validations:
+      required: false
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: "Browsers"
+      description: What browsers are you seeing the problem on ?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - Opera
+    validations:
+      required: false
+  - type: dropdown
+    id: os
+    attributes:
+      label: "OS"
+      description: What is the impacted environment ?
+      multiple: true
+      options:
+        - Windows
+        - Linux
+        - Mac
+    validations:
+      required: false
   - type: dropdown
     id: contribution
     attributes:
@@ -51,13 +105,15 @@ body:
       options:
         - GSSoC2023
         - Other
-        
-        
+    validations:
+      required: true
   - type: checkboxes
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our contibuting guideline[CONTRIBUTING GUIDELINE](https://github.com/amupedia2021/Project-Amupedia/blob/master/CONTRIBUTING.md)
+      description: By submitting this issue, you agree to follow our contributing guidelines. Please read our [CONTRIBUTING GUIDELINES](https://github.com/amupedia2021/Project-Amupedia/blob/master/CONTRIBUTING.md).
       options:
-        - label: I follow [CONTRIBUTING GUIDELINE](https://github.com/amupedia2021/Project-Amupedia/blob/master/CONTRIBUTING.md) of this project.
+        - label: I have read and agree to the [CONTRIBUTING GUIDELINES](https://github.com/amupedia2021/Project-Amupedia/blob/master/CONTRIBUTING.md) of this project.
           required: true
+
+      
