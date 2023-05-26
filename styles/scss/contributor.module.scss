@@ -1,0 +1,7 @@
+@import "./config";
+
+.container {
+  margin-top: var(--header-margin);
+  @include flex;
+  flex-wrap: wrap;
+}
