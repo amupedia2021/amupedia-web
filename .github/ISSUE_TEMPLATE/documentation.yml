@@ -1,15 +1,20 @@
-name: Documentation or README.md issue report
+name: 📚 Documentation
 description: Report an issue in the project's documentation or README.md file.
 title: "[Documentation Addition]: "
-labels: ["documentation", "enhancement", "No Code"]
+labels: ["documentation", "No Code" ]
 
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this documentation deficiency report!
-        
-        
+        📚 **Document Request / Updation **
+
+        Thanks for taking the time to fill out this documentation deficiency report! :memo:
+
+        :information_source: Before submitting the report, please make sure to read our contributing guidelines. By submitting this issue, you agree to follow our guidelines. :book:
+
+        :link: [CONTRIBUTING GUIDELINES](https://github.com/amupedia2021/Project-Amupedia/blob/master/CONTRIBUTING.md)
+
   - type: textarea
     id: documentation-description
     attributes:
@@ -17,10 +22,10 @@ body:
       description: Enter a brief description about the deficit documentation that you want to add.
       placeholder: Please include a summary, also include relevant motivation and context. 
       value: "Description"
+      render: bash
     validations:
       required: true
       
-     
   - type: dropdown
     id: contribution
     attributes:
@@ -30,12 +35,11 @@ body:
         - GSSoC23
         - Other
         
-        
   - type: checkboxes
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our contibuting guideline[CONTRIBUTING GUIDELINE](https://github.com/amupedia2021/Project-Amupedia/blob/master/CONTRIBUTING.md)
+      description: By submitting this issue, you agree to follow our contributing guidelines. Please read our [CONTRIBUTING GUIDELINES](https://github.com/amupedia2021/Project-Amupedia/blob/master/CONTRIBUTING.md).
       options:
-        - label: I follow [CONTRIBUTING GUIDELINE](https://github.com/amupedia2021/Project-Amupedia/blob/master/CONTRIBUTING.md) of this project.
+        - label: I have read and agree to the [CONTRIBUTING GUIDELINES](https://github.com/amupedia2021/Project-Amupedia/blob/master/CONTRIBUTING.md) of this project.
           required: true

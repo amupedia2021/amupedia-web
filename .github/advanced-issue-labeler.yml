@@ -1,0 +1,11 @@
+# syntax - https://github.com/redhat-plumbers-in-action/advanced-issue-labeler#policy
+---
+
+policy:
+  - template: ['bug_report.yml', 'feature.yml', 'documentation.yml']
+    section:
+      - id: ['contribution']
+        block-list: ['Other']
+        label:
+          - name: 'GSSoC2023'
+            keys: ['GSSoC2023']
