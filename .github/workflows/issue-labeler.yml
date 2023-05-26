@@ -1,7 +1,8 @@
 name: Issue labeler
+
 on:
   issues:
-    types: [ opened ]
+    types: [opened]
 
 jobs:
   label-issues-policy:
@@ -11,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        template: [ bug_report.yml, feature.yml, documentation.yml ]
+        template: [bug_report.yml, feature.yml, doc.yml]
 
     steps:
       - uses: actions/checkout@v3
@@ -28,3 +29,8 @@ jobs:
           issue-form: ${{ steps.issue-parser.outputs.jsonString }}
           template: ${{ matrix.template }}
           token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Add "no code" label to documentation template
+        if: matrix.template == 'doc.yml'
+        run: |
+          echo '::add-labels::no code'
