@@ -25,6 +25,7 @@
    <img src="https://img.shields.io/github/issues-pr-closed-raw/amupedia2021/Project-Amupedia?style=for-the-badge" />
    <img src="https://img.shields.io/github/forks/amupedia2021/Project-Amupedia?style=for-the-badge" />
   <img src="https://img.shields.io/github/last-commit/amupedia2021/Project-Amupedia?style=for-the-badge" />
+   <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Famupedia2021%2FProject-Amupedia&label=visitors&countColor=%2337d67a&style=for-the-badge&labelStyle=upper" />
      </div>
      <br>
 Founded by the students of ZHCET in 2021, Amupedia is the biggest platform to help fellow students through their college program. This initiative will cater to the academic demands of the students and give assistance to them in every way possible. Everyone out there is running in the race to the top, and we here offer a push to anyone who needs it. Whether you come for the notes, read our blogs, or attend our events, you will emerge from Amupedia with new knowledge, perspective, influences, and connections.
