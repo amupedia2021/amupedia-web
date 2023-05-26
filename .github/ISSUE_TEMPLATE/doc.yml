@@ -2,13 +2,14 @@ name: "📚 Documentation"
 description: Report an issue in the project's documentation or README.md file.
 title: "📚 [Documentation] - Title"
 labels: [
-  "documentation"
+  "documentation",
+  "no code"
 ]
 body:
   - type: markdown
     attributes:
       value: |
-        📚 **Document Request / Updation **
+        📚 **Document Request / Updation**
 
         Thanks for taking the time to fill out this documentation deficiency report! :memo:
 
