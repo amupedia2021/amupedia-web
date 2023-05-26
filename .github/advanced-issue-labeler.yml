@@ -2,7 +2,7 @@
 ---
 
 policy:
-  - template: ['bug_report.yml', 'feature.yml', 'documentation.yml']
+  - template: ['bug_report.yml', 'feature.yml', 'doc.yml']
     section:
       - id: ['contribution']
         block-list: ['Other']
