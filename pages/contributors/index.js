@@ -10,7 +10,7 @@ const Contributors = () => {
     const fetchContributors = async () => {
       try {
         const response = await fetch(
-          "https://api.github.com/repos/aysal04/Project-Amupedia/contributors",
+          "https://api.github.com/repos/amupedia2021/Project-Amupedia/contributors",
           {
             headers: {
               Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
