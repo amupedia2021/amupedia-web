@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap");
+
+.profile{
+    border-radius:50%;
+    height:250px;
+    margin-bottom: 20px;
+}
+
+.card{
+    margin:20px;
+    padding: 10px;
+}
+
+.content{
+    text-align: center;
+}
+
+.text{
+    font-weight: 700;
+    font-size: large;
+}

@@ -156,6 +156,23 @@ const Navbar = () => {
               </a>
             </Link>
           </li>
+
+          <li
+            className={`${styles.listitem} ${
+              router.pathname === '/contributors' && navbar ? styles.navList_active : ''
+            }`}
+          >
+            <Link href='/contributors'>
+              <a
+                onClick={onClick}
+                className={`${styles.lnk} ${
+                  router.pathname === '/contributors' ? styles.active : ''
+                } ${navbar && styles.nav_active}`}
+              >
+                Contributors
+              </a>
+            </Link>
+          </li>
         </ul>
       </nav>
     </>
