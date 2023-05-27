@@ -3,8 +3,7 @@
 #above_bg {
   font-family: "Baloo Bhai 2", sans-serif;
   font-size: 23px;
-  background: url("/images/footer/footer_bacg.jpeg") no-repeat center
-    center/cover;
+  background: url("/images/footer/footer_bacg.jpeg") no-repeat center center/cover;
   z-index: 12;
   height: 150px;
   width: 80%;
@@ -42,10 +41,33 @@
   transform: scale(1.05);
 }
 
+/* contribution background */
+#above_ftbg {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-size: 21px;
+  background: url("/images/footer/footer_2_bg.png") no-repeat center right/cover;
+  z-index: 15;
+  height: 50px;
+  width: 260px;
+  margin: auto;
+  border-radius: 20px;
+  position: relative;
+  top: 80px;
+}
+
+#above_ftbg p {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-size: 21px;
+  font-weight: bolder;
+  text-align: center;
+  position: relative;
+  top: 20%;
+  color: white;
+}
+
 /* footer background  */
 #ftbg {
-  background: url("/images/footer/footer_2_bg.png") no-repeat center
-    center/cover;
+  background: url("/images/footer/footer_2_bg.png") no-repeat center center/cover;
   width: 100%;
   height: 150px;
   bottom: 0;

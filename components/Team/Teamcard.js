@@ -29,7 +29,7 @@ export default function Teamcard({
             <p className={styles.card__info_name}>{name}</p>
             <p className={styles.card__info_desg}>{desig}</p>
             <div id={styles.card__info_icons}>
-              <a href={insta} target="_blank" rel="noreferrer">
+              <a href={insta} target="_blank" rel="noreferrer" aria-label="Follow me on Instagram">
                 <FontAwesomeIcon
                   icon={faInstagramSquare}
                   size="2x"
@@ -37,7 +37,7 @@ export default function Teamcard({
                   className={styles.icon}
                 />
               </a>
-              <a href={facebook} target="_blank" rel="noreferrer">
+              <a href={facebook} target="_blank" rel="noreferrer" aria-label="Follow me on Facebook">
                 <FontAwesomeIcon
                   icon={faFacebookSquare}
                   size="2x"
@@ -45,7 +45,7 @@ export default function Teamcard({
                   className={styles.icon}
                 />
               </a>
-              <a href={twitter} target="_blank" rel="noreferrer">
+              <a href={twitter} target="_blank" rel="noreferrer" aria-label="Follow me on Twitter">
                 <FontAwesomeIcon
                   icon={faTwitterSquare}
                   size="2x"
@@ -53,7 +53,7 @@ export default function Teamcard({
                   className={styles.icon}
                 />
               </a>
-              <a href={linkedin} target="_blank" rel="noreferrer">
+              <a href={linkedin} target="_blank" rel="noreferrer" aria-label="Follow me on Linkedin">
                 <FontAwesomeIcon
                   icon={faLinkedin}
                   size="2x"

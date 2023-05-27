@@ -103,7 +103,7 @@
   text-align: center;
   font-size: 45px;
   font-weight: bold;
-  margin: 80px 8px 0px 8px;
+  margin: 150px 8px 0px 8px;
 }
 .grabnotes a {
   text-decoration: none;
@@ -165,7 +165,7 @@
   #ourserimgs div img {
     width: 200px !important;
     height: 200px !important;
-    filter: drop-shadow(0px, 0px, 10px, black) !important;
+    filter: drop-shadow(0px 0px 10px black) !important;
   }
 }
 
@@ -193,20 +193,18 @@
 }
 
 .details {
-  flex-basis: 20%;
-  margin: 7px;
-  padding: 13px 18px;
-  background-color: rgb(218, 218, 255);
-  color: royalblue;
-  font-family: "Baloo Bhai 2";
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0px 2px rgb(86, 86, 255);
-  transition: all 0.4s ease;
+    margin: 7px;
+    color: #000000cc;
+    padding: 13px 18px;
+    background-color: rgb(218 218 255 / 42%);
+    font-family: "Baloo Bhai 2";
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    transition: all 0.4s ease;
 }
-/* ::placeholder {
-	color: rgb(62, 62, 252);
-	font-family: "Baloo Bhai 2";
+/*
+::placeholder {
+	color: red;
 }
 
 input:focus {
@@ -216,28 +214,25 @@ input:focus {
 } */
 
 .address {
-  margin: 7px;
-  padding: 13px 18px;
-  background-color: rgb(188, 188, 250);
-  color: royalblue;
-  font-family: "Baloo Bhai 2", sans-serif;
-  border: none;
-  border-radius: 10px;
-  flex-basis: 41%;
-  box-shadow: 0px 1.4px rgb(86, 86, 255);
-  transition: all 0.4s ease;
+    margin: 7px;
+    color: #000000cc;
+    padding: 13px 18px;
+    background-color: rgb(218 218 255 / 42%);
+    font-family: "Baloo Bhai 2";
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    transition: all 0.4s ease;
 }
 
 .msg {
   margin: 7px;
   padding: 24px 18px;
-  background-color: rgb(172, 168, 249);
-  color: royalblue;
+  background-color: rgb(218 218 255 / 42%);
+  color: #000000cc;
   font-family: "Baloo Bhai 2", sans-serif;
-  border: none;
+  border: 1px solid #e6e6e6;
   border-radius: 10px;
   flex-basis: 38%;
-  box-shadow: 0px 1.4px rgb(86, 86, 255);
   transition: all 0.4s ease;
 }
 
@@ -250,18 +245,18 @@ input:focus {
 
 #sub {
   display: block;
-  margin: 8px auto;
-  width: 77%;
+  margin: 25px auto;
+  padding: 10px 0px;
+  width: 16%;
+  max-width: 150px;
   text-align: center;
-  max-width: 585px;
-
-  color: rgb(62, 62, 252);
-  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Baloo Bhai 2", sans-serif;
+  border: 1px solid #e6e6e6;
   border-radius: 20px;
-  padding: 10px 20px;
-
-  background-color: rgb(159, 154, 255);
-  box-shadow: 0px 1.4px rgb(86, 86, 255);
+  background-color: #6565fd;
   cursor: pointer;
   transition: all 0.4s ease;
 }
@@ -271,7 +266,10 @@ input:focus {
 }
 
 #sub:hover {
-  background-color: rgb(243, 239, 255);
+  background-color: rgb(95 45 168);
+  border: 1px solid #6565fd;
+  color: #ffffff;
+  font-size: 17px;
 }
 
 #sub:hover > div > div {
