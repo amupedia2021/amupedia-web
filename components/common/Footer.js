@@ -15,7 +15,7 @@ const Footer = () => {
             href="https://www.instagram.com/amu.pedia/?hl=am-et"
             target="_blank"
             rel="noreferrer"
-            aria-label="Instagram"
+            aria-label="Visit us on Instagram"
           >
             <FontAwesomeIcon
               icon={faInstagramSquare}
@@ -28,7 +28,7 @@ const Footer = () => {
             href="https://www.facebook.com/AMUPedia"
             target="_blank"
             rel="noreferrer"
-            aria-label="Facebook"
+            aria-label="Visit us on Facebook"
           >
             <FontAwesomeIcon
               icon={faFacebookSquare}
@@ -41,7 +41,7 @@ const Footer = () => {
             href="https://twitter.com/AmuPedia?t=PEHmP10PAymk6gsTykKtAQ&s=08"
             target="_blank"
             rel="noreferrer"
-            aria-label="Twitter"
+            aria-label="Visit us on Twitter"
           >
             <FontAwesomeIcon
               icon={faTwitterSquare}
@@ -54,7 +54,7 @@ const Footer = () => {
             href="https://in.linkedin.com/company/amupedia"
             target="_blank"
             rel="noreferrer"
-            aria-label="Twitter"
+            aria-label="Visit us on Twitter"
           >
             <FontAwesomeIcon
               icon={faLinkedin}
@@ -66,7 +66,7 @@ const Footer = () => {
         </div>
       </div>
       <div id={styles.above_ftbg}>
-        <p><a href="https://github.com/amupedia2021/Project-Amupedia" aria-label="Github">
+        <p><a href="https://github.com/amupedia2021/Project-Amupedia" aria-label="Visit us on Github">
           Contribute to the project <br />
           <FontAwesomeIcon
             icon={faGithub}
