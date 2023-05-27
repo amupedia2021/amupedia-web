@@ -54,7 +54,7 @@ const Footer = () => {
             href="https://in.linkedin.com/company/amupedia"
             target="_blank"
             rel="noreferrer"
-            aria-label="Visit us on Twitter"
+            aria-label="Visit us on Linkedin"
           >
             <FontAwesomeIcon
               icon={faLinkedin}
