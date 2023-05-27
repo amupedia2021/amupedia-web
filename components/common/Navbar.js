@@ -173,6 +173,22 @@ const Navbar = () => {
               </a>
             </Link>
           </li>
+          <li
+            className={`${styles.listitem} ${
+              router.pathname === '/#contactus' && navbar ? styles.navList_active : ''
+            }`}
+          >
+            <Link href='/#contactus'>
+              <a
+                onClick={function f(){document.getElementById('contactus').scrollIntoView(true)}}
+                className={`${styles.lnk} ${
+                  router.pathname === '/#contactus' ? styles.active : ''
+                } ${navbar && styles.nav_active}`}
+              >
+                Contact Us
+              </a>
+            </Link>
+          </li>
         </ul>
       </nav>
     </>
