@@ -160,7 +160,7 @@ export default function Home() {
 
           {/* <!-- Contact Form  --> */}
           <h2 className={styles.grabh2}>Get In Touch With Us</h2>
-          <form onSubmit={onSubmit}>
+          <form onSubmit={onSubmit} id='contactus'>
             <div className={styles.cntfrm}>
               <input
                 value={form.first_name}
@@ -191,6 +191,7 @@ export default function Home() {
                 name="email"
                 type="email"
                 placeholder="Email"
+                pattern="[a-zA-Z0-9]+@[a-z]+[.]*[a-z]*\.[a-z]{2,3}"
                 className={styles.details}
               />
               <input
