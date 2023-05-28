@@ -7,27 +7,54 @@ import styles from '@styles/scss/contributor.module.scss';
 
 const Contributors = () => {
   const [contributors, setContributors] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
+
+  const fetchContributors = async (page) => {
+    const url = `https://api.github.com/repos/amupedia2021/Project-Amupedia/contributors?page=${page}&per_page=10`;
+
+    try {
+      const response = await fetch(url);
+      if (response.ok) {
+        const contributorsData = await response.json();
+        setContributors(contributorsData);
+        const linkHeader = response.headers.get('Link');
+        const totalPages = extractTotalPages(linkHeader);
+        setTotalPages(totalPages);
+      } else {
+        console.error('Failed to fetch contributors:', response.status);
+      }
+    } catch (error) {
+      console.error('Error fetching contributors:', error);
+    }
+  };
+
+  const extractTotalPages = (linkHeader) => {
+    if (!linkHeader) return 0;
+    const regex = /page=(\d+)>; rel="last"/;
+    const matches = linkHeader.match(regex);
+    return matches ? parseInt(matches[1]) : 0;
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      const nextPage = currentPage + 1;
+      fetchContributors(nextPage);
+      setCurrentPage(nextPage);
+    }
+  };
+
+  const handlePreviousPage = () => {
+    if (currentPage > 1) {
+      const previousPage = currentPage - 1;
+      fetchContributors(previousPage);
+      setCurrentPage(previousPage);
+    }
+  };
 
   useEffect(() => {
-    const fetchContributors = async () => {
-      try {
-        const response = await fetch(
-          'https://api.github.com/repos/amupedia2021/Project-Amupedia/contributors'
-        );
-
-        if (response.ok) {
-          const contributorsData = await response.json();
-          setContributors(contributorsData);
-        } else {
-          console.error('Failed to fetch contributors:', response.status);
-        }
-      } catch (error) {
-        console.error('Error fetching contributors:', error);
-      }
-    };
-
-    fetchContributors();
-  }, []);
+    fetchContributors(currentPage);
+  }, [currentPage]);
 
   return (
     <>
@@ -49,6 +76,13 @@ const Contributors = () => {
             profile={contributor.html_url}
           />
         ))}
+      </div>
+      <div className={styles.pagination}>
+        {currentPage > 1 && <button onClick={handlePreviousPage}>Prev</button>}
+        <span>{currentPage}</span>
+        {currentPage < totalPages && (
+          <button onClick={handleNextPage}>Next</button>
+        )}
       </div>
       <Footer />
     </>
