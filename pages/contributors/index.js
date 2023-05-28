@@ -54,7 +54,6 @@ const Contributors = () => {
 
   useEffect(() => {
     fetchContributors(currentPage);
-    console.log(currentPage);
   }, [currentPage]);
 
   return (
