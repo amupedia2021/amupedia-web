@@ -1,0 +1,56 @@
+/* styling for branches flex box  */
+
+#branches {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+
+/* styling for every branch div  */
+
+#branches div {
+    width: 90%;
+    margin: 20px auto;
+    /* background-color: black; */
+    background-size: 330px 250px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+
+#branches h1 {
+    text-align: left;
+}
+
+
+/* styling for para in branches div  */
+
+#branches div p {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    background: skyblue;
+    border-radius: 14px;
+    border-style: solid;
+    border-color: darkseagreen;
+    /* animation: blinker 1.7s step-start infinite; */
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* for screens below 300px  */
+
+@media only screen and (max-width: 299px) {
+    #branches div p {
+        width: 100%;
+    }
+}
