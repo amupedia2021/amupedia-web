@@ -24,7 +24,6 @@ const Navbar = () => {
       },
       { threshold: 0.8 }
     );
-
     obs.observe(courses);
   }, []);
 
@@ -159,7 +158,9 @@ const Navbar = () => {
 
           <li
             className={`${styles.listitem} ${
-              router.pathname === '/contributors' && navbar ? styles.navList_active : ''
+              router.pathname === '/contributors' && navbar
+                ? styles.navList_active
+                : ''
             }`}
           >
             <Link href='/contributors'>
@@ -172,6 +173,27 @@ const Navbar = () => {
                 Contributors
               </a>
             </Link>
+          </li>
+          <li
+            className={`${styles.listitem} ${
+              courseActive && navbar ? styles.navList_active : ''
+            }`}
+          >
+            <a
+              onClick={() => {
+                router.push('/');
+                setTimeout(() => {
+                  const contacts = document.getElementById('contacts');
+                  if (contacts) contacts.scrollIntoView();
+                  onClick();
+                }, 10);
+              }}
+              className={`${styles.lnk} ${courseActive ? styles.active : ''} ${
+                navbar && styles.nav_active
+              }`}
+            >
+              Contact Us
+            </a>
           </li>
         </ul>
       </nav>
