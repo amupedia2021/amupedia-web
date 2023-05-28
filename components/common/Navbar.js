@@ -180,7 +180,14 @@ const Navbar = () => {
           >
             <Link href='/#contactus'>
               <a
-                onClick={function f(){document.getElementById('contactus').scrollIntoView(true)}}
+                onClick={function f()
+                  {
+                    setTimeout(() => {
+                      document.getElementById('contactus').scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+                      onClick();
+                    }, 10);
+                  }
+                }
                 className={`${styles.lnk} ${
                   router.pathname === '/#contactus' ? styles.active : ''
                 } ${navbar && styles.nav_active}`}
