@@ -188,6 +188,7 @@ export default function Home() {
                 value={form.email}
                 onChange={onChange}
                 required
+                pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'
                 name='email'
                 type='email'
                 placeholder='Email'
@@ -196,7 +197,9 @@ export default function Home() {
               <input
                 value={form.phone}
                 onChange={onChange}
-                type='number'
+                onInput={(e) => {
+                  e.target.value = e.target.value.replace(/[^0-9]/g, ''); // Filter out non-numeric characters
+                }}
                 name='phone'
                 placeholder='Phone'
                 className={styles.details}

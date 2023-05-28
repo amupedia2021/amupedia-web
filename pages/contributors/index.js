@@ -31,7 +31,7 @@ const Contributors = () => {
 
   const extractTotalPages = (linkHeader) => {
     if (!linkHeader) return 0;
-    const regex = /page=(\d+)>; rel="last"/;
+    const regex = /<.+[?&]page=(\d+)&per_page=\d+>; rel="last"/;
     const matches = linkHeader.match(regex);
     return matches ? parseInt(matches[1]) : 0;
   };
@@ -54,6 +54,7 @@ const Contributors = () => {
 
   useEffect(() => {
     fetchContributors(currentPage);
+    console.log(currentPage);
   }, [currentPage]);
 
   return (
@@ -78,11 +79,13 @@ const Contributors = () => {
         ))}
       </div>
       <div className={styles.pagination}>
-        {currentPage > 1 && <button onClick={handlePreviousPage}>Prev</button>}
+        <button onClick={handlePreviousPage} disabled={currentPage === 1}>
+          Prev
+        </button>
         <span>{currentPage}</span>
-        {currentPage < totalPages && (
-          <button onClick={handleNextPage}>Next</button>
-        )}
+        <button onClick={handleNextPage} disabled={currentPage === totalPages}>
+          Next
+        </button>
       </div>
       <Footer />
     </>
