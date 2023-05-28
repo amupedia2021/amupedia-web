@@ -1,35 +1,32 @@
-import { useState, useContext } from "react";
-import Image from "next/image";
-import pdf from "@images/home/pdf.svg";
-import chap_yt from "@images/home/yt.svg";
-import quiz from "@images/home/test_and_quiz.svg";
-import assign from "@images/home/assignment.svg";
-import Tilt from "react-vanilla-tilt";
-import styles from "@styles/Home.module.css";
-import Header from "components/common/Header/Header";
-import Link from "next/link";
-import Footer from "components/common/Footer";
-import { Store } from "utils/Store/Store";
-import Preloader from "components/common/Preloader";
-import axios from "node_modules/axios/index";
-import ComingSoon from "./ComingSoon";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import TestimonialCard from "components/Testimonial/Testimonial";
-
+import { useState, useContext } from 'react';
+import Image from 'next/image';
+import pdf from '@images/home/pdf.svg';
+import chap_yt from '@images/home/yt.svg';
+import quiz from '@images/home/test_and_quiz.svg';
+import assign from '@images/home/assignment.svg';
+import Tilt from 'react-vanilla-tilt';
+import styles from '@styles/Home.module.css';
+import Header from 'components/common/Header/Header';
+import Link from 'next/link';
+import Footer from 'components/common/Footer';
+import { Store } from 'utils/Store/Store';
+import Preloader from 'components/common/Preloader';
+import axios from 'node_modules/axios/index';
+import TestimonialCard from 'components/Testimonial/Testimonial';
 
 export default function Home() {
   const { dispatch } = useContext(Store);
 
   const emptyForm = {
-    first_name: "",
-    last_name: "",
-    email: "",
-    phone: "",
-    address: "",
-    message: "",
+    first_name: '',
+    last_name: '',
+    email: '',
+    phone: '',
+    address: '',
+    message: ''
   };
 
-  const headerImg = "/images/home/homeback.svg";
+  const headerImg = '/images/home/homeback.svg';
 
   const [form, setForm] = useState(emptyForm);
   const [loading, setLoading] = useState(false);
@@ -38,14 +35,14 @@ export default function Home() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post("/api/submitForm", form);
+      const res = await axios.post('/api/submitForm', form);
       const data = await res.data;
       console.log(data);
       dispatch({
         type: {
-          task: "setAlert",
-          alert: { type: "noti", message: "Form Submitted Successfully" },
-        },
+          task: 'setAlert',
+          alert: { type: 'noti', message: 'Form Submitted Successfully' }
+        }
       });
     } catch (error) {
       console.log(error);
@@ -61,7 +58,7 @@ export default function Home() {
 
   return (
     <>
-      <Header image={headerImg} text="Amupedia" />
+      <Header image={headerImg} text='Amupedia' />
       <main>
         <section id={styles.content}>
           {/* <!-- Our Mission Container --> */}
@@ -70,8 +67,9 @@ export default function Home() {
             <p>
               We are the students of AMU, intending to provide you all the
               quality stuff related to B.Tech, B.Com, B.E, and various other
-              courses, the pdfs related to experiments, viva, and quizzes, the mid and end semester examinations as well as the
-              assignments. We are providing all this content for free.
+              courses, the pdfs related to experiments, viva, and quizzes, the
+              mid and end semester examinations as well as the assignments. We
+              are providing all this content for free.
             </p>
           </div>
 
@@ -80,50 +78,50 @@ export default function Home() {
             <h2>Our Services</h2>
             <div id={styles.ourserimgs}>
               <div>
-                <Image src={pdf} alt="pdfs" />
+                <Image src={pdf} alt='pdfs' />
                 <p>PDFs OF ALL SUBJECTS</p>
               </div>
               <div>
-                <Image src={chap_yt} alt="explaination" />
+                <Image src={chap_yt} alt='explaination' />
                 <p>CHAPTER EXPLANATION BY YOUTUBE VIDEO</p>
               </div>
               <div>
-                <Image src={quiz} alt="solutions" />
+                <Image src={quiz} alt='solutions' />
                 <p>SOLUTION OF TEST AND QUIZZES</p>
               </div>
               <div>
-                <Image src={assign} alt="assignments" />
+                <Image src={assign} alt='assignments' />
                 <p>ASSIGNMENTS GIVEN</p>
               </div>
             </div>
           </div>
 
           {/* <!-- grab your notes section  --> */}
-          <div className={styles.courses} id="courses">
+          <div className={styles.courses} id='courses'>
             <h2 className={styles.grabh2}>Grab Your Notes Here</h2>
             <div className={styles.grabnotes}>
-              <Link passHref href="/courses/btech">
+              <Link passHref href='/courses/btech'>
                 <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
                   <div className={styles.grab1}>
                     <p>B.Tech</p>
                   </div>
                 </Tilt>
               </Link>
-              <Link passHref href="/ComingSoon">
+              <Link passHref href='/'>
                 <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
                   <div className={styles.grab2}>
                     <p>B.E</p>
                   </div>
                 </Tilt>
               </Link>
-              <Link passHref href="/ComingSoon">
+              <Link passHref href='/'>
                 <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
                   <div className={styles.grab3}>
                     <p>B.Com</p>
                   </div>
                 </Tilt>
               </Link>
-              <Link passHref href="/ComingSoon">
+              <Link passHref href='/'>
                 <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
                   <div className={styles.grab4}>
                     <p>B.Sc</p>
@@ -137,21 +135,21 @@ export default function Home() {
           {/* <!-- same css as grabnotes section  --> */}
           <h2 className={styles.grabh2}>Recent Updates</h2>
           <div className={styles.grabnotes}>
-            <Link passHref href="/">
+            <Link passHref href='/'>
               <Tilt className={styles.tlt}>
                 <div className={styles.rec1}>
                   <p>App</p>
                 </div>
               </Tilt>
             </Link>
-            <Link passHref href="/">
+            <Link passHref href='/'>
               <Tilt className={styles.tlt}>
                 <div className={styles.rec2}>
                   <p>Blogs</p>
                 </div>
               </Tilt>
             </Link>
-            <Link passHref href="/">
+            <Link passHref href='/'>
               <Tilt className={styles.tlt}>
                 <div className={styles.rec3}>
                   <p>Competitive Exams</p>
@@ -168,67 +166,70 @@ export default function Home() {
                 value={form.first_name}
                 onChange={onChange}
                 required
-                type="text"
-                name="first_name"
-                placeholder="First Name"
+                type='text'
+                name='first_name'
+                placeholder='First Name'
                 className={styles.details}
-                pattern="[a-zA-Z]+"
-                title="Please enter Alphabets"
+                pattern='[a-zA-Z]+'
+                title='Please enter Alphabets'
               />
               <input
                 value={form.last_name}
                 onChange={onChange}
                 required
-                name="last_name"
-                type="text"
-                placeholder="Last Name"
+                name='last_name'
+                type='text'
+                placeholder='Last Name'
                 className={styles.details}
-                pattern="[a-zA-Z]+"
-                title="Please enter Alphabets"
+                pattern='[a-zA-Z]+'
+                title='Please enter Alphabets'
               />
               <input
                 value={form.email}
                 onChange={onChange}
                 required
-                name="email"
-                type="email"
-                placeholder="Email"
+                pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'
+                name='email'
+                type='email'
+                placeholder='Email'
                 className={styles.details}
               />
               <input
                 value={form.phone}
                 onChange={onChange}
-                type="number"
-                name="phone"
-                placeholder="Phone"
+                onInput={(e) => {
+                  e.target.value = e.target.value.replace(/[^0-9]/g, ''); // Filter out non-numeric characters
+                }}
+                name='phone'
+                placeholder='Phone'
                 className={styles.details}
               />
               <input
                 value={form.address}
                 onChange={onChange}
                 required
-                name="address"
-                type="text"
-                placeholder="Address"
+                name='address'
+                type='text'
+                placeholder='Address'
                 className={styles.address}
               />
               <input
                 value={form.message}
                 onChange={onChange}
                 required
-                name="message"
-                type="text"
-                placeholder="Type your message here"
+                name='message'
+                type='text'
+                placeholder='Type your message here'
                 className={styles.msg}
               />
             </div>
-            <button type="submit" id={styles.sub}>
+            <button type='submit' id={styles.sub}>
               {loading ? <Preloader /> : <p>Submit</p>}
             </button>
           </form>
         </section>
       </main>
-      <TestimonialCard/>
+      <TestimonialCard />
       <Footer />
     </>
   );
