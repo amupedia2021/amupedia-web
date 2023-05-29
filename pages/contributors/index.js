@@ -17,7 +17,10 @@ const Contributors = () => {
       const response = await fetch(url);
       if (response.ok) {
         const contributorsData = await response.json();
-        setContributors(contributorsData);
+        const contributorsDataFiltered = contributorsData.filter(
+          (contributor) => !contributor.login.includes('dependabot[bot]')
+        );
+        setContributors(contributorsDataFiltered);
         const linkHeader = response.headers.get('Link');
         const totalPages = extractTotalPages(linkHeader);
         setTotalPages(totalPages);
