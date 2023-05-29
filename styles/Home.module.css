@@ -247,7 +247,7 @@ input:focus {
   display: block;
   margin: 25px auto;
   padding: 10px 0px;
-  width: 16%;
+  width: 50%;
   max-width: 150px;
   text-align: center;
   color: #ffffff;
@@ -261,15 +261,9 @@ input:focus {
   transition: all 0.4s ease;
 }
 
-#sub > p {
-  margin: 2.3px auto;
-}
-
 #sub:hover {
-  background-color: rgb(95 45 168);
+  background-color: #8585e8;
   border: 1px solid #6565fd;
-  color: #ffffff;
-  font-size: 17px;
 }
 
 #sub:hover > div > div {

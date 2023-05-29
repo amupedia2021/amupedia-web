@@ -159,74 +159,76 @@ export default function Home() {
           </div>
 
           {/* <!-- Contact Form  --> */}
-          <h2 className={styles.grabh2}>Get In Touch With Us</h2>
-          <form onSubmit={onSubmit} id='contactus'>
-            <div className={styles.cntfrm}>
-              <input
-                value={form.first_name}
-                onChange={onChange}
-                required
-                type='text'
-                name='first_name'
-                placeholder='First Name'
-                className={styles.details}
-                pattern='[a-zA-Z]+'
-                title='Please enter Alphabets'
-              />
-              <input
-                value={form.last_name}
-                onChange={onChange}
-                required
-                name='last_name'
-                type='text'
-                placeholder='Last Name'
-                className={styles.details}
-                pattern='[a-zA-Z]+'
-                title='Please enter Alphabets'
-              />
-              <input
-                value={form.email}
-                onChange={onChange}
-                required
-                pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'
-                name='email'
-                type='email'
-                placeholder='Email'
-                className={styles.details}
-              />
-              <input
-                value={form.phone}
-                onChange={onChange}
-                onInput={(e) => {
-                  e.target.value = e.target.value.replace(/[^0-9]/g, ''); // Filter out non-numeric characters
-                }}
-                name='phone'
-                placeholder='Phone'
-                className={styles.details}
-              />
-              <input
-                value={form.address}
-                onChange={onChange}
-                required
-                name='address'
-                type='text'
-                placeholder='Address'
-                className={styles.address}
-              />
-              <input
-                value={form.message}
-                onChange={onChange}
-                required
-                name='message'
-                type='text'
-                placeholder='Type your message here'
-                className={styles.msg}
-              />
-            </div>
-            <button type='submit' id={styles.sub}>
-              {loading ? <Preloader /> : <p>Submit</p>}
-            </button>
-          </form>
+          <div id='contacts'>
+            <h2 className={styles.grabh2}>Get In Touch With Us</h2>
+            <form onSubmit={onSubmit}>
+              <div className={styles.cntfrm}>
+                <input
+                  value={form.first_name}
+                  onChange={onChange}
+                  required
+                  type='text'
+                  name='first_name'
+                  placeholder='First Name'
+                  className={styles.details}
+                  pattern='[a-zA-Z]+'
+                  title='Please enter Alphabets'
+                />
+                <input
+                  value={form.last_name}
+                  onChange={onChange}
+                  required
+                  name='last_name'
+                  type='text'
+                  placeholder='Last Name'
+                  className={styles.details}
+                  pattern='[a-zA-Z]+'
+                  title='Please enter Alphabets'
+                />
+                <input
+                  value={form.email}
+                  onChange={onChange}
+                  required
+                  pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'
+                  name='email'
+                  type='email'
+                  placeholder='Email'
+                  className={styles.details}
+                />
+                <input
+                  value={form.phone}
+                  onChange={onChange}
+                  onInput={(e) => {
+                    e.target.value = e.target.value.replace(/[^0-9]/g, ''); // Filter out non-numeric characters
+                  }}
+                  name='phone'
+                  placeholder='Phone'
+                  className={styles.details}
+                />
+                <input
+                  value={form.address}
+                  onChange={onChange}
+                  required
+                  name='address'
+                  type='text'
+                  placeholder='Address'
+                  className={styles.address}
+                />
+                <input
+                  value={form.message}
+                  onChange={onChange}
+                  required
+                  name='message'
+                  type='text'
+                  placeholder='Type your message here'
+                  className={styles.msg}
+                />
+              </div>
+              <button type='submit' id={styles.sub}>
+                {loading ? <Preloader /> : <p>Submit</p>}
+              </button>
+            </form>
+          </div>
         </section>
       </main>
       <TestimonialCard />
