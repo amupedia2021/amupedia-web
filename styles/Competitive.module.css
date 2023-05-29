@@ -25,6 +25,14 @@
     text-align: left;
 }
 
+#branches .card {
+    margin: 20px;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0px 0px 30px 0px hsla(0, 0%, 0%, 0.09);
+    text-align: center;
+  }
+
 
 /* styling for para in branches div  */
 

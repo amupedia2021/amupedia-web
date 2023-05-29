@@ -1,3 +1,4 @@
+import styles from '@styles/Competitive.module.css';
 
 const Exams = ({ data }) => {
     return (
@@ -6,9 +7,7 @@ const Exams = ({ data }) => {
                 data.map((unit, index) => {
                     const title = unit.title;
                     return (
-                        <div key={index}>
-                            <p> {title} </p>
-                        </div>
+                        <div key={index} className={styles.card}>{title}</div>
                     )
                 })
             }
