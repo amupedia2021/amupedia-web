@@ -60,7 +60,6 @@ body:
       description: If applicable, add screenshots to help explain your problem.
       value: |
         ![DESCRIPTION](LINK.png)  
-      render: bash
     validations:
       required: false
   - type: textarea
@@ -111,9 +110,9 @@ body:
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our contributing guidelines. Please read our [CONTRIBUTING GUIDELINES](https://github.com/amupedia2021/Project-Amupedia/blob/master/CONTRIBUTING.md).
+      description: By submitting this issue, you agree to follow our contributing guidelines. Please read our [Contributing Guidelines](https://github.com/amupedia2021/Project-Amupedia/blob/master/CONTRIBUTING.md).
       options:
-        - label: I have read and agree to the [CONTRIBUTING GUIDELINES](https://github.com/amupedia2021/Project-Amupedia/blob/master/CONTRIBUTING.md) of this project.
+        - label: I have read and agree to the Contributing Guidelines of this project.
           required: true
 
       

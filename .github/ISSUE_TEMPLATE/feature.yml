@@ -1,6 +1,6 @@
 name: 🚀 Feature Request
 description: Create a new ticket for a new feature request
-title: "[Feature Request] - <title>"
+title: "🚀 [Feature Request] - Title"
 labels: ["enhancement"]
 
 body:
@@ -21,23 +21,25 @@ body:
       description: Enter a brief description about the feature you feel is required.
       placeholder: Give all the context of your enhancement as well as the existing project.
       value: "Enhancement"
-      render: bash
     validations:
       required: true
   - type: textarea
-    id: behaviour
+    id: solutionsteps
     attributes:
-      label: Describe breifly how would you implement the same.
-      description: Give a brief description by which you will solve it.
-      placeholder: Please include a summary, also include relevant motivation and context. 
-      value: "Solution_steps"
+      label: Describe briefly how you would implement this enhancement.
+      description: Please provide a solution steps for implementing the enhancement.
+      placeholder: Short and explicit description of the solution steps...
+      value: Some steps to implement this enhancement-
+        1. Step 1
+        2. Step 2
+        3. Step 3
       render: bash
     validations:
       required: true
   - type: textarea
     id: AdditionalInfo
     attributes:
-      label: Additional context
+      label: Additional context or screenshots
       description: Add any other context or screenshots about the feature request here.
       placeholder: Add any other context or screenshots about the feature request here.
       value: "Additional context"
@@ -55,7 +57,7 @@ body:
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our contributing guidelines. Please read our [CONTRIBUTING GUIDELINES](https://github.com/amupedia2021/Project-Amupedia/blob/master/CONTRIBUTING.md).
+      description: By submitting this issue, you agree to follow our contributing guidelines. Please read our [Contributing Guidelines](https://github.com/amupedia2021/Project-Amupedia/blob/master/CONTRIBUTING.md).
       options:
-        - label: I have read and agree to the [CONTRIBUTING GUIDELINES](https://github.com/amupedia2021/Project-Amupedia/blob/master/CONTRIBUTING.md) of this project.
+        - label: I have read and agree to the Contributing Guidelines of this project.
           required: true
