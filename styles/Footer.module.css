@@ -6,11 +6,12 @@
   background: url("/images/footer/footer_bacg.webp") no-repeat center center/cover;
   z-index: 12;
   height: 150px;
-  width: 80%;
+  width: 90%;
   margin: auto;
-  border-radius: 20px;
+  border-radius: 20px 20px 0px 0px;
   position: relative;
   top: 80px;
+  margin-bottom: 30px;
 }
 
 #above_bg p {

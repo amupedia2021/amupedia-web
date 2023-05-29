@@ -67,6 +67,7 @@ const Footer = () => {
               className={styles.icon}
             />
           </a>
+          
         </div>
       </div>
       <div id={styles.above_ftbg}>
