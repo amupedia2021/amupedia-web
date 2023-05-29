@@ -7,25 +7,31 @@
 
 
 <url>
-  <loc>https://www.amupedia.com/</loc>
-  <lastmod>2023-05-29T11:34:19+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.amupedia.com/about</loc>
-  <lastmod>2023-05-29T11:34:19+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.amupedia.com/blog</loc>
-  <lastmod>2023-05-29T11:34:19+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.amupedia.com/contributors</loc>
-  <lastmod>2023-05-29T11:34:19+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
+    <loc>https://www.amupedia.com/</loc>
+    <lastmod>2023-05-29T11:34:19+00:00</lastmod>
+    <priority>1.00</priority>
+    <changefreq>daily</changefreq>
+  </url>
 
+  <url>
+    <loc>https://www.amupedia.com/about</loc>
+    <lastmod>2023-05-29T11:34:19+00:00</lastmod>
+    <priority>0.80</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.amupedia.com/blog</loc>
+    <lastmod>2023-05-29T11:34:19+00:00</lastmod>
+    <priority>0.80</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.amupedia.com/contributors</loc>
+    <lastmod>2023-05-29T11:34:19+00:00</lastmod>
+    <priority>0.80</priority>
+    <changefreq>daily</changefreq>
+  </url>
 
 </urlset>
