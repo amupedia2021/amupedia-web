@@ -280,6 +280,35 @@ input:focus {
   }
 }
 
+@media only screen and (max-width : 530px){
+  .cntfrm{
+    text-align: center;
+    display: block;
+    line-height: 70px;
+    width: 100%;
+    height: 530px;
+    max-width: 300px;
+  }
+
+  .details{
+    width: 220px;
+    height: 40px;
+    margin: 5px 0px 0px 5px;
+    border-radius: 10px;
+  }
+
+  .address{
+    margin-top: 20px;
+    height: 50px;
+    width: 240px;
+  }
+
+  .msg{
+    margin-top: 20px;
+    height: 70px;
+  }
+}
+
 #sub {
   display: block;
   margin: 25px auto;
