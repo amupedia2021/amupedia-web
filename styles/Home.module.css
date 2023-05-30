@@ -203,7 +203,7 @@
     padding: 13px 18px;
     background-color: rgba(235, 235, 241, 0.273);
     font-family: "Baloo Bhai 2";
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
     border: 1px solid #e6e6e6;/*#e6e6e6*/
     border-radius: 15px;
     transition: all 0.4s ease;
@@ -249,6 +249,34 @@ input:focus {
   .address,
   .msg {
     grid-column: 1 / span 2;
+  }
+  
+}
+
+@media only screen and (max-width : 640px) {
+  .cntfrm{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 5px;
+    width: 100%;
+    height: 450px;
+    max-width: 450px;
+  }
+
+  .details{
+    width: 180px;
+    height: 50px;
+    margin: 5px 0px 0px 5px;
+  }
+
+  .address{
+    margin-top: -20px;
+    height: 60px;
+  }
+
+  .msg{
+    margin-top: -20px;
+    height: 90px;
   }
 }
 
