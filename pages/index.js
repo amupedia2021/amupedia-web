@@ -15,6 +15,7 @@ import axios from 'node_modules/axios/index';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import TestimonialCard from 'components/Testimonial/Testimonial';
+import GoToTop from 'components/GoToTop';
 
 export default function Home() {
   const { dispatch } = useContext(Store);
@@ -66,6 +67,7 @@ export default function Home() {
 
   return (
     <>
+      <GoToTop />
       <Header image={headerImg} text='Amupedia' />
       <main>
         <section id={styles.content}>
