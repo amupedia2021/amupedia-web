@@ -58,25 +58,12 @@ const Wrapper = styled.section`
     justify-content: center;
     align-items: center;
     cursor: pointer;
-
-    &--icon {
-      animation: gototop 1s linear infinite alternate-reverse;
-    }
-
-    @keyframes gototop {
-      0% {
-        transform: translateY(-0.3rem);
-      }
-      100% {
-        transform: translateY(0.5rem);
-      }
-    }
   }
 
   @media (max-width:1200px) {
     .top-btn {
-      right: 0;
-      left: 40%;
+      bottom: 1rem;
+      right: 1rem;
     }
   }
 `;
