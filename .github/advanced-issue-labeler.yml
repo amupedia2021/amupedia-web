@@ -8,4 +8,4 @@ policy:
         block-list: ['Other']
         label:
           - name: 'gssoc23'
-            keys: ['gssoc23']
+            keys: ['GSSoc23', 'GSSoC2023', 'GSSoC 2023', 'GSSoC 23', 'GSSoC-2023', 'GSSoC-23']
