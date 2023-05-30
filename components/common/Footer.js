@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import styles from '@styles/Footer.module.css';
 import { FontAwesomeIcon } from 'node_modules/@fortawesome/react-fontawesome/index';
 import {
@@ -70,7 +71,7 @@ const Footer = () => {
         </div>
       </div>
       <div id={styles.above_ftbg}>
-        <p >
+        <p>
           <a
             href='https://github.com/amupedia2021/Project-Amupedia'
             aria-label='Visit us on Github'
