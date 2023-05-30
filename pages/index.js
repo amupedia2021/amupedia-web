@@ -141,8 +141,9 @@ export default function Home() {
 
           {/* <!-- Recent Updates section  --> */}
           {/* <!-- same css as grabnotes section  --> */}
-          <h2 data-aos="fade-up" className={styles.grabh2}>Recent Updates</h2>
-          <div data-aos="fade-up" className={styles.grabnotes}>
+          <div data-aos="fade-up">
+          <h2 className={styles.grabh2}>Recent Updates</h2>
+          <div className={styles.grabnotes}>
             <Link passHref href='/'>
               <Tilt className={styles.tlt}>
                 <div className={styles.rec1}>
@@ -164,6 +165,7 @@ export default function Home() {
                 </div>
               </Tilt>
             </Link>
+            </div>
           </div>
 
           {/* <!-- Contact Form  --> */}
