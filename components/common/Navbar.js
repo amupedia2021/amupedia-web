@@ -8,6 +8,7 @@ const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const [courseActive, setCourseActive] = useState(false);
   const [contactActive, setContactActive] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
 
   useEffect(() => {
     window.addEventListener('scroll', changeNavbar);
@@ -104,6 +105,8 @@ const Navbar = () => {
             className={`${styles.listitem} ${
               courseActive && navbar ? styles.navList_active : ''
             }`}
+            onMouseEnter={() => setDropdown(true)}
+            onMouseLeave={() => setDropdown(false)}
           >
             <Link href='/'>
               <a
@@ -120,9 +123,28 @@ const Navbar = () => {
                   courseActive ? styles.active : ''
                 } ${navbar && styles.nav_active}`}
               >
-                Courses
+                Courses 
               </a>
             </Link>
+            {dropdown && (
+              <ul className={styles.dropdownMenu}>
+               <li>
+                 <Link href='/courses/btech'>
+                   <a onClick={onClick} className={styles.dropdownLink}>
+                     B.Tech
+                   </a>
+                 </Link>
+                </li>
+                <li>
+                 <Link href='/courses/hsc'>
+                   <a onClick={onClick} className={styles.dropdownLink}>
+                    BE
+                   </a>
+                 </Link>
+                </li>
+                {/* Add more courses as needed */}
+              </ul>
+            )}
           </li>
           <li
             className={`${styles.listitem} ${
