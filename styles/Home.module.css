@@ -191,7 +191,6 @@
   max-width: 600px;
   margin: 30px auto 0px auto;
   border: 1px solid #e6e6e6;
-  /* background-color: rgb(222, 226, 238); */
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem rgb(216, 213, 225);
@@ -203,11 +202,10 @@
     padding: 13px 18px;
     background-color: rgba(235, 235, 241, 0.273);
     font-family: "Baloo Bhai 2";
-    /* font-size: 1.1rem; */
-    border: 1px solid #e6e6e6;/*#e6e6e6*/
+    border: 1px solid #e6e6e6;
     border-radius: 15px;
     transition: all 0.4s ease;
-    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #8585e8;/*b9b9e0*/
+    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #b9b9e0;
 }
 /*
 ::placeholder {
@@ -229,7 +227,7 @@ input:focus {
     border: 1px solid #e6e6e6;
     border-radius: 10px;
     transition: all 0.4s ease;
-    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #8585e8;
+    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #b9b9e0;
 }
 
 .msg {
@@ -241,7 +239,7 @@ input:focus {
   border: 1px solid #e6e6e6;
   border-radius: 10px;
   flex-basis: 38%;
-  box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #8585e8;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #b9b9e0;
   transition: all 0.4s ease;
 }
 
