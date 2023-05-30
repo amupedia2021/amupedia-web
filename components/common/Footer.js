@@ -8,26 +8,15 @@ import {
 import { faFacebookSquare } from 'node_modules/@fortawesome/free-brands-svg-icons/index';
 import { faTwitterSquare } from 'node_modules/@fortawesome/free-brands-svg-icons/index';
 import { faLinkedin } from 'node_modules/@fortawesome/free-brands-svg-icons/index';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const Footer = () => {
-
   const year = new Date().getFullYear();
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-    });
-  }, []);
-
   return (
     <footer id='footer'>
       <div id={styles.above_bg}>
         <p>Follow Us On</p>
         <div id={styles.icons}>
           <a
-            data-aos="fade-up"
             href='https://www.instagram.com/amu.pedia/?hl=am-et'
             target='_blank'
             rel='noreferrer'
@@ -41,7 +30,6 @@ const Footer = () => {
             />
           </a>
           <a
-          data-aos="fade-down"
             href='https://www.facebook.com/AMUPedia'
             target='_blank'
             rel='noreferrer'
@@ -55,7 +43,6 @@ const Footer = () => {
             />
           </a>
           <a
-          data-aos="fade-up"
             href='https://twitter.com/AmuPedia?t=PEHmP10PAymk6gsTykKtAQ&s=08'
             target='_blank'
             rel='noreferrer'
@@ -69,7 +56,6 @@ const Footer = () => {
             />
           </a>
           <a
-          data-aos="fade-down"
             href='https://in.linkedin.com/company/amupedia'
             target='_blank'
             rel='noreferrer'
@@ -91,14 +77,12 @@ const Footer = () => {
             aria-label='Visit us on Github'
           >
             Contribute to the project
-            <div data-aos="flip-left">
             <FontAwesomeIcon
               icon={faGithub}
               size='1x'
               inverse
               className={styles.icon}
             />
-            </div>
           </a>
         </p>
       </div>
