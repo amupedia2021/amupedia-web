@@ -141,7 +141,7 @@ export default function Home() {
 
           {/* <!-- Recent Updates section  --> */}
           {/* <!-- same css as grabnotes section  --> */}
-          <h2 className={styles.grabh2}>Recent Updates</h2>
+          <h2 data-aos="fade-up" className={styles.grabh2}>Recent Updates</h2>
           <div data-aos="fade-up" className={styles.grabnotes}>
             <Link passHref href='/'>
               <Tilt className={styles.tlt}>
