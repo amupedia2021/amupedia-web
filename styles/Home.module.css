@@ -207,7 +207,7 @@
     border: 1px solid #e6e6e6;/*#e6e6e6*/
     border-radius: 15px;
     transition: all 0.4s ease;
-    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #b9b9e0;
+    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #8585e8;/*b9b9e0*/
 }
 /*
 ::placeholder {
@@ -229,7 +229,7 @@ input:focus {
     border: 1px solid #e6e6e6;
     border-radius: 10px;
     transition: all 0.4s ease;
-    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #b9b9e0;
+    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #8585e8;
 }
 
 .msg {
@@ -241,7 +241,7 @@ input:focus {
   border: 1px solid #e6e6e6;
   border-radius: 10px;
   flex-basis: 38%;
-  box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #b9b9e0;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #8585e8;
   transition: all 0.4s ease;
 }
 
