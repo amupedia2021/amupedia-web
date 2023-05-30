@@ -8,4 +8,6 @@ policy:
         block-list: ['Other']
         label:
           - name: 'gssoc23'
-            keys: ['gssoc23']
+            keys: ['gssoc23', 'GSSoc23', 'GSSoc2023', 'GSSOC23', 'gssoc 23', 'GSSoc 23', 'GSSOC 23']
+
+            
