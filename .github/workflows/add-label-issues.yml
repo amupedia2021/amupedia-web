@@ -1,11 +1,11 @@
-name: Issue labeler
+name: Add Labels to Issues
 
 on:
   issues:
     types: [opened]
 
 jobs:
-  label-issues-policy:
+  add-labels:
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -15,22 +15,18 @@ jobs:
         template: [bug_report.yml, feature.yml, doc.yml]
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
       - name: Parse issue form
-        uses: stefanbuck/github-issue-parser@v2
+        uses: stefanbuck/github-issue-parser@v3
         id: issue-parser
         with:
           template-path: .github/ISSUE_TEMPLATE/${{ matrix.template }}
 
-      - name: Set labels based on policy
-        uses: redhat-plumbers-in-action/advanced-issue-labeler@main
+      - name: Add 'gssoc23' label to Issues based on policy
+        uses: redhat-plumbers-in-action/advanced-issue-labeler@v2
         with:
           issue-form: ${{ steps.issue-parser.outputs.jsonString }}
           template: ${{ matrix.template }}
           token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Add "no code" label to documentation template
-        if: matrix.template == 'doc.yml'
-        run: |
-          echo '::add-labels::no code'
