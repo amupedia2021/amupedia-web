@@ -9,10 +9,14 @@ export default function CompetitiveExams() {
   return (
     <>
       <Header image={image} text="Competitive Exams" />
-      <div id={styles.branches}>
-        <Exams data={competitiveExams}></Exams>
-      </div>
-      <Footer />
+      <main>
+        <section id={styles.content}>
+          <div id={styles.branches}>
+            <Exams data={competitiveExams}></Exams>
+          </div>
+          <Footer />
+        </section>
+      </main>
     </>
   );
 }

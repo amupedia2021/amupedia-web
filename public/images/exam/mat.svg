@@ -1,0 +1,307 @@
+<?xml version="1.0" standalone="yes"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:ns1="http://sozi.baierouge.fr"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:cc="http://web.resource.org/cc/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    version="1.1"
+    viewBox="0.0 0.0 338.0 382.0"
+    fill="none"
+    stroke="none"
+    stroke-linecap="square"
+    stroke-miterlimit="10"
+  >
+  <clipPath
+      id="p.0"
+    >
+    <path
+        d="m0 0l338.0 0l0 382.0l-338.0 0l0 -382.0z"
+        clip-rule="nonzero"
+    />
+  </clipPath
+  >
+  <g
+      clip-path="url(#p.0)"
+    >
+    <path
+        fill="#000000"
+        fill-opacity="0.0"
+        d="m0 0l338.82416 0l0 382.6378l-338.82416 0z"
+        fill-rule="nonzero"
+    />
+    <path
+        fill="#ebf3bb"
+        d="m23.141172 88.70427l230.19588 -50.604916l59.342148 269.9715l-230.19586 50.60492z"
+        fill-rule="nonzero"
+    />
+    <path
+        fill="#000000"
+        fill-opacity="0.0"
+        d="m135.99274 53.064526l206.98785 -14.965145l4.1408997 85.580765l-206.98785 14.965149z"
+        fill-rule="nonzero"
+    />
+    <path
+        fill="#cc0000"
+        d="m162.56609 67.9934q0.35884094 -1.3105392 1.1593933 -1.5720749q0.81539917 -0.27827454 1.8907166 -0.35601807q1.6207733 -0.11717987 3.7517242 1.9062958q2.1465454 2.0223541 4.4420166 5.5065155q2.3102875 3.46743 4.7046356 8.025391q2.4091644 4.541214 4.67836 9.421539q2.2684326 4.864708 4.2867584 9.731834q2.0175629 4.8515167 3.5283356 8.925049q1.525589 4.056801 2.3756866 7.081497q0.8649292 3.007965 0.92007446 4.1475754q0.055145264 1.1396179 -0.4404602 2.2093887q-0.480011 1.0686493 -1.8202515 1.1655502q-0.8571472 0.061965942 -1.4906158 -0.42486572q-0.6334686 -0.4868393 -1.0920105 -1.2369766q-0.4593048 -0.7657471 -0.8555145 -1.5203934q-0.39620972 -0.7546387 -0.70466614 -1.3119736q-0.31829834 -0.7602768 -1.3286896 -2.896103q-0.9955597 -2.1525574 -2.0788727 -4.502434q-1.0677338 -2.350998 -2.0283508 -4.4277573q-0.94503784 -2.0778885 -1.3480377 -2.97303q-5.0129547 -0.49918365 -10.067352 -0.88571167q-5.054413 -0.38652802 -10.636429 -0.687912l-0.7792053 0.05633545q-2.0217896 11.221886 -3.6749573 17.780052q-1.6383514 6.54142 -2.8315887 9.3535385q-1.1784058 2.7953796 -1.9491119 2.3811188q-0.76994324 -0.39863586 -1.1552582 -3.1906128q-0.38607788 -2.807602 -0.28616333 -7.53022q0.09989929 -4.7226257 0.71476746 -10.438095q0.6141052 -5.731079 1.5921478 -12.021111q0.97802734 -6.290024 2.50708 -12.181252q1.5438843 -5.907959 3.5330048 -11.01783q2.0039368 -5.126602 4.482834 -8.517311zm-0.5011749 25.195488q0.12767029 2.6382828 1.8867798 3.7643661q1.774704 1.1249542 4.207657 1.3093643q2.4477692 0.1676712 5.109665 -0.08744812q2.661148 -0.27072144 4.578018 -0.40931702q-0.13748169 -2.8412323 -1.2326813 -6.083191q-1.080368 -3.2587051 -2.6564026 -6.418907q-1.5767975 -3.1758118 -3.331543 -6.150772q-1.7555084 -2.99057 -3.2166138 -5.3914566q-0.7414551 0.8368988 -1.5277863 3.0086288q-0.7870941 2.1561203 -1.5648346 4.828537q-0.76290894 2.6556778 -1.3589325 5.2052994q-0.58044434 2.5484924 -0.8633423 4.135521q0.010574341 0.21855927 -0.024291992 1.1140289q-0.01928711 0.8943405 -0.0056915283 1.1753464zm36.33969 15.106323q-0.28051758 0.02027893 -0.8881073 -0.5780945q-0.5927582 -0.6151047 -0.7496338 -0.94841003q-0.08169556 -0.07241821 -0.0922699 -0.29097748q-0.06913757 -0.13599396 -0.07896423 -0.33893585q-0.014343262 -0.2966156 0.03817749 -0.50406647q-0.00680542 -0.14050293 0.063568115 -0.3022461q0.26011658 -0.4417801 0.7939606 -1.0443497q0.54867554 -0.61930084 0.6889343 -0.6294403l15.225876 -1.1008301q0.24176025 -3.7302704 0.79870605 -7.7339783q0.55618286 -4.0193176 1.4368896 -7.795784l0.8571472 -0.06197357l0.7792053 -0.05633545q0.30290222 0.11909485 0.79811096 0.3339386q0.5107727 0.21372223 1.02005 0.39622498q0.50927734 0.18250275 0.87979126 0.40636444q0.3697815 0.20825195 0.37355042 0.2863083l0.6896515 14.252998q1.2155762 -0.087882996 3.0356445 -0.6111145q1.8348846 -0.539978 3.5632324 -0.6962662q1.7439423 -0.1574173 2.97641 0.42710114q1.2480621 0.5833969 1.3515472 2.7221298q0.058914185 1.2176666 -0.72050476 1.9163208q-0.7794037 0.69864655 -1.979126 1.1143646q-1.20047 0.40010834 -2.5510101 0.60741425q-1.3349762 0.20617676 -2.5696259 0.5460968q-1.2346649 0.33992004 -1.9881897 0.9270325q-0.75354004 0.58712006 -0.7052002 1.586235q0.083099365 1.7172318 0.903656 3.1618195q0.81980896 1.428978 1.7776031 2.8009796q0.9570465 1.3563919 1.7308502 2.8043594q0.78863525 1.4312363 0.8717346 3.1484604q0.15484619 3.2002945 -3.0399323 3.4312744q-1.496109 0.108169556 -2.7547302 -0.6937866q-1.2430573 -0.8030777 -2.2817993 -2.2318878q-1.0231476 -1.4299393 -1.8603363 -3.2179794q-0.8379364 -1.8036423 -1.4747772 -3.65316q-0.62127686 -1.8506393 -0.9856415 -3.563202q-0.3651123 -1.7281723 -0.5642853 -2.9356995l-15.370163 -1.8809052z"
+        fill-rule="nonzero"
+    />
+    <path
+        fill="#000000"
+        fill-opacity="0.0"
+        d="m53.04317 113.382835l48.270153 -10.611427"
+        fill-rule="nonzero"
+    />
+    <path
+        stroke="#000000"
+        stroke-width="2.0"
+        stroke-linejoin="round"
+        stroke-linecap="butt"
+        d="m53.04317 113.382835l48.270153 -10.611427"
+        fill-rule="nonzero"
+    />
+    <path
+        fill="#000000"
+        fill-opacity="0.0"
+        d="m57.800735 135.02692l22.51255 -4.9490356"
+        fill-rule="nonzero"
+    />
+    <path
+        stroke="#000000"
+        stroke-width="2.0"
+        stroke-linejoin="round"
+        stroke-linecap="butt"
+        d="m57.800735 135.02692l22.51255 -4.9490356"
+        fill-rule="nonzero"
+    />
+    <path
+        fill="#000000"
+        fill-opacity="0.0"
+        d="m61.570293 152.17616l54.76025 -12.0381775"
+        fill-rule="nonzero"
+    />
+    <path
+        stroke="#000000"
+        stroke-width="2.0"
+        stroke-linejoin="round"
+        stroke-linecap="butt"
+        d="m61.570293 152.17616l54.76025 -12.0381775"
+        fill-rule="nonzero"
+    />
+    <path
+        fill="#000000"
+        fill-opacity="0.0"
+        d="m77.20912 196.4413l161.0357 -35.401154"
+        fill-rule="nonzero"
+    />
+    <path
+        stroke="#000000"
+        stroke-width="2.0"
+        stroke-linejoin="round"
+        stroke-linecap="butt"
+        d="m77.20912 196.4413l161.0357 -35.401154"
+        fill-rule="nonzero"
+    />
+    <path
+        fill="#000000"
+        fill-opacity="0.0"
+        d="m82.63461 217.13405l177.05814 -38.92343"
+        fill-rule="nonzero"
+    />
+    <path
+        stroke="#000000"
+        stroke-width="2.0"
+        stroke-linejoin="round"
+        stroke-linecap="butt"
+        d="m82.63461 217.13405l177.05814 -38.92343"
+        fill-rule="nonzero"
+    />
+    <path
+        fill="#000000"
+        fill-opacity="0.0"
+        d="m86.52004 238.96164l172.29196 -37.875656"
+        fill-rule="nonzero"
+    />
+    <path
+        stroke="#000000"
+        stroke-width="2.0"
+        stroke-linejoin="round"
+        stroke-linecap="butt"
+        d="m86.52004 238.96164l172.29196 -37.875656"
+        fill-rule="nonzero"
+    />
+    <path
+        fill="#000000"
+        fill-opacity="0.0"
+        d="m93.95237 261.167l167.75488 -35.30211"
+        fill-rule="nonzero"
+    />
+    <path
+        stroke="#000000"
+        stroke-width="2.0"
+        stroke-linejoin="round"
+        stroke-linecap="butt"
+        d="m93.95237 261.167l167.75488 -35.30211"
+        fill-rule="nonzero"
+    />
+    <path
+        fill="#000000"
+        fill-opacity="0.0"
+        d="m96.17983 286.49493l180.30319 -39.636795"
+        fill-rule="nonzero"
+    />
+    <path
+        stroke="#000000"
+        stroke-width="2.0"
+        stroke-linejoin="round"
+        stroke-linecap="butt"
+        d="m96.17983 286.49493l180.30319 -39.636795"
+        fill-rule="nonzero"
+    />
+    <path
+        fill="#000000"
+        fill-opacity="0.0"
+        d="m103.86338 306.25623l167.75488 -35.302124"
+        fill-rule="nonzero"
+    />
+    <path
+        stroke="#000000"
+        stroke-width="2.0"
+        stroke-linejoin="round"
+        stroke-linecap="butt"
+        d="m103.86338 306.25623l167.75488 -35.302124"
+        fill-rule="nonzero"
+    />
+    <path
+        fill="#000000"
+        fill-opacity="0.0"
+        d="m105.50734 328.92957l180.3032 -39.63681"
+        fill-rule="nonzero"
+    />
+    <path
+        stroke="#000000"
+        stroke-width="2.0"
+        stroke-linejoin="round"
+        stroke-linecap="butt"
+        d="m105.50734 328.92957l180.3032 -39.63681"
+        fill-rule="nonzero"
+    />
+  </g
+  >
+  <metadata
+    >
+    <rdf:RDF
+      >
+      <cc:Work
+        >
+        <dc:format
+          >image/svg+xml</dc:format
+        >
+        <dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+        />
+        <cc:license
+            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
+        />
+        <dc:publisher
+          >
+          <cc:Agent
+              rdf:about="http://openclipart.org/"
+            >
+            <dc:title
+              >Openclipart</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:publisher
+        >
+        <dc:title
+          >Good Grade </dc:title
+        >
+        <dc:date
+          >2014-02-27T13:37:16</dc:date
+        >
+        <dc:description
+          >A good grade assignment</dc:description
+        >
+        <dc:source
+          >https://openclipart.org/detail/191354/good-grade--by-scout-191354</dc:source
+        >
+        <dc:creator
+          >
+          <cc:Agent
+            >
+            <dc:title
+              >Scout</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:creator
+        >
+        <dc:subject
+          >
+          <rdf:Bag
+            >
+            <rdf:li
+              >A+</rdf:li
+            >
+            <rdf:li
+              >assignment</rdf:li
+            >
+            <rdf:li
+              >exam</rdf:li
+            >
+            <rdf:li
+              >good grades</rdf:li
+            >
+            <rdf:li
+              >grades</rdf:li
+            >
+            <rdf:li
+              >paper</rdf:li
+            >
+            <rdf:li
+              >report</rdf:li
+            >
+            <rdf:li
+              >school</rdf:li
+            >
+            <rdf:li
+              >success</rdf:li
+            >
+            <rdf:li
+              >test</rdf:li
+            >
+            <rdf:li
+              >writing</rdf:li
+            >
+          </rdf:Bag
+          >
+        </dc:subject
+        >
+      </cc:Work
+      >
+      <cc:License
+          rdf:about="http://creativecommons.org/licenses/publicdomain/"
+        >
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Reproduction"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Distribution"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
+        />
+      </cc:License
+      >
+    </rdf:RDF
+    >
+  </metadata
+  >
+</svg
+>

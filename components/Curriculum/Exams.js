@@ -1,4 +1,6 @@
-import styles from '@styles/Competitive.module.css';
+import styles from '@styles/Home.module.css';
+import Link from 'next/Link';
+import Tilt from 'react-vanilla-tilt';
 
 const Exams = ({ data }) => {
     return (
@@ -7,7 +9,18 @@ const Exams = ({ data }) => {
                 data.map((unit, index) => {
                     const title = unit.title;
                     return (
-                        <div key={index} className={styles.card}>{title}</div>
+                        <>
+                            <div className={styles.grabnotes}>
+                                <Link passHref href='/'>
+                                    <div style={{
+                                        background: `url(${unit.icon}) no-repeat center center`,
+                                        backgroundSize: "contain"
+                                    }}>
+                                        <p>{unit.title}</p>
+                                    </div>
+                                </Link>
+                            </div>
+                        </>
                     )
                 })
             }
