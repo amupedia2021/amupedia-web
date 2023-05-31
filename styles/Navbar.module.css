@@ -197,12 +197,13 @@ navigation menu opens in mobile phones */
     -webkit-transition: all 0.5s ease !important;
   }
 
+  /* for dropdown */
   .dropdownMenu {
     position: absolute;
     top: 100%;
     left: 10;
     background-color: #fff;
-    border-radius: 4px;
+    border-radius: 14px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 8px 0;
     width: 160px;
@@ -220,6 +221,7 @@ navigation menu opens in mobile phones */
   
   .dropdownLink:hover {
     color: #0070f3;
+    text-shadow: 0 2px 4px #75b2f8 ;
   }
 
   .lnk {

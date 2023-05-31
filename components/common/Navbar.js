@@ -136,12 +136,27 @@ const Navbar = () => {
                  </Link>
                 </li>
                 <li>
-                 <Link href='/courses/hsc'>
+                 <Link href='/'>
                    <a onClick={onClick} className={styles.dropdownLink}>
                     BE
                    </a>
                  </Link>
                 </li>
+                <li>
+                 <Link href='/'>
+                   <a onClick={onClick} className={styles.dropdownLink}>
+                    B.Com
+                   </a>
+                 </Link>
+                </li>
+                <li>
+                 <Link href='/'>
+                   <a onClick={onClick} className={styles.dropdownLink}>
+                    BSC
+                   </a>
+                 </Link>
+                </li>
+                
                 {/* Add more courses as needed */}
               </ul>
             )}
