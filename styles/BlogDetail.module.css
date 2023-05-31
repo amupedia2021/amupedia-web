@@ -1,8 +1,8 @@
 .blog {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding: 0 40px;
+  gap: 35px;
+  padding: 0 20rem;
 }
 
 .blogHeader {
@@ -83,6 +83,7 @@
   margin: 0 auto 50px;
   width: 100%;
   max-width: 1700px;
+  font-size: 1.25rem;
 }
 
 .otherBlogsCard {
