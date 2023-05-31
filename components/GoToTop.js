@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { FaArrowUp } from "react-icons/fa";
+import {TiArrowSortedUp} from "react-icons/ti";
 
 const GoToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,7 +30,7 @@ const GoToTop = () => {
     <Wrapper>
       {isVisible && (
         <div className="top-btn" onClick={goToBtn}>
-          <FaArrowUp className="top-btn--icon" />
+          <TiArrowSortedUp className="top-btn--icon" />
         </div>
       )}
     </Wrapper>
@@ -43,11 +43,11 @@ const Wrapper = styled.section`
   position: relative;
 
   .top-btn {
-    font-size: 1.7rem;
-    width: 3rem;
-    height: 3rem;
+    font-size: 1.8rem;
+    width: 2rem;
+    height: 2rem;
     color: #fff;
-    background-color:black;
+    background-color:rgb(62, 62, 252);
     box-shadow:rgba(0,0,0,0.2) 0px 0px 10px 0px;
     border-radius: 50%;
     position: fixed;
@@ -62,8 +62,12 @@ const Wrapper = styled.section`
 
   @media (max-width:1200px) {
     .top-btn {
+      font-size: 1.5rem;
+      width: 1.6rem;
+      height: 1.6rem;
       bottom: 1rem;
       right: 1rem;
+      
     }
   }
 `;
