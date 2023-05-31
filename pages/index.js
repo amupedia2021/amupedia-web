@@ -213,23 +213,29 @@ export default function Home() {
                   }}
                   name='phone'
                   placeholder='Phone'
+                  minLength={10}
+                  maxLength={10}
+                  type='tel'
+                  required
                   className={styles.details}
                 />
-                <input
+                <textarea
                   value={form.address}
                   onChange={onChange}
                   required
                   name='address'
                   type='text'
+                  rows={2}
                   placeholder='Address'
                   className={styles.address}
                 />
-                <input
+                <textarea
                   value={form.message}
                   onChange={onChange}
                   required
                   name='message'
                   type='text'
+                  rows={4}
                   placeholder='Type your message here'
                   className={styles.msg}
                 />
