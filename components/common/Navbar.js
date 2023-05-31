@@ -7,6 +7,7 @@ const Navbar = () => {
   const router = useRouter();
   const [navbar, setNavbar] = useState(false);
   const [courseActive, setCourseActive] = useState(false);
+  const [contactActive, setContactActive] = useState(false);
 
   useEffect(() => {
     window.addEventListener('scroll', changeNavbar);
@@ -25,6 +26,25 @@ const Navbar = () => {
       { threshold: 0.8 }
     );
     obs.observe(courses);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeNavbar);
+
+    const contacts = document.getElementById('contacts');
+    if (!contacts) return;
+    const obs = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setContactActive(true);
+        } else {
+          setContactActive(false);
+        }
+      },
+      { threshold: 0.8 }
+    );
+    obs.observe(contacts);
   }, []);
 
   const changeNavbar = () => {
@@ -64,7 +84,7 @@ const Navbar = () => {
         <ul className={styles.list}>
           <li
             className={`${styles.listitem} ${
-              router.pathname === '/' && !courseActive && navbar
+              router.pathname === '/' && !courseActive && !contactActive && navbar
                 ? styles.navList_active
                 : ''
             }`}
@@ -73,7 +93,7 @@ const Navbar = () => {
               <a
                 onClick={onClick}
                 className={`${styles.lnk} ${
-                  router.pathname === '/' && !courseActive ? styles.active : ''
+                  router.pathname === '/' && !courseActive && !contactActive ? styles.active : ''
                 } ${navbar && styles.nav_active}`}
               >
                 Home
@@ -176,7 +196,7 @@ const Navbar = () => {
           </li>
           <li
             className={`${styles.listitem} ${
-              courseActive && navbar ? styles.navList_active : ''
+              contactActive && navbar ? styles.navList_active : ''
             }`}
           >
             <a
@@ -188,7 +208,7 @@ const Navbar = () => {
                   onClick();
                 }, 10);
               }}
-              className={`${styles.lnk} ${courseActive ? styles.active : ''} ${
+              className={`${styles.lnk} ${contactActive ? styles.active : ''} ${
                 navbar && styles.nav_active
               }`}
             >

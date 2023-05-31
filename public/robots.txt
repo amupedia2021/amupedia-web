@@ -1,0 +1,57 @@
+User-Agent: *
+Disallow:
+
+User-Agent: Googlebot
+Disallow:
+
+User-Agent: googlebot-image
+Disallow:
+
+User-Agent: googlebot-mobile
+Disallow:
+
+User-Agent: MSNBot
+Disallow:
+
+User-Agent: Slurp
+Disallow:
+
+User-Agent: yahoo-mmcrawler
+Disallow:
+
+User-Agent: yahoo-blogs/v3.9
+Disallow:
+
+User-Agent: Yandex
+Disallow:
+
+User-Agent: Baiduspider
+Disallow:
+
+User-Agent: DuckDuckBot
+Disallow:
+
+User-Agent: Sogou
+Disallow:
+
+User-Agent: Exabot
+Disallow:
+
+User-Agent: MJ12bot
+Disallow:
+
+User-Agent: AhrefsBot
+Disallow:
+
+User-Agent: DotBot
+Disallow:
+
+User-Agent: Seekport
+Disallow:
+
+User-Agent: *
+
+# Add additional bots as needed with appropriate User-Agent and Disallow directives
+
+Crawl-delay: 20
+Sitemap: https://www.amupedia.com/sitemap.xml

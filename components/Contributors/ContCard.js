@@ -19,7 +19,7 @@ const ContCard = (props) => {
         className={styles.card}
         onClick={() => openContributorProfile(profile)}
       >
-        <img className={styles.profile} src={image} alt='Contributor' />
+        <img className={styles.profile} src={`https://images.weserv.nl/?output=webp&url=${image}`} alt='Contributor' />
         <div className={styles.content}>
           <h1 className={styles.text}>{title}</h1>
           <p>

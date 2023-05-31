@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import Image from 'next/image';
 import pdf from '@images/home/pdf.svg';
 import chap_yt from '@images/home/yt.svg';
@@ -12,7 +12,10 @@ import Footer from 'components/common/Footer';
 import { Store } from 'utils/Store/Store';
 import Preloader from 'components/common/Preloader';
 import axios from 'node_modules/axios/index';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import TestimonialCard from 'components/Testimonial/Testimonial';
+import GoToTop from 'components/GoToTop';
 
 export default function Home() {
   const { dispatch } = useContext(Store);
@@ -56,13 +59,20 @@ export default function Home() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <>
+      <GoToTop />
       <Header image={headerImg} text='Amupedia' />
       <main>
         <section id={styles.content}>
           {/* <!-- Our Mission Container --> */}
-          <div className={styles.mission}>
+          <div data-aos="zoom-in" className={styles.mission}>
             <h2>Our Mission</h2>
             <p>
               We are the students of AMU, intending to provide you all the
@@ -74,7 +84,7 @@ export default function Home() {
           </div>
 
           {/* Our Services Section  */}
-          <div id={styles.ourserv}>
+          <div data-aos="fade-up" id={styles.ourserv}>
             <h2>Our Services</h2>
             <div id={styles.ourserimgs}>
               <div>
@@ -97,7 +107,7 @@ export default function Home() {
           </div>
 
           {/* <!-- grab your notes section  --> */}
-          <div className={styles.courses} id='courses'>
+          <div data-aos="fade-up" className={styles.courses} id='courses'>
             <h2 className={styles.grabh2}>Grab Your Notes Here</h2>
             <div className={styles.grabnotes}>
               <Link passHref href='/courses/btech'>
@@ -133,6 +143,7 @@ export default function Home() {
 
           {/* <!-- Recent Updates section  --> */}
           {/* <!-- same css as grabnotes section  --> */}
+          <div data-aos="fade-up">
           <h2 className={styles.grabh2}>Recent Updates</h2>
           <div className={styles.grabnotes}>
             <Link passHref href='/'>
@@ -156,10 +167,11 @@ export default function Home() {
                 </div>
               </Tilt>
             </Link>
+            </div>
           </div>
 
           {/* <!-- Contact Form  --> */}
-          <div id='contacts'>
+          <div data-aos="zoom-in" id='contacts'>
             <h2 className={styles.grabh2}>Get In Touch With Us</h2>
             <form onSubmit={onSubmit}>
               <div className={styles.cntfrm}>
@@ -203,23 +215,29 @@ export default function Home() {
                   }}
                   name='phone'
                   placeholder='Phone'
+                  minLength={10}
+                  maxLength={10}
+                  type='tel'
+                  required
                   className={styles.details}
                 />
-                <input
+                <textarea
                   value={form.address}
                   onChange={onChange}
                   required
                   name='address'
                   type='text'
+                  rows={2}
                   placeholder='Address'
                   className={styles.address}
                 />
-                <input
+                <textarea
                   value={form.message}
                   onChange={onChange}
                   required
                   name='message'
                   type='text'
+                  rows={4}
                   placeholder='Type your message here'
                   className={styles.msg}
                 />
