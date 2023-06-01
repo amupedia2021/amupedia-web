@@ -7,6 +7,7 @@ import "../styles/tailwind.css" //importing Tailwind CSS utilities
 import { motion } from "framer-motion";
 import { StoreProvider } from "utils/Store/Store";
 import Alert from "components/common/Alert";
+import AdBlockMessage from 'pages/AdBlockMessage'; //importing AdBlockMessage Component
 import Script from "node_modules/next/script";
 // import Login from 'components/Login';
 
@@ -136,6 +137,7 @@ function MyApp({ Component, pageProps, router }) {
           ></Script>
         </section>
       </motion.div>
+      <AdBlockMessage />
     </StoreProvider>
   );
 }
