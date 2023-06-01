@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap');
 
 /* styling for section container  */
 #content {
   display: flex;
   flex-direction: column;
-  font-family: "Baloo Bhai 2", sans-serif;
+  font-family: 'Baloo Bhai 2', sans-serif;
 }
 
 /* styling for our mission container  */
@@ -20,7 +20,7 @@
   margin: 12px;
 }
 .mission p {
-  font-family: "Baloo Bhai 2", sans-serif;
+  font-family: 'Baloo Bhai 2', sans-serif;
   max-width: 700px;
   margin: auto;
   padding: 14px;
@@ -132,16 +132,16 @@
   margin: 20px !important;
 }
 .grab1 {
-  background: url("/images/home/btech.svg") no-repeat center center;
+  background: url('/images/home/btech.svg') no-repeat center center;
 }
 .grab2 {
-  background: url("/images/home/be.svg") no-repeat center center/cover;
+  background: url('/images/home/be.svg') no-repeat center center/cover;
 }
 .grab3 {
-  background: url("/images/home/bcom.svg") no-repeat center center/cover;
+  background: url('/images/home/bcom.svg') no-repeat center center/cover;
 }
 .grab4 {
-  background: url("/images/home/bsc.svg") no-repeat center center/cover;
+  background: url('/images/home/bsc.svg') no-repeat center center/cover;
 }
 .exam1 {
   background: url("/images/exam/cat.svg") no-repeat center center;
@@ -185,13 +185,13 @@
 /* same css as grabnotes section will be given to recent updates section  */
 
 .rec1 {
-  background: url("/images/home/app.svg") no-repeat center center/cover;
+  background: url('/images/home/app.svg') no-repeat center center/cover;
 }
 .rec2 {
-  background: url("/images/home/blog.svg") no-repeat center center/cover;
+  background: url('/images/home/blog.svg') no-repeat center center/cover;
 }
 .rec3 {
-  background: url("/images/home/comp_exam.svg") no-repeat center center/cover;
+  background: url('/images/home/comp_exam.svg') no-repeat center center/cover;
 }
 
 /* Styling for contact form  */
@@ -208,52 +208,48 @@
   box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem rgb(216, 213, 225);
 }
 
-.cntfrm textarea{
+.cntfrm textarea {
   resize: none;
 }
 
 .details {
-    margin: 7px;
-    color: #6565fd;/*#000000cc*/
-    font-weight: bold;
-    padding: 13px 18px;
-    background-color: rgba(235, 235, 241, 0.273);
-    font-family: "Baloo Bhai 2";
-    border: 1px solid #e6e6e6;
-    border-radius: 15px;
-    transition: all 0.4s ease;
-    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #b9b9e0;
+  margin: 7px;
+  color: #6565fd; /*#000000cc*/
+  font-weight: bold;
+  padding: 13px 18px;
+  background-color: rgba(235, 235, 241, 0.273);
+  font-family: 'Baloo Bhai 2';
+  border: 1px solid #e6e6e6;
+  border-radius: 15px;
+  transition: all 0.4s ease;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #b9b9e0;
 }
-/*
-::placeholder {
-	color: red;
-}
-*/
+
 .cntfrm textarea:focus {
-	background-color: rgb(243, 239, 255);
-	box-shadow: none;
-	outline: none;
+  background-color: rgb(243, 239, 255);
+  box-shadow: none;
+  outline: none;
 }
 
 .address {
-    margin: 7px;
-    color: #6565fd;
-    padding: 10px 18px;
-    background-color: rgba(235, 235, 241, 0.273);
-    font-family: "Baloo Bhai 2";
-    border: 1px solid #e6e6e6;
-    font-weight: bold;
-    border-radius: 10px;
-    transition: all 0.4s ease;
-    box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #b9b9e0;
+  margin: 7px;
+  color: #6565fd;
+  padding: 10px 18px;
+  background-color: rgba(235, 235, 241, 0.273);
+  font-family: 'Baloo Bhai 2,sans-serif';
+  border: 1px solid #e6e6e6;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #b9b9e0;
 }
 
 .msg {
   margin: 7px;
-  padding: 10px 18px;/*24px 18px*/
+  padding: 10px 18px; /*24px 18px*/
   background-color: rgba(235, 235, 241, 0.273);
   color: #6565fd;
-  font-family: "Baloo Bhai 2", sans-serif;
+  font-family: 'Baloo Bhai 2', sans-serif;
   border: 1px solid #e6e6e6;
   border-radius: 10px;
   font-weight: bold;
@@ -262,69 +258,33 @@
   transition: all 0.4s ease;
 }
 
-@media only screen and (min-width: 516px) {
-  .address,
-  .msg {
-    grid-column: 1 / span 2;
-  }
-  
-}
-
-@media only screen and (max-width : 640px) {
-  .cntfrm{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-gap: 5px;
-    width: 100%;
-    height: 450px;
+@media only screen and (max-width: 700px) {
+  .cntfrm {
+    text-align: center;
+    display: block;
+    line-height: 4.5rem;
+    width: 80%;
     max-width: 450px;
   }
 
-  .details{
-    width: 180px;
+  .details {
+    margin: 0px auto;
     height: 50px;
-    margin: 5px 0px 0px 5px;
+    width: 85%;
   }
 
-  .address{
-    margin-top: -20px;
-    height: 60px;
-    padding: 0px 18px;
+  .address {
+    width: 85%;
+    line-height: 1.5rem;
+    margin-bottom: 0px;
+    height: 100px;
   }
 
-  .msg{
-    margin-top: -20px;
-    height: 90px;
-  }
-}
-
-@media only screen and (max-width : 530px){
-  .cntfrm{
-    text-align: center;
-    display: block;
-    line-height: 70px;
-    width: 100%;
-    height: 530px;
-    max-width: 300px;
-  }
-
-  .details{
-    width: 220px;
-    height: 40px;
-    margin: 5px 0px 0px 5px;
-    border-radius: 10px;
-  }
-
-  .address{
-    padding: 0px 18px;
-    margin-top: 20px;
-    height: 50px;
-    width: 240px;
-  }
-
-  .msg{
-    margin-top: 10px;
-    height: 70px;
+  .msg {
+    margin: -14px auto 0px auto;
+    width: 85%;
+    line-height: 1.5rem;
+    height: 150px;
   }
 }
 
@@ -338,7 +298,7 @@
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
-  font-family: "Baloo Bhai 2", sans-serif;
+  font-family: 'Baloo Bhai 2', sans-serif;
   border: 1px solid #e6e6e6;
   border-radius: 20px;
   background-color: #6565fd;
