@@ -27,4 +27,18 @@ export default class MyDocument extends Document {
       sheet.seal();
     }
   }
+
+  render() {
+    return (
+      <Html>
+        <Head>
+          <script src="/blockadblock.js"></script>
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }
