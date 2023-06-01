@@ -6,8 +6,7 @@ const Exams = ({ data }) => {
     return (
         <>
             {
-                data.map((unit, index) => {
-                    const title = unit.title;
+                data.map((unit) => {
                     return (
                         <>
                             <div className={styles.grabnotes}>
