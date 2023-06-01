@@ -96,6 +96,17 @@ export default function BTech() {
               <p>Technology</p>
             </div>
           </a>
+          <a
+            href="https://drive.google.com/drive/folders/1YVAoa4S8cJ5Jh1E1WJjedEdLTqvNPVjl?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className={styles.brnch} id={styles.cs}>
+              <p>ECE</p>
+              <p>AI</p>
+
+            </div>
+          </a>
         </div>
       </section>
       <Footer />
