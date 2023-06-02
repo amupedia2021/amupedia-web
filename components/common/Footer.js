@@ -7,81 +7,6 @@ import {
   BsTwitter
 } from 'react-icons/bs';
 import Link from 'next/link';
-import Wave from './Wave';
-// const Footer = () => {
-//   return (
-//     <footer id="footer">
-//       <div id={styles.above_bg}>
-//         <p>Follow Us On</p>
-//         <div id={styles.icons}>
-//           <a
-//             href="https://www.instagram.com/amu.pedia/?hl=am-et"
-//             target="_blank"
-//             rel="noreferrer"
-//           >
-//             <FontAwesomeIcon
-//               icon={faInstagramSquare}
-//               size="2x"
-//               inverse
-//               className={styles.icon}
-//             />
-//           </a>
-//           <a
-//             href="https://www.facebook.com/AMUPedia"
-//             target="_blank"
-//             rel="noreferrer"
-//           >
-//             <FontAwesomeIcon
-//               icon={faFacebookSquare}
-//               size="2x"
-//               inverse
-//               className={styles.icon}
-//             />
-//           </a>
-//           <a
-//             href="https://twitter.com/AmuPedia?t=PEHmP10PAymk6gsTykKtAQ&s=08"
-//             target="_blank"
-//             rel="noreferrer"
-//           >
-//             <FontAwesomeIcon
-//               icon={faTwitterSquare}
-//               size="2x"
-//               inverse
-//               className={styles.icon}
-//             />
-//           </a>
-//           <a
-//             href="https://in.linkedin.com/company/amupedia"
-//             target="_blank"
-//             rel="noreferrer"
-//           >
-//             <FontAwesomeIcon
-//               icon={faLinkedin}
-//               size="2x"
-//               inverse
-//               className={styles.icon}
-//             />
-//           </a>
-//         </div>
-//       </div>
-//       <div id={styles.above_ftbg}>
-//        <p><a href="https://github.com/amupedia2021/Project-Amupedia">
-//             Contribute to the project
-//             <FontAwesomeIcon
-//               icon={faGithub}
-//               size="1x"
-//               inverse
-//               className={styles.icon}
-//             />
-//             </a>
-//             </p>
-//             </div>
-//       <div id={styles.ftbg}>
-//         <p>Copyright2021@amupedia.com</p>
-//       </div>
-//     </footer>
-//   );
-// };
 
 const Footer = () => {
   return (
@@ -189,7 +114,6 @@ const Footer = () => {
           <p>Copyright2023@amupedia.com</p>
         </div>
       </div>
-      <Wave />
     </div>
   );
 };
