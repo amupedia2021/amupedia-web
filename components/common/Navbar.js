@@ -8,7 +8,7 @@ const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const [courseActive, setCourseActive] = useState(false);
   const [contactActive, setContactActive] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
+  const [dropdown, setDropdown] = useState(false); //for adding dropdown feature
 
   useEffect(() => {
     window.addEventListener('scroll', changeNavbar);
@@ -105,8 +105,10 @@ const Navbar = () => {
             className={`${styles.listitem} ${
               courseActive && navbar ? styles.navList_active : ''
             }`}
-            onMouseEnter={() => setDropdown(true)}
-            onMouseLeave={() => setDropdown(false)}
+
+            // Show/hide dropdown menu on hover
+            onMouseEnter={() => setDropdown(true)} // Set dropdown state to true when mouse enters the element
+            onMouseLeave={() => setDropdown(false)} // Set dropdown state to false when mouse leaves the element
           >
             <Link href='/'>
               <a
@@ -126,6 +128,7 @@ const Navbar = () => {
                 Courses 
               </a>
             </Link>
+            {/* Dropdown menu for courses */}
             {dropdown && (
               <ul className={styles.dropdownMenu}>
                <li>

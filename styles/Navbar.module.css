@@ -183,6 +183,7 @@ navigation menu opens in mobile phones */
     right: 10px;
     top: 17px;
     z-index: 2;
+    
   }
   .listitem {
     background-color: transparent;
@@ -201,7 +202,7 @@ navigation menu opens in mobile phones */
   .dropdownMenu {
     position: absolute;
     top: 100%;
-    left: 10;
+    /* right: 10px; */
     background-color: #fff;
     border-radius: 14px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -255,4 +256,59 @@ navigation menu opens in mobile phones */
   .navList_actives {
     background-color: rgb(62, 62, 252);
   }
+}
+
+/* Responsive adjustments for smaller screens */
+@media only screen and (max-width: 749px) {
+  .navbar {
+    height: auto;
+    
+  }
+
+  .list {
+    opacity: 80%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    width: 40%;
+    top: 100px;
+    right: -700px;
+    list-style: none;
+    padding: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    
+  }
+
+  .listitem {
+    display: block;
+    margin: 15px 0;
+    width: 100%;
+    padding: 0;
+    font-weight: bold;
+  }
+
+  .ham {
+    display: flex;
+  }
+
+  .blackoverlay {
+    display: none;
+  }
+
+  .menu:checked ~ .navbar .list {
+    display: block;
+    right: 0;
+  }
+  .lnk {
+    font-size: 16px; 
+  }
+  .dropdownLink:hover {
+    color: #0070f3;
+    text-shadow: 0 2px 4px #75b2f8;
+  }
+  .dropdownMenu{
+    background-color: rgb(248, 246, 246);
+    
+  }
+  
 }
