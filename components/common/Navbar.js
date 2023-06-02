@@ -54,10 +54,21 @@ const Navbar = () => {
     } else setNavbar(false);
   };
 
-  const onClick = () => {
-    // Handles mobile course click
-    const menu = document.querySelector('#menu');
-    if (menu.checked) menu.click();
+  
+
+  const handleCoursesHover = () => {
+    if (window.innerWidth >= 768) {
+      // Show the dropdown menu only on larger screens
+      setDropdown(true);
+    }
+  };
+
+  const handleCoursesClick = () => {
+    if (window.innerWidth < 768) {
+      // Show/hide the dropdown menu on small screens
+      setDropdown(!dropdown);
+      
+    }
   };
 
   return (
@@ -71,7 +82,7 @@ const Navbar = () => {
       </label>
 
       {/* <!-- overlay to be shown when nav bar becomes visible --> */}
-      <div className={styles.blackoverlay} id='overlay' onClick={onClick}></div>
+      <div className={styles.blackoverlay} id='overlay' /*onClick={onClick}*/></div>
 
       {/* <!-- navigation bar --> */}
       <nav
@@ -92,7 +103,11 @@ const Navbar = () => {
           >
             <Link href='/'>
               <a
-                onClick={onClick}
+                // onClick={onClick}: replace this with below to ensure that the menu is properly closed when the element is clicked.
+                onClick={() => {
+                  const menu = document.querySelector('#menu');
+                  if (menu.checked) menu.click();
+                }}
                 className={`${styles.lnk} ${
                   router.pathname === '/' && !courseActive && !contactActive ? styles.active : ''
                 } ${navbar && styles.nav_active}`}
@@ -106,55 +121,47 @@ const Navbar = () => {
               courseActive && navbar ? styles.navList_active : ''
             }`}
 
-            // Show/hide dropdown menu on hover
-            onMouseEnter={() => setDropdown(true)} // Set dropdown state to true when mouse enters the element
-            onMouseLeave={() => setDropdown(false)} // Set dropdown state to false when mouse leaves the element
-          >
-            <Link href='/'>
-              <a
-                onClick={() => {
-                  router.push('/');
-                  setTimeout(() => {
-                    const courses = document.getElementById('courses');
-                    if (courses) courses.scrollIntoView();
+            
+            onMouseEnter={handleCoursesHover} // Add mouse enter event for larger screens
+            onClick={handleCoursesClick} // Add click event for smaller screens
 
-                    onClick();
-                  }, 10);
-                }}
-                className={`${styles.lnk} ${
-                  courseActive ? styles.active : ''
-                } ${navbar && styles.nav_active}`}
+          >
+              <a
+              id='courses'
+              className={`${styles.lnk} ${courseActive ? styles.active : ''} ${
+                dropdown && styles.dropdown_active // Add the class for the active dropdown menu
+              }`}
               >
                 Courses 
               </a>
-            </Link>
+            
             {/* Dropdown menu for courses */}
             {dropdown && (
-              <ul className={styles.dropdownMenu}>
+              <ul className={styles.dropdownMenu} onMouseLeave={() => setDropdown(false)}>
                <li>
                  <Link href='/courses/btech'>
-                   <a onClick={onClick} className={styles.dropdownLink}>
+                   <a onClick={() => setDropdown(false)} className={styles.dropdownLink}>
                      B.Tech
                    </a>
                  </Link>
                 </li>
                 <li>
                  <Link href='/'>
-                   <a onClick={onClick} className={styles.dropdownLink}>
+                   <a onClick={() => setDropdown(false)} className={styles.dropdownLink}>
                     BE
                    </a>
                  </Link>
                 </li>
                 <li>
                  <Link href='/'>
-                   <a onClick={onClick} className={styles.dropdownLink}>
+                   <a onClick={() => setDropdown(false)} className={styles.dropdownLink}>
                     B.Com
                    </a>
                  </Link>
                 </li>
                 <li>
                  <Link href='/'>
-                   <a onClick={onClick} className={styles.dropdownLink}>
+                   <a onClick={() => setDropdown(false)} className={styles.dropdownLink}>
                     BSC
                    </a>
                  </Link>
@@ -173,7 +180,11 @@ const Navbar = () => {
           >
             <Link href='/about'>
               <a
-                onClick={onClick}
+               
+                onClick={() => {
+                  const menu = document.querySelector('#menu');
+                  if (menu.checked) menu.click();
+                }}
                 className={`${styles.lnk} ${
                   router.pathname === '/about' ? styles.active : ''
                 } ${navbar && styles.nav_active}`}
@@ -206,7 +217,10 @@ const Navbar = () => {
           >
             <Link href='/blog'>
               <a
-                onClick={onClick}
+                onClick={() => {
+                  const menu = document.querySelector('#menu');
+                  if (menu.checked) menu.click();
+                }}
                 className={`${styles.lnk} ${
                   router.pathname === '/blog' ? styles.active : ''
                 } ${navbar && styles.nav_active}`}
@@ -225,7 +239,10 @@ const Navbar = () => {
           >
             <Link href='/contributors'>
               <a
-                onClick={onClick}
+                onClick={() => {
+                  const menu = document.querySelector('#menu');
+                  if (menu.checked) menu.click();
+                }}
                 className={`${styles.lnk} ${
                   router.pathname === '/contributors' ? styles.active : ''
                 } ${navbar && styles.nav_active}`}
@@ -245,7 +262,7 @@ const Navbar = () => {
                 setTimeout(() => {
                   const contacts = document.getElementById('contacts');
                   if (contacts) contacts.scrollIntoView();
-                  onClick();
+                  //onClick();
                 }, 10);
               }}
               className={`${styles.lnk} ${contactActive ? styles.active : ''} ${

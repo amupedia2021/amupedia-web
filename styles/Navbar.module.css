@@ -285,6 +285,8 @@ navigation menu opens in mobile phones */
     width: 100%;
     padding: 0;
     font-weight: bold;
+    text-align: left;
+    
   }
 
   .ham {
@@ -308,7 +310,37 @@ navigation menu opens in mobile phones */
   }
   .dropdownMenu{
     background-color: rgb(248, 246, 246);
-    
+    /* display: none; */
+    position: absolute;
+    top: 80px;
+    left: -110px; 
+    width: 100px;  
+    /* background-color: #fff; */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 8px 16px;
+    z-index: 999;
+   
+  }
+
+  /* for dropdown pointer */
+  .dropdownMenu::before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -10px;
+    right: -10px;
+    border-style: solid;
+    border-width: 0 0 20px 20px;
+    border-color: transparent transparent rgb(248, 246, 246) transparent;
+    z-index: 1;
+    transform: rotate(45deg);
+  }
+
+  
+  .navbar .listitem .dropdown_active {
+    display: block;
   }
   
 }
