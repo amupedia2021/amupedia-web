@@ -7,6 +7,20 @@
 <img width="959" alt="Screenshot 2022-10-06 13-14-32" src="https://user-images.githubusercontent.com/56462749/196167807-122487df-62c4-445f-b58c-7884a26db1ba.png">
 <img width="959" alt="Screenshot 2022-10-06 13-14-19" src="https://user-images.githubusercontent.com/56462749/196167803-bc606c1c-a03f-40c0-9c51-b6f2576234c1.png">
 
+## TABLE OF CONTENTS
+
+- [About](#About)
+- [Live Demo](#Live-Demo)
+- [Setup Video](#Setup-Video)
+    - [How to Contribute to this repository](#How-to-Contribute-to-this-repository)
+    - [Building Amupedia](#Building-Amupedia)
+    - [NOTE](#NOTE)
+- [Features](#Features)
+- [Technology Stack](#Technology-Stack)
+- [REPO STATUS](#REPO-STATUS)
+- [OUR CONTRIBUTORS](#OUR-CONTRIBUTORS)
+
+
 ## About
 <div align="center">
 <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
