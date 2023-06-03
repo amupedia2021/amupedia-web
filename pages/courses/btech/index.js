@@ -2,11 +2,13 @@ import Header from "components/common/Header/Header";
 import styles from "@styles/Btech.module.css";
 import Link from "next/link";
 import Footer from "components/common/Footer";
+import GoToTop from "components/GoToTop";
 
 export default function BTech() {
   const image = "/images/btech/top_bg.jpg";
   return (
     <>
+    <GoToTop />
       <Header image={image} text="B.Tech" />
       {/* <!-- content of b.tech section  --> */}
       <section id={styles.btcontent}>

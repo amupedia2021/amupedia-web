@@ -4,6 +4,7 @@ import ContCard from 'components/Contributors/ContCard';
 import Footer from 'components/common/Footer';
 import Header from 'components/common/Header/Header';
 import styles from '@styles/scss/contributor.module.scss';
+import GoToTop from 'components/GoToTop';
 
 const Contributors = () => {
   const [contributors, setContributors] = useState([]);
@@ -61,6 +62,7 @@ const Contributors = () => {
 
   return (
     <>
+    <GoToTop />
       <Head>
         <title>Contributors | Amupedia</title>
         <meta
