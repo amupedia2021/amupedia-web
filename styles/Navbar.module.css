@@ -234,9 +234,9 @@ navigation menu opens in mobile phones */
   .listitem:hover > .lnk {
     text-shadow: white 2px 2px 10px;
   }
-  .lnk.active {
+  /* .lnk.active {
     text-shadow: white 0px 0px 10px !important;
-  }
+  } */
 
   .nav_active {
     color: rgb(12, 12, 12);

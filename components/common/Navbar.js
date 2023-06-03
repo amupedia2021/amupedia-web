@@ -48,10 +48,24 @@ const Navbar = () => {
     obs.observe(contacts);
   }, []);
 
+  // const changeNavbar = () => {
+  //   if (window.scrollY > 500) {
+  //     setNavbar(true);
+  //   } else setNavbar(false);
+  // };
   const changeNavbar = () => {
-    if (window.scrollY > 500) {
-      setNavbar(true);
-    } else setNavbar(false);
+    const courses = document.getElementById('courses');
+    if (courses) {
+      if (window.scrollY > 500) {
+        setNavbar(true);
+        setCourseActive(true);
+      } else {
+        setNavbar(false);
+        setCourseActive(false);
+      }
+    } else {
+      setNavbar(window.scrollY > 500);
+    }
   };
 
   
@@ -71,6 +85,10 @@ const Navbar = () => {
     }
   };
 
+  const handleClickOverlay = () => {
+    setDropdown(false);
+  };
+
   return (
     <>
       {/* <!-- hamburger menu icon (for mobile phones) --> */}
@@ -82,7 +100,12 @@ const Navbar = () => {
       </label>
 
       {/* <!-- overlay to be shown when nav bar becomes visible --> */}
-      <div className={styles.blackoverlay} id='overlay' /*onClick={onClick}*/></div>
+      {/* <div className={styles.blackoverlay} id='overlay' ></div> */}
+      <div
+        className={`${styles.blackoverlay} ${dropdown ? styles.overlay_active : ''}`}
+        id='overlay'
+        onClick={handleClickOverlay}
+      ></div>
 
       {/* <!-- navigation bar --> */}
       <nav
@@ -127,10 +150,16 @@ const Navbar = () => {
 
           >
               <a
-              id='courses'
-              className={`${styles.lnk} ${courseActive ? styles.active : ''} ${
-                dropdown && styles.dropdown_active // Add the class for the active dropdown menu
-              }`}
+              onClick={() => {
+                router.push('/');
+                setTimeout(() => {
+                  const courses = document.getElementById('courses');
+                  if (courses) courses.scrollIntoView();
+                  //onClick();
+                }, 10);
+              }}
+              
+              className={`${styles.lnk} ${courseActive ? styles.active : ''} ${navbar && styles.nav_active}`}
               >
                 Courses 
               </a>
