@@ -9,6 +9,7 @@ import {
 import Link from 'next/link';
 
 const Footer = () => {
+  const year = new Date().getFullYear();
   return (
     <div id={styles.bg_color}>
       <div id={styles.above_bg}>
@@ -111,7 +112,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <p>Copyright2023@amupedia.com</p>
+          <p>`Copyright${year}@amupedia.com`</p>
         </div>
       </div>
     </div>

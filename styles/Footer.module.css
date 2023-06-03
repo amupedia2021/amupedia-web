@@ -77,6 +77,8 @@
   gap: 20px;
   color: white;
 }
+
+/* contribution to the project */
 #contribute {
   display: flex;
   align-items: center;
@@ -87,6 +89,7 @@
   align-items: center;
 }
 
+/* home , about , blogs , course */
 #footer_links {
   max-width: 1024px;
   font-size: 20px;
