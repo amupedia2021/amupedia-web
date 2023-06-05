@@ -5,6 +5,7 @@ import Header from "components/common/Header/Header";
 import styles from "@styles/scss/blog.module.scss";
 import blogData from "/data/blogdata";
 import GoToTop from "components/GoToTop";
+import WriteBlog from "./writeblog";
 
 export default function Blogs() {
 	return (
@@ -26,7 +27,7 @@ export default function Blogs() {
 						likes={blogItem.likes}
 					/>
 				))}
-			</div>
+			</div>			
 			<Footer />
 		</>
 	);

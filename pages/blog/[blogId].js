@@ -12,6 +12,7 @@ import { faLink } from "node_modules/@fortawesome/free-solid-svg-icons/index";
 import { faBookmark } from "node_modules/@fortawesome/free-solid-svg-icons/index";
 import { faEllipsisH } from "node_modules/@fortawesome/free-solid-svg-icons/index";
 import BlogCard from "components/Blogs/BlogCard";
+import Footer from "components/common/Footer";
 import blogData from "/data/blogdata";
 import Link from "next/link";
 
@@ -19,6 +20,7 @@ export default function BlogId() {
   const router = useRouter();
   const { blogId } = router.query;
   return (
+    <>
     <div className={styles.blog}>
       <div className={styles.blogDetail}>
         <div className={styles.blogHeader}>
@@ -167,5 +169,7 @@ export default function BlogId() {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
