@@ -3,11 +3,13 @@ import Header from "components/common/Header/Header";
 import styles from "@styles/scss/main.module.scss";
 import Footer from "components/common/Footer";
 import Team from "components/Team/Team";
+import GoToTop from "components/GoToTop";
 
 export default function About() {
   const image = "/images/about/about_bg.svg";
   return (
     <>
+      <GoToTop />
       <Head>
         <title>About | Amupedia</title>
         <meta
@@ -38,16 +40,15 @@ export default function About() {
         <div className={`${styles.whoWeAre} ${styles.ourStory}`}>
           <h2>Our Story</h2>
           <p>
-            The life of any student is not as easy as it may look like. There
-            are so many problems of every student out there that we plan to
-            tackle single-handedly with this website. Finding all the right
-            documents and reference books and with reference video lectures can
-            save a lot of your time and help you check off more things than you
-            plan to. To that, we&apos;re even providing information on various
-            competitive exams like GATE, SSCJE, etc. and notify you about
-            verified sources of internships. AMUPedia is only looking out for
-            all the students out there and our sole mission is to help you in
-            making a bright future for yourself.
+            The life of any student is not as easy as it may seem. There are 
+            numerous challenges faced by students, and we aim to address them 
+            through this website. Finding the correct documents, reference books, 
+            and video lectures can save you a significant amount of time and allow 
+            you to accomplish more than you initially planned. Additionally, we 
+            provide information on competitive exams such as GATE and SSCJE, as 
+            well as notify you about verified internship opportunities. AMUPedia 
+            is dedicated to supporting all students and our primary mission is to 
+            assist you in building a bright future for yourself.
           </p>
         </div>
       </main>

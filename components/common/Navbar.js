@@ -8,7 +8,8 @@ const Navbar = () => {
   const router = useRouter();
   const [navbar, setNavbar] = useState(false);
   const [courseActive, setCourseActive] = useState(false);
-  const [contactActive,setContactActive]=useState(false);
+  const [contactActive, setContactActive] = useState(false);
+
 
   useEffect(() => {
     window.addEventListener("scroll", changeNavbar);
@@ -27,7 +28,6 @@ const Navbar = () => {
       },
       { threshold: 0.8 }
     );
-
     obs.observe(courses);
   }, []);
 
@@ -40,6 +40,7 @@ const Navbar = () => {
     const contact=document.getElementById("contact");
     // const courses = document.getElementById("courses");
     if (!contact) return;
+
     const obs = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
@@ -51,11 +52,8 @@ const Navbar = () => {
       },
       { threshold: 0.8 }
     );
-
-    obs.observe(contact);
+    obs.observe(contacts);
   }, []);
-
-
 
   const changeNavbar = () => {
     if (window.scrollY > 500) {
@@ -94,7 +92,8 @@ const Navbar = () => {
         <ul className={styles.list}>
           <li
             className={`${styles.listitem} ${
-              router.pathname === "/" && !courseActive && !contactActive && navbar
+              router.pathname === '/' && !courseActive && !contactActive && navbar
+
                 ? styles.navList_active
                 : ''
             }`}
@@ -103,7 +102,9 @@ const Navbar = () => {
               <a
                 onClick={onClick}
                 className={`${styles.lnk} ${
-                  router.pathname === "/" && !courseActive && !contactActive ? styles.active : ""
+
+                  router.pathname === '/' && !courseActive && !contactActive ? styles.active : ''
+
                 } ${navbar && styles.nav_active}`}
               >
                 Home
@@ -176,6 +177,46 @@ const Navbar = () => {
                 Blogs
               </a>
             </Link>
+          </li>
+
+          <li
+            className={`${styles.listitem} ${
+              router.pathname === '/contributors' && navbar
+                ? styles.navList_active
+                : ''
+            }`}
+          >
+            <Link href='/contributors'>
+              <a
+                onClick={onClick}
+                className={`${styles.lnk} ${
+                  router.pathname === '/contributors' ? styles.active : ''
+                } ${navbar && styles.nav_active}`}
+              >
+                Contributors
+              </a>
+            </Link>
+          </li>
+          <li
+            className={`${styles.listitem} ${
+              contactActive && navbar ? styles.navList_active : ''
+            }`}
+          >
+            <a
+              onClick={() => {
+                router.push('/');
+                setTimeout(() => {
+                  const contacts = document.getElementById('contacts');
+                  if (contacts) contacts.scrollIntoView();
+                  onClick();
+                }, 10);
+              }}
+              className={`${styles.lnk} ${contactActive ? styles.active : ''} ${
+                navbar && styles.nav_active
+              }`}
+            >
+              Contact Us
+            </a>
           </li>
         </ul>
       </nav>

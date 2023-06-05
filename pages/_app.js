@@ -104,7 +104,7 @@ function MyApp({ Component, pageProps, router }) {
           <meta name="keywords" content="B.Tech, B.Com, B.E" />
           <meta
             property="og:image"
-            content="https://www.amupedia.com/og-image.jpg"
+            content="https://www.amupedia.com/og-image.webp"
           />
           <meta property="og:image:width" content="150" />
           <meta property="og:image:height" content="150" />

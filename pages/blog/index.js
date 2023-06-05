@@ -4,10 +4,12 @@ import Footer from "components/common/Footer";
 import Header from "components/common/Header/Header";
 import styles from "@styles/scss/blog.module.scss";
 import blogData from "/data/blogdata";
+import GoToTop from "components/GoToTop";
 
 export default function Blogs() {
 	return (
 		<>
+			<GoToTop />
 			<Head>
 				<title>Blogs | Amupedia</title>
 				<meta name="description" content="Check out our blog posts." />

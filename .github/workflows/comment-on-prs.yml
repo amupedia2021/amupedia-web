@@ -1,0 +1,35 @@
+name: Add Comment to Newly Open PRs
+
+on:
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  add-comment:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Add Comment
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { pull_request } = context.payload;
+            const author = pull_request.user.login;
+            const prNumber = pull_request.number;
+            const comment = `Thank you, @${author}, for creating this pull request and contributing to GitHub-ReadMe! 💗\n\nOur review team will thoroughly review the pull request and will reach out to you soon! 😇\nPlease make sure you have marked all the completed tasks as done. ✅\nWe appreciate your patience and contribution! 😀`;
+            const { owner, repo } = context.repo;
+
+            await github.issues.createComment({
+              owner: owner,
+              repo: repo,
+              issue_number: prNumber,
+              body: comment
+            });
+
+            console.log(`Comment added to the PR #${prNumber}.`);

@@ -175,11 +175,11 @@ navigation menu opens in mobile phones */
   }
 
   .list {
-    width: 500px;
+    width: fit-content;
     position: absolute;
     background: transparent;
     display: flex;
-    margin: 0;
+    margin-right: 60px;
     padding: 0;
     right: 10px;
     top: 17px;
@@ -189,14 +189,16 @@ navigation menu opens in mobile phones */
     background-color: transparent;
     /* font-size: larger; */
     font-weight: bold;
-    width: 100px;
+    width: max-content;
+    /* width: 150px; */
     border-radius: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin: auto 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto 15px;
     transition: all 0.5s ease !important;
     -webkit-transition: all 0.5s ease !important;
   }
+
   .lnk {
     width: 100%;
     font-size: 17px;
@@ -220,6 +222,7 @@ navigation menu opens in mobile phones */
   }
   
 
+
   .nav_active.active {
     color: white;
     text-shadow: none !important;
@@ -227,5 +230,9 @@ navigation menu opens in mobile phones */
 
   .navList_active {
     background-color: rgb(153, 120, 223);
+  }
+
+  .navList_actives {
+    background-color: rgb(62, 62, 252);
   }
 }

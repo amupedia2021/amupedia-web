@@ -1,6 +1,6 @@
 import styles from "@styles/scss/blogcard.module.scss";
 import Image from "next/image";
-import dataScienceImg from "@images/blog/dataScience.jpg";
+import dataScienceImg from "@images/blog/dataScience.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp, faComment } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
