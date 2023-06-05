@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 const Navbar = () => {
   const router = useRouter();
   const [navbar, setNavbar] = useState(false);
+  const [hideNavBar, setHideNavBar] = useState(false);
   const [courseActive, setCourseActive] = useState(false);
   const [contactActive, setContactActive] = useState(false);
 
@@ -48,9 +49,17 @@ const Navbar = () => {
   }, []);
 
   const changeNavbar = () => {
-    if (window.scrollY > 500) {
+    if (window.scrollY > 300) {
       setNavbar(true);
-    } else setNavbar(false);
+      setHideNavBar(false);
+    }
+    else if (window.scrollY > 150) {
+      setHideNavBar(true);
+    }
+    else {
+      setNavbar(false);
+      setHideNavBar(false);
+    }
   };
 
   const onClick = () => {
@@ -59,7 +68,7 @@ const Navbar = () => {
     if (menu.checked) menu.click();
   };
 
-  return (
+  return (!hideNavBar &&
     <>
       {/* <!-- hamburger menu icon (for mobile phones) --> */}
       <input type='checkbox' className={styles.menu} id='menu' />
@@ -87,14 +96,14 @@ const Navbar = () => {
               router.pathname === '/' && !courseActive && !contactActive && navbar
                 ? styles.navList_active
                 : ''
-            }`}
+              }`}
           >
             <Link href='/'>
               <a
                 onClick={onClick}
                 className={`${styles.lnk} ${
                   router.pathname === '/' && !courseActive && !contactActive ? styles.active : ''
-                } ${navbar && styles.nav_active}`}
+                  } ${navbar && styles.nav_active}`}
               >
                 Home
               </a>
@@ -103,7 +112,7 @@ const Navbar = () => {
           <li
             className={`${styles.listitem} ${
               courseActive && navbar ? styles.navList_active : ''
-            }`}
+              }`}
           >
             <Link href='/'>
               <a
@@ -118,7 +127,7 @@ const Navbar = () => {
                 }}
                 className={`${styles.lnk} ${
                   courseActive ? styles.active : ''
-                } ${navbar && styles.nav_active}`}
+                  } ${navbar && styles.nav_active}`}
               >
                 Courses
               </a>
@@ -129,14 +138,14 @@ const Navbar = () => {
               router.pathname === '/about' && navbar
                 ? styles.navList_active
                 : ''
-            }`}
+              }`}
           >
             <Link href='/about'>
               <a
                 onClick={onClick}
                 className={`${styles.lnk} ${
                   router.pathname === '/about' ? styles.active : ''
-                } ${navbar && styles.nav_active}`}
+                  } ${navbar && styles.nav_active}`}
               >
                 About
               </a>
@@ -162,14 +171,14 @@ const Navbar = () => {
           <li
             className={`${styles.blg} ${styles.listitem} ${
               router.pathname === '/blog' && navbar ? styles.navList_active : ''
-            }`}
+              }`}
           >
             <Link href='/blog'>
               <a
                 onClick={onClick}
                 className={`${styles.lnk} ${
                   router.pathname === '/blog' ? styles.active : ''
-                } ${navbar && styles.nav_active}`}
+                  } ${navbar && styles.nav_active}`}
               >
                 Blogs
               </a>
@@ -181,14 +190,14 @@ const Navbar = () => {
               router.pathname === '/contributors' && navbar
                 ? styles.navList_active
                 : ''
-            }`}
+              }`}
           >
             <Link href='/contributors'>
               <a
                 onClick={onClick}
                 className={`${styles.lnk} ${
                   router.pathname === '/contributors' ? styles.active : ''
-                } ${navbar && styles.nav_active}`}
+                  } ${navbar && styles.nav_active}`}
               >
                 Contributors
               </a>
@@ -197,7 +206,7 @@ const Navbar = () => {
           <li
             className={`${styles.listitem} ${
               contactActive && navbar ? styles.navList_active : ''
-            }`}
+              }`}
           >
             <a
               onClick={() => {
@@ -210,7 +219,7 @@ const Navbar = () => {
               }}
               className={`${styles.lnk} ${contactActive ? styles.active : ''} ${
                 navbar && styles.nav_active
-              }`}
+                }`}
             >
               Contact Us
             </a>

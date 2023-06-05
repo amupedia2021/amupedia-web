@@ -9,7 +9,7 @@ const Exams = ({ data }) => {
                     return (
                         <>
                             <div className={styles.grabnotes} key={index}>
-                                <Link passHref href='/'>
+                                <Link href={`/competitiveExams/${unit.title}`} key={index}>
                                     <div style={{
                                         background: `url(${unit.icon}) no-repeat center center`,
                                         backgroundSize: "contain"

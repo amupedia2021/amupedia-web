@@ -5,10 +5,9 @@ import { competitiveExams } from "data/examData";
 import Exams from "components/Curriculum/Exams";
 
 export default function CompetitiveExams() {
-  const image = "/images/btech/top_bg.jpg";
   return (
     <>
-      <Header image={image} text="Competitive Exams" />
+      <Header text="Competitive Exams" />
       <main>
         <section id={styles.content}>
           <div id={styles.branches}>
