@@ -94,3 +94,182 @@
     font-size: 17px;
   }
 }
+
+
+
+
+/* Styles for General Footer.js  */
+/* Use these stylling when using GeneralFooter.js file insted for footer.js */
+
+/* Footer Styling  */
+/* background overlapping footer  */
+
+/* #bg_color {
+  background: url('/images/footer/footer_bacg.jpeg') no-repeat center
+    center/cover;
+
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+#above_bg {
+  font-family: 'Baloo Bhai 2', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1024px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+#above_bg div h2 {
+  color: white;
+
+}
+
+#above_bg h2 {
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#above_bg_h2_p {
+  position: relative;
+  top: -30px;
+  font-size: 18px;
+}
+
+#above_bg p {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  transition: all 0.5s ease;
+} */
+
+/* social icons  */
+/* #icons {
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 30px;
+  color: white;
+}
+
+.icon {
+  margin: auto 6px;
+  transition: all 0.5s ease;
+}
+
+.icon:hover {
+  filter: drop-shadow(0px 0px 15px white);
+  transform: scale(1.2);
+}
+
+#above_ftbg_ {
+  font-family: 'Baloo Bhai 2', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  color: white;
+} */
+
+/* contribution to the project */
+/* #contribute {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#github_icon {
+  display: flex;
+  align-items: center;
+} */
+
+/* home , about , blogs , course */
+/* #footer_links {
+  max-width: 1024px;
+  font-size: 20px;
+  font-weight: 200;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 20px;
+  gap: 10px;
+  
+}
+
+#footer_links_title:hover {
+  letter-spacing: 0.5px;
+  transition: all 0.5s ease;
+}
+
+#footer_links_title {
+  text-decoration: underline;
+  text-decoration-color: rgba(235, 215, 249, 0.641);
+  text-decoration-style: wavy;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+#footer_line {
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  margin: 10px 0px;
+  color: white;
+} */
+/* for mobile phones having width less than 300px */
+/* @media only screen and (max-width: 299px) {
+  #ftbg {
+    font-size: 17px;
+  }
+  #icon {
+    size: 10px;
+  }
+  #footer_links {
+    flex-direction: column;
+    margin: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #footer_links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  
+  }
+  #footer_links_title:hover{
+    transform: scale(1.1);
+  }
+  #above_bg {
+    flex-direction: column;
+    gap:0px;
+    margin: -10px;
+
+  }
+  #footer_links_subtitle{
+    display: none;
+  }
+  #icons {
+    top: -10px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  #above_ftbg_ {
+    flex-direction: column;
+    gap: 0px;
+  }
+} */
