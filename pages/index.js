@@ -34,26 +34,26 @@ export default function Home() {
   const [form, setForm] = useState(emptyForm);
   const [loading, setLoading] = useState(false);
 
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    try {
-      const res = await axios.post('/api/submitForm', form);
-      const data = await res.data;
-      console.log(data);
-      dispatch({
-        type: {
-          task: 'setAlert',
-          alert: { type: 'noti', message: 'Form Submitted Successfully' }
-        }
-      });
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setLoading(false);
-    }
-    setForm(emptyForm);
-  };
+  // const onSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setLoading(true);
+  //   try {
+  //     const res = await axios.post('/api/submitForm', form);
+  //     const data = await res.data;
+  //     console.log(data);
+  //     dispatch({
+  //       type: {
+  //         task: 'setAlert',
+  //         alert: { type: 'noti', message: 'Form Submitted Successfully' }
+  //       }
+  //     });
+  //   } catch (error) {
+  //     console.log(error);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  //   setForm(emptyForm);
+  // };
 
   const onChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -173,7 +173,7 @@ export default function Home() {
           {/* <!-- Contact Form  --> */}
           <div data-aos="zoom-in" id='contacts'>
             <h2 className={styles.grabh2}>Get In Touch With Us</h2>
-            <form onSubmit={onSubmit}>
+            <form action="https://formsubmit.co/{Enter Email}" method="POST">
               <div className={styles.cntfrm}>
                 <input
                   value={form.first_name}
