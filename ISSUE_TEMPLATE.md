@@ -4,7 +4,7 @@
 
 ## Description:
 
-[Provide a detailed description of the issue or bug, including any relevant information such as error messages, steps to reproduce the problem, and expected versus actual behavior.]
+[Provide a detailed description of the issue or bug, including any relevant information such as error messages, steps to reproduce the problem, and expected versus actual behavior. Include Screenshots of the issue or bug]
 
 ## Steps to Reproduce:
 
