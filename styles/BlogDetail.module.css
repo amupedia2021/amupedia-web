@@ -11,6 +11,36 @@
   align-items: center;
 }
 
+.blogSubHeader {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.blogSubHeader h2 {
+  margin: auto;
+}
+
+.blogSubHeaderButton{
+  width: 5rem;
+  height: 2rem;
+  color:whitesmoke;
+  background-color: rgb(87, 87, 234);
+  border-radius: 9999px;
+  margin-top: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.blogSubHeaderButton:hover{
+  background-color: rgb(87, 130, 250);
+  color:whitesmoke;
+  cursor: pointer;
+}
+
 .blogHeaderInfo {
   display: flex;
   justify-content: space-between;

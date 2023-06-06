@@ -22,7 +22,12 @@ export default function BlogId() {
     <div className={styles.blog}>
       <div className={styles.blogDetail}>
         <div className={styles.blogHeader}>
+          <div className={styles.blogSubHeader}>
           <h2>Blog Title</h2>
+          <button className={styles.blogSubHeaderButton} >  
+            <Link rel="stylesheet" href="/blog" >back</Link>
+            </button>
+          </div>
           <div className={styles.blogHeaderInfo}>
             <div className={styles.blogHeaderInfoLeft}>
               <ul>
