@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+
 import styles from '@styles/Footer.module.css';
 import { FontAwesomeIcon } from 'node_modules/@fortawesome/react-fontawesome/index';
 import {
