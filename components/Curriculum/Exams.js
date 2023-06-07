@@ -8,7 +8,7 @@ const Exams = ({ data }) => {
                 data.map((unit, index) => {
                     return (
                         <>
-                            <div className={styles.grabnotes} key={index}>
+                            <div data-aos="fade-up" className={styles.grabnotes} key={index}>
                                 <Link href={`/competitiveExams/${unit.title}`} key={index}>
                                     <div style={{
                                         background: `url(${unit.icon}) no-repeat center center`,
