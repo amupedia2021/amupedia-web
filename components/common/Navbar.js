@@ -85,9 +85,6 @@ const Navbar = () => {
     }
   };
 
-  const handleClickOverlay = () => {
-    setDropdown(false);
-  };
 
   return (
     <>
@@ -104,7 +101,12 @@ const Navbar = () => {
       <div
         className={`${styles.blackoverlay} ${dropdown ? styles.overlay_active : ''}`}
         id='overlay'
-        onClick={handleClickOverlay}
+        onClick={() => {
+                  const menu = document.querySelector('#menu');
+                  if (menu.checked) menu.click();
+                  setDropdown(false);
+                }}
+        
       ></div>
 
       {/* <!-- navigation bar --> */}
@@ -130,6 +132,7 @@ const Navbar = () => {
                 onClick={() => {
                   const menu = document.querySelector('#menu');
                   if (menu.checked) menu.click();
+                  
                 }}
                 className={`${styles.lnk} ${
                   router.pathname === '/' && !courseActive && !contactActive ? styles.active : ''
