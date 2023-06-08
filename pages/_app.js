@@ -2,7 +2,7 @@ import Navbar from "@comp/common/Navbar";
 import jwt from "jsonwebtoken";
 import "@styles/globals.css";
 import Head from "node_modules/next/head";
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
 import "../styles/tailwind.css" //importing Tailwind CSS utilities
 import { motion } from "framer-motion";
 import { StoreProvider } from "utils/Store/Store";
@@ -37,6 +37,14 @@ function addProductJsonLd() {
 }
 
 function MyApp({ Component, pageProps, router }) {
+  useEffect(() => {
+    // Check if the ad blocker is detected
+    if (window.blockAdBlock) {
+      if (window.blockAdBlock.onDetected) {
+        console.log('Ad blocker detected. Please disable it to access the content.');
+      }
+    }
+  }, []);
   // function handleCallbackResponse(response) {
   // 	const token = response.credential;
   // // got all the info from the user
