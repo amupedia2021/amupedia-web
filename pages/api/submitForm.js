@@ -1,21 +1,22 @@
 import db from "db/db";
 import nextConnect from "next-connect";
 import Form from "db/models/Form";
+import FormSchema from "validation/form"
 
 const handler = nextConnect();
 
 handler.post(async (req, res) => {
   try {
     await db.connect();
-    const data = req.body;
-
+    const payload = await FormSchema.validateAsync(req.body)
+    const {first_name, last_name, email, phone, address, message} = payload;
     const result = await Form.create({
-      first_name: data.first_name,
-      last_name: data.last_name,
-      email: data.email,
-      phone: data.phone,
-      address: data.address,
-      message: data.message,
+      first_name,
+      last_name,
+      email,
+      phone,
+      address,
+      message
     });
 
     await db.disconnect();
