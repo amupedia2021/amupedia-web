@@ -1,7 +1,10 @@
 import styles from '@styles/scss/main.module.scss';
 import { FontAwesomeIcon } from 'node_modules/@fortawesome/react-fontawesome/index';
 import {
-  faInstagramSquare, faFacebookSquare, faTwitterSquare, faLinkedin,
+  faInstagramSquare,
+  faFacebookSquare,
+  faTwitterSquare,
+  faLinkedin
 } from 'node_modules/@fortawesome/free-brands-svg-icons/index';
 import Tilt from 'react-vanilla-tilt';
 
@@ -12,14 +15,14 @@ export default function Teamcard({
   linkedin,
   name,
   photo,
-  desig,
+  desig
 }) {
   return (
     <Tilt className={styles.tilt}>
       <div
         className={styles.card}
         style={{
-          background: `url(${photo}) no-repeat center center/cover`,
+          background: `url(${photo}) no-repeat center center/cover`
         }}
       >
         <div className={styles.card__space} />
@@ -27,34 +30,34 @@ export default function Teamcard({
           <p className={styles.card__info_name}>{name}</p>
           <p className={styles.card__info_desg}>{desig}</p>
           <div id={styles.card__info_icons}>
-            <a href={insta} target="_blank" rel="noreferrer">
+            <a href={insta} target='_blank' rel='noreferrer'>
               <FontAwesomeIcon
                 icon={faInstagramSquare}
-                size="2x"
+                size='2x'
                 inverse
                 className={styles.icon}
               />
             </a>
-            <a href={facebook} target="_blank" rel="noreferrer">
+            <a href={facebook} target='_blank' rel='noreferrer'>
               <FontAwesomeIcon
                 icon={faFacebookSquare}
-                size="2x"
+                size='2x'
                 inverse
                 className={styles.icon}
               />
             </a>
-            <a href={twitter} target="_blank" rel="noreferrer">
+            <a href={twitter} target='_blank' rel='noreferrer'>
               <FontAwesomeIcon
                 icon={faTwitterSquare}
-                size="2x"
+                size='2x'
                 inverse
                 className={styles.icon}
               />
             </a>
-            <a href={linkedin} target="_blank" rel="noreferrer">
+            <a href={linkedin} target='_blank' rel='noreferrer'>
               <FontAwesomeIcon
                 icon={faLinkedin}
-                size="2x"
+                size='2x'
                 inverse
                 className={styles.icon}
               />

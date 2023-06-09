@@ -7,52 +7,52 @@ export const FoodSems = [
         slug: 'food-preservation-and-processing',
         img: null,
         linkToPage:
-          '/courses/btech/food-technology/food-preservation-and-processing',
+          '/courses/btech/food-technology/food-preservation-and-processing'
       },
       {
         name: 'Food Chemistry and Nutrition',
         slug: 'food-chemistry-and-nutrition',
         img: null,
-        linkToPage: '/courses/btech/elb/food-chemistry-and-nutrition',
+        linkToPage: '/courses/btech/elb/food-chemistry-and-nutrition'
       },
       {
         name: 'Fluid Particles Opiration',
         slug: 'fluid-particles-opiration',
         img: null,
-        linkToPage: '/courses/btech/elb/fluid-particles-opiration',
+        linkToPage: '/courses/btech/elb/fluid-particles-opiration'
       },
       {
         name: 'Fluid Mechanics',
         slug: 'fluid-mechanics',
         img: null,
-        linkToPage: '/courses/btech/elb/fluid-mechanics',
+        linkToPage: '/courses/btech/elb/fluid-mechanics'
       },
       {
         name: 'Computer Lab',
         slug: 'computer-lab',
         img: null,
-        linkToPage: '/courses/btech/elb/computer-lab',
+        linkToPage: '/courses/btech/elb/computer-lab'
       },
       {
         name: 'Communication Skills Laboratory',
         slug: 'communication-skill-laboratory',
         img: null,
-        linkToPage: '/courses/btech/elb/communication-skill-laboratory',
+        linkToPage: '/courses/btech/elb/communication-skill-laboratory'
       },
       {
         name: 'Basic Principle of Chemical Engineering',
         slug: 'basic-principle-of-chemical-engineering',
         img: null,
-        linkToPage: '/courses/btech/elb/basic-principle-of-chemical-engineering',
+        linkToPage: '/courses/btech/elb/basic-principle-of-chemical-engineering'
       },
       {
         name: 'Advanced Engineering Mathematics',
         slug: 'advanced-enginnering-mathematics',
         img: null,
-        linkToPage: '/courses/btech/advanced-enginnering-mathematics',
-      },
-    ],
-  },
+        linkToPage: '/courses/btech/advanced-enginnering-mathematics'
+      }
+    ]
+  }
 ];
 
 export const getFoodSubjectPages = (subject) => {
@@ -107,12 +107,12 @@ export const getFoodSubjectPages = (subject) => {
             'https://drive.google.com/file/d/1MjYJo9s3S3L31-kNuhI_pUanOyjKkhL4/view?usp=sharing',
             'https://drive.google.com/file/d/1LNKGXyj4eWYLl45VQAU-BJ58CavV86mU/view?usp=sharing',
             'https://drive.google.com/file/d/13uNW0OVIoutCuK2GF9c1ptwtYTwcCGGD/view?usp=sharing',
-            'https://drive.google.com/file/d/18lZkcPtnntyhx3nqJhN0udicK4Ir5jFs/view?usp=sharing',
+            'https://drive.google.com/file/d/18lZkcPtnntyhx3nqJhN0udicK4Ir5jFs/view?usp=sharing'
           ],
           videoLectures: [],
-          assignment: [],
-        },
-      ],
+          assignment: []
+        }
+      ]
     },
 
     'food-chemistry-and-nutrition': {
@@ -131,12 +131,12 @@ export const getFoodSubjectPages = (subject) => {
             'https://docs.google.com/presentation/d/1Ak39q42UApr9iKy1Qxu-K8-C0c1KFpry/edit?usp=sharing&ouid=108803332290741902451&rtpof=true&sd=true',
             'https://docs.google.com/presentation/d/19cSsXE5DuHopMT5XTZ61zGoENNkXG_4N/edit?usp=sharing&ouid=108803332290741902451&rtpof=true&sd=true',
             'https://drive.google.com/file/d/1GdHlispvuvFC1PCXCvInhrQ7vcimX7TB/view?usp=sharing',
-            'https://drive.google.com/file/d/1C4TE-Vb_O7I7HmPui6iX8he4t22nid4m/view?usp=sharing',
+            'https://drive.google.com/file/d/1C4TE-Vb_O7I7HmPui6iX8he4t22nid4m/view?usp=sharing'
           ],
           videoLectures: [],
-          assignment: [],
-        },
-      ],
+          assignment: []
+        }
+      ]
     },
     'fluid-particles-opiration': {
       name: 'Fluid Particles Opiration',
@@ -147,17 +147,17 @@ export const getFoodSubjectPages = (subject) => {
           notes: [
             'https://drive.google.com/file/d/1HRUTd2zD3mqS4d6PoeNHgt2zTRWV3R8M/view?usp=sharing',
             'https://drive.google.com/file/d/1Np0IYnaIo19mago6x9pOaPvry_p-AYdh/view?usp=sharing',
-            'https://drive.google.com/file/d/1n3RmJfOQ_o33OG6iyjTv9rw_KOomZYMv/view?usp=sharing',
+            'https://drive.google.com/file/d/1n3RmJfOQ_o33OG6iyjTv9rw_KOomZYMv/view?usp=sharing'
           ],
           videoLectures: [],
           assignment: [
             'https://drive.google.com/file/d/1wb2E0YFULdDL6Or9WpsUv0roVBh3De-z/view?usp=sharing',
             'https://drive.google.com/file/d/1vsaR9oNmKj-RXAvHq-YlxwpWYeeK8my1/view?usp=sharing',
             'https://drive.google.com/file/d/1fPKgwK0hJ09u0Q6okkLXitBPEG-wOavt/view?usp=sharing',
-            'https://drive.google.com/file/d/1zR5VG4I7DwuP25O0VfJKNOPv2AgFmU8k/view?usp=sharing',
-          ],
-        },
-      ],
+            'https://drive.google.com/file/d/1zR5VG4I7DwuP25O0VfJKNOPv2AgFmU8k/view?usp=sharing'
+          ]
+        }
+      ]
     },
     'fluid-mechanics': {
       name: 'Fluid Mechanics',
@@ -172,12 +172,12 @@ export const getFoodSubjectPages = (subject) => {
             'https://drive.google.com/file/d/1b-8jiN1hb98xnn7ioKLTSByaQYL9Q77c/view?usp=sharing',
             'https://drive.google.com/file/d/1VsNjUC3Bnp-V7PfFgKo3UFZZvpcWuCOP/view?usp=sharing',
             'https://drive.google.com/file/d/1MPYxkJi7wCMsikCDDIrOVWJoZVLf-5H4/view?usp=sharing',
-            'https://drive.google.com/file/d/1M5x-Eltk7EiA3lqtSfpKGeseYu0GI9iS/view?usp=sharing',
+            'https://drive.google.com/file/d/1M5x-Eltk7EiA3lqtSfpKGeseYu0GI9iS/view?usp=sharing'
           ],
           videoLectures: [],
-          assignment: [],
-        },
-      ],
+          assignment: []
+        }
+      ]
     },
     'computer-lab': {
       name: 'Computer Lab',
@@ -187,34 +187,34 @@ export const getFoodSubjectPages = (subject) => {
           unitNo: 1,
           notes: [],
           videoLectures: [],
-          assignment: [],
+          assignment: []
         },
         {
           unitNo: 2,
           notes: [
-            'https://drive.google.com/drive/folders/1aGxZVfF76ZKQWiLjWAbfXQfyGv-2OIsl?usp=sharing',
+            'https://drive.google.com/drive/folders/1aGxZVfF76ZKQWiLjWAbfXQfyGv-2OIsl?usp=sharing'
           ],
           videoLectures: [],
-          assignment: [],
+          assignment: []
         },
         {
           unitNo: 3,
           notes: [
-            'https://drive.google.com/drive/folders/1R-3NMboXyAYplL0b3pQ92Sv3h37RoY8S?usp=sharing',
+            'https://drive.google.com/drive/folders/1R-3NMboXyAYplL0b3pQ92Sv3h37RoY8S?usp=sharing'
           ],
           videoLectures: [],
-          assignment: [],
+          assignment: []
         },
 
         {
           unitNo: 4,
           notes: [
-            'https://drive.google.com/drive/folders/16XjAI6Ww1cQ5t25KORdnAH2dVkBXrdSF?usp=sharing',
+            'https://drive.google.com/drive/folders/16XjAI6Ww1cQ5t25KORdnAH2dVkBXrdSF?usp=sharing'
           ],
           videoLectures: [],
-          assignment: [],
-        },
-      ],
+          assignment: []
+        }
+      ]
     },
     'communication-skill-laboratory': {
       name: 'Communication Skills Laboratory',
@@ -226,12 +226,12 @@ export const getFoodSubjectPages = (subject) => {
             'https://drive.google.com/file/d/1eDKjyMtligo99-_Z0Xx62bDyiMcsq0Zk/view?usp=sharing',
             'https://drive.google.com/file/d/10rYKAm7hBuA7TOV76NVHWuP7QUkHL0hh/view?usp=sharing',
             'https://drive.google.com/file/d/1d4Ew6vauXu5RYG-uOXz1X5vDQfAQ9E1L/view?usp=sharing',
-            'https://drive.google.com/file/d/1z6LzudhM35bl2X6u5DSRux6f6JvTmpbm/view?usp=sharing',
+            'https://drive.google.com/file/d/1z6LzudhM35bl2X6u5DSRux6f6JvTmpbm/view?usp=sharing'
           ],
           videoLectures: [],
-          assignment: [],
-        },
-      ],
+          assignment: []
+        }
+      ]
     },
     'basic-principle-of-chemical-engineering': {
       name: 'Basic Principle of Chemical Engineering',
@@ -240,39 +240,39 @@ export const getFoodSubjectPages = (subject) => {
         {
           unitNo: 1,
           notes: [
-            'https://drive.google.com/file/d/113HDRmEOkGV0wrrKX0w0B65hX464kr1u/view?usp=sharing',
+            'https://drive.google.com/file/d/113HDRmEOkGV0wrrKX0w0B65hX464kr1u/view?usp=sharing'
           ],
           videoLectures: [],
-          assignment: [],
+          assignment: []
         },
         {
           unitNo: 2,
           notes: [
-            'https://drive.google.com/file/d/1tUutgPCzLisLaj1iKKKqNssHulFwSR0d/view?usp=sharing',
+            'https://drive.google.com/file/d/1tUutgPCzLisLaj1iKKKqNssHulFwSR0d/view?usp=sharing'
           ],
           videoLectures: [],
-          assignment: [],
+          assignment: []
         },
         {
           unitNo: 3,
           notes: [
-            'https://drive.google.com/file/d/1a22dLsRPu_z6tVpB1GrodbWiDnTysno7/view?usp=sharing',
+            'https://drive.google.com/file/d/1a22dLsRPu_z6tVpB1GrodbWiDnTysno7/view?usp=sharing'
           ],
           videoLectures: [],
-          assignment: [],
+          assignment: []
         },
         {
           unitNo: 4,
           notes: [
-            'https://drive.google.com/file/d/16h85DJTzOljI0zv1mtyw9VBNAELfca4C/view?usp=sharing',
+            'https://drive.google.com/file/d/16h85DJTzOljI0zv1mtyw9VBNAELfca4C/view?usp=sharing'
           ],
           videoLectures: [],
           assignment: [
             'https://drive.google.com/file/d/1HNW66FrIumpthN4_zN2FCuKX8knd_Qz_/view?usp=sharing',
-            'https://drive.google.com/file/d/1_phN-FtFtHJ8iTfXnLL4IQUf8Ruv-0gs/view?usp=sharing',
-          ],
-        },
-      ],
+            'https://drive.google.com/file/d/1_phN-FtFtHJ8iTfXnLL4IQUf8Ruv-0gs/view?usp=sharing'
+          ]
+        }
+      ]
     },
     'advanced-enginnering-mathematics': {
       name: 'Advanced Engineering Mathematics',
@@ -296,13 +296,13 @@ export const getFoodSubjectPages = (subject) => {
             'https://drive.google.com/file/d/1ETM193l-tO3vGyPKC58oao1GYWDzLBxH/view?usp=sharing',
             'https://drive.google.com/file/d/1OMmJ97KXEtvyZT8v-k2OBK4ceBMhg85b/view?usp=sharing',
             'https://drive.google.com/file/d/11UcrwVbBRGowWNA4UieJWQg7LrUox9b7/view?usp=sharing',
-            'https://drive.google.com/file/d/1TYmsL82RvgMFv1O3TArDaCxx00M-ofK_/view?usp=sharing',
+            'https://drive.google.com/file/d/1TYmsL82RvgMFv1O3TArDaCxx00M-ofK_/view?usp=sharing'
           ],
           videoLectures: [],
-          assignment: [],
-        },
-      ],
-    },
+          assignment: []
+        }
+      ]
+    }
   };
   return foodSubjects[subject];
 };

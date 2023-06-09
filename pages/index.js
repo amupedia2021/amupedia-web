@@ -23,7 +23,7 @@ export default function Home() {
     email: '',
     phone: '',
     address: '',
-    message: '',
+    message: ''
   };
 
   const headerImg = '/images/home/homeback.svg';
@@ -41,8 +41,8 @@ export default function Home() {
       dispatch({
         type: {
           task: 'setAlert',
-          alert: { type: 'noti', message: 'Form Submitted Successfully' },
-        },
+          alert: { type: 'noti', message: 'Form Submitted Successfully' }
+        }
       });
     } catch (error) {
       console.log(error);
@@ -58,7 +58,7 @@ export default function Home() {
 
   return (
     <>
-      <Header image={headerImg} text="Amupedia" />
+      <Header image={headerImg} text='Amupedia' />
       <main>
         <section id={styles.content}>
           {/* <!-- Our Mission Container --> */}
@@ -78,50 +78,50 @@ export default function Home() {
             <h2>Our Services</h2>
             <div id={styles.ourserimgs}>
               <div>
-                <Image src={pdf} alt="pdfs" />
+                <Image src={pdf} alt='pdfs' />
                 <p>PDFs OF ALL SUBJECTS</p>
               </div>
               <div>
-                <Image src={chap_yt} alt="explaination" />
+                <Image src={chap_yt} alt='explaination' />
                 <p>CHAPTER EXPLANATION BY YOUTUBE VIDEO</p>
               </div>
               <div>
-                <Image src={quiz} alt="solutions" />
+                <Image src={quiz} alt='solutions' />
                 <p>SOLUTION OF TEST AND QUIZZES</p>
               </div>
               <div>
-                <Image src={assign} alt="assignments" />
+                <Image src={assign} alt='assignments' />
                 <p>ASSIGNMENTS GIVEN</p>
               </div>
             </div>
           </div>
 
           {/* <!-- grab your notes section  --> */}
-          <div className={styles.courses} id="courses">
+          <div className={styles.courses} id='courses'>
             <h2 className={styles.grabh2}>Grab Your Notes Here</h2>
             <div className={styles.grabnotes}>
-              <Link passHref href="/courses/btech">
+              <Link passHref href='/courses/btech'>
                 <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
                   <div className={styles.grab1}>
                     <p>B.Tech</p>
                   </div>
                 </Tilt>
               </Link>
-              <Link passHref href="/">
+              <Link passHref href='/'>
                 <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
                   <div className={styles.grab2}>
                     <p>B.E</p>
                   </div>
                 </Tilt>
               </Link>
-              <Link passHref href="/">
+              <Link passHref href='/'>
                 <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
                   <div className={styles.grab3}>
                     <p>B.Com</p>
                   </div>
                 </Tilt>
               </Link>
-              <Link passHref href="/">
+              <Link passHref href='/'>
                 <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
                   <div className={styles.grab4}>
                     <p>B.Sc</p>
@@ -135,21 +135,21 @@ export default function Home() {
           {/* <!-- same css as grabnotes section  --> */}
           <h2 className={styles.grabh2}>Recent Updates</h2>
           <div className={styles.grabnotes}>
-            <Link passHref href="/">
+            <Link passHref href='/'>
               <Tilt className={styles.tlt}>
                 <div className={styles.rec1}>
                   <p>App</p>
                 </div>
               </Tilt>
             </Link>
-            <Link passHref href="/">
+            <Link passHref href='/'>
               <Tilt className={styles.tlt}>
                 <div className={styles.rec2}>
                   <p>Blogs</p>
                 </div>
               </Tilt>
             </Link>
-            <Link passHref href="/">
+            <Link passHref href='/'>
               <Tilt className={styles.tlt}>
                 <div className={styles.rec3}>
                   <p>Competetive Exams</p>
@@ -166,57 +166,57 @@ export default function Home() {
                 value={form.first_name}
                 onChange={onChange}
                 required
-                type="text"
-                name="first_name"
-                placeholder="First Name"
+                type='text'
+                name='first_name'
+                placeholder='First Name'
                 className={styles.details}
               />
               <input
                 value={form.last_name}
                 onChange={onChange}
                 required
-                name="last_name"
-                type="text"
-                placeholder="Last Name"
+                name='last_name'
+                type='text'
+                placeholder='Last Name'
                 className={styles.details}
               />
               <input
                 value={form.email}
                 onChange={onChange}
                 required
-                name="email"
-                type="email"
-                placeholder="Email"
+                name='email'
+                type='email'
+                placeholder='Email'
                 className={styles.details}
               />
               <input
                 value={form.phone}
                 onChange={onChange}
-                type="number"
-                name="phone"
-                placeholder="Phone"
+                type='number'
+                name='phone'
+                placeholder='Phone'
                 className={styles.details}
               />
               <input
                 value={form.address}
                 onChange={onChange}
                 required
-                name="address"
-                type="text"
-                placeholder="Address"
+                name='address'
+                type='text'
+                placeholder='Address'
                 className={styles.address}
               />
               <input
                 value={form.message}
                 onChange={onChange}
                 required
-                name="message"
-                type="text"
-                placeholder="Type your message here"
+                name='message'
+                type='text'
+                placeholder='Type your message here'
                 className={styles.msg}
               />
             </div>
-            <button type="submit" id={styles.sub}>
+            <button type='submit' id={styles.sub}>
               {loading ? <Preloader /> : <p>Submit</p>}
             </button>
           </form>

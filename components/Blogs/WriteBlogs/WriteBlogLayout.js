@@ -6,7 +6,7 @@ import {
   BlogTitle,
   BlogContent,
   TitlePlaceholder,
-  TitleWrapper,
+  TitleWrapper
 } from './WriteBlogLayoutStyles';
 
 function WriteBlogLayout() {
@@ -22,7 +22,7 @@ function WriteBlogLayout() {
               setHeading(e.target.value);
             }}
             html={heading}
-            tagName="h2"
+            tagName='h2'
           />
           <TitlePlaceholder heading={heading}>
             {heading == '' && "Enter your blog's title"}

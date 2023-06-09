@@ -5,9 +5,7 @@ import { faThumbsUp, faComment } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 
 function BlogCard(props) {
-  const {
-    id, title, image, comments, likes,
-  } = props;
+  const { id, title, image, comments, likes } = props;
   return (
     <Link
       href={`/blog/${id == undefined ? (id == null ? '' : id) : id}`}
@@ -19,7 +17,7 @@ function BlogCard(props) {
             src={`/images/blog/${image}`}
             width={500}
             height={500}
-            alt="data-science-amupedia-blogs"
+            alt='data-science-amupedia-blogs'
           />
         </div>
         <h3 className={styles.title}>{title}</h3>

@@ -8,10 +8,7 @@ import fetchOpportunities from 'utils/getDataFromDB/opportunities/fetchOpportuni
 function Opportunities({ opportunities }) {
   return (
     <div>
-      <Header
-        image={'/images/about/about_bg.svg'}
-        text={'Opportunities'}
-      />
+      <Header image={'/images/about/about_bg.svg'} text={'Opportunities'} />
       <article className={styles.mainBody}>
         {opportunities.map((data, index) => (
           <Link href={`/opportunities/${index}`} key={index}>
@@ -31,6 +28,6 @@ export default Opportunities;
 export async function getServerSideProps() {
   const opportunities = await fetchOpportunities();
   return {
-    props: { opportunities },
+    props: { opportunities }
   };
 }

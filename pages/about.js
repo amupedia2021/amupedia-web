@@ -11,11 +11,11 @@ export default function About() {
       <Head>
         <title>About | Amupedia</title>
         <meta
-          name="description"
-          content="Amupedia is the biggest platform to help fellow students through their college program."
+          name='description'
+          content='Amupedia is the biggest platform to help fellow students through their college program.'
         />
       </Head>
-      <Header image={image} text="About Us" />
+      <Header image={image} text='About Us' />
       <main id={styles.content}>
         {/* <!-- About Us Container --> */}
         <div className={styles.whoWeAre}>

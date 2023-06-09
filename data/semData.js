@@ -6,52 +6,52 @@ export const firstYearSems = [
         name: 'Applied Mathematics 1',
         slug: 'applied-mathematics-1',
         img: null,
-        linkToPage: '/courses/btech/first-year/applied-mathematics-1',
+        linkToPage: '/courses/btech/first-year/applied-mathematics-1'
       },
       {
         name: 'Applied Chemistry',
         slug: 'applied-chemistry',
         img: null,
-        linkToPage: '/courses/btech/first-year/applied-chemistry',
+        linkToPage: '/courses/btech/first-year/applied-chemistry'
       },
       {
         name: 'Thermodynamics',
         slug: 'thermo-dynamics',
         img: null,
-        linkToPage: '/courses/btech/first-year/thermo-dynamics',
+        linkToPage: '/courses/btech/first-year/thermo-dynamics'
       },
       {
         name: 'Electrical Engineering',
         slug: 'electrical-engineering',
         img: null,
-        linkToPage: '/courses/btech/first-year/electrical-engineering',
+        linkToPage: '/courses/btech/first-year/electrical-engineering'
       },
       {
         name: 'Environmental Studies',
         slug: 'environmental-studies',
         img: null,
-        linkToPage: '/courses/btech/first-year/environmental-studies',
+        linkToPage: '/courses/btech/first-year/environmental-studies'
       },
       {
         name: 'Applied Chemistry Lab',
         slug: 'applied-chemistry-lab',
         img: null,
-        linkToPage: '/courses/btech/first-year/applied-chemistry-lab',
+        linkToPage: '/courses/btech/first-year/applied-chemistry-lab'
       },
       {
         name: 'Computer Programming Lab',
         slug: 'computer-programming-lab',
         img: null,
-        linkToPage: '/courses/btech/first-year/computer-programming-lab',
+        linkToPage: '/courses/btech/first-year/computer-programming-lab'
       },
       {
         name: 'Engineering Graphics',
         slug: 'engineering-graphics',
         img: null,
-        linkToPage: '/courses/btech/first-year/engineering-graphics',
-      },
-    ],
-  },
+        linkToPage: '/courses/btech/first-year/engineering-graphics'
+      }
+    ]
+  }
 ];
 
 export function getSubjectPages(subject) {
@@ -70,7 +70,7 @@ export function getSubjectPages(subject) {
             'https://drive.google.com/file/d/1hGtu-ZbQu_aBM2WtOO0ts8Adc9uCQi67/view',
             'https://drive.google.com/file/d/1ag6rhPbcoDVHTi1VPtDNZIPc5Pl1tAAF/view?usp=sharing',
             'https://drive.google.com/file/d/1ZiWNgNdIor3Si5wSVpexDq5PCj-fzFOU/view',
-            'https://drive.google.com/file/d/1ZI1UpXiCsFKP5YbjUdPaJB7T0kEXhodj/view',
+            'https://drive.google.com/file/d/1ZI1UpXiCsFKP5YbjUdPaJB7T0kEXhodj/view'
           ],
           videoLectures: [
             'https://www.youtube.com/watch?v=ccaHV-ukK2o&list=PLU6SqdYcYsfJOGZdxUpDk3w9o-w94-RoG&index=8',
@@ -79,9 +79,9 @@ export function getSubjectPages(subject) {
             'https://www.youtube.com/watch?v=rDrQH9ma82o&list=PLU6SqdYcYsfJOGZdxUpDk3w9o-w94-RoG&index=5',
             'https://www.youtube.com/watch?v=1wjXVdwzgX8&list=PLU6SqdYcYsfJOGZdxUpDk3w9o-w94-RoG&index=12',
             'https://www.youtube.com/watch?v=THONvuviGkc&list=PLU6SqdYcYsfJOGZdxUpDk3w9o-w94-RoG&index=18',
-            'https://www.youtube.com/watch?v=ZOHMCsdDti0&list=PLU6SqdYcYsfJOGZdxUpDk3w9o-w94-RoG&index=16',
+            'https://www.youtube.com/watch?v=ZOHMCsdDti0&list=PLU6SqdYcYsfJOGZdxUpDk3w9o-w94-RoG&index=16'
           ],
-          assignments: [],
+          assignments: []
         },
         {
           unitNo: 2,
@@ -92,7 +92,7 @@ export function getSubjectPages(subject) {
             'https://drive.google.com/file/d/1LnxqI8FrturJnUfS0bpBdf3v4FzWgurz/view',
             'https://drive.google.com/file/d/1J0F_Yh0S0PGy29qLCO6qyT4ub6eEAUhm/view',
             'https://drive.google.com/file/d/1rSuMi4HF0E8DXj7YxqvjjInbbU23sxXQ/view',
-            'https://drive.google.com/file/d/1S-5ObF94giWPQQAzdD97JL5qqOPqVS9h/view',
+            'https://drive.google.com/file/d/1S-5ObF94giWPQQAzdD97JL5qqOPqVS9h/view'
           ],
           videoLectures: [
             'https://www.youtube.com/watch?v=KijGLjxKlsY&list=PLU6SqdYcYsfLLAU6Hxi0C_TnrZeqgbJMJ&index=1',
@@ -110,9 +110,9 @@ export function getSubjectPages(subject) {
             'https://www.youtube.com/watch?v=vfg1mmsSMMM&list=PLU6SqdYcYsfJqbZvQECrwnlQrp4fg6isX',
             'https://www.youtube.com/watch?v=9sLsX9DV5Fs&list=PLU6SqdYcYsfJqbZvQECrwnlQrp4fg6isX&index=4',
             'https://www.youtube.com/watch?v=tF4vDQ6X7Kg&list=PLU6SqdYcYsfJqbZvQECrwnlQrp4fg6isX&index=6',
-            'https://www.youtube.com/watch?v=S-qzRWJOlf8&list=PLU6SqdYcYsfJqbZvQECrwnlQrp4fg6isX&index=2',
+            'https://www.youtube.com/watch?v=S-qzRWJOlf8&list=PLU6SqdYcYsfJqbZvQECrwnlQrp4fg6isX&index=2'
           ],
-          assignments: [],
+          assignments: []
         },
         {
           unitNo: 3,
@@ -121,7 +121,7 @@ export function getSubjectPages(subject) {
             'https://drive.google.com/file/d/1JhMSUpFw2x7xoYRjt22DUPffh7BhAS6W/view',
             'https://drive.google.com/file/d/17vcBE3EyTYTnAGB0wmTZqC7MLsmufBPU/view',
             'https://drive.google.com/file/d/1Zbi0X4ED_hmTaeDTsOSg0oyQnUrGfxcn/view',
-            'https://drive.google.com/file/d/1_5l8dGYNCnbxn4Z2ybI7UeuhEGYsILA0/view',
+            'https://drive.google.com/file/d/1_5l8dGYNCnbxn4Z2ybI7UeuhEGYsILA0/view'
           ],
           videoLectures: [
             'https://www.youtube.com/watch?v=n4JJ3fNKHUc&list=PLU6SqdYcYsfL7EIZrqNVMyQ5xMbCu18Mf',
@@ -129,9 +129,9 @@ export function getSubjectPages(subject) {
             'https://www.youtube.com/watch?v=LDPGDtxezWs&list=PLU6SqdYcYsfL7EIZrqNVMyQ5xMbCu18Mf&index=3',
             'https://www.youtube.com/watch?v=jCmexnTwxmM',
             'https://www.youtube.com/watch?v=jCmexnTwxmM',
-            'https://www.youtube.com/watch?v=x4U4n4DaxZ8&list=PLU6SqdYcYsfK8JhTfv-A1LreCcbMQ0BXF&index=2',
+            'https://www.youtube.com/watch?v=x4U4n4DaxZ8&list=PLU6SqdYcYsfK8JhTfv-A1LreCcbMQ0BXF&index=2'
           ],
-          assignments: [],
+          assignments: []
         },
         {
           unitNo: 4,
@@ -143,7 +143,7 @@ export function getSubjectPages(subject) {
             'https://drive.google.com/file/d/18ZbZIaC-gOZTvzrJDNkWBnwSmK5Vhfnb/view',
             'https://drive.google.com/file/d/1BVkbFJrZz7JJyZd15XJiYQ06uePPvwqu/view',
             'https://drive.google.com/file/d/1WG1-ny1E99wqbX3UtjVRidowknwAerM5/view',
-            'https://drive.google.com/file/d/1YaTo1KbxGEpQ8WVoUzuQgFJU3evMZxuH/view',
+            'https://drive.google.com/file/d/1YaTo1KbxGEpQ8WVoUzuQgFJU3evMZxuH/view'
           ],
           videoLectures: [
             'https://www.youtube.com/watch?v=vQcThbJJjOI&list=PLU6SqdYcYsfJmqo86d12EoNNWKtAZqu8q&index=48',
@@ -152,19 +152,19 @@ export function getSubjectPages(subject) {
             'https://www.youtube.com/watch?v=1HKn9IvYiEM&list=PLU6SqdYcYsfJmqo86d12EoNNWKtAZqu8q&index=6',
             'https://www.youtube.com/watch?v=1HKn9IvYiEM&list=PLU6SqdYcYsfJmqo86d12EoNNWKtAZqu8q&index=6',
             'https://www.youtube.com/watch?v=Qscs_AZTf7c&list=PLU6SqdYcYsfJmqo86d12EoNNWKtAZqu8q&index=3',
-            'https://www.youtube.com/watch?v=Y8CF01gbd_U',
+            'https://www.youtube.com/watch?v=Y8CF01gbd_U'
           ],
-          assignments: [],
-        },
+          assignments: []
+        }
       ],
       shortNotes: [
         'https://drive.google.com/file/d/1m6_1lzeY1eWVjgAzULTQEMK3vrIZIeXY/view?usp=sharing',
-        'https://drive.google.com/file/d/11pDOfTy1lemlEoYGIsa5Dsqk6OJXefuj/view?usp=sharing',
+        'https://drive.google.com/file/d/11pDOfTy1lemlEoYGIsa5Dsqk6OJXefuj/view?usp=sharing'
       ],
       previousPapers: {
         midSem: [],
-        endSem: [],
-      },
+        endSem: []
+      }
     },
     'applied-chemistry': {
       name: 'Applied Chemistry',
@@ -174,47 +174,47 @@ export function getSubjectPages(subject) {
           unitNo: 1,
           unitName: '',
           notes: [
-            'https://drive.google.com/file/d/1W9u4rnFNwlXOEDoPeNF7MzoXnQqe2_jL/view?usp=sharing',
+            'https://drive.google.com/file/d/1W9u4rnFNwlXOEDoPeNF7MzoXnQqe2_jL/view?usp=sharing'
           ],
           videoLectures: [
-            'https://www.youtube.com/playlist?list=PLQvzPLYdJBGcGyREMkipXypbrwjJoJIpj',
+            'https://www.youtube.com/playlist?list=PLQvzPLYdJBGcGyREMkipXypbrwjJoJIpj'
           ],
-          assignments: [],
+          assignments: []
         },
         {
           unitNo: 2,
           unitName: '',
           notes: [
-            'https://drive.google.com/file/d/1GqwnQ7mwrpKPC1UoxVhnpJUQMxtkLkIV/view?usp=sharing',
+            'https://drive.google.com/file/d/1GqwnQ7mwrpKPC1UoxVhnpJUQMxtkLkIV/view?usp=sharing'
           ],
           videoLectures: [
-            'https://www.youtube.com/playlist?list=PLQvzPLYdJBGcodM-2_TvUUR1L5VJUBbdc',
+            'https://www.youtube.com/playlist?list=PLQvzPLYdJBGcodM-2_TvUUR1L5VJUBbdc'
           ],
-          assignments: [],
+          assignments: []
         },
         {
           unitNo: 3,
           unitName: '',
           notes: [
-            'https://drive.google.com/file/d/1LcYa2aoOuzINfSnO1dIGoiuJWKkJPlvp/view?usp=sharing',
+            'https://drive.google.com/file/d/1LcYa2aoOuzINfSnO1dIGoiuJWKkJPlvp/view?usp=sharing'
           ],
           videoLectures: [
-            'https://www.youtube.com/playlist?list=PLQvzPLYdJBGfoWZK9G7uiWlFHdZ2Xg2ZN',
+            'https://www.youtube.com/playlist?list=PLQvzPLYdJBGfoWZK9G7uiWlFHdZ2Xg2ZN'
           ],
-          assignments: [],
+          assignments: []
         },
         {
           unitNo: 4,
           unitName: '',
           notes: [
-            'https://drive.google.com/file/d/1daEW95k74std5L_UCqNw6cqYtobVIGjo/view?usp=sharing',
+            'https://drive.google.com/file/d/1daEW95k74std5L_UCqNw6cqYtobVIGjo/view?usp=sharing'
           ],
           videoLectures: [
-            'https://www.youtube.com/playlist?list=PLzSTglXGeoUuhXb4czCE_0fA2tQPA1yEk',
+            'https://www.youtube.com/playlist?list=PLzSTglXGeoUuhXb4czCE_0fA2tQPA1yEk'
           ],
-          assignments: [],
-        },
-      ],
+          assignments: []
+        }
+      ]
     },
     'thermo-dynamics': {
       name: 'Thermodynamics',
@@ -227,10 +227,10 @@ export function getSubjectPages(subject) {
             'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/3d609f_3be56cb6d5cb4e64bcafb3376bcc6f40.pdf',
             'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/3d609f_625940c5579a45db8b76d20e8b2a1a09.pdf',
             'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/3d609f_3be56cb6d5cb4e64bcafb3376bcc6f40.pdf',
-            'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/3d609f_23813a5e14344b60a01424c6ede1ae41.pdf',
+            'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/3d609f_23813a5e14344b60a01424c6ede1ae41.pdf'
           ],
           videoLectures: [],
-          assignments: [],
+          assignments: []
         },
         {
           unitNo: 2,
@@ -240,10 +240,10 @@ export function getSubjectPages(subject) {
             'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/3d609f_92ec02e6a4b045cb9d1f6d10c4257652.pdf',
             'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/3d609f_6753b6da0dae4ca48407e96236a4efdb.pdf',
             'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/3d609f_4d2801b0b9d9410db8c9160f2f6748c4.pdf',
-            'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/3d609f_cbb1660c46e64c2bb0561b025bb01783.pdf',
+            'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/3d609f_cbb1660c46e64c2bb0561b025bb01783.pdf'
           ],
           videoLectures: [],
-          assignments: [],
+          assignments: []
         },
         {
           unitNo: 3,
@@ -252,26 +252,26 @@ export function getSubjectPages(subject) {
             'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/3d609f_8f131fda4bd64869af38ea33311cf006.pdf',
             'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/3d609f_3d7e78cf5b8e4984b363b96595bf9026.pdf',
             'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/3d609f_ce431275298f4269bf5c8194b34665e1.pdf',
-            'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/3d609f_0d8eeff7c22d43d795cd7a8869513f78.pdf',
+            'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/3d609f_0d8eeff7c22d43d795cd7a8869513f78.pdf'
           ],
           videoLectures: [],
-          assignments: [],
+          assignments: []
         },
         {
           unitNo: 4,
           unitName: '',
           notes: [
-            'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/3d609f_8a7949ed702c484b861d5e6cb9fff1bc.pdf',
+            'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/3d609f_8a7949ed702c484b861d5e6cb9fff1bc.pdf'
           ],
           videoLectures: [],
-          assignments: [],
-        },
+          assignments: []
+        }
       ],
       shortNotes: [],
       previousPapers: {
         midSem: [],
-        endSem: [],
-      },
+        endSem: []
+      }
     },
     'electrical-engineering': {
       name: 'Electrical Engineering',
@@ -281,7 +281,7 @@ export function getSubjectPages(subject) {
           unitNo: 1,
           unitName: '',
           notes: [
-            'https://drive.google.com/file/d/1IQoMJnfucIDOMGNlq8AF10ltgrLUSMgj/view?usp=sharing',
+            'https://drive.google.com/file/d/1IQoMJnfucIDOMGNlq8AF10ltgrLUSMgj/view?usp=sharing'
           ],
           videoLectures: [
             'https://drive.google.com/file/d/1tQd4vO5hXxcZxcCqXzFKc8BSe6hik1CL/view?usp=sharing',
@@ -295,9 +295,9 @@ export function getSubjectPages(subject) {
             'https://www.youtube.com/watch?v=HKRFX7AtYig&list=PL9RcWoqXmzaLTYUdnzKhF4bYug3GjGcEc&index=22',
             'https://www.youtube.com/watch?v=aS5bkOMZRIs&list=PL9RcWoqXmzaLTYUdnzKhF4bYug3GjGcEc&index=23',
             'https://www.youtube.com/watch?v=pTkNXgGXCjo&list=PL9RcWoqXmzaLTYUdnzKhF4bYug3GjGcEc&index=24',
-            'https://drive.google.com/file/d/1b-5ynWooYSh9kfD9V5UtCg3BOeE9iBoG/view',
+            'https://drive.google.com/file/d/1b-5ynWooYSh9kfD9V5UtCg3BOeE9iBoG/view'
           ],
-          assignments: [],
+          assignments: []
         },
         {
           unitNo: 2,
@@ -305,7 +305,7 @@ export function getSubjectPages(subject) {
           notes: [
             'https://drive.google.com/file/d/1oypMde_kDrSglXxcfPlt3Fuvavd7g1Y8/view?usp=sharing',
             'https://drive.google.com/file/d/1r4VlojnjFLkcxmzTJicAmj26w3B5a8Pf/view?usp=sharing',
-            'https://drive.google.com/file/d/1R-is9kXcOCxpo1qHCjMuv68SsR9YtNLZ/view?usp=sharing',
+            'https://drive.google.com/file/d/1R-is9kXcOCxpo1qHCjMuv68SsR9YtNLZ/view?usp=sharing'
           ],
           videoLectures: [
             'https://www.youtube.com/watch?v=-V87ANqaHD4&list=PL9RcWoqXmzaLTYUdnzKhF4bYug3GjGcEc&index=27',
@@ -313,9 +313,9 @@ export function getSubjectPages(subject) {
             'https://www.youtube.com/watch?v=cw9f33jLkd4&list=PL9RcWoqXmzaLTYUdnzKhF4bYug3GjGcEc&index=29',
             'https://www.youtube.com/watch?v=_RJRbGOAeok&list=PL9RcWoqXmzaLTYUdnzKhF4bYug3GjGcEc&index=32',
             'https://www.youtube.com/watch?v=vh_aCAHThTQ',
-            'https://www.youtube.com/watch?v=TvMLBLprbXo',
+            'https://www.youtube.com/watch?v=TvMLBLprbXo'
           ],
-          assignments: [],
+          assignments: []
         },
         {
           unitNo: 3,
@@ -324,21 +324,21 @@ export function getSubjectPages(subject) {
             'https://drive.google.com/file/d/1gexZRxfDna4zRN85vVKcQi7iyeUyugYE/view?usp=sharing',
             'https://drive.google.com/file/d/17hkomnLb1FvjTIaKH795Yq0GmQGpb92B/view?usp=sharing',
             'https://drive.google.com/file/d/1_OPcN-T6cXpj7xU3LQbmPfohBVlboNny/view?usp=sharing',
-            'https://drive.google.com/file/d/1CiFJ4bVFPXrbtCzWgD65B_xmQI4QB8Ul/view?usp=sharing',
+            'https://drive.google.com/file/d/1CiFJ4bVFPXrbtCzWgD65B_xmQI4QB8Ul/view?usp=sharing'
           ],
           videoLectures: [
             'https://www.youtube.com/watch?v=AQqyGNOP_3o',
             'https://www.youtube.com/watch?v=knuH97y6WrQ',
-            'https://www.youtube.com/watch?v=Y7_zKCnGgsI',
+            'https://www.youtube.com/watch?v=Y7_zKCnGgsI'
           ],
-          assignments: [],
-        },
+          assignments: []
+        }
       ],
       shortNotes: [],
       previousPapers: {
         midSem: [],
-        endSem: [],
-      },
+        endSem: []
+      }
     },
     'environmental-studies': {
       name: 'Environmental Studies',
@@ -354,10 +354,10 @@ export function getSubjectPages(subject) {
             'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/42f86e_dbc12d07f6d34d72919e2f7c25c6aee4.pdf',
             'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/42f86e_b7da4d5338734e41b2d4fd1ec7546e66.pdf',
             'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/42f86e_a10f8861fbcf48a19118b14106c6ed5e.pdf',
-            'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/42f86e_38b2cc6559534ebc93fd54e5b6ae4bf6.pdf',
+            'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/42f86e_38b2cc6559534ebc93fd54e5b6ae4bf6.pdf'
           ],
           videoLectures: [],
-          assignments: [],
+          assignments: []
         },
         {
           unitNo: 2,
@@ -367,10 +367,10 @@ export function getSubjectPages(subject) {
             'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/42f86e_6ea016d27e8746059cabcb9e627481e7.pdf',
             'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/42f86e_06e49ddc353f4b5882aab5eda31e3804.pdf',
             'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/42f86e_537d9bc8c71342ed8fe40d65164ac864.pdf',
-            'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/42f86e_9be785138bc44608a25c2c68ba5ce7ed.pdf',
+            'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/42f86e_9be785138bc44608a25c2c68ba5ce7ed.pdf'
           ],
           videoLectures: [],
-          assignments: [],
+          assignments: []
         },
         {
           unitNo: 3,
@@ -380,21 +380,21 @@ export function getSubjectPages(subject) {
             'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/3d609f_1e2a3fa6dc4f4f18b47eed9bc82d2a91.pdf',
             'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/3d609f_1b236bc9956f435393b178cbaccc90c6.pdf',
             'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/3d609f_46f8e0faddcc481fad658ff4340b06b8.pdf',
-            'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/3d609f_a8cbf0261250418e99d2b2b606ee03e5.pdf',
+            'https://27c5e116-11a7-4dd8-87e8-9b8b77ba7ba5.filesusr.com/ugd/3d609f_a8cbf0261250418e99d2b2b606ee03e5.pdf'
           ],
           videoLectures: [],
-          assignments: [],
-        },
+          assignments: []
+        }
       ],
       shortNotes: [],
       previousPapers: {
         midSem: [
-          'https://drive.google.com/drive/folders/1PLy-bYg-Uje9Rhq3HRcvExVRtP2COSrQ?usp=sharing',
+          'https://drive.google.com/drive/folders/1PLy-bYg-Uje9Rhq3HRcvExVRtP2COSrQ?usp=sharing'
         ],
         endSem: [
-          'https://drive.google.com/drive/folders/1c-y3H786xpFyKEXn5sykLZMj7nVsN3hM?usp=sharing',
-        ],
-      },
+          'https://drive.google.com/drive/folders/1c-y3H786xpFyKEXn5sykLZMj7nVsN3hM?usp=sharing'
+        ]
+      }
     },
     'applied-chemistry-lab': {
       name: 'Applied Chemistry Lab',
@@ -404,17 +404,17 @@ export function getSubjectPages(subject) {
           unitNo: 1,
           unitName: '',
           notes: [
-            'https://drive.google.com/file/d/1_uTaUAaeCE8J0T5N3Z_au9AwQ7LBBNvu/view?usp=sharing',
+            'https://drive.google.com/file/d/1_uTaUAaeCE8J0T5N3Z_au9AwQ7LBBNvu/view?usp=sharing'
           ],
           videoLectures: ['https://youtu.be/Sm4RubV1gCw'],
-          assignments: [],
-        },
+          assignments: []
+        }
       ],
       shortNotes: [],
       previousPapers: {
         midSem: [],
-        endSem: [],
-      },
+        endSem: []
+      }
     },
     'computer-programming-lab': {
       name: 'Computer Programming Lab',
@@ -425,14 +425,14 @@ export function getSubjectPages(subject) {
           unitName: '',
           notes: [],
           videoLectures: [],
-          assignments: [],
-        },
+          assignments: []
+        }
       ],
       shortNotes: [],
       previousPapers: {
         midSem: [],
-        endSem: [],
-      },
+        endSem: []
+      }
     },
     'engineering-graphics': {
       name: 'Engineering Graphics',
@@ -443,14 +443,14 @@ export function getSubjectPages(subject) {
           unitName: '',
           notes: [],
           videoLectures: [],
-          assignments: [],
-        },
+          assignments: []
+        }
       ],
       shortNotes: [],
       previousPapers: {
         midSem: [],
-        endSem: [],
-      },
+        endSem: []
+      }
     },
     'circuit-theory': {
       name: 'Circuit Theory',
@@ -461,15 +461,15 @@ export function getSubjectPages(subject) {
           unitName: '',
           notes: [],
           videoLectures: [],
-          assignments: [],
-        },
+          assignments: []
+        }
       ],
       shortNotes: [],
       previousPapers: {
         midSem: [],
-        endSem: [],
-      },
-    },
+        endSem: []
+      }
+    }
   };
 
   return subjectPages[subject];

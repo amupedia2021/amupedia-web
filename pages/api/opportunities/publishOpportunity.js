@@ -15,7 +15,7 @@ handler.post(async (req, res) => {
       title: data.title,
       date: data.date,
       applyNow: data.applyNow,
-      description: data.description,
+      description: data.description
     });
     await db.disconnect();
     res.status(200).json({ success: true, result });

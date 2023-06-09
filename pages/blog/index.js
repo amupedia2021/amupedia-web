@@ -11,8 +11,8 @@ export default function Blogs({ blogsData }) {
     <>
       <Head>
         <title>Blogs | Amupedia</title>
-        <meta name="description" content="Check out our blog posts." />
-        <Header image="/images/blog/blog_bg.svg" text="Blogs" />
+        <meta name='description' content='Check out our blog posts.' />
+        <Header image='/images/blog/blog_bg.svg' text='Blogs' />
       </Head>
       {/* <Link href="/blog/writeblog">Write a blog</Link> */}
       <div className={styles.container}>
@@ -35,6 +35,6 @@ export default function Blogs({ blogsData }) {
 export async function getServerSideProps() {
   const blogsData = await fetchBlogs();
   return {
-    props: { blogsData },
+    props: { blogsData }
   };
 }

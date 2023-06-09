@@ -2,9 +2,18 @@ import Image from 'next/image';
 import styles from '@styles/BlogDetail.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faUserCircle, faClock, faPlayCircle, faLink, faBookmark, faEllipsisH,
+  faUserCircle,
+  faClock,
+  faPlayCircle,
+  faLink,
+  faBookmark,
+  faEllipsisH
 } from 'node_modules/@fortawesome/free-solid-svg-icons/index';
-import { faTwitter, faFacebook, faLinkedin } from 'node_modules/@fortawesome/free-brands-svg-icons/index';
+import {
+  faTwitter,
+  faFacebook,
+  faLinkedin
+} from 'node_modules/@fortawesome/free-brands-svg-icons/index';
 import BlogCard from 'components/Blogs/BlogCard';
 import Link from 'next/link';
 import fetchBlogId from 'utils/getDataFromDB/blogs/fetchBlogId';
@@ -13,9 +22,7 @@ import fetchBlogs from 'utils/getDataFromDB/blogs/fetchBlogs';
 import axios from 'node_modules/axios/index';
 
 export default function BlogId({ blogsData, blogData, commentsData }) {
-  const {
-    userId, title, coverImg, content, _id,
-  } = blogData;
+  const { userId, title, coverImg, content, _id } = blogData;
 
   const submitComment = (e) => {
     e.preventDefault();
@@ -35,7 +42,7 @@ export default function BlogId({ blogsData, blogData, commentsData }) {
       .post('http://localhost:3000/api/blogs/comments/publishComment', {
         userName: userCommentName,
         blogId,
-        message,
+        message
       })
       .then((res) => {
         console.log(res);
@@ -67,29 +74,29 @@ export default function BlogId({ blogsData, blogData, commentsData }) {
             <div className={styles.blogHeaderInfoRight}>
               <ul className={styles.socialIcons}>
                 <li>
-                  <Link href="#twitter">
-                    <a href="#twitter">
+                  <Link href='#twitter'>
+                    <a href='#twitter'>
                       <FontAwesomeIcon icon={faTwitter} />
                     </a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#facebook">
-                    <a href="#facebook">
+                  <Link href='#facebook'>
+                    <a href='#facebook'>
                       <FontAwesomeIcon icon={faFacebook} />
                     </a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#linkedin">
-                    <a href="#linkedin">
+                  <Link href='#linkedin'>
+                    <a href='#linkedin'>
                       <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#blogLink">
-                    <a href="#blogLink">
+                  <Link href='#blogLink'>
+                    <a href='#blogLink'>
                       <FontAwesomeIcon icon={faLink} />
                     </a>
                   </Link>
@@ -105,10 +112,10 @@ export default function BlogId({ blogsData, blogData, commentsData }) {
         <div className={styles.blogPicture}>
           <Image
             src={`/images/blog/${coverImg}`}
-            alt="blogDetailPicture"
-            layout="responsive"
-            width="700"
-            height="700"
+            alt='blogDetailPicture'
+            layout='responsive'
+            width='700'
+            height='700'
           />
         </div>
         <div className={styles.blogBody}>
@@ -116,23 +123,23 @@ export default function BlogId({ blogsData, blogData, commentsData }) {
         </div>
         <div className={styles.blogCommentSection}>
           <h2>Comment</h2>
-          <form method="POST" className={styles.sendComment}>
+          <form method='POST' className={styles.sendComment}>
             <h3>Write a comment...</h3>
             <div className={styles.userMessageInput}>
               <input
-                type="text"
-                placeholder="Your Name..."
-                className="userCommentName"
+                type='text'
+                placeholder='Your Name...'
+                className='userCommentName'
               />
               <textarea
-                name="message"
-                placeholder="Your message..."
-                id="userCommentMessage"
-                cols="30"
-                rows="10"
+                name='message'
+                placeholder='Your message...'
+                id='userCommentMessage'
+                cols='30'
+                rows='10'
               />
             </div>
-            <button type="submit" onClick={(e) => submitComment(e)}>
+            <button type='submit' onClick={(e) => submitComment(e)}>
               Send
             </button>
           </form>
@@ -185,6 +192,6 @@ export const getServerSideProps = async (context) => {
   const commentsData = await fetchBlogComment();
 
   return {
-    props: { blogsData, blogData, commentsData },
+    props: { blogsData, blogData, commentsData }
   };
 };

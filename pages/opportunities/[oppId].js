@@ -10,6 +10,6 @@ export const getServerSideProps = async (context) => {
   const opportunityDetail = await fetchOpportunityById(oppId);
   console.log(opportunityDetail);
   return {
-    props: { opportunityDetail },
+    props: { opportunityDetail }
   };
 };

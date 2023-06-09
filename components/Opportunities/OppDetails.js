@@ -21,7 +21,7 @@ function OppDetails({ data }) {
       </div>
       <div className={styles.footer}>
         <button className={styles.applyBtn}>Apply Now</button>
-        <a href="#not_yet_provide">
+        <a href='#not_yet_provide'>
           Explore More Opportunities
           <FontAwesomeIcon icon={faChevronRight} />
         </a>

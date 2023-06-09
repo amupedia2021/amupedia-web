@@ -17,7 +17,7 @@ handler.post(async (req, res) => {
       userName: req.body.userName,
       blogId: req.body.blogId,
       message: req.body.message,
-      date: `${mm}/${dd}/${yyyy}`,
+      date: `${mm}/${dd}/${yyyy}`
     });
     await db.disconnect();
     res.status(200).json({ success: true, result });

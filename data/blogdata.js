@@ -5,43 +5,43 @@ const blogData = [
     title: '',
     image: '',
     comments: 22,
-    likes: 40,
+    likes: 40
   },
   {
     id: i++,
     title: '',
     image: '',
     comments: 22,
-    likes: 40,
+    likes: 40
   },
   {
     id: i++,
     title: '',
     image: '',
     comments: 22,
-    likes: 40,
+    likes: 40
   },
   {
     id: i++,
     title: '',
     image: '',
     comments: 22,
-    likes: 40,
+    likes: 40
   },
   {
     id: i++,
     title: '',
     image: '',
     comments: 22,
-    likes: 40,
+    likes: 40
   },
   {
     id: i++,
     title: '',
     image: '',
     comments: 22,
-    likes: 40,
-  },
+    likes: 40
+  }
 ];
 
 export default blogData;

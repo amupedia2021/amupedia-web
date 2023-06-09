@@ -5,44 +5,44 @@ export const getStaticPaths = async () => {
   const paths = [
     {
       params: {
-        subject: 'applied-mathematics-1',
-      },
+        subject: 'applied-mathematics-1'
+      }
     },
     {
       params: {
-        subject: 'applied-chemistry',
-      },
+        subject: 'applied-chemistry'
+      }
     },
     {
       params: {
-        subject: 'thermo-dynamics',
-      },
+        subject: 'thermo-dynamics'
+      }
     },
     {
       params: {
-        subject: 'electrical-engineering',
-      },
+        subject: 'electrical-engineering'
+      }
     },
     {
       params: {
-        subject: 'environmental-studies',
-      },
+        subject: 'environmental-studies'
+      }
     },
     {
       params: {
-        subject: 'applied-chemistry-lab',
-      },
+        subject: 'applied-chemistry-lab'
+      }
     },
     {
       params: {
-        subject: 'computer-programming-lab',
-      },
-    },
+        subject: 'computer-programming-lab'
+      }
+    }
   ];
 
   return {
     paths,
-    fallback: false,
+    fallback: false
   };
 };
 
@@ -58,9 +58,7 @@ export const getStaticProps = async (context) => {
 };
 
 function GeneralSubject({ data }) {
-  return (
-    <Subject data={data} />
-  );
+  return <Subject data={data} />;
 }
 
 export default GeneralSubject;

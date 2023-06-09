@@ -2,22 +2,23 @@ import mongoose from 'mongoose';
 
 const blogCommentSchema = new mongoose.Schema({
   userName: {
-    type: String,
+    type: String
   },
   blogId: {
     type: String,
-    required: true,
+    required: true
   },
   message: {
     type: String,
-    required: true,
+    required: true
   },
   date: {
     type: String,
-    required: true,
-  },
+    required: true
+  }
 });
 
-const BlogComment = mongoose.models.BlogComment
-  || mongoose.model('BlogComment', blogCommentSchema);
+const BlogComment =
+  mongoose.models.BlogComment ||
+  mongoose.model('BlogComment', blogCommentSchema);
 export default BlogComment;

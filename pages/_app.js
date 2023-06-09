@@ -30,7 +30,7 @@ function addProductJsonLd() {
 					"name": "Blogs",
 					"item": "https://www.amupedia.com/blog"  
 				}]
-			}`,
+			}`
   };
 }
 
@@ -77,15 +77,15 @@ function MyApp({ Component, pageProps, router }) {
       {/* <Login /> */}
       <motion.div
         key={router.route}
-        initial="pageInitial"
-        animate="pageAnimate"
+        initial='pageInitial'
+        animate='pageAnimate'
         variants={{
           pageInitial: {
-            opacity: 0,
+            opacity: 0
           },
           pageAnimate: {
-            opacity: 1,
-          },
+            opacity: 1
+          }
         }}
       >
         <Head>
@@ -97,41 +97,37 @@ function MyApp({ Component, pageProps, router }) {
 
           <title>Amupedia</title>
           <meta
-            name="description"
-            content="Amupedia is an initiative to help college students pursuing B.Tech, B.E or B.Com, especially from AMU."
+            name='description'
+            content='Amupedia is an initiative to help college students pursuing B.Tech, B.E or B.Com, especially from AMU.'
           />
-          <meta name="keywords" content="B.Tech, B.Com, B.E" />
+          <meta name='keywords' content='B.Tech, B.Com, B.E' />
           <meta
-            property="og:image"
-            content="https://www.amupedia.com/og-image.jpg"
+            property='og:image'
+            content='https://www.amupedia.com/og-image.jpg'
           />
-          <meta property="og:image:width" content="150" />
-          <meta property="og:image:height" content="150" />
-          <meta property="og:title" content="Amupedia" />
+          <meta property='og:image:width' content='150' />
+          <meta property='og:image:height' content='150' />
+          <meta property='og:title' content='Amupedia' />
           <meta
-            property="og:description"
-            content="Amupedia is an initiative to help college students pursuing B.Tech, B.E or B.Com, especially from AMU."
+            property='og:description'
+            content='Amupedia is an initiative to help college students pursuing B.Tech, B.E or B.Com, especially from AMU.'
           />
-          <meta name="twitter:card" content="summary" />
-          <meta property="og:url" content="https://www.amupedia.com" />
+          <meta name='twitter:card' content='summary' />
+          <meta property='og:url' content='https://www.amupedia.com' />
           <script
-            type="application/ld+json"
+            type='application/ld+json'
             dangerouslySetInnerHTML={addProductJsonLd()}
-            key="product-jsonld"
+            key='product-jsonld'
           />
         </Head>
         <section styles={{ position: 'relative' }}>
           <Component {...pageProps} />
           <Script
             async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6172950963478417"
-            crossOrigin="anonymous"
+            src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6172950963478417'
+            crossOrigin='anonymous'
           />
-          <Script
-            src="https://accounts.google.com/gsi/client"
-            async
-            defer
-          />
+          <Script src='https://accounts.google.com/gsi/client' async defer />
         </section>
       </motion.div>
     </StoreProvider>

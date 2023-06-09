@@ -6,7 +6,7 @@ import { firstYearSems } from 'data/semData';
 function FirstYear() {
   return (
     <div>
-      <Header image="/images/blog/blog_bg.svg" text="First Year" />
+      <Header image='/images/blog/blog_bg.svg' text='First Year' />
       <Sems data={firstYearSems} />
       <Footer />
     </div>

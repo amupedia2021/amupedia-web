@@ -3,30 +3,31 @@ import mongoose from 'mongoose';
 const opportunitesSchema = new mongoose.Schema({
   id: {
     type: Number,
-    required: true,
+    required: true
   },
   image: {
     type: String,
-    required: true,
+    required: true
   },
   title: {
     type: String,
-    required: true,
+    required: true
   },
   date: {
     type: String,
-    required: true,
+    required: true
   },
   applyNow: {
     type: String,
-    required: true,
+    required: true
   },
   description: {
     type: String,
-    required: true,
-  },
+    required: true
+  }
 });
 
-const Opportunities = mongoose.models.Opportunities
-  || mongoose.model('Opportunities', opportunitesSchema);
+const Opportunities =
+  mongoose.models.Opportunities ||
+  mongoose.model('Opportunities', opportunitesSchema);
 export default Opportunities;

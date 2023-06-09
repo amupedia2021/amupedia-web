@@ -28,7 +28,7 @@ handler.post(async (req, res) => {
     }
     const secret = crypto.randomBytes(32).toString('hex'); // generate secret token for mean while (due this because of eslint error)
     const payload = {
-      userEmail: user.email,
+      userEmail: user.email
     };
 
     const token = jwt.sign(payload, secret);

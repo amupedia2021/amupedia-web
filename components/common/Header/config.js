@@ -3,39 +3,39 @@ export const icons = [
     left: '25%',
     width: '80px',
     height: '80px',
-    animationDelay: '0s',
+    animationDelay: '0s'
   },
   {
     left: '10%',
     width: '30px',
     height: '30px',
-    animationDelay: '12s',
+    animationDelay: '12s'
   },
   {
     left: '70%',
     width: '40px',
     height: '40px',
-    animationDelay: '4s',
+    animationDelay: '4s'
   },
   {
     left: '40%',
     width: '60px',
     height: '60px',
     animationDelay: '0s',
-    animationDuration: '18s',
+    animationDuration: '18s'
   },
   {
     left: '65%',
     width: '30px',
     height: '30px',
-    animationDelay: '6s',
+    animationDelay: '6s'
   },
   {
     left: '85%',
     width: '50px',
     height: '50px',
-    animationDelay: '6s',
-  },
+    animationDelay: '6s'
+  }
 ];
 
 const backgrounds = [
@@ -47,7 +47,7 @@ const backgrounds = [
   radial-gradient(at 0% 61%, hsla(328,80%,77%,1) 0px, transparent 50%),
   radial-gradient(at 39% 31%, hsla(356,80%,70%,1) 0px, transparent 50%),
   radial-gradient(at 92% 33%, hsla(344,84%,70%,1) 0px, transparent 50%),
-  radial-gradient(at 9% 14%, hsla(197,61%,68%,1) 0px, transparent 50%);`,
+  radial-gradient(at 9% 14%, hsla(197,61%,68%,1) 0px, transparent 50%);`
   },
   {
     backgroundColor: '#ff99fd',
@@ -57,7 +57,7 @@ const backgrounds = [
     radial-gradient(at 84% 92%, hsla(359,78%,73%,1) 0px, transparent 50%),
     radial-gradient(at 39% 54%, hsla(90,90%,69%,1) 0px, transparent 50%),
     radial-gradient(at 38% 13%, hsla(97,93%,70%,1) 0px, transparent 50%),
-    radial-gradient(at 93% 52%, hsla(81,85%,78%,1) 0px, transparent 50%);`,
+    radial-gradient(at 93% 52%, hsla(81,85%,78%,1) 0px, transparent 50%);`
   },
   {
     backgroundColor: '#99c3ff',
@@ -67,7 +67,7 @@ const backgrounds = [
     radial-gradient(at 93% 41%, hsla(67,87%,64%,1) 0px, transparent 50%),
     radial-gradient(at 46% 27%, hsla(203,79%,67%,1) 0px, transparent 50%),
     radial-gradient(at 31% 97%, hsla(289,69%,65%,1) 0px, transparent 50%),
-    radial-gradient(at 47% 84%, hsla(267,73%,63%,1) 0px, transparent 50%);`,
+    radial-gradient(at 47% 84%, hsla(267,73%,63%,1) 0px, transparent 50%);`
   },
   {
     backgroundColor: '#df99ff',
@@ -77,7 +77,7 @@ const backgrounds = [
     radial-gradient(at 37% 53%, hsla(92,79%,72%,1) 0px, transparent 50%),
     radial-gradient(at 56% 99%, hsla(276,92%,61%,1) 0px, transparent 50%),
     radial-gradient(at 17% 19%, hsla(43,79%,73%,1) 0px, transparent 50%),
-    radial-gradient(at 0% 17%, hsla(80,74%,63%,1) 0px, transparent 50%);`,
+    radial-gradient(at 0% 17%, hsla(80,74%,63%,1) 0px, transparent 50%);`
   },
   {
     backgroundColor: '#f899ff',
@@ -87,8 +87,8 @@ const backgrounds = [
     radial-gradient(at 25% 5%, hsla(325,85%,74%,1) 0px, transparent 50%),
     radial-gradient(at 66% 61%, hsla(179,64%,73%,1) 0px, transparent 50%),
     radial-gradient(at 13% 76%, hsla(273,90%,63%,1) 0px, transparent 50%),
-    radial-gradient(at 64% 49%, hsla(312,73%,77%,1) 0px, transparent 50%);`,
-  },
+    radial-gradient(at 64% 49%, hsla(312,73%,77%,1) 0px, transparent 50%);`
+  }
 ];
 
 export const getRandomBackground = () => {

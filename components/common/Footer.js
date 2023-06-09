@@ -1,59 +1,62 @@
 import styles from '@styles/Footer.module.css';
 import { FontAwesomeIcon } from 'node_modules/@fortawesome/react-fontawesome/index';
 import {
-  faInstagramSquare, faFacebookSquare, faTwitterSquare, faLinkedin,
+  faInstagramSquare,
+  faFacebookSquare,
+  faTwitterSquare,
+  faLinkedin
 } from 'node_modules/@fortawesome/free-brands-svg-icons/index';
 
 function Footer() {
   return (
-    <footer id="footer">
+    <footer id='footer'>
       <div id={styles.above_bg}>
         <p>Folow Us On</p>
         <div id={styles.icons}>
           <a
-            href="https://www.instagram.com/amu.pedia/?hl=am-et"
-            target="_blank"
-            rel="noreferrer"
+            href='https://www.instagram.com/amu.pedia/?hl=am-et'
+            target='_blank'
+            rel='noreferrer'
           >
             <FontAwesomeIcon
               icon={faInstagramSquare}
-              size="2x"
+              size='2x'
               inverse
               className={styles.icon}
             />
           </a>
           <a
-            href="https://www.facebook.com/AMUPedia"
-            target="_blank"
-            rel="noreferrer"
+            href='https://www.facebook.com/AMUPedia'
+            target='_blank'
+            rel='noreferrer'
           >
             <FontAwesomeIcon
               icon={faFacebookSquare}
-              size="2x"
+              size='2x'
               inverse
               className={styles.icon}
             />
           </a>
           <a
-            href="https://twitter.com/AmuPedia?t=PEHmP10PAymk6gsTykKtAQ&s=08"
-            target="_blank"
-            rel="noreferrer"
+            href='https://twitter.com/AmuPedia?t=PEHmP10PAymk6gsTykKtAQ&s=08'
+            target='_blank'
+            rel='noreferrer'
           >
             <FontAwesomeIcon
               icon={faTwitterSquare}
-              size="2x"
+              size='2x'
               inverse
               className={styles.icon}
             />
           </a>
           <a
-            href="https://in.linkedin.com/company/amupedia"
-            target="_blank"
-            rel="noreferrer"
+            href='https://in.linkedin.com/company/amupedia'
+            target='_blank'
+            rel='noreferrer'
           >
             <FontAwesomeIcon
               icon={faLinkedin}
-              size="2x"
+              size='2x'
               inverse
               className={styles.icon}
             />

@@ -7,7 +7,9 @@ function Sems({ data }) {
       {data.map((sem, index) => (
         <div className={styles.semWrapper} key={index}>
           {sem.name && <h2 className={styles.semNum}>{sem.name}</h2>}
-          {sem.subjects.map((sub, idx) => <SubjCard details={sub} key={idx} />)}
+          {sem.subjects.map((sub, idx) => (
+            <SubjCard details={sub} key={idx} />
+          ))}
         </div>
       ))}
     </section>

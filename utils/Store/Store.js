@@ -4,7 +4,7 @@ export const Store = createContext();
 const initailState = {
   alert: null,
   closingLogin: false,
-  showLogin: true,
+  showLogin: true
 };
 
 function reducer(state, action) {

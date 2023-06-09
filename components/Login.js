@@ -6,7 +6,7 @@ import {
   faEye,
   faUser,
   faLock,
-  faEyeSlash,
+  faEyeSlash
 } from 'node_modules/@fortawesome/free-solid-svg-icons/index';
 import { useContext, useState } from 'react';
 import { Store } from 'utils/Store/Store';
@@ -25,7 +25,7 @@ function Login() {
     } else if (e.target.name === 'password') {
       setCredentials({
         email: credentials.email,
-        password: e.target.value,
+        password: e.target.value
       });
     }
   };
@@ -48,28 +48,28 @@ function Login() {
         <div className={styles.overlay} onClick={closeLoginPanel} />
         <div className={`${styles.container}`}>
           <div className={styles.logo}>
-            <Image src={logo} alt="Amupedia Logo" />
+            <Image src={logo} alt='Amupedia Logo' />
           </div>
-          <div id="googleSignIn" className={styles.googleSignIn} />
+          <div id='googleSignIn' className={styles.googleSignIn} />
           <p className={styles.or}>Or</p>
           <form className={styles.loginForm}>
-            <label htmlFor="user">
+            <label htmlFor='user'>
               <FontAwesomeIcon icon={faUser} className={styles.icon} />
               <input
-                placeholder="Username"
-                id="user"
-                name="email"
-                type="email"
+                placeholder='Username'
+                id='user'
+                name='email'
+                type='email'
                 value={credentials.email}
                 onChange={inputChange}
               />
             </label>
-            <label htmlFor="pass">
+            <label htmlFor='pass'>
               <FontAwesomeIcon icon={faLock} className={styles.icon} />
               <input
-                id="pass"
-                placeholder="Password"
-                name="password"
+                id='pass'
+                placeholder='Password'
+                name='password'
                 type={type}
                 value={credentials.password}
                 onChange={inputChange}

@@ -22,7 +22,7 @@ function Navbar() {
           setCourseActive(false);
         }
       },
-      { threshold: 0.8 },
+      { threshold: 0.8 }
     );
 
     obs.observe(courses);
@@ -43,20 +43,20 @@ function Navbar() {
   return (
     <>
       {/* <!-- hamburger menu icon (for mobile phones) --> */}
-      <input type="checkbox" className={styles.menu} id="menu" />
-      <label htmlFor="menu" className={styles.ham} id="ham">
+      <input type='checkbox' className={styles.menu} id='menu' />
+      <label htmlFor='menu' className={styles.ham} id='ham'>
         <div className={`${styles.hamline} ${styles.hamline1}`} />
         <div className={`${styles.hamline} ${styles.hamline2}`} />
         <div className={`${styles.hamline} ${styles.hamline3}`} />
       </label>
 
       {/* <!-- overlay to be shown when nav bar becomes visible --> */}
-      <div className={styles.blackoverlay} id="overlay" onClick={onClick} />
+      <div className={styles.blackoverlay} id='overlay' onClick={onClick} />
 
       {/* <!-- navigation bar --> */}
       <nav
         className={`${styles.navbar} ${navbar && styles.active}`}
-        id="navbar"
+        id='navbar'
       >
         {/* {TODO: !Logo to be completed } */}
         {/* <div className={styles.logo}>
@@ -64,46 +64,51 @@ function Navbar() {
 				</div> */}
         <ul className={styles.list}>
           <li
-            className={`${styles.listitem} ${router.pathname === '/' && !courseActive && navbar
-              ? styles.navList_active
-              : ''
-              }`}
+            className={`${styles.listitem} ${
+              router.pathname === '/' && !courseActive && navbar
+                ? styles.navList_active
+                : ''
+            }`}
           >
-            <Link href="/">
+            <Link href='/'>
               <a
-                href="/"
+                href='/'
                 onClick={onClick}
-                className={`${styles.lnk} ${router.pathname === '/' && !courseActive ? styles.active : ''
-                  } ${navbar && styles.nav_active}`}
+                className={`${styles.lnk} ${
+                  router.pathname === '/' && !courseActive ? styles.active : ''
+                } ${navbar && styles.nav_active}`}
               >
                 Home
               </a>
             </Link>
           </li>
           <li
-            className={`${styles.listitem} ${router.pathname === '/about' && navbar
-              ? styles.navList_active
-              : ''
-              }`}
+            className={`${styles.listitem} ${
+              router.pathname === '/about' && navbar
+                ? styles.navList_active
+                : ''
+            }`}
           >
-            <Link href="/about">
+            <Link href='/about'>
               <a
-                href="/about"
+                href='/about'
                 onClick={onClick}
-                className={`${styles.lnk} ${router.pathname === '/about' ? styles.active : ''
-                  } ${navbar && styles.nav_active}`}
+                className={`${styles.lnk} ${
+                  router.pathname === '/about' ? styles.active : ''
+                } ${navbar && styles.nav_active}`}
               >
                 About
               </a>
             </Link>
           </li>
           <li
-            className={`${styles.listitem} ${courseActive && navbar ? styles.navList_active : ''
-              }`}
+            className={`${styles.listitem} ${
+              courseActive && navbar ? styles.navList_active : ''
+            }`}
           >
             <span>
               <a
-                href="#courses"
+                href='#courses'
                 onClick={() => {
                   router.push('/');
                   setTimeout(() => {
@@ -113,8 +118,9 @@ function Navbar() {
                     onClick();
                   }, 10);
                 }}
-                className={`${styles.lnk} ${courseActive ? styles.active : ''
-                  } ${navbar && styles.nav_active}`}
+                className={`${styles.lnk} ${
+                  courseActive ? styles.active : ''
+                } ${navbar && styles.nav_active}`}
               >
                 Courses
               </a>
@@ -137,15 +143,17 @@ function Navbar() {
 						</Link>
 					</li> */}
           <li
-            className={`${styles.blg} ${styles.listitem} ${router.pathname === '/blog' && navbar ? styles.navList_active : ''
-              }`}
+            className={`${styles.blg} ${styles.listitem} ${
+              router.pathname === '/blog' && navbar ? styles.navList_active : ''
+            }`}
           >
-            <Link href="/blog">
+            <Link href='/blog'>
               <a
-                href="/blog"
+                href='/blog'
                 onClick={onClick}
-                className={`${styles.lnk} ${router.pathname === '/blog' ? styles.active : ''
-                  } ${navbar && styles.nav_active}`}
+                className={`${styles.lnk} ${
+                  router.pathname === '/blog' ? styles.active : ''
+                } ${navbar && styles.nav_active}`}
               >
                 Blogs
               </a>

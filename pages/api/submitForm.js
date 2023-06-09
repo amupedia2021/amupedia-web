@@ -15,7 +15,7 @@ handler.post(async (req, res) => {
       email: data.email,
       phone: data.phone,
       address: data.address,
-      message: data.message,
+      message: data.message
     });
 
     await db.disconnect();

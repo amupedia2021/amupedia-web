@@ -32,9 +32,7 @@ function Taskbar({ section, setSection }) {
         <span>Assignments</span>
       </div>
       <div
-        className={`${styles.papers} ${
-          section === 'papers' && styles.active
-        }`}
+        className={`${styles.papers} ${section === 'papers' && styles.active}`}
         onClick={() => {
           setSection(() => 'papers');
         }}

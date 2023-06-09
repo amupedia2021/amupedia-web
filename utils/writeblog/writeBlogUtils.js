@@ -1,9 +1,10 @@
-export const getBase64 = (file) => new Promise((resolve, reject) => {
-  const reader = new FileReader();
-  reader.onload = () => resolve(reader.result);
-  reader.onerror = (error) => reject(error);
-  reader.readAsDataURL(file);
-});
+export const getBase64 = (file) =>
+  new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = (error) => reject(error);
+    reader.readAsDataURL(file);
+  });
 
 export const initializeState = (setData) => {
   const savedTitle = sessionStorage.getItem('title');
@@ -20,7 +21,7 @@ export const initializeState = (setData) => {
     content:
       savedContent === 'undefined' || savedContent === 'null'
         ? ''
-        : savedContent,
+        : savedContent
   });
 };
 
@@ -31,8 +32,8 @@ export const dataChangeHandler = (e, data, setData, dispatch) => {
       dispatch({
         type: {
           task: 'setAlert',
-          alert: { type: 'error', message: 'Only 70 characters are allowed' },
-        },
+          alert: { type: 'error', message: 'Only 70 characters are allowed' }
+        }
       });
       return;
     }
@@ -49,9 +50,9 @@ export const dataChangeHandler = (e, data, setData, dispatch) => {
             task: 'setAlert',
             alert: {
               type: 'error',
-              message: 'Image size should be less than 1.5 MB',
-            },
-          },
+              message: 'Image size should be less than 1.5 MB'
+            }
+          }
         });
         return;
       }

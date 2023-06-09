@@ -4,7 +4,7 @@ import styles from '@styles/scss/alert.module.scss';
 import {
   faExclamationCircle,
   faExclamationTriangle,
-  faBell,
+  faBell
 } from 'node_modules/@fortawesome/free-solid-svg-icons/index';
 import { FontAwesomeIcon } from 'node_modules/@fortawesome/react-fontawesome/index';
 import Link from 'node_modules/next/link';
@@ -17,7 +17,7 @@ function Alert() {
   const alertUtil = {
     error: faExclamationCircle,
     warning: faExclamationTriangle,
-    noti: faBell,
+    noti: faBell
   };
 
   const alertOff = () => {
@@ -50,7 +50,7 @@ function Alert() {
             ) : (
               alert.link && (
                 <Link href={alert.link.url} passHref>
-                  <a href="#not_yet_provide">{alert.link.text}</a>
+                  <a href='#not_yet_provide'>{alert.link.text}</a>
                 </Link>
               )
             )}

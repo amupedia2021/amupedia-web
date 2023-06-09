@@ -7,8 +7,8 @@ export const editorOptions = {
     ['outdent', 'indent'],
 
     ['link', 'image'],
-    ['removeFormat'],
-  ],
+    ['removeFormat']
+  ]
 };
 
 export const HandleImageUpload = (files, info, uploadHandler, dispatch) => {
@@ -19,9 +19,9 @@ export const HandleImageUpload = (files, info, uploadHandler, dispatch) => {
         task: 'setAlert',
         alert: {
           type: 'error',
-          message: 'Blogs can have a maximum of four images',
-        },
-      },
+          message: 'Blogs can have a maximum of four images'
+        }
+      }
     });
     uploadHandler();
     return;
@@ -32,9 +32,9 @@ export const HandleImageUpload = (files, info, uploadHandler, dispatch) => {
         task: 'setAlert',
         alert: {
           type: 'error',
-          message: 'Image Size should be less than 1.5 MB',
-        },
-      },
+          message: 'Image Size should be less than 1.5 MB'
+        }
+      }
     });
     uploadHandler();
     return;

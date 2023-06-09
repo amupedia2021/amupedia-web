@@ -3,27 +3,27 @@ import mongoose from 'mongoose';
 const formSchema = new mongoose.Schema({
   first_name: {
     type: String,
-    required: true,
+    required: true
   },
   last_name: {
     type: String,
-    required: true,
+    required: true
   },
   email: {
     type: String,
-    required: true,
+    required: true
   },
   phone: {
-    type: Number,
+    type: Number
   },
   address: {
     type: String,
-    required: true,
+    required: true
   },
   message: {
     type: String,
-    required: true,
-  },
+    required: true
+  }
 });
 
 const Form = mongoose.models.Form || mongoose.model('Form', formSchema);
