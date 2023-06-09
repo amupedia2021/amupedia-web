@@ -11,6 +11,7 @@ import { faLinkedin } from "node_modules/@fortawesome/free-brands-svg-icons/inde
 import { faLink } from "node_modules/@fortawesome/free-solid-svg-icons/index";
 import { faBookmark } from "node_modules/@fortawesome/free-solid-svg-icons/index";
 import { faEllipsisH } from "node_modules/@fortawesome/free-solid-svg-icons/index";
+import {faArrowLeft} from "node_modules/@fortawesome/free-solid-svg-icons/index";
 import BlogCard from "components/Blogs/BlogCard";
 import blogData from "/data/blogdata";
 import Link from "next/link";
@@ -26,6 +27,12 @@ export default function BlogId() {
           <div className={styles.blogHeaderInfo}>
             <div className={styles.blogHeaderInfoLeft}>
               <ul>
+                <li>
+                  <a href="/blog">
+                    <FontAwesomeIcon icon={faArrowLeft} />
+                    <span> Blogs</span>
+                  </a>
+                </li>
                 <li>
                   <FontAwesomeIcon icon={faUserCircle} />
                   <span>Test User</span>
@@ -153,7 +160,7 @@ export default function BlogId() {
         </div>
       </div>
       <div className={styles.otherBlogsCard}>
-        <h3>See other blog</h3>
+        <h3>See other blogs</h3>
         <div className={styles.blogCards}>
           {blogData.map((blogItem) => (
             <BlogCard

@@ -183,6 +183,7 @@ navigation menu opens in mobile phones */
     right: 10px;
     top: 17px;
     z-index: 2;
+    
   }
   .listitem {
     background-color: transparent;
@@ -197,6 +198,33 @@ navigation menu opens in mobile phones */
     -webkit-transition: all 0.5s ease !important;
   }
 
+  /* for dropdown */
+  .dropdownMenu {
+    position: absolute;
+    top: 100%;
+    /* right: 10px; */
+    background-color: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+    width: 160px;
+    z-index: 999;
+  }
+  
+  .dropdownMenu li {
+    padding: 10px 16px;
+  }
+  
+  .dropdownLink {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .dropdownLink:hover {
+    color: #0070f3;
+    text-shadow: 0 2px 4px #75b2f8 ;
+  }
+
   .lnk {
     width: 100%;
     font-size: 22px;
@@ -206,9 +234,9 @@ navigation menu opens in mobile phones */
   .listitem:hover > .lnk {
     text-shadow: white 2px 2px 10px;
   }
-  .lnk.active {
+  /* .lnk.active {
     text-shadow: white 0px 0px 10px !important;
-  }
+  } */
 
   .nav_active {
     color: rgb(12, 12, 12);
@@ -228,4 +256,178 @@ navigation menu opens in mobile phones */
   .navList_actives {
     background-color: rgb(62, 62, 252);
   }
+}
+
+/* Responsive adjustments for smaller screens */
+@media only screen and (max-width: 749px) {
+  .navbar {
+    height: auto;
+    
+  }
+
+  .list {
+    opacity: 80%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    width: 40%;
+    top: 100px;
+    right: -700px;
+    list-style: none;
+    padding: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    transition: all 0.5s cubic-bezier(0, 1.21, 1, 0.97);
+    z-index: 1000;
+    
+  }
+
+  .listitem {
+    display: flex;
+    margin: 15px 0;
+    width: 100%;
+    padding: 0;
+    font-weight: bold;
+    text-align: left;
+    transition: all 0.5s ease;
+    
+  }
+  
+  .menu {
+    position: absolute;
+    opacity: 0;
+    z-index: 20;
+    top: 10px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .ham {
+    justify-content: center;
+    z-index: 1000;
+    position: absolute;
+    top: 5.5vw;
+    right: 20px;
+    width: 10%;
+    height: 10%;
+    background-color: transparent;
+    border-radius: 12px;
+    padding: 10px;
+    transition: all 0.5s ease;
+  }
+
+  .hamline {
+    position: absolute;
+    right: 5px;
+    width: 38px;
+    margin: auto;
+    height: 4px;
+    border-radius: 4px;
+    background-color: white;
+    color: white;
+    transition: all 0.5s ease;
+  }
+
+  .hamline1 {
+    transition: all 0.4s ease;
+  }
+  
+  /* targeting each line uniquely */
+  .hamline2 {
+    top: 23px;
+    transition: all 0.5s ease;
+  }
+
+  /* line 3 */
+  .hamline3 {
+    top: 37px;
+    transition: all 0.4s ease;
+  }
+
+  /* overlay on opening the menu in phone */
+  .blackoverlay {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 0.4s ease;
+  }
+
+  .menu:checked ~ .ham {
+    position: absolute;
+  }
+  
+  /* changes when checkbox is checked  */
+  .menu:checked ~ .navbar .list {
+    right: 0px;
+  }
+  
+  /* animation after clicking the hamburger icon  */
+  .menu:checked ~ .ham > .hamline1 {
+    transform: rotate(135deg);
+    top: 23px;
+  }
+  
+  .menu:checked ~ .ham > .hamline3 {
+    transform: rotate(-135deg);
+    top: 23px;
+  }
+  
+  .menu:checked ~ .ham > .hamline2 {
+    transform: rotate(135deg);
+  }
+  
+  /* appearance for the overlay in the background when 
+  navigation menu opens in mobile phones */
+  .menu:checked ~ .blackoverlay {
+    background-color: rgba(0, 0, 0, 0.403);
+    z-index: 900;
+  }
+  
+
+ 
+  .lnk {
+    font-size: 16px; 
+  }
+  .dropdownLink:hover {
+    color: #0070f3;
+    text-shadow: 0 2px 4px #75b2f8;
+  }
+  .dropdownMenu{
+    background-color: rgb(248, 246, 246);
+    /* display: none; */
+    position: absolute;
+    top: 80px;
+    left: -110px; 
+    width: 100px;  
+    /* background-color: #fff; */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 8px 16px;
+    z-index: 999;
+   
+  }
+
+  /* for dropdown pointer */
+  .dropdownMenu::before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -10px;
+    right: -10px;
+    border-style: solid;
+    border-width: 0 0 20px 20px;
+    border-color: transparent transparent rgb(248, 246, 246) transparent;
+    z-index: 1;
+    transform: rotate(45deg);
+  }
+
+  
+  .navbar .listitem .dropdown_active {
+    display: block;
+  }
+  
 }

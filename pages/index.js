@@ -153,7 +153,7 @@ export default function Home() {
                 </div>
               </Tilt>
             </Link>
-            <Link passHref href='/'>
+            <Link passHref href='/blog'>
               <Tilt className={styles.tlt}>
                 <div className={styles.rec2}>
                   <p>Blogs</p>
