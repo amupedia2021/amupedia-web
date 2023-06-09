@@ -56,9 +56,9 @@ export const firstYearSems = [
 
 export function getSubjectPages(subject) {
   const subjectPages = {
-    'applied-mathematics-1': {
-      name: 'Applied Mathematics 1',
-      bgImg: '/images/btech/firstYear/applied_maths_1.jpg',
+    "applied-mathematics-1": {
+      name: "Applied Mathematics 1",
+      bgImg: "/images/btech/firstYear/applied_maths_1.webp",
       units: [
         {
           unitNo: 1,
@@ -166,9 +166,9 @@ export function getSubjectPages(subject) {
         endSem: []
       }
     },
-    'applied-chemistry': {
-      name: 'Applied Chemistry',
-      bgImg: '/images/btech/firstYear/applied_chemistry.jpg',
+    "applied-chemistry": {
+      name: "Applied Chemistry",
+      bgImg: "/images/btech/firstYear/applied_chemistry.webp",
       units: [
         {
           unitNo: 1,
@@ -216,9 +216,9 @@ export function getSubjectPages(subject) {
         }
       ]
     },
-    'thermo-dynamics': {
-      name: 'Thermodynamics',
-      bgImg: '/images/btech/firstYear/applied_chemistry.jpg',
+    "thermo-dynamics": {
+      name: "Thermodynamics",
+      bgImg: "/images/btech/firstYear/applied_chemistry.webp",
       units: [
         {
           unitNo: 1,
@@ -273,9 +273,9 @@ export function getSubjectPages(subject) {
         endSem: []
       }
     },
-    'electrical-engineering': {
-      name: 'Electrical Engineering',
-      bgImg: '/images/btech/firstYear/applied_chemistry.jpg',
+    "electrical-engineering": {
+      name: "Electrical Engineering",
+      bgImg: "/images/btech/firstYear/applied_chemistry.webp",
       units: [
         {
           unitNo: 1,
@@ -340,9 +340,9 @@ export function getSubjectPages(subject) {
         endSem: []
       }
     },
-    'environmental-studies': {
-      name: 'Environmental Studies',
-      bgImg: '/images/btech/firstYear/applied_chemistry.jpg',
+    "environmental-studies": {
+      name: "Environmental Studies",
+      bgImg: "/images/btech/firstYear/applied_chemistry.webp",
       units: [
         {
           unitNo: 1,
@@ -396,9 +396,9 @@ export function getSubjectPages(subject) {
         ]
       }
     },
-    'applied-chemistry-lab': {
-      name: 'Applied Chemistry Lab',
-      bgImg: '/images/btech/firstYear/applied_chemistry.jpg',
+    "applied-chemistry-lab": {
+      name: "Applied Chemistry Lab",
+      bgImg: "/images/btech/firstYear/applied_chemistry.webp",
       units: [
         {
           unitNo: 1,
@@ -416,9 +416,9 @@ export function getSubjectPages(subject) {
         endSem: []
       }
     },
-    'computer-programming-lab': {
-      name: 'Computer Programming Lab',
-      bgImg: '/images/btech/firstYear/applied_chemistry.jpg',
+    "computer-programming-lab": {
+      name: "Computer Programming Lab",
+      bgImg: "/images/btech/firstYear/applied_chemistry.webp",
       units: [
         {
           unitNo: 1,
@@ -434,9 +434,9 @@ export function getSubjectPages(subject) {
         endSem: []
       }
     },
-    'engineering-graphics': {
-      name: 'Engineering Graphics',
-      bgImg: '/images/btech/firstYear/applied_chemistry.jpg',
+    "engineering-graphics": {
+      name: "Engineering Graphics",
+      bgImg: "/images/btech/firstYear/applied_chemistry.webp",
       units: [
         {
           unitNo: 1,
@@ -452,9 +452,9 @@ export function getSubjectPages(subject) {
         endSem: []
       }
     },
-    'circuit-theory': {
-      name: 'Circuit Theory',
-      bgImg: '/images/btech/firstYear/applied_chemistry.jpg',
+    "circuit-theory": {
+      name: "Circuit Theory",
+      bgImg: "/images/btech/firstYear/applied_chemistry.webp",
       units: [
         {
           unitNo: 1,

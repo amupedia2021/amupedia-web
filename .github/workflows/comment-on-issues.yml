@@ -1,0 +1,35 @@
+name: Add Comment to Newly Open Issue
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  add-comment:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Add Comment
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { issue } = context.payload;
+            const author = issue.user.login;
+            const issueNumber = issue.number;
+            const comment = `Hello @${author}! \n Thank you for raising this issue. \n\nPlease make sure to follow our [Contributing Guidelines. 💪🏻](https://github.com/amupedia2021/Project-Amupedia/blob/master/CONTRIBUTING.md) \nDon't forget to ⭐ our [Project-Amupedia. 📔](https://github.com/amupedia2021/Project-Amupedia)\n\nOur review team will carefully assess the issue and reach out to you soon! 😇 \n We appreciate your patience! 😀`;
+            const { owner, repo } = context.repo;
+
+            await github.issues.createComment({
+              owner: owner,
+              repo: repo,
+              issue_number: issueNumber,
+              body: comment
+            });
+
+            console.log(`Comment added to the Issue #${issueNumber}.`);

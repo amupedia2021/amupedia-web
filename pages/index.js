@@ -1,5 +1,4 @@
-// import Head from "next/head";
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import Image from 'next/image';
 import pdf from '@images/home/pdf.svg';
 import chap_yt from '@images/home/yt.svg';
@@ -13,6 +12,10 @@ import Footer from 'components/common/Footer';
 import { Store } from 'utils/Store/Store';
 import Preloader from 'components/common/Preloader';
 import axios from 'node_modules/axios/index';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import TestimonialCard from 'components/Testimonial/Testimonial';
+import GoToTop from 'components/GoToTop';
 
 export default function Home() {
   const { dispatch } = useContext(Store);
@@ -56,25 +59,32 @@ export default function Home() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <>
+      <GoToTop />
       <Header image={headerImg} text='Amupedia' />
       <main>
         <section id={styles.content}>
           {/* <!-- Our Mission Container --> */}
-          <div className={styles.mission}>
+          <div data-aos="zoom-in" className={styles.mission}>
             <h2>Our Mission</h2>
             <p>
               We are the students of AMU, intending to provide you all the
               quality stuff related to B.Tech, B.Com, B.E, and various other
-              courses, the pdfs related to experiment, viva, and quizzes
-              question, the mid and end semester examination as well as the
-              assignments. We are providing all this content for free.
+              courses, the pdfs related to experiments, viva, and quizzes, the
+              mid and end semester examinations as well as the assignments. We
+              are providing all this content for free.
             </p>
           </div>
 
           {/* Our Services Section  */}
-          <div id={styles.ourserv}>
+          <div data-aos="fade-up" id={styles.ourserv}>
             <h2>Our Services</h2>
             <div id={styles.ourserimgs}>
               <div>
@@ -133,6 +143,7 @@ export default function Home() {
 
           {/* <!-- Recent Updates section  --> */}
           {/* <!-- same css as grabnotes section  --> */}
+          <div data-aos="fade-up">
           <h2 className={styles.grabh2}>Recent Updates</h2>
           <div className={styles.grabnotes}>
             <Link passHref href='/'>
@@ -142,7 +153,7 @@ export default function Home() {
                 </div>
               </Tilt>
             </Link>
-            <Link passHref href='/'>
+            <Link passHref href='/blog'>
               <Tilt className={styles.tlt}>
                 <div className={styles.rec2}>
                   <p>Blogs</p>
@@ -152,10 +163,11 @@ export default function Home() {
             <Link passHref href='/'>
               <Tilt className={styles.tlt}>
                 <div className={styles.rec3}>
-                  <p>Competetive Exams</p>
+                  <p>Competitive Exams</p>
                 </div>
               </Tilt>
             </Link>
+            </div>
           </div>
 
           {/* <!-- Contact Form  --> */}
@@ -222,6 +234,7 @@ export default function Home() {
           </form>
         </section>
       </main>
+      <TestimonialCard />
       <Footer />
     </>
   );

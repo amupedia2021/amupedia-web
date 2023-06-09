@@ -1,14 +1,16 @@
-import Head from 'next/head';
-import BlogCard from 'components/Blogs/BlogCard';
-import Footer from 'components/common/Footer';
-import Header from 'components/common/Header/Header';
-import styles from '@styles/scss/blog.module.scss';
-import fetchBlogs from 'utils/getDataFromDB/blogs/fetchBlogs';
+import Head from "next/head";
+import BlogCard from "components/Blogs/BlogCard";
+import Footer from "components/common/Footer";
+import Header from "components/common/Header/Header";
+import styles from "@styles/scss/blog.module.scss";
+import blogData from "/data/blogdata";
+import GoToTop from "components/GoToTop";
 
 export default function Blogs({ blogsData }) {
   console.log(blogsData);
   return (
     <>
+			<GoToTop />
       <Head>
         <title>Blogs | Amupedia</title>
         <meta name='description' content='Check out our blog posts.' />

@@ -32,9 +32,9 @@ export default function BTech() {
             </a>
           </Link>
           <a
-            href='https://drive.google.com/drive/folders/1qHWSIsNiYGgtXn0emPzt62cv_jI1rlDw?usp=sharing'
-            target='_blank'
-            rel='noreferrer'
+            href="https://drive.google.com/drive/folders/1ZPk97HT0reLjyJsVxOJmEw542HugZonY?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
           >
             <div className={styles.brnch} id={styles.cs}>
               <p>Computer Engineering</p>
@@ -94,6 +94,17 @@ export default function BTech() {
             <div className={styles.brnch} id={styles.chem}>
               <p>Food</p>
               <p>Technology</p>
+            </div>
+          </a>
+          <a
+            href="https://drive.google.com/drive/folders/1YVAoa4S8cJ5Jh1E1WJjedEdLTqvNPVjl?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className={styles.brnch} id={styles.cs}>
+              <p>ECE</p>
+              <p>AI</p>
+
             </div>
           </a>
         </div>

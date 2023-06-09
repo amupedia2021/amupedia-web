@@ -3,10 +3,11 @@ import jwt from 'jsonwebtoken';
 import '@styles/globals.css';
 import Head from 'node_modules/next/head';
 // import { useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { StoreProvider } from 'utils/Store/Store';
-import Alert from 'components/common/Alert';
-import Script from 'node_modules/next/script';
+import "../styles/tailwind.css" //importing Tailwind CSS utilities
+import { motion } from "framer-motion";
+import { StoreProvider } from "utils/Store/Store";
+import Alert from "components/common/Alert";
+import Script from "node_modules/next/script";
 // import Login from 'components/Login';
 
 function addProductJsonLd() {
@@ -102,8 +103,8 @@ function MyApp({ Component, pageProps, router }) {
           />
           <meta name='keywords' content='B.Tech, B.Com, B.E' />
           <meta
-            property='og:image'
-            content='https://www.amupedia.com/og-image.jpg'
+            property="og:image"
+            content="https://www.amupedia.com/og-image.webp"
           />
           <meta property='og:image:width' content='150' />
           <meta property='og:image:height' content='150' />

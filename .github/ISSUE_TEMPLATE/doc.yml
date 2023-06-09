@@ -1,0 +1,46 @@
+name: "📚 Documentation"
+description: Report an issue in the project's documentation or README.md file.
+title: "📚 [Documentation] - Title"
+labels: [
+  "documentation",
+  "no code"
+]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        📚 **Document Request / Updation**
+
+        Thanks for taking the time to fill out this documentation deficiency report! :memo:
+
+        :information_source: Before submitting the report, please make sure to read our contributing guidelines. By submitting this issue, you agree to follow our guidelines. :book:
+
+        :link: [CONTRIBUTING GUIDELINES](https://github.com/amupedia2021/Project-Amupedia/blob/master/CONTRIBUTING.md)
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description ✍️"
+      description: Enter a brief description about the deficit documentation that you want to add.
+      placeholder: Please include a summary, also include any relevant links.
+    validations:
+      required: true
+  - type: dropdown
+    id: contribution
+    attributes:
+      label: Are you contributing for a program ?
+      description: Please select the program you are contributing for.
+      multiple: true
+      options:
+        - GSSoC2023
+        - Other
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our contributing guidelines. Please read our [Contributing Guidelines](https://github.com/amupedia2021/Project-Amupedia/blob/master/CONTRIBUTING.md).
+      options:
+        - label: I have read and agree to the Contributing Guidelines of this project.
+          required: true

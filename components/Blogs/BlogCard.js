@@ -1,8 +1,9 @@
-import styles from '@styles/scss/blogcard.module.scss';
-import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThumbsUp, faComment } from '@fortawesome/free-solid-svg-icons';
-import Link from 'next/link';
+import styles from "@styles/scss/blogcard.module.scss";
+import Image from "next/image";
+import dataScienceImg from "@images/blog/dataScience.webp";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faThumbsUp, faComment } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 function BlogCard(props) {
   const { id, title, image, comments, likes } = props;

@@ -1,0 +1,64 @@
+name: 🚀 Feature Request
+description: Create a new ticket for a new feature request
+title: "🚀 [Feature Request] - Title"
+labels: ["enhancement"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🚀 **Feature Request**
+
+        Thanks for taking the time to fill out this Feature Request report! :memo:
+
+        :information_source: Before submitting the report, please make sure to read our contributing guidelines. By submitting this issue, you agree to follow our guidelines. :book:
+
+        :link: [CONTRIBUTING GUIDELINES](https://github.com/amupedia2021/Project-Amupedia/blob/master/CONTRIBUTING.md)
+  - type: textarea
+    id: description
+    attributes:
+      label: Is your feature request related to a problem ? Please describe. ✍️
+      description: Enter a brief description about the feature you feel is required.
+      placeholder: Give all the context of your enhancement as well as the existing project.
+      value: "Enhancement"
+    validations:
+      required: true
+  - type: textarea
+    id: solutionsteps
+    attributes:
+      label: Describe briefly how you would implement this enhancement.
+      description: Please provide a solution steps for implementing the enhancement.
+      placeholder: Short and explicit description of the solution steps...
+      value: |
+        Some steps to implement this enhancement-
+        1. Step 1
+        2. Step 2
+        3. Step 3
+      render: bash
+    validations:
+      required: true
+  - type: textarea
+    id: AdditionalInfo
+    attributes:
+      label: Additional context or screenshots
+      description: Add any other context or screenshots about the feature request here.
+      placeholder: Add any other context or screenshots about the feature request here.
+      value: "Additional context"
+  - type: dropdown
+    id: contribution
+    attributes:
+      label: Are you contributing for a program?
+      multiple: true
+      options:
+        - GSSoC2023
+        - Other
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our contributing guidelines. Please read our [Contributing Guidelines](https://github.com/amupedia2021/Project-Amupedia/blob/master/CONTRIBUTING.md).
+      options:
+        - label: I have read and agree to the Contributing Guidelines of this project.
+          required: true
