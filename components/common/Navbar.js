@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import styles from '@styles/Navbar.module.css';
 import { useState, useEffect } from 'react';
+import styles from '@styles/Navbar.module.css';
 
 const Navbar = () => {
   const router = useRouter();
@@ -10,49 +10,44 @@ const Navbar = () => {
   const [contactActive, setContactActive] = useState(false);
   const [dropdown, setDropdown] = useState(false); //for adding dropdown feature
 
-  useEffect(() => {
-    window.addEventListener('scroll', changeNavbar);
 
-    const courses = document.getElementById('courses');
-    if (!courses) return;
-    const obs = new IntersectionObserver(
-      (entries) => {
+    useEffect(() => {
+      window.addEventListener('scroll', changeNavbar);
+      const courses = document.getElementById('courses');
+      const contacts = document.getElementById('contacts');
+      const obsOptions = { threshold: 0.8 };
+    
+      const handleIntersection = (entries, setActive) => {
         const entry = entries[0];
-        if (entry.isIntersecting) {
-          setCourseActive(true);
-        } else {
-          setCourseActive(false);
+        setActive(entry.isIntersecting);
+      };
+    
+      if (courses) {
+        const obsCourses = new IntersectionObserver((entries) => {
+          handleIntersection(entries, setCourseActive);
+        }, obsOptions);
+        obsCourses.observe(courses);
+      }
+    
+      if (contacts) {
+        const obsContacts = new IntersectionObserver((entries) => {
+          handleIntersection(entries, setContactActive);
+        }, obsOptions);
+        obsContacts.observe(contacts);
+      }
+    
+      return () => {
+        if (courses) {
+          obsCourses?.unobserve(courses);
+          obsCourses?.disconnect();
         }
-      },
-      { threshold: 0.8 }
-    );
-    obs.observe(courses);
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('scroll', changeNavbar);
-
-    const contacts = document.getElementById('contacts');
-    if (!contacts) return;
-    const obs = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry.isIntersecting) {
-          setContactActive(true);
-        } else {
-          setContactActive(false);
+        if (contacts) {
+          obsContacts?.unobserve(contacts);
+          obsContacts?.disconnect();
         }
-      },
-      { threshold: 0.8 }
-    );
-    obs.observe(contacts);
-  }, []);
-
-  // const changeNavbar = () => {
-  //   if (window.scrollY > 500) {
-  //     setNavbar(true);
-  //   } else setNavbar(false);
-  // };
+      };
+    }, []);
+    
   const changeNavbar = () => {
     const courses = document.getElementById('courses');
     if (courses) {
@@ -67,8 +62,6 @@ const Navbar = () => {
       setNavbar(window.scrollY > 500);
     }
   };
-
-  
 
   const handleCoursesHover = () => {
     if (window.innerWidth >= 768) {
@@ -121,7 +114,7 @@ const Navbar = () => {
         <ul className={styles.list}>
           <li
             className={`${styles.listitem} ${
-              router.pathname === '/' && !courseActive && !contactActive && navbar
+              router?.pathname === '/' && !courseActive && !contactActive && navbar
                 ? styles.navList_active
                 : ''
             }`}
@@ -135,7 +128,7 @@ const Navbar = () => {
                   
                 }}
                 className={`${styles.lnk} ${
-                  router.pathname === '/' && !courseActive && !contactActive ? styles.active : ''
+                  router?.pathname === '/' && !courseActive && !contactActive ? styles.active : ''
                 } ${navbar && styles.nav_active}`}
               >
                 Home
@@ -154,7 +147,7 @@ const Navbar = () => {
           >
               <a
               onClick={() => {
-                router.push('/');
+                router?.push('/');
                 setTimeout(() => {
                   const courses = document.getElementById('courses');
                   if (courses) courses.scrollIntoView();
@@ -205,7 +198,7 @@ const Navbar = () => {
           </li>
           <li
             className={`${styles.listitem} ${
-              router.pathname === '/about' && navbar
+              router?.pathname === '/about' && navbar
                 ? styles.navList_active
                 : ''
             }`}
@@ -218,7 +211,7 @@ const Navbar = () => {
                   if (menu.checked) menu.click();
                 }}
                 className={`${styles.lnk} ${
-                  router.pathname === '/about' ? styles.active : ''
+                  router?.pathname === '/about' ? styles.active : ''
                 } ${navbar && styles.nav_active}`}
               >
                 About
@@ -228,14 +221,14 @@ const Navbar = () => {
 
           {/* <li
 						className={`${styles.tem} ${styles.listitem} ${
-							router.pathname === '/team' && navbar ? styles.navList_active : ''
+							router?.pathname === '/team' && navbar ? styles.navList_active : ''
 						}`}
 					>
 						<Link href="/team">
 							<a
 								onClick={onClick}
 								className={`${styles.lnk} ${
-									router.pathname === '/team' ? styles.active : ''
+									router?.pathname === '/team' ? styles.active : ''
 								} ${navbar && styles.nav_active}`}
 							>
 								Team
@@ -244,7 +237,7 @@ const Navbar = () => {
 					</li> */}
           <li
             className={`${styles.blg} ${styles.listitem} ${
-              router.pathname === '/blog' && navbar ? styles.navList_active : ''
+              router?.pathname === '/blog' && navbar ? styles.navList_active : ''
             }`}
           >
             <Link href='/blog'>
@@ -254,7 +247,7 @@ const Navbar = () => {
                   if (menu.checked) menu.click();
                 }}
                 className={`${styles.lnk} ${
-                  router.pathname === '/blog' ? styles.active : ''
+                  router?.pathname === '/blog' ? styles.active : ''
                 } ${navbar && styles.nav_active}`}
               >
                 Blogs
@@ -264,7 +257,7 @@ const Navbar = () => {
 
           <li
             className={`${styles.listitem} ${
-              router.pathname === '/contributors' && navbar
+              router?.pathname === '/contributors' && navbar
                 ? styles.navList_active
                 : ''
             }`}
@@ -276,7 +269,7 @@ const Navbar = () => {
                   if (menu.checked) menu.click();
                 }}
                 className={`${styles.lnk} ${
-                  router.pathname === '/contributors' ? styles.active : ''
+                  router?.pathname === '/contributors' ? styles.active : ''
                 } ${navbar && styles.nav_active}`}
               >
                 Contributors
@@ -290,7 +283,7 @@ const Navbar = () => {
           >
             <a
               onClick={() => {
-                router.push('/');
+                router?.push('/');
                 setTimeout(() => {
                   const contacts = document.getElementById('contacts');
                   if (contacts) contacts.scrollIntoView();

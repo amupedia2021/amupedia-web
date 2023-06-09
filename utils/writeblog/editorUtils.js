@@ -1,27 +1,27 @@
 export const editorOptions = {
   buttonList: [
-    ["undo", "redo"],
-    ["bold", "underline", "italic"],
-    ["fontColor", "hiliteColor", "blockquote"],
-    ["align", "list"],
-    ["outdent", "indent"],
+    ['undo', 'redo'],
+    ['bold', 'underline', 'italic'],
+    ['fontColor', 'hiliteColor', 'blockquote'],
+    ['align', 'list'],
+    ['outdent', 'indent'],
 
-    ["link", "image"],
-    ["removeFormat"],
-  ],
+    ['link', 'image'],
+    ['removeFormat']
+  ]
 };
 
 export const HandleImageUpload = (files, info, uploadHandler, dispatch) => {
-  const imgs = document.querySelectorAll("img");
+  const imgs = document.querySelectorAll('img');
   if (imgs.length > 6) {
     dispatch({
       type: {
-        task: "setAlert",
+        task: 'setAlert',
         alert: {
-          type: "error",
-          message: "Blogs can have a maximum of four images",
-        },
-      },
+          type: 'error',
+          message: 'Blogs can have a maximum of four images'
+        }
+      }
     });
     uploadHandler();
     return;
@@ -29,12 +29,12 @@ export const HandleImageUpload = (files, info, uploadHandler, dispatch) => {
   if (files[0].size > 1048576) {
     dispatch({
       type: {
-        task: "setAlert",
+        task: 'setAlert',
         alert: {
-          type: "error",
-          message: "Image Size should be less than 1.5 MB",
-        },
-      },
+          type: 'error',
+          message: 'Image Size should be less than 1.5 MB'
+        }
+      }
     });
     uploadHandler();
     return;

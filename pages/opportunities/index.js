@@ -1,41 +1,33 @@
-import Footer from "components/common/Footer";
-import Header from "components/common/Header/Header";
-import OppCard from "components/Opportunities/oppCard";
-import styles from "@styles/oppCard.module.css";
-import Link from "node_modules/next/link";
+import Footer from 'components/common/Footer';
+import Header from 'components/common/Header/Header';
+import OppCard from 'components/Opportunities/oppCard';
+import styles from '@styles/oppCard.module.css';
+import Link from 'next/link';
+import fetchOpportunities from 'utils/getDataFromDB/opportunities/fetchOpportunities';
 
-const Index = (dataOpp) => {
+function Opportunities({ opportunities }) {
   return (
     <div>
-      <Header
-        image={"/images/about/about_bg.svg"}
-        text={"Opportunities"}
-      ></Header>
+      <Header image={'/images/about/about_bg.svg'} text={'Opportunities'} />
       <article className={styles.mainBody}>
-      {
-        dataOpp.result.result.map((data,index)=>(
+        {opportunities.map((data, index) => (
           <Link href={`/opportunities/${index}`} key={index}>
             <a href={`/opportuities/${index}`}>
-          <OppCard key={data.id} data={data} />
-          </a>
+              <OppCard key={data.id} data={data} />
+            </a>
           </Link>
-        )
-        )
-      }
+        ))}
       </article>
       <Footer />
     </div>
   );
-};
-
-export default Index;
-
-export const getServerSideProps = async () => {
-  const data = await fetch("http://localhost:3000/api/opportunities/fetchOpportunities");
-  const result = await data.json();
-  return {
-    props: {
-      result
-  }
 }
+
+export default Opportunities;
+
+export async function getServerSideProps() {
+  const opportunities = await fetchOpportunities();
+  return {
+    props: { opportunities }
+  };
 }

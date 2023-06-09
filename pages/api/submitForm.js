@@ -1,6 +1,6 @@
-import db from "db/db";
-import nextConnect from "next-connect";
-import Form from "db/models/Form";
+import db from 'db/db';
+import nextConnect from 'next-connect';
+import Form from 'db/models/Form';
 
 const handler = nextConnect();
 
@@ -15,7 +15,7 @@ handler.post(async (req, res) => {
       email: data.email,
       phone: data.phone,
       address: data.address,
-      message: data.message,
+      message: data.message
     });
 
     await db.disconnect();

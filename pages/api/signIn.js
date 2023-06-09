@@ -1,8 +1,9 @@
-import db from "db/db";
-import User from "db/models/User";
-import nextConnect from "next-connect";
-import bcrypt from "bcryptjs";
-import jwt from "jsonwebtoken";
+import db from 'db/db';
+import User from 'db/models/User';
+import nextConnect from 'next-connect';
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
+import crypto from 'crypto';
 
 const handler = nextConnect();
 
@@ -23,11 +24,11 @@ handler.post(async (req, res) => {
     if (!passMatch) {
       return res
         .status(400)
-        .json({ success: false, newUser: false, message: "Wrong Password" });
+        .json({ success: false, newUser: false, message: 'Wrong Password' });
     }
-
+    const secret = crypto.randomBytes(32).toString('hex'); // generate secret token for mean while (due this because of eslint error)
     const payload = {
-      userEmail: user.email,
+      userEmail: user.email
     };
 
     const token = jwt.sign(payload, secret);

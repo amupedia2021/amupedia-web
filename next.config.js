@@ -1,4 +1,5 @@
-const withImages = require("next-images");
+const withImages = require('next-images');
+
 module.exports = withImages();
 module.exports = withImages({
   webpack(config, options) {
@@ -6,14 +7,14 @@ module.exports = withImages({
   }
 });
 
-const path = require("path");
+const path = require('path');
 
 module.exports = {
   sassOptions: {
-    includePaths: [path.join(__dirname, "styles")],
+    includePaths: [path.join(__dirname, 'styles')]
   },
   images: {
     dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-  },
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
+  }
 };

@@ -1,9 +1,7 @@
-import WriteBlogLayout from "components/Blogs/WriteBlogs/WriteBlogLayout";
+import WriteBlogLayout from 'components/Blogs/WriteBlogs/WriteBlogLayout';
 
-const WriteBlog = () => {
-  return (
-    <WriteBlogLayout/>
-  );
+function WriteBlog() {
+  return <WriteBlogLayout />;
 }
 
 export default WriteBlog;

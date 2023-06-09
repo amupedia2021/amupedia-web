@@ -1,15 +1,15 @@
-import { Store } from "utils/Store/Store";
-import { useContext, useState } from "react";
-import styles from "@styles/scss/alert.module.scss";
+import { Store } from 'utils/Store/Store';
+import { useContext, useState } from 'react';
+import styles from '@styles/scss/alert.module.scss';
 import {
   faExclamationCircle,
   faExclamationTriangle,
-  faBell,
-} from "node_modules/@fortawesome/free-solid-svg-icons/index";
-import { FontAwesomeIcon } from "node_modules/@fortawesome/react-fontawesome/index";
-import Link from "node_modules/next/link";
+  faBell
+} from 'node_modules/@fortawesome/free-solid-svg-icons/index';
+import { FontAwesomeIcon } from 'node_modules/@fortawesome/react-fontawesome/index';
+import Link from 'node_modules/next/link';
 
-const Alert = () => {
+function Alert() {
   const { state, dispatch } = useContext(Store);
   const { alert } = state;
   const [toNull, setToNull] = useState(false);
@@ -17,13 +17,13 @@ const Alert = () => {
   const alertUtil = {
     error: faExclamationCircle,
     warning: faExclamationTriangle,
-    noti: faBell,
+    noti: faBell
   };
 
   const alertOff = () => {
     setToNull(true);
     setTimeout(() => {
-      dispatch({ type: { task: "setAlert", alert: null } });
+      dispatch({ type: { task: 'setAlert', alert: null } });
       setToNull(false);
     }, 250);
   };
@@ -36,21 +36,21 @@ const Alert = () => {
             <div className={styles.content}>
               <span
                 className={`${styles.icon} 
-                ${alert.type === "error" && styles.error} 
-                ${alert.type === "warning" && styles.warning} 
-                ${alert.type === "noti" && styles.noti}`}
+                ${alert.type === 'error' && styles.error} 
+                ${alert.type === 'warning' && styles.warning} 
+                ${alert.type === 'noti' && styles.noti}`}
               >
                 <FontAwesomeIcon icon={alertUtil[alert.type]} />
               </span>
               <span>{alert.message}</span>
             </div>
             <button onClick={alertOff}>&times;</button>
-            {alert.link && alert.link.type === "external" ? (
+            {alert.link && alert.link.type === 'external' ? (
               <a href={alert.link.url}>{alert.link.text}</a>
             ) : (
               alert.link && (
                 <Link href={alert.link.url} passHref>
-                  <a>{alert.link.text}</a>
+                  <a href='#not_yet_provide'>{alert.link.text}</a>
                 </Link>
               )
             )}
@@ -59,6 +59,6 @@ const Alert = () => {
       )}
     </>
   );
-};
+}
 
 export default Alert;

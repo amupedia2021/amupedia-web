@@ -1,10 +1,12 @@
-import styles from "@styles/scss/main.module.scss";
-import { FontAwesomeIcon } from "node_modules/@fortawesome/react-fontawesome/index";
-import { faInstagramSquare } from "node_modules/@fortawesome/free-brands-svg-icons/index";
-import { faFacebookSquare } from "node_modules/@fortawesome/free-brands-svg-icons/index";
-import { faTwitterSquare } from "node_modules/@fortawesome/free-brands-svg-icons/index";
-import { faLinkedin } from "node_modules/@fortawesome/free-brands-svg-icons/index";
-import Tilt from "react-vanilla-tilt";
+import styles from '@styles/scss/main.module.scss';
+import { FontAwesomeIcon } from 'node_modules/@fortawesome/react-fontawesome/index';
+import {
+  faInstagramSquare,
+  faFacebookSquare,
+  faTwitterSquare,
+  faLinkedin
+} from 'node_modules/@fortawesome/free-brands-svg-icons/index';
+import Tilt from 'react-vanilla-tilt';
 
 export default function Teamcard({
   facebook,
@@ -13,7 +15,7 @@ export default function Teamcard({
   linkedin,
   name,
   photo,
-  desig,
+  desig
 }) {
   return (
     <>

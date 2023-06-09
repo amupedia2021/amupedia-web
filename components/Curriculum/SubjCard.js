@@ -1,7 +1,7 @@
-import styles from "@styles/scss/subjcard.module.scss";
-import Link from "next/link";
+import styles from '@styles/scss/subjcard.module.scss';
+import Link from 'next/link';
 
-const SubjCard = ({ details }) => {
+function SubjCard({ details }) {
   return (
     <Link href={details.linkToPage} passHref>
       <div className={styles.subject}>
@@ -10,6 +10,6 @@ const SubjCard = ({ details }) => {
       </div>
     </Link>
   );
-};
+}
 
 export default SubjCard;

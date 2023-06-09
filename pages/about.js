@@ -1,23 +1,23 @@
-import Head from "next/head";
-import Header from "components/common/Header/Header";
-import styles from "@styles/scss/main.module.scss";
-import Footer from "components/common/Footer";
-import Team from "components/Team/Team";
+import Head from 'next/head';
+import Header from 'components/common/Header/Header';
+import styles from '@styles/scss/main.module.scss';
+import Footer from 'components/common/Footer';
+import Team from 'components/Team/Team';
 import GoToTop from "components/GoToTop";
 
 export default function About() {
-  const image = "/images/about/about_bg.svg";
+  const image = '/images/about/about_bg.svg';
   return (
     <>
       <GoToTop />
       <Head>
         <title>About | Amupedia</title>
         <meta
-          name="description"
-          content="Amupedia is the biggest platform to help fellow students through their college program."
+          name='description'
+          content='Amupedia is the biggest platform to help fellow students through their college program.'
         />
       </Head>
-      <Header image={image} text="About Us" />
+      <Header image={image} text='About Us' />
       <main id={styles.content}>
         {/* <!-- About Us Container --> */}
         <div className={styles.whoWeAre}>

@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
 
 /* style for logo  */
 .logo {
@@ -14,7 +14,7 @@
 
 /* navigation bar style for mobile phone */
 .list {
-  font-family: "Baloo Bhai 2", sans-serif;
+  font-family: 'Baloo Bhai 2', sans-serif;
   opacity: 80%;
   background-color: rgb(255, 255, 255);
   position: fixed;

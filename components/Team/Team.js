@@ -1,7 +1,7 @@
-import styles from "@styles/scss/main.module.scss";
-import Card from "./Teamcard";
+import styles from '@styles/scss/main.module.scss';
+import Card from './Teamcard';
 
-const Team = () => {
+function Team() {
   return (
     <>
       <h2 className={styles.heading}>Our Team</h2>
@@ -34,9 +34,11 @@ const Team = () => {
           desig={"Co-Founder"}
         />
         <Card
-          facebook={"#"}
-          insta={
-            "https://www.instagram.com/ashraydixitad/"
+          facebook={'#'}
+          insta={'https://www.instagram.com/ashraydixitad/'}
+          twitter={'#'}
+          linkedin={
+            'https://www.linkedin.com/in/ashray-dixit?trk=people-guest_people_search-card&originalSubdomain=in'
           }
           
 
@@ -56,24 +58,24 @@ const Team = () => {
           desig={"Management Head"}
         />
         <Card
-          facebook={"#"}
-          insta={"https://www.instagram.com/?hl=en"}
-          twitter={"#"}
+          facebook={'#'}
+          insta={'https://www.instagram.com/?hl=en'}
+          twitter={'#'}
           linkedin={
-            "https://www.linkedin.com/in/sayyed-arib-hussain-1220b5187/"
+            'https://www.linkedin.com/in/sayyed-arib-hussain-1220b5187/'
           }
           name={"Aarib"}
           photo={"/images/team/Aarib.webp"}
           desig={"Web Developer"}
         />
         <Card
-          facebook={"#"}
-          insta={"#"}
-          twitter={"#"}
-          linkedin={"https://www.linkedin.com/in/muhammad-jufri/"}
-          name={"Muhammad"}
-          photo={"/images/team/Muhammad.jfif"}
-          desig={"Web Developer"}
+          facebook={'#'}
+          insta={'#'}
+          twitter={'#'}
+          linkedin={'https://www.linkedin.com/in/muhammad-jufri/'}
+          name={'Muhammad'}
+          photo={'/images/team/Muhammad.jfif'}
+          desig={'Web Developer'}
         />
         <Card
           facebook={"#"}
@@ -111,7 +113,6 @@ const Team = () => {
           photo={"/images/team/Shalini.webp"}
           desig={"Content Writer Head"}
         />
-
 
         <Card
           facebook={"#"}
@@ -170,6 +171,6 @@ const Team = () => {
       </div>
     </>
   );
-};
+}
 
 export default Team;
