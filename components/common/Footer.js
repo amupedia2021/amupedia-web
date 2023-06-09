@@ -1,4 +1,3 @@
-
 import styles from '@styles/Footer.module.css';
 import { FontAwesomeIcon } from 'node_modules/@fortawesome/react-fontawesome/index';
 import {
@@ -91,6 +90,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

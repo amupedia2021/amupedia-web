@@ -5,6 +5,7 @@ import Header from "components/common/Header/Header";
 import styles from "@styles/scss/blog.module.scss";
 import blogData from "/data/blogdata";
 import GoToTop from "components/GoToTop";
+import fetchBlogs from 'utils/getDataFromDB/blogs/fetchBlogs';
 
 export default function Blogs({ blogsData }) {
   console.log(blogsData);

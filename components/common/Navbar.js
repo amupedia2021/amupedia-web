@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import styles from '@styles/Navbar.module.css';
 import { useState, useEffect } from 'react';
+import styles from '@styles/Navbar.module.css';
 
 const Navbar = () => {
   const router = useRouter();
@@ -10,49 +10,44 @@ const Navbar = () => {
   const [contactActive, setContactActive] = useState(false);
   const [dropdown, setDropdown] = useState(false); //for adding dropdown feature
 
-  useEffect(() => {
-    window.addEventListener('scroll', changeNavbar);
 
-    const courses = document.getElementById('courses');
-    if (!courses) return;
-    const obs = new IntersectionObserver(
-      (entries) => {
+    useEffect(() => {
+      window.addEventListener('scroll', changeNavbar);
+      const courses = document.getElementById('courses');
+      const contacts = document.getElementById('contacts');
+      const obsOptions = { threshold: 0.8 };
+    
+      const handleIntersection = (entries, setActive) => {
         const entry = entries[0];
-        if (entry.isIntersecting) {
-          setCourseActive(true);
-        } else {
-          setCourseActive(false);
+        setActive(entry.isIntersecting);
+      };
+    
+      if (courses) {
+        const obsCourses = new IntersectionObserver((entries) => {
+          handleIntersection(entries, setCourseActive);
+        }, obsOptions);
+        obsCourses.observe(courses);
+      }
+    
+      if (contacts) {
+        const obsContacts = new IntersectionObserver((entries) => {
+          handleIntersection(entries, setContactActive);
+        }, obsOptions);
+        obsContacts.observe(contacts);
+      }
+    
+      return () => {
+        if (courses) {
+          obsCourses.unobserve(courses);
+          obsCourses.disconnect();
         }
-      },
-      { threshold: 0.8 }
-    );
-    obs.observe(courses);
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('scroll', changeNavbar);
-
-    const contacts = document.getElementById('contacts');
-    if (!contacts) return;
-    const obs = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry.isIntersecting) {
-          setContactActive(true);
-        } else {
-          setContactActive(false);
+        if (contacts) {
+          obsContacts.unobserve(contacts);
+          obsContacts.disconnect();
         }
-      },
-      { threshold: 0.8 }
-    );
-    obs.observe(contacts);
-  }, []);
-
-  // const changeNavbar = () => {
-  //   if (window.scrollY > 500) {
-  //     setNavbar(true);
-  //   } else setNavbar(false);
-  // };
+      };
+    }, []);
+    
   const changeNavbar = () => {
     const courses = document.getElementById('courses');
     if (courses) {
@@ -67,8 +62,6 @@ const Navbar = () => {
       setNavbar(window.scrollY > 500);
     }
   };
-
-  
 
   const handleCoursesHover = () => {
     if (window.innerWidth >= 768) {
