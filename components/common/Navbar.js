@@ -38,12 +38,12 @@ const Navbar = () => {
     
       return () => {
         if (courses) {
-          obsCourses.unobserve(courses);
-          obsCourses.disconnect();
+          obsCourses?.unobserve(courses);
+          obsCourses?.disconnect();
         }
         if (contacts) {
-          obsContacts.unobserve(contacts);
-          obsContacts.disconnect();
+          obsContacts?.unobserve(contacts);
+          obsContacts?.disconnect();
         }
       };
     }, []);
@@ -114,7 +114,7 @@ const Navbar = () => {
         <ul className={styles.list}>
           <li
             className={`${styles.listitem} ${
-              router.pathname === '/' && !courseActive && !contactActive && navbar
+              router?.pathname === '/' && !courseActive && !contactActive && navbar
                 ? styles.navList_active
                 : ''
             }`}
@@ -128,7 +128,7 @@ const Navbar = () => {
                   
                 }}
                 className={`${styles.lnk} ${
-                  router.pathname === '/' && !courseActive && !contactActive ? styles.active : ''
+                  router?.pathname === '/' && !courseActive && !contactActive ? styles.active : ''
                 } ${navbar && styles.nav_active}`}
               >
                 Home
@@ -147,7 +147,7 @@ const Navbar = () => {
           >
               <a
               onClick={() => {
-                router.push('/');
+                router?.push('/');
                 setTimeout(() => {
                   const courses = document.getElementById('courses');
                   if (courses) courses.scrollIntoView();
@@ -198,7 +198,7 @@ const Navbar = () => {
           </li>
           <li
             className={`${styles.listitem} ${
-              router.pathname === '/about' && navbar
+              router?.pathname === '/about' && navbar
                 ? styles.navList_active
                 : ''
             }`}
@@ -211,7 +211,7 @@ const Navbar = () => {
                   if (menu.checked) menu.click();
                 }}
                 className={`${styles.lnk} ${
-                  router.pathname === '/about' ? styles.active : ''
+                  router?.pathname === '/about' ? styles.active : ''
                 } ${navbar && styles.nav_active}`}
               >
                 About
@@ -221,14 +221,14 @@ const Navbar = () => {
 
           {/* <li
 						className={`${styles.tem} ${styles.listitem} ${
-							router.pathname === '/team' && navbar ? styles.navList_active : ''
+							router?.pathname === '/team' && navbar ? styles.navList_active : ''
 						}`}
 					>
 						<Link href="/team">
 							<a
 								onClick={onClick}
 								className={`${styles.lnk} ${
-									router.pathname === '/team' ? styles.active : ''
+									router?.pathname === '/team' ? styles.active : ''
 								} ${navbar && styles.nav_active}`}
 							>
 								Team
@@ -237,7 +237,7 @@ const Navbar = () => {
 					</li> */}
           <li
             className={`${styles.blg} ${styles.listitem} ${
-              router.pathname === '/blog' && navbar ? styles.navList_active : ''
+              router?.pathname === '/blog' && navbar ? styles.navList_active : ''
             }`}
           >
             <Link href='/blog'>
@@ -247,7 +247,7 @@ const Navbar = () => {
                   if (menu.checked) menu.click();
                 }}
                 className={`${styles.lnk} ${
-                  router.pathname === '/blog' ? styles.active : ''
+                  router?.pathname === '/blog' ? styles.active : ''
                 } ${navbar && styles.nav_active}`}
               >
                 Blogs
@@ -257,7 +257,7 @@ const Navbar = () => {
 
           <li
             className={`${styles.listitem} ${
-              router.pathname === '/contributors' && navbar
+              router?.pathname === '/contributors' && navbar
                 ? styles.navList_active
                 : ''
             }`}
@@ -269,7 +269,7 @@ const Navbar = () => {
                   if (menu.checked) menu.click();
                 }}
                 className={`${styles.lnk} ${
-                  router.pathname === '/contributors' ? styles.active : ''
+                  router?.pathname === '/contributors' ? styles.active : ''
                 } ${navbar && styles.nav_active}`}
               >
                 Contributors
@@ -283,7 +283,7 @@ const Navbar = () => {
           >
             <a
               onClick={() => {
-                router.push('/');
+                router?.push('/');
                 setTimeout(() => {
                   const contacts = document.getElementById('contacts');
                   if (contacts) contacts.scrollIntoView();
