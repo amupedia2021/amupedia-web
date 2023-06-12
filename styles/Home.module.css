@@ -143,18 +143,6 @@
 .grab4 {
   background: url('/images/home/bsc.svg') no-repeat center center/cover;
 }
-.exam1 {
-  background: url("/images/exam/cat.svg") no-repeat center center;
-}
-.exam2 {
-  background: url("/images/home/gate.svg") no-repeat center center/cover;
-}
-.exam3 {
-  background: url("/images/home/mat.svg") no-repeat center center/cover;
-}
-.exam4 {
-  background: url("/images/home/ssc.svg") no-repeat center center/cover;
-}
 
 /* styling for grab your notes section for pc  */
 @media only screen and (min-width: 900px) {
