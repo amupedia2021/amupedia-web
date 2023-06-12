@@ -24,13 +24,18 @@
       font-weight: 800;
       font-size: 30px;
       margin-bottom: 20px;
-  
     }
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .detailDiv p{
+    font-size: 20px;
+  }
+}
+
 .course{
-  width: '40%';
+  width: '40%';  
   height: '20%';
 }
 
