@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" id="svg2" viewBox="0 0 64 64" version="1.1">
+  <g id="layer1" transform="translate(0 -988.36)">
+    <g id="g2916">
+      <path id="path3002" d="m10 992.36v57h45v-57h-45z" fill="#737373"/>
+      <path id="path3004" d="m12 999.36-0.05388 48h41.054v-48h-41z" fill="#f2f2f2"/>
+      <path id="path3881" d="m40 992.36v5l5 2v4h10v-11h-15z" fill-opacity=".19608"/>
+      <path id="path3821" fill="#6dc5dd" d="m20 999.36v4h25v-4l-5-2v-5h-15v5l-5 2z"/>
+      <g id="g3869" transform="translate(0 -1)">
+        <rect id="rect3883" height="3" width="3" y="1009.4" x="17" fill="#2ea99c"/>
+        <rect id="rect3885" height="2" width="26" y="1010.4" x="22" fill="#f77462"/>
+        <rect id="rect3887" height="3" width="3" y="1014.4" x="17" fill="#2ea99c"/>
+        <rect id="rect3889" height="2" width="26" y="1015.4" x="22" fill="#f77462"/>
+        <rect id="rect3891" fill-opacity=".19608" height="3" width="3" y="1029.4" x="17"/>
+        <rect id="rect3893" fill-opacity=".19608" height="2" width="26" y="1030.4" x="22"/>
+        <rect id="rect3895" fill-opacity=".19608" height="3" width="3" y="1039.4" x="17"/>
+        <rect id="rect3897" fill-opacity=".19608" height="2" width="26" y="1040.4" x="22"/>
+        <rect id="rect3013" fill-opacity=".19608" height="3" width="3" y="1019.4" x="17"/>
+        <rect id="rect3015" fill-opacity=".19608" height="2" width="26" y="1020.4" x="22"/>
+        <rect id="rect3017" fill-opacity=".19608" height="3" width="3" y="1024.4" x="17"/>
+        <rect id="rect3019" fill-opacity=".19608" height="2" width="26" y="1025.4" x="22"/>
+        <rect id="rect3021" fill-opacity=".19608" height="3" width="3" y="1034.4" x="17"/>
+        <rect id="rect3023" fill-opacity=".19608" height="2" width="26" y="1035.4" x="22"/>
+      </g>
+    </g>
+  </g>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>check list</dc:title>
+        <dc:date>2013-08-30T08:59:25</dc:date>
+        <dc:description>check list</dc:description>
+        <dc:source>http://openclipart.org/detail/182735/check-list-by-crisg-182735</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>crisg</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>check list</rdf:li>
+            <rdf:li>clip art</rdf:li>
+            <rdf:li>icon</rdf:li>
+            <rdf:li>list</rdf:li>
+            <rdf:li>office</rdf:li>
+            <rdf:li>to do</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>
