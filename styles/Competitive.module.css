@@ -1,0 +1,49 @@
+/* styling for branches flex box  */
+
+#branches {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+
+/* styling for every branch div  */
+
+#branches div {
+    margin: 20px 20px;
+    background-size: 330px 250px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+
+#branches h1 {
+    text-align: left;
+}
+
+#branches .card {
+    margin: 20px;
+    padding: 65px;
+    cursor: pointer;
+  }
+
+
+/* styling for para in branches div  */
+
+#branches div p {
+    width: 80%;
+    font-weight: bold;
+    pointer-events: none;
+    max-width: 170px;
+    margin: auto;
+}
+
+
+/* for screens below 300px  */
+
+@media only screen and (max-width: 299px) {
+    #branches div p {
+        width: 100%;
+    }
+}
