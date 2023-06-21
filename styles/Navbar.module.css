@@ -149,6 +149,21 @@ navigation menu opens in mobile phones */
   z-index: 900;
 }
 
+/*navbar on some screen sizes*/
+@media(max-width:825px){
+  .navbar {
+    position: fixed;
+    left: 47px;
+  }
+}
+
+@media(max-width:800px){
+  .lnk{
+    font-size: 20px;
+    color: #fff;
+  }
+}
+
 /* navigation bar on bigger screens  */
 @media only screen and (min-width: 750px) {
   .logo {
