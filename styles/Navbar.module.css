@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap");
 
+/* Google icons for dark mode button */
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,100,1,-25");
+
 /* style for logo  */
 .logo {
   position: absolute;
