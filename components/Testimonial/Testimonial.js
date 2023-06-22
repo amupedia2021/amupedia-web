@@ -37,7 +37,7 @@ const TestimonialCard = () => {
                                     <div className='md:flex md:space-x-6 -space-x-2 mx-auto'>
                                     <img src={testimonial.image} alt="Testimonial Profile Photo" className="w-24 h-24 rounded-full mx-auto"/>
                                     <span className='inline-block '></span>
-                                    <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm">{testimonial.name}</h2>
+                                    <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm mx-auto">{testimonial.name}</h2>
                                     <p className="text-gray-500">{testimonial.role}</p>
                                     </div>
                                 </div>
