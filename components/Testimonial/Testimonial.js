@@ -34,8 +34,9 @@ const TestimonialCard = () => {
                                     </svg>
                                     <p className="leading-relaxed text-lg">{testimonial.message}</p>
                                     <span className="inline-block h-1 w-10 rounded bg-purple-500 mt-8 mb-6"></span>
-                                    <div className='md:flex mx-auto'>
-                                    <img src={testimonial.image} alt="Testimonial Profile Photo" className="w-14 h-14 rounded-full mx-auto"/>
+                                    <div className='md:flex md:space-x-6 -space-x-2 mx-auto'>
+                                    <img src={testimonial.image} alt="Testimonial Profile Photo" className="w-24 h-24 rounded-full mx-auto"/>
+                                    <span className='inline-block '></span>
                                     <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm">{testimonial.name}</h2>
                                     <p className="text-gray-500">{testimonial.role}</p>
                                     </div>
