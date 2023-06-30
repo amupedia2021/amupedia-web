@@ -139,7 +139,6 @@ const Navbar = () => {
                 className={styles.logoImage}
               />
             </div>
-
           </a>
         </Link>
         <ul className={styles.list}>
