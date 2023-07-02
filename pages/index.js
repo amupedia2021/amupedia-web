@@ -167,6 +167,13 @@ export default function Home() {
                 </div>
               </Tilt>
             </Link>
+            <Link passHref href='/interviewPrep'>
+              <Tilt className={styles.tlt}>
+                <div className={styles.rec4}>
+                  <p>Interview Preparation</p>
+                </div>
+              </Tilt>
+            </Link>
             </div>
           </div>
 

@@ -181,6 +181,9 @@
 .rec3 {
   background: url('/images/home/comp_exam.svg') no-repeat center center/cover;
 }
+.rec4 {
+  background: url('/images/home/interview.webp') no-repeat center center/cover;
+}
 
 /* Styling for contact form  */
 .cntfrm {
