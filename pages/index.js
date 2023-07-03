@@ -144,29 +144,36 @@ export default function Home() {
           {/* <!-- Recent Updates section  --> */}
           {/* <!-- same css as grabnotes section  --> */}
           <div data-aos="fade-up">
-          <h2 className={styles.grabh2}>Recent Updates</h2>
-          <div className={styles.grabnotes}>
-            <Link passHref href='/'>
-              <Tilt className={styles.tlt}>
-                <div className={styles.rec1}>
-                  <p>App</p>
-                </div>
-              </Tilt>
-            </Link>
-            <Link passHref href='/blog'>
-              <Tilt className={styles.tlt}>
-                <div className={styles.rec2}>
-                  <p>Blogs</p>
-                </div>
-              </Tilt>
-            </Link>
-            <Link passHref href="/competitiveExams">
-              <Tilt className={styles.tlt}>
-                <div className={styles.rec3}>
-                  <p>Competitive Exams</p>
-                </div>
-              </Tilt>
-            </Link>
+            <h2 className={styles.grabh2}>Recent Updates</h2>
+            <div className={styles.grabnotes}>
+              <Link passHref href='/'>
+                <Tilt className={styles.tlt}>
+                  <div className={styles.rec1}>
+                    <p>App</p>
+                  </div>
+                </Tilt>
+              </Link>
+              <Link passHref href='/blog'>
+                <Tilt className={styles.tlt}>
+                  <div className={styles.rec2}>
+                    <p>Blogs</p>
+                  </div>
+                </Tilt>
+              </Link>
+              <Link passHref href="/competitiveExams">
+                <Tilt className={styles.tlt}>
+                  <div className={styles.rec3}>
+                    <p>Competitive Exams</p>
+                  </div>
+                </Tilt>
+              </Link>
+              <Link passHref href="/interviewprep">
+                <Tilt className={styles.tlt}>
+                  <div className={styles.rec4}>
+                    <p>Interview Preparation</p>
+                  </div>
+                </Tilt>
+              </Link>
             </div>
           </div>
 
