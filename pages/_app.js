@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps, router }) {
     setLoading(true);
   }, []);
   React.useEffect(() =>{
-    setTimeout(() => setLoading(false), 6000);
+    setTimeout(() => setLoading(false), 1500);
    })
   // function handleCallbackResponse(response) {
   // 	const token = response.credential;
