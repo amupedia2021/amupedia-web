@@ -6,7 +6,7 @@ import { faThumbsUp, faComment } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
 const BlogCard = (props) => {
-  const { id, image, comments, likes } = props;
+  const { id, image, comments, likes ,title,author} = props;
   return (
     <>
       <Link
@@ -15,13 +15,16 @@ const BlogCard = (props) => {
       >
         <div className={styles.cover}>
           <div className={styles.image}>
-            <Image src={dataScienceImg} alt="data-science-amupedia-blogs" />
+            <Image src={image} alt="data-science-amupedia-blogs"
+            layout="responsive"
+            width="1500"
+            height="1000"/>
           </div>
           <h3 className={styles.title}>
-            How to become a data scientist in no time
+            {title}
           </h3>
           <div className={styles.blogfooter}>
-            <span className={styles.author}>Author</span>
+            <span className={styles.author}>{author}</span>
             <div className={styles.info}>
               <span className={styles.likes}>
                 {likes}
