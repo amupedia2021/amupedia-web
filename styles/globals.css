@@ -233,3 +233,52 @@ input:focus {
     transform: rotate(0deg);
   }
 }
+
+/* Css for dark mode button */
+* {
+  box-sizing: border-box;
+  padding: 0;
+} 
+
+ body {
+  transition: 0.6s linear;
+}
+
+body.dark{
+  background-color: #111;
+  color: white;
+}
+.label {
+  background-color:#0b0505;
+  border-radius: 30px;
+  position: relative;
+  height: 33px;
+  width: 66px;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+}
+
+.moon {
+  color: yellow;
+}
+
+.sun {
+  color: yellow;
+  margin-left: 12px;
+}
+
+.ball {
+  color: white;
+  position: absolute;
+  transition: transform 0.3s linear;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+
+}
+.checkbox:checked+.label .ball {
+  transform: translate(34px);
+}

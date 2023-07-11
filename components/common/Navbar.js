@@ -85,6 +85,22 @@ const Navbar = () => {
     }
   };
 
+  //function for dark mode button
+  useEffect(() => {
+    const handleCheckboxChange = () => {
+      document.body.classList.toggle('dark');
+    };
+    const checkbox = document.getElementById("checkbox");
+    checkbox.addEventListener('change', handleCheckboxChange);
+    return () => {
+      checkbox.removeEventListener('change', handleCheckboxChange);
+    };
+  }, []);
+
+  // styling ball of dark mode button
+  const style = {
+    fontSize: '30px',
+  };
 
   return (
     <>
@@ -303,7 +319,15 @@ const Navbar = () => {
             >
               Contact Us
             </a>
-          </li>
+          </li>  
+              <div>
+                <input type="checkbox" class="checkbox" id="checkbox" />
+                <label for="checkbox" class="label" >
+                  <i class="material-symbols-outlined moon">dark_mode</i>
+                  <i class="material-symbols-outlined sun"> clear_day</i>
+                  <div class="material-symbols-outlined  ball" style={style}>circle</div>
+                </label>
+              </div>
         </ul>
       </nav>
     </>
