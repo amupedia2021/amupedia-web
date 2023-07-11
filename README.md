@@ -48,6 +48,11 @@ Founded by the students of ZHCET in 2021, Amupedia is the biggest platform to he
 
 Here is the live view of this website. It is hosted on Netlify https://www.amupedia.com/.
 
+## Licenses
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Terms and conditions for use, reproduction and distribution are under the [MIT License](https://opensource.org/license/mit/).
+
 ## Setup Video
 
 
