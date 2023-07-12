@@ -98,6 +98,7 @@ const Footer = () => {
               </a>
             </p>
           </div>
+
         </div>
 
         <div id={styles.ftbg}>
