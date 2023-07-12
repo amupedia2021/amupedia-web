@@ -150,7 +150,7 @@ navigation menu opens in mobile phones */
 }
 
 /* navigation bar on bigger screens  */
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 850px) {
   .logo {
     left: 30px;
   }
@@ -259,7 +259,7 @@ navigation menu opens in mobile phones */
 }
 
 /* Responsive adjustments for smaller screens */
-@media only screen and (max-width: 749px) {
+@media only screen and (max-width: 849px) {
   .navbar {
     height: auto;
     
