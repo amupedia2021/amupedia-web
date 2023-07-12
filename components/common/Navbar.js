@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styles from '@styles/Navbar.module.css';
 import { useState, useEffect } from 'react';
+import Image from 'node_modules/next/image';
 
 const Navbar = () => {
   const router = useRouter();
@@ -68,7 +69,7 @@ const Navbar = () => {
     }
   };
 
-  
+
 
   const handleCoursesHover = () => {
     if (window.innerWidth >= 768) {
@@ -81,7 +82,7 @@ const Navbar = () => {
     if (window.innerWidth < 768) {
       // Show/hide the dropdown menu on small screens
       setDropdown(!dropdown);
-      
+
     }
   };
 
@@ -102,11 +103,11 @@ const Navbar = () => {
         className={`${styles.blackoverlay} ${dropdown ? styles.overlay_active : ''}`}
         id='overlay'
         onClick={() => {
-                  const menu = document.querySelector('#menu');
-                  if (menu.checked) menu.click();
-                  setDropdown(false);
-                }}
-        
+          const menu = document.querySelector('#menu');
+          if (menu.checked) menu.click();
+          setDropdown(false);
+        }}
+
       ></div>
 
       {/* <!-- navigation bar --> */}
@@ -118,13 +119,35 @@ const Navbar = () => {
         {/* <div className={styles.logo}>
 					<Image src={logo} alt="Logo"></Image>
 				</div> */}
+        <Link href='/'>
+          <a
+            // onClick={onClick}: replace this with below to ensure that the menu is properly closed when the element is clicked.
+            onClick={() => {
+              const menu = document.querySelector('#menu');
+              if (menu.checked) menu.click();
+
+            }}
+            className={`${styles.lnk} ${router.pathname === '/' && !courseActive && !contactActive ? styles.active : ''
+              } ${navbar && styles.nav_active}`}
+          >
+            <div className={styles.imageContainer} >
+              <Image
+                src="/logomain2.png"
+                alt="Logo"
+                width={60}
+                height={60}
+                className={styles.logoImage}
+              />
+            </div>
+
+          </a>
+        </Link>
         <ul className={styles.list}>
           <li
-            className={`${styles.listitem} ${
-              router.pathname === '/' && !courseActive && !contactActive && navbar
-                ? styles.navList_active
-                : ''
-            }`}
+            className={`${styles.listitem} ${router.pathname === '/' && !courseActive && !contactActive && navbar
+              ? styles.navList_active
+              : ''
+              }`}
           >
             <Link href='/'>
               <a
@@ -132,27 +155,25 @@ const Navbar = () => {
                 onClick={() => {
                   const menu = document.querySelector('#menu');
                   if (menu.checked) menu.click();
-                  
+
                 }}
-                className={`${styles.lnk} ${
-                  router.pathname === '/' && !courseActive && !contactActive ? styles.active : ''
-                } ${navbar && styles.nav_active}`}
+                className={`${styles.lnk} ${router.pathname === '/' && !courseActive && !contactActive ? styles.active : ''
+                  } ${navbar && styles.nav_active}`}
               >
                 Home
               </a>
             </Link>
           </li>
           <li
-            className={`${styles.listitem} ${
-              courseActive && navbar ? styles.navList_active : ''
-            }`}
+            className={`${styles.listitem} ${courseActive && navbar ? styles.navList_active : ''
+              }`}
 
-            
+
             onMouseEnter={handleCoursesHover} // Add mouse enter event for larger screens
             onClick={handleCoursesClick} // Add click event for smaller screens
 
           >
-              <a
+            <a
               onClick={() => {
                 router.push('/');
                 setTimeout(() => {
@@ -161,65 +182,63 @@ const Navbar = () => {
                   //onClick();
                 }, 10);
               }}
-              
+
               className={`${styles.lnk} ${courseActive ? styles.active : ''} ${navbar && styles.nav_active}`}
-              >
-                Courses 
-              </a>
-            
+            >
+              Courses
+            </a>
+
             {/* Dropdown menu for courses */}
             {dropdown && (
               <ul className={styles.dropdownMenu} onMouseLeave={() => setDropdown(false)}>
-               <li>
-                 <Link href='/courses/btech'>
-                   <a onClick={() => setDropdown(false)} className={styles.dropdownLink}>
-                     B.Tech
-                   </a>
-                 </Link>
+                <li>
+                  <Link href='/courses/btech'>
+                    <a onClick={() => setDropdown(false)} className={styles.dropdownLink}>
+                      B.Tech
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                 <Link href='/'>
-                   <a onClick={() => setDropdown(false)} className={styles.dropdownLink}>
-                    BE
-                   </a>
-                 </Link>
+                  <Link href='/'>
+                    <a onClick={() => setDropdown(false)} className={styles.dropdownLink}>
+                      BE
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                 <Link href='/'>
-                   <a onClick={() => setDropdown(false)} className={styles.dropdownLink}>
-                    B.Com
-                   </a>
-                 </Link>
+                  <Link href='/'>
+                    <a onClick={() => setDropdown(false)} className={styles.dropdownLink}>
+                      B.Com
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                 <Link href='/'>
-                   <a onClick={() => setDropdown(false)} className={styles.dropdownLink}>
-                    BSC
-                   </a>
-                 </Link>
+                  <Link href='/'>
+                    <a onClick={() => setDropdown(false)} className={styles.dropdownLink}>
+                      BSC
+                    </a>
+                  </Link>
                 </li>
-                
+
                 {/* Add more courses as needed */}
               </ul>
             )}
           </li>
           <li
-            className={`${styles.listitem} ${
-              router.pathname === '/about' && navbar
-                ? styles.navList_active
-                : ''
-            }`}
+            className={`${styles.listitem} ${router.pathname === '/about' && navbar
+              ? styles.navList_active
+              : ''
+              }`}
           >
             <Link href='/about'>
               <a
-               
+
                 onClick={() => {
                   const menu = document.querySelector('#menu');
                   if (menu.checked) menu.click();
                 }}
-                className={`${styles.lnk} ${
-                  router.pathname === '/about' ? styles.active : ''
-                } ${navbar && styles.nav_active}`}
+                className={`${styles.lnk} ${router.pathname === '/about' ? styles.active : ''
+                  } ${navbar && styles.nav_active}`}
               >
                 About
               </a>
@@ -243,9 +262,8 @@ const Navbar = () => {
 						</Link>
 					</li> */}
           <li
-            className={`${styles.blg} ${styles.listitem} ${
-              router.pathname === '/blog' && navbar ? styles.navList_active : ''
-            }`}
+            className={`${styles.blg} ${styles.listitem} ${router.pathname === '/blog' && navbar ? styles.navList_active : ''
+              }`}
           >
             <Link href='/blog'>
               <a
@@ -253,9 +271,8 @@ const Navbar = () => {
                   const menu = document.querySelector('#menu');
                   if (menu.checked) menu.click();
                 }}
-                className={`${styles.lnk} ${
-                  router.pathname === '/blog' ? styles.active : ''
-                } ${navbar && styles.nav_active}`}
+                className={`${styles.lnk} ${router.pathname === '/blog' ? styles.active : ''
+                  } ${navbar && styles.nav_active}`}
               >
                 Blogs
               </a>
@@ -263,11 +280,10 @@ const Navbar = () => {
           </li>
 
           <li
-            className={`${styles.listitem} ${
-              router.pathname === '/contributors' && navbar
-                ? styles.navList_active
-                : ''
-            }`}
+            className={`${styles.listitem} ${router.pathname === '/contributors' && navbar
+              ? styles.navList_active
+              : ''
+              }`}
           >
             <Link href='/contributors'>
               <a
@@ -275,18 +291,16 @@ const Navbar = () => {
                   const menu = document.querySelector('#menu');
                   if (menu.checked) menu.click();
                 }}
-                className={`${styles.lnk} ${
-                  router.pathname === '/contributors' ? styles.active : ''
-                } ${navbar && styles.nav_active}`}
+                className={`${styles.lnk} ${router.pathname === '/contributors' ? styles.active : ''
+                  } ${navbar && styles.nav_active}`}
               >
                 Contributors
               </a>
             </Link>
           </li>
           <li
-            className={`${styles.listitem} ${
-              contactActive && navbar ? styles.navList_active : ''
-            }`}
+            className={`${styles.listitem} ${contactActive && navbar ? styles.navList_active : ''
+              }`}
           >
             <a
               onClick={() => {
@@ -297,9 +311,8 @@ const Navbar = () => {
                   //onClick();
                 }, 10);
               }}
-              className={`${styles.lnk} ${contactActive ? styles.active : ''} ${
-                navbar && styles.nav_active
-              }`}
+              className={`${styles.lnk} ${contactActive ? styles.active : ''} ${navbar && styles.nav_active
+                }`}
             >
               Contact Us
             </a>
