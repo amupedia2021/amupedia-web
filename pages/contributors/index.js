@@ -4,17 +4,19 @@ import ContCard from 'components/Contributors/ContCard';
 import Footer from 'components/common/Footer';
 import Header from 'components/common/Header/Header';
 import styles from '@styles/scss/contributor.module.scss';
+import { each } from 'lodash';
 
 const Contributors = () => {
   const [contributors, setContributors] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
+  const [username, setUsername] = useState("")
 
   const fetchContributors = async (page) => {
     const url = `https://api.github.com/repos/amupedia2021/Project-Amupedia/contributors?page=${page}&per_page=10`;
-
     try {
       const response = await fetch(url);
+
       if (response.ok) {
         const contributorsData = await response.json();
         const contributorsDataFiltered = contributorsData.filter(
@@ -70,7 +72,10 @@ const Contributors = () => {
       </Head>
       <Header text='Contributors' />
       <div className={styles.container}>
-        {contributors.map((contributor) => (
+        <input type="text" className={styles.details} placeholder='enter github username' value={username} onChange={e => setUsername(e.target.value)}/>
+      </div>
+      <div className={styles.container}>
+        {contributors.filter((eachContributor) => eachContributor.login.toLowerCase().includes(username.toLowerCase())).map((contributor) => (
           <ContCard
             key={contributor.id}
             image={contributor.avatar_url}

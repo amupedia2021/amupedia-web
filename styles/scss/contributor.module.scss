@@ -29,3 +29,17 @@
 .pagination button[disabled] {
   cursor: not-allowed;
 }
+
+.details {
+  margin: 10px;
+  color: #6565fd;
+  /*#000000cc*/
+  font-weight: bold;
+  padding: 13px 18px;
+  background-color: rgba(235, 235, 241, 0.273);
+  font-family: 'Baloo Bhai 2';
+  border: 1px solid #e6e6e6;
+  border-radius: 15px;
+  transition: all 0.4s ease;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0.2rem #b9b9e0;
+}
