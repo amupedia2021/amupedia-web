@@ -4,7 +4,7 @@ import Card from "./Teamcard";
 const Team = () => {
   return (
     <>
-      <h2 className={styles.heading}>Our Team</h2>
+      <h2>Our Team</h2>
       <div className={styles.team}>
         <Card
           facebook={"#"}
