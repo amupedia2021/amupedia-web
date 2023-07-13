@@ -6,24 +6,25 @@ import Header from 'components/common/Header/Header';
 import styles from '@styles/scss/contributor.module.scss';
 
 const Contributors = () => {
-  const [contributors, setContributors] = useState([]);
+  const per_page = 10;
   const [currentPage, setCurrentPage] = useState(1);
+  const [allContributors, setAllContributors] = useState([]);
+  const [contributors, setContributors] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
+  const [username, setUsername] = useState('');
 
-  const fetchContributors = async (page) => {
-    const url = `https://api.github.com/repos/amupedia2021/Project-Amupedia/contributors?page=${page}&per_page=10`;
-
+  const fetchContributors = async () => {
     try {
-      const response = await fetch(url);
+      const response = await fetch(
+        'https://api.github.com/repos/amupedia2021/Project-Amupedia/contributors?per_page=100'
+      );
+
       if (response.ok) {
         const contributorsData = await response.json();
         const contributorsDataFiltered = contributorsData.filter(
           (contributor) => !contributor.login.includes('dependabot[bot]')
         );
-        setContributors(contributorsDataFiltered);
-        const linkHeader = response.headers.get('Link');
-        const totalPages = extractTotalPages(linkHeader);
-        setTotalPages(totalPages);
+        setAllContributors(contributorsDataFiltered);
       } else {
         console.error('Failed to fetch contributors:', response.status);
       }
@@ -32,32 +33,38 @@ const Contributors = () => {
     }
   };
 
-  const extractTotalPages = (linkHeader) => {
-    if (!linkHeader) return 0;
-    const regex = /<.+[?&]page=(\d+)&per_page=\d+>; rel="last"/;
-    const matches = linkHeader.match(regex);
-    return matches ? parseInt(matches[1]) : 0;
-  };
-
   const handleNextPage = () => {
     if (currentPage < totalPages) {
-      const nextPage = currentPage + 1;
-      fetchContributors(nextPage);
-      setCurrentPage(nextPage);
+      setCurrentPage(currentPage + 1);
     }
   };
 
   const handlePreviousPage = () => {
     if (currentPage > 1) {
-      const previousPage = currentPage - 1;
-      fetchContributors(previousPage);
-      setCurrentPage(previousPage);
+      setCurrentPage(currentPage - 1);
     }
   };
 
   useEffect(() => {
-    fetchContributors(currentPage);
-  }, [currentPage]);
+    fetchContributors();
+  }, []);
+
+  useEffect(() => {
+    const filteredContributors = allContributors.filter((eachContributor) =>
+      eachContributor.login.toLowerCase().includes(username.toLowerCase())
+    );
+    setContributors(filteredContributors);
+
+    const totalPage = Math.ceil(filteredContributors.length / per_page);
+    setTotalPages(totalPage);
+
+    setCurrentPage(1)
+  }, [username, allContributors]);
+
+  const visibleContributors = contributors.slice(
+    (currentPage - 1) * per_page,
+    currentPage * per_page
+  );
 
   return (
     <>
@@ -70,7 +77,16 @@ const Contributors = () => {
       </Head>
       <Header text='Contributors' />
       <div className={styles.container}>
-        {contributors.map((contributor) => (
+        <input
+          type='text'
+          className={styles.details}
+          placeholder='Enter GitHub username'
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+      </div>
+      <div className={styles.container}>
+        {visibleContributors.map((contributor) => (
           <ContCard
             key={contributor.id}
             image={contributor.avatar_url}
@@ -84,7 +100,7 @@ const Contributors = () => {
         <button onClick={handlePreviousPage} disabled={currentPage === 1}>
           Prev
         </button>
-        <span>{currentPage}</span>
+        <span>{currentPage} / {totalPages}</span>
         <button onClick={handleNextPage} disabled={currentPage === totalPages}>
           Next
         </button>
