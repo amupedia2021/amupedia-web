@@ -1,10 +1,12 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styles from '@styles/Navbar.module.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect,useRef } from 'react';
 import Image from 'node_modules/next/image';
 
 const Navbar = () => {
+  const checkboxRef = useRef()
+  const [labelText,setLabelText]=useState('&#9776');
   const router = useRouter();
   const [navbar, setNavbar] = useState(false);
   const [courseActive, setCourseActive] = useState(false);
@@ -85,16 +87,18 @@ const Navbar = () => {
 
     }
   };
-
+    const hidebodyOverflow = (e) => {
+        if(checkboxRef.current.checked===false)setLabelText("&#9776;")
+        else 
+          setLabelText("&times;")
+        
+    }
 
   return (
     <>
       {/* <!-- hamburger menu icon (for mobile phones) --> */}
-      <input type='checkbox' className={styles.menu} id='menu' />
-      <label htmlFor='menu' className={styles.ham} id='ham'>
-        <div className={`${styles.hamline} ${styles.hamline1}`}></div>
-        <div className={`${styles.hamline} ${styles.hamline2}`}></div>
-        <div className={`${styles.hamline} ${styles.hamline3}`}></div>
+      <input type='checkbox' className={`${styles.menu} ${dropdown ? styles.overlay_active : ''} `} id='menu'  onClick={hidebodyOverflow} ref={checkboxRef} />
+      <label htmlFor='menu' className={`${styles.hams} ${dropdown ? styles.overlay_active : ''} `} style={!dropdown?{top:10,fontSize:50}:null} id='ham' dangerouslySetInnerHTML={{ __html: labelText}} >
       </label>
 
       {/* <!-- overlay to be shown when nav bar becomes visible --> */}
@@ -102,6 +106,7 @@ const Navbar = () => {
       <div
         className={`${styles.blackoverlay} ${dropdown ? styles.overlay_active : ''}`}
         id='overlay'
+
         onClick={() => {
           const menu = document.querySelector('#menu');
           if (menu.checked) menu.click();
@@ -124,7 +129,8 @@ const Navbar = () => {
             // onClick={onClick}: replace this with below to ensure that the menu is properly closed when the element is clicked.
             onClick={() => {
               const menu = document.querySelector('#menu');
-              if (menu.checked) menu.click();
+
+              if (menu.checked){    setLabelText("&#9776;"); menu.click();}
 
             }}
             className={`${styles.lnk} ${router.pathname === '/' && !courseActive && !contactActive ? styles.active : ''
@@ -153,8 +159,9 @@ const Navbar = () => {
                 // onClick={onClick}: replace this with below to ensure that the menu is properly closed when the element is clicked.
                 onClick={() => {
                   const menu = document.querySelector('#menu');
-                  if (menu.checked) menu.click();
 
+                  if (menu.checked){    setLabelText("&#9776;"); menu.click();}
+   
                 }}
                 className={`${styles.lnk} ${router.pathname === '/' && !courseActive && !contactActive ? styles.active : ''
                   } ${navbar && styles.nav_active}`}
@@ -234,7 +241,7 @@ const Navbar = () => {
 
                 onClick={() => {
                   const menu = document.querySelector('#menu');
-                  if (menu.checked) menu.click();
+                  if (menu.checked){    setLabelText("&#9776;"); menu.click();}
                 }}
                 className={`${styles.lnk} ${router.pathname === '/about' ? styles.active : ''
                   } ${navbar && styles.nav_active}`}
@@ -268,7 +275,7 @@ const Navbar = () => {
               <a
                 onClick={() => {
                   const menu = document.querySelector('#menu');
-                  if (menu.checked) menu.click();
+                  if (menu.checked){    setLabelText("&#9776;"); menu.click();}
                 }}
                 className={`${styles.lnk} ${router.pathname === '/blog' ? styles.active : ''
                   } ${navbar && styles.nav_active}`}
@@ -288,7 +295,7 @@ const Navbar = () => {
               <a
                 onClick={() => {
                   const menu = document.querySelector('#menu');
-                  if (menu.checked) menu.click();
+                  if (menu.checked){    setLabelText("&#9776;"); menu.click();}
                 }}
                 className={`${styles.lnk} ${router.pathname === '/contributors' ? styles.active : ''
                   } ${navbar && styles.nav_active}`}
