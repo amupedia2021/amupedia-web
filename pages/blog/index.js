@@ -33,7 +33,7 @@ export default function Blogs() {
             </div>
 			{/* <Link href="/blog/writeblog">Write a blog</Link> */}
 			<div className={styles.container}>	
-				{blogData.filter((blogItem) =>blogItem.title.toLowerCase().includes(query)
+				{blogData.filter((blogItem) =>blogItem.title.toLowerCase().includes(query.toLowerCase())
 				).map((blogItem) => (
 					<BlogCard
 					author={blogItem.author}
