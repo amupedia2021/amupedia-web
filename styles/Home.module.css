@@ -257,7 +257,9 @@
     width: 80%;
     max-width: 450px;
   }
-
+  .grabh2 {
+    font-size: 2rem;
+  }
   .details {
     height: 50px;
     width: 85%;
