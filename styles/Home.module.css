@@ -285,11 +285,13 @@
     width: 80%;
     max-width: 450px;
   }
-
+  .grabh2 {
+    font-size: 2rem;
+  }
   .details {
-    margin: 0px auto;
     height: 50px;
     width: 85%;
+    margin-bottom: 1rem;
   }
 
   .address {
@@ -297,6 +299,7 @@
     line-height: 1.5rem;
     margin-bottom: 0px;
     height: 100px;
+    margin-bottom: 1rem;
   }
 
   .msg {
