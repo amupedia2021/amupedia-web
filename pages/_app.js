@@ -1,5 +1,7 @@
 import Navbar from "@comp/common/Navbar";
 import jwt from "jsonwebtoken";
+import React from "react"
+import LoadingScreen from "./LoadingScreen";
 import "@styles/globals.css";
 import Head from "node_modules/next/head";
 // import { useEffect } from 'react';
@@ -36,6 +38,14 @@ function addProductJsonLd() {
 }
 
 function MyApp({ Component, pageProps, router }) {
+  const [loading, setLoading] = React.useState(false);
+
+  React.useEffect(() => {
+    setLoading(true);
+  }, []);
+  React.useEffect(() =>{
+    setTimeout(() => setLoading(false), 1500);
+   })
   // function handleCallbackResponse(response) {
   // 	const token = response.credential;
   // // got all the info from the user
@@ -72,6 +82,14 @@ function MyApp({ Component, pageProps, router }) {
   // }, []);
 
   return (
+    <>
+    {!loading ? (
+      <React.Fragment>
+        <Component {...pageProps} />
+      </React.Fragment>
+    ) : (
+      <LoadingScreen />
+    )}
     <StoreProvider>
       {/* <div id="signInDiv"></div> */}
       <Alert />
@@ -137,7 +155,9 @@ function MyApp({ Component, pageProps, router }) {
         </section>
       </motion.div>
     </StoreProvider>
+    </>
   );
+  
 }
 
 export default MyApp;

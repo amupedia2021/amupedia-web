@@ -31,7 +31,7 @@
     "react-markdown": "^8.0.7",
     "react-vanilla-tilt": "^1.0.0",
     "sass": "^1.45.1",
-    "styled-components": "^5.3.6",
+    "styled-components": "^5.3.11",
     "swiper": "^9.3.2"
   },
   "devDependencies": {

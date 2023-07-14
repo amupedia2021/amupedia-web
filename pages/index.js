@@ -18,7 +18,6 @@ import TestimonialCard from 'components/Testimonial/Testimonial';
 import GoToTop from 'components/GoToTop';
 
 export default function Home() {
-  const { dispatch } = useContext(Store);
 
   const emptyForm = {
     first_name: '',
