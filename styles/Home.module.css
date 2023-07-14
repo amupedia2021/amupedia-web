@@ -52,7 +52,6 @@
   font-weight: bold;
   margin: 10px;
 }
-
 /* styling for images used in our service section  */
 #ourserimgs {
   display: flex;
@@ -60,6 +59,23 @@
   justify-content: center;
   max-width: 1100px;
   margin: auto;
+}
+@media only screen and (min-width: 500px) {
+  #ourserimgs {
+  display: block;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 350px;
+  margin: auto;
+}
+@media only screen and (min-width: 600px) {
+  #ourserimgs {
+  display: block;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 450px;
+  margin: auto;
+}
 }
 
 #ourserimgs div {
