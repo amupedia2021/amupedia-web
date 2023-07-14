@@ -4,9 +4,6 @@ import dataScienceImg from "@images/blog/dataScience.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp, faComment } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
-
-
-
 const BlogCard = (props) => {
   const { id, image, comments, likes ,title,author} = props;
   return (
@@ -45,11 +42,8 @@ const BlogCard = (props) => {
             </div>
           </div>
         </div>
-    
       </Link>
-
     </>
   );
 };
-
 export default BlogCard;

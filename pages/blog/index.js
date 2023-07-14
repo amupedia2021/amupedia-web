@@ -7,19 +7,13 @@ import blogData from "/data/blogdata";
 import GoToTop from "components/GoToTop";
 import WriteBlog from "./writeblog";
 import { useState } from "react";
-
-
 export default function Blogs() {
 	const [query, setQuery] = useState("");
 	const handleSearch=(e)=>{
 		setQuery (e.target.value)
 	}
-
    const searchQueryHandler = () =>{
-
    }
-   console.log(blogData.filter(blog => blog.title.includes("SQ")))
-
 	return (
 		<>
 			<GoToTop />
@@ -27,11 +21,8 @@ export default function Blogs() {
 				<title>Blogs | Amupedia</title>
 				<meta name="description" content="Check out our blog posts." />
 			</Head>
-		
 			<Header image="/images/blog/blog_bg.svg" text="Blogs" />
-
 		    {/* Search */}
-
 			<div className={styles.searchbar}>
                 <input className={styles.searchInput}
                     type='text'
@@ -41,8 +32,7 @@ export default function Blogs() {
                 <button className={styles.searchBtn} onClick={handleSearch}>Search</button>
             </div>
 			{/* <Link href="/blog/writeblog">Write a blog</Link> */}
-			<div className={styles.container}>
-				
+			<div className={styles.container}>	
 				{blogData.filter((blogItem) =>blogItem.title.toLowerCase().includes(query)
 				).map((blogItem) => (
 					<BlogCard
@@ -55,8 +45,7 @@ export default function Blogs() {
 						likes={blogItem.likes}
 					/>
 				))}
-			</div>
-			
+			</div>	
 			<Footer />
 		</>
 	);
