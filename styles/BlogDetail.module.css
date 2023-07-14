@@ -18,6 +18,7 @@
   max-width: 1700px;
   gap: 35px;
   flex-wrap: wrap;
+  margin-top: 6%;
 }
 
 .blogHeaderInfoLeft,
@@ -45,6 +46,11 @@
 .blogHeaderInfoLeft > ul li:last-child {
   color: green;
   fill: green;
+  transition: 0.3s;
+}
+.blogHeaderInfoLeft > ul li:last-child:hover{
+  color: rgb(69, 207, 69);
+  fill: rgb(69, 207, 69);
 }
 
 .blogHeaderInfoRight {
@@ -81,8 +87,9 @@
 
 .blogBody {
   margin: 0 auto 50px;
-  width: 100%;
+  width: 80%;
   max-width: 1700px;
+  font-size: x-large;
 }
 
 .otherBlogsCard {
@@ -109,6 +116,7 @@
 @media screen and (max-width: 768px) {
   .blogHeaderInfo {
     justify-content: center;
+    margin-top: 15%;
   }
 
   .blogHeaderInfoLeft > ul li {
