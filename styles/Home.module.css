@@ -69,6 +69,7 @@
   max-width: 350px;
   margin: auto;
 }
+}
 @media only screen and (min-width: 600px) {
   #ourserimgs {
   display: block;
@@ -76,6 +77,7 @@
   justify-content: center;
   max-width: 450px;
   margin: auto;
+}
 }
 
 #ourserimgs div {
