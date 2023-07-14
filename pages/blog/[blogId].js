@@ -37,7 +37,7 @@ export default function BlogId() {
             <div className={styles.blogHeaderInfoLeft}>
               <ul>
                 <li>
-                  <a href="/blog" class="text-blue-700 hover:text-blue-900 transition duration-200">
+                  <a href="/blog" class="text-blue-700 hover:scale-110 hover:text-blue-900 transition duration-200">
                     <FontAwesomeIcon icon={faArrowLeft} />
                     <span> Blogs</span>
                   </a>
@@ -50,7 +50,7 @@ export default function BlogId() {
                   <FontAwesomeIcon icon={faClock} />
                   <span>5 min read</span>
                 </li>
-                <li>
+                <li className="hover:scale-110">
                   <FontAwesomeIcon icon={faPlayCircle} />
                   <span>Listen</span>
                 </li>
@@ -61,35 +61,35 @@ export default function BlogId() {
                 <li>
                   <Link href="#twitter">
                     <a href="#twitter">
-                      <FontAwesomeIcon className="hover:text-blue-500 hover:scale-110 transition duration-200" icon={faTwitter}/>
+                      <FontAwesomeIcon className="hover:text-blue-500 hover:scale-150 transition duration-200" icon={faTwitter}/>
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="#facebook">
                     <a href="#facebook">
-                      <FontAwesomeIcon className="hover:text-blue-500 hover:scale-110 transition duration-200" icon={faFacebook} />
+                      <FontAwesomeIcon className="hover:text-blue-500 hover:scale-150 transition duration-200" icon={faFacebook} />
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="#linkedin">
                     <a href="#linkedin">
-                      <FontAwesomeIcon className="hover:text-blue-500 hover:scale-110 transition duration-200" icon={faLinkedin} />
+                      <FontAwesomeIcon className="hover:text-blue-500 hover:scale-150 transition duration-200" icon={faLinkedin} />
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="#blogLink">
                     <a href="#blogLink">
-                      <FontAwesomeIcon className="hover:text-green-500 hover:scale-110 transition duration-200" icon={faLink} />
+                      <FontAwesomeIcon className="hover:text-green-500 hover:scale-150 transition duration-200" icon={faLink} />
                     </a>
                   </Link>
                 </li>
               </ul>
               <div className={styles.bookmark_and_more_icon}>
-                <FontAwesomeIcon className="hover:text-[#000] cursor-pointer hover:scale-110 transition duration-200" icon={faBookmark} />
-                <FontAwesomeIcon className="hover:text-[#000] cursor-pointer hover:scale-110 transition duration-200" icon={faEllipsisH} />
+                <FontAwesomeIcon className="hover:text-[#000] cursor-pointer hover:scale-150 transition duration-200" icon={faBookmark} />
+                <FontAwesomeIcon className="hover:text-[#000] cursor-pointer hover:scale-150 transition duration-200" icon={faEllipsisH} />
               </div>
             </div>
           </div>
