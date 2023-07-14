@@ -63,6 +63,9 @@ export default function Home() {
 
     else if(phone === '')
     { seterror("phoneerr");}
+    else if(phone.length !== 10)
+    { seterror("numbererr");}
+
     else if(address === '')
     {seterror("addresserr");}
 
@@ -308,8 +311,11 @@ export default function Home() {
                             {
                             error === 'phoneerr' && (
                               <small className='text-red-600 text-lg'>*Phone is Required!</small>
-                            ) 
-                          }
+                            ) }{
+                            error === 'numbererr' && (
+                              <small className='text-red-600 text-lg'>*Please fill 10 digit mobile number!</small>
+                            ) }
+                          
                     </div>
                 
                 <div className='flex flex-col'>
