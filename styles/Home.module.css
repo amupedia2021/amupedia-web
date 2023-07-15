@@ -257,11 +257,13 @@
     width: 80%;
     max-width: 450px;
   }
-
+  .grabh2 {
+    font-size: 2rem;
+  }
   .details {
-    margin: 0px auto;
     height: 50px;
     width: 85%;
+    margin-bottom: 1rem;
   }
 
   .address {
@@ -269,6 +271,7 @@
     line-height: 1.5rem;
     margin-bottom: 0px;
     height: 100px;
+    margin-bottom: 1rem;
   }
 
   .msg {
@@ -304,4 +307,14 @@
 
 #sub:hover > div > div {
   background: rgb(159, 154, 255) !important;
+}
+
+
+.inputShow
+{
+  border: 1px solid red;
+}
+.successShow
+{
+  border: 1px solid green;
 }
