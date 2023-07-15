@@ -130,19 +130,19 @@ export default function Home() {
             <h2>Our Services</h2>
             <div id={styles.ourserimgs}>
               <div>
-                <Image src={pdf} alt='pdfs' />
+                <Image loading="lazy" src={pdf} alt='pdfs' />
                 <p>PDFs OF ALL SUBJECTS</p>
               </div>
               <div>
-                <Image src={chap_yt} alt='explaination' />
+                <Image loading="lazy" src={chap_yt} alt='explaination' />
                 <p>CHAPTER EXPLANATION BY YOUTUBE VIDEO</p>
               </div>
               <div>
-                <Image src={quiz} alt='solutions' />
+                <Image loading="lazy" src={quiz} alt='solutions' />
                 <p>SOLUTION OF TEST AND QUIZZES</p>
               </div>
               <div>
-                <Image src={assign} alt='assignments' />
+                <Image loading="lazy" src={assign} alt='assignments' />
                 <p>ASSIGNMENTS GIVEN</p>
               </div>
             </div>

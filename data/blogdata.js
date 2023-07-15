@@ -76,7 +76,7 @@ the month of August 2022. I got my first PR up on the 3rd of the same month
 </p>
 <p class="text-left">
 <a href="https://res.cloudinary.com/practicaldev/image/fetch/s--tSuwvW8C--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0c2evj5yt5vxmd0anp0d.png">
-  <img
+  <img loading="lazy"
     src="https://res.cloudinary.com/practicaldev/image/fetch/s--tSuwvW8C--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0c2evj5yt5vxmd0anp0d.png"
     alt="My first PR in open source"
     class="mx-auto mt-4"
@@ -105,7 +105,7 @@ and more contributions to the same project 🔥🔥 (all thanks to
 </p>
 <p class="text-center">
 <a href="https://res.cloudinary.com/practicaldev/image/fetch/s--eEr1kLL8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/m4fm4d7d751wlfxwuecm.png">
-  <img
+  <img loading="lazy"
     src="https://res.cloudinary.com/practicaldev/image/fetch/s--eEr1kLL8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/m4fm4d7d751wlfxwuecm.png"
     alt="A message from brian douglas when I made my PR 🍕"
     class="mx-auto mt-4"
@@ -122,7 +122,7 @@ Shortly after my contributions, I got a message from the
 </p>
 <p class="text-center text-left">
 <a href="https://res.cloudinary.com/practicaldev/image/fetch/s--0ccvMeIC--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/688p7osal2ghm1aw1n6k.png">
-  <img
+  <img loading="lazy"
     src="https://res.cloudinary.com/practicaldev/image/fetch/s--0ccvMeIC--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/688p7osal2ghm1aw1n6k.png"
     alt="brian douglas messsage to me about a contract"
     class="mx-auto mt-4"
@@ -201,7 +201,7 @@ And as it was coined in
     likes: 7,
     author:"Lisa",
     description:<div className="container py-8">
-    <img
+    <img loading="lazy"
       src="https://www.freecodecamp.org/news/content/images/size/w1000/2023/05/image-76.png"
       alt="AI code quality"
       className="mx-auto"
@@ -351,7 +351,7 @@ And as it was coined in
     <h1 className="text-3xl font-bold mb-4">
       How to Build a Discord AI Chatbot that Talks Like Your Favorite Character
     </h1>
-    <img
+    <img loading="lazy"
       src="https://freecodecamp.org/news/content/images/2021/08/discord.gif"
    style={{height:"300px",width:"300px"}}
       alt="Discord GIF"
@@ -452,7 +452,7 @@ And as it was coined in
       </a>
       .
     </p>
-    <img
+    <img loading="lazy"
       src="https://freecodecamp.org/news/content/images/2021/08/discord.gif"
       alt="Discord GIF"
       className="w-full max-w-screen-lg mb-8"
@@ -476,7 +476,7 @@ And as it was coined in
     likes: 9,
     author:"John",
     description:<div className="container py-8">
-    <img
+    <img loading="lazy"
       src="https://www.freecodecamp.org/news/content/images/size/w1000/2023/02/survived.png"
       alt="Julia machine learning"
       className="mx-auto"
@@ -1247,7 +1247,7 @@ And as it was coined in
   <h1 className="text-3xl font-bold mb-4">
     Learn Serverless on AWS Step-by-Step: SQL with Aurora
   </h1>
-  <img
+  <img loading="lazy"
     src="https://res.cloudinary.com/practicaldev/image/fetch/s--DdzoSOFB--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://raw.githubusercontent.com/PChol22/kumo-articles/master/blog-posts/learn-serverless/aurora/assets/basic-schema.png"
     alt="Basic Schema"
     className="w-full max-w-screen-lg mb-8"

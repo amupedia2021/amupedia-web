@@ -95,7 +95,7 @@ export default function BlogId() {
           </div>
         </div>
         <div className={styles.blogPicture}>
-          <Image
+          <Image loading="lazy"
             src={blog.image}
             width="1500"
             height="1000"

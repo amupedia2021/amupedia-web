@@ -48,7 +48,7 @@ const Login = () => {
         <div className={styles.overlay} onClick={closeLoginPanel}></div>
         <div className={`${styles.container}`}>
           <div className={styles.logo}>
-            <Image src={logo} alt="Amupedia Logo"></Image>
+            <Image loading="lazy" src={logo} alt="Amupedia Logo"></Image>
           </div>
           <div id="googleSignIn" className={styles.googleSignIn}></div>
           <p className={styles.or}>Or</p>

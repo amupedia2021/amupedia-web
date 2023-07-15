@@ -123,7 +123,7 @@ const Navbar = () => {
       >
         {/* {TODO: !Logo to be completed } */}
         {/* <div className={styles.logo}>
-					<Image src={logo} alt="Logo"></Image>
+					<Image loading="lazy" src={logo} alt="Logo"></Image>
 				</div> */}
         <Link href='/'>
           <a
