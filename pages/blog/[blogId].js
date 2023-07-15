@@ -95,11 +95,11 @@ export default function BlogId() {
           </div>
         </div>
         <div className={styles.blogPicture}>
-          <Image
+          <img
             src={blog.image}
-            width="5000%"
-            height="2000%"
-            className=""
+            width="100%"
+            height="100%"
+            className="inline object-fill w-full"
           />
         </div>
         <div className={styles.blogBody}>
