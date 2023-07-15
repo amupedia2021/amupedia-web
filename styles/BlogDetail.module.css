@@ -77,12 +77,13 @@
 }
 
 .blogPicture {
-  display: "block";
+  display: block;
   width: 100%;
   height: 100%;
   max-width: 1700px;
   max-height: 1100px;
   margin: 20px auto;
+  border: 3px solid black;
 }
 
 .blogBody {
