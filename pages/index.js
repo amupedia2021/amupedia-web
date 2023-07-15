@@ -221,7 +221,7 @@ export default function Home() {
 
           {/* <!-- Contact Form  --> */}
           <h2 className={styles.grabh2}>Get In Touch With Us</h2>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} aria-label="Contact form">
             <div className={styles.cntfrm}>
               <input
                 value={form.first_name}
@@ -231,6 +231,8 @@ export default function Home() {
                 name='first_name'
                 placeholder='First Name'
                 className={styles.details}
+                aria-label="First name Input"
+                aria-required="true"
               />
               <input
                 value={form.last_name}
@@ -240,6 +242,8 @@ export default function Home() {
                 type='text'
                 placeholder='Last Name'
                 className={styles.details}
+                aria-label="Last name Input"
+                aria-required="true"
               />
               <input
                 value={form.email}
@@ -249,6 +253,8 @@ export default function Home() {
                 type='email'
                 placeholder='Email'
                 className={styles.details}
+                aria-label="Email Input"
+                aria-required="true"
               />
               <input
                 value={form.phone}
@@ -257,6 +263,8 @@ export default function Home() {
                 name='phone'
                 placeholder='Phone'
                 className={styles.details}
+                aria-label="Phone Input"
+                aria-required="true"
               />
               <input
                 value={form.address}
@@ -266,6 +274,8 @@ export default function Home() {
                 type='text'
                 placeholder='Address'
                 className={styles.address}
+                aria-label="Address Input"
+                aria-required="true"
               />
               <input
                 value={form.message}
@@ -275,6 +285,8 @@ export default function Home() {
                 type='text'
                 placeholder='Type your message here'
                 className={styles.msg}
+                aria-label="Message Input"
+                aria-required="true"
               />
             </div>
             <button type='submit' id={styles.sub}>
