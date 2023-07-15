@@ -11,6 +11,9 @@ import {
 import { useContext, useState } from "react";
 import { Store } from "utils/Store/Store";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Login = () => {
   const { state, dispatch } = useContext(Store);
   const { closingLogin, showLogin } = state;
@@ -41,6 +44,44 @@ const Login = () => {
       dispatch({ type: { task: "closingLogin", closingLogin: false } });
     }, 250);
   };
+
+
+  //new features added 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Perform form validation here
+    if (credentials.email.trim() === '') {
+      toast.error('Please enter a valid email.');
+      return;
+    }
+
+    if (credentials.password.trim() === '') {
+      toast.error('Please enter a valid password.');
+      return;
+    }
+
+    try {
+      // Send login request to the server
+      const response = await axios.post('/api/login', credentials);
+
+      // Check the response from the server
+      if (response.data.success) {
+        // Login successful
+        toast.success(response.data.message);
+        // Redirect to the dashboard or perform any other necessary action
+      } else {
+        // Login failed
+        toast.error(response.data.message);
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error('An error occurred. Please try again.');
+    }
+  };
+
+
+
 
   return (
     showLogin && (
@@ -89,6 +130,7 @@ const Login = () => {
               <span>Forgot Password ?</span>
             </label>
             <button>Sign In</button>
+            <ToastContainer />
           </form>
         </div>
       </main>

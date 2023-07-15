@@ -17,6 +17,9 @@ import 'aos/dist/aos.css';
 import TestimonialCard from 'components/Testimonial/Testimonial';
 import GoToTop from 'components/GoToTop';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export default function Home() {
   const { dispatch } = useContext(Store);
 
@@ -29,6 +32,7 @@ export default function Home() {
     message: ''
   };
 
+  
   const headerImg = '/images/home/homeback.svg';
 
   const [form, setForm] = useState(emptyForm);
@@ -36,7 +40,18 @@ export default function Home() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+     // Validate the form fields
+  if (form.first_name.trim() === '') {
+    toast.error('Please enter a valid first name.');
+    return;
+  }
+
+  if (form.last_name.trim() === '') {
+    toast.error('Please enter a valid last name.');
+    return;
+  }
     setLoading(true);
+    toast("Form Submitted Successfully ");
     try {
       const res = await axios.post('/api/submitForm', form);
       const data = await res.data;
@@ -247,13 +262,15 @@ export default function Home() {
                   rows={4}
                   placeholder='Type your message here'
                   className={styles.msg}
-                />
+                /> 
               </div>
               <button type='submit' id={styles.sub}>
-                {loading ? <Preloader /> : <p>Submit</p>}
-              </button>
+                {loading ? <Preloader /> : <p>Submit</p>  }  
+                
+              </button>              
             </form>
           </div>
+          <ToastContainer />
         </section>
       </main>
       <TestimonialCard />
