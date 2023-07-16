@@ -71,6 +71,25 @@
     height: 400px;
     margin: auto;
   }
+  #ourserimgs div {
+    text-align: center;
+    margin: 20px;
+    cursor: pointer;
+    animation: float;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    border-radius: 5%;
+    transition: 0.3s;
+    padding: 2% 2%;
+    background-color: #ce89dc;
+    margin-top: 4%;
+    margin-bottom: -2%;
+  }
+  #ourserimgs div:hover{
+    scale: 1.06;
+    box-shadow: #8585e8;
+    background-color: #8585e8;
+  }
 }
 
 #ourserimgs div {
