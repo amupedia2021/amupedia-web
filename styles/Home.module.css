@@ -63,6 +63,7 @@
 }
 @media only screen and (max-width: 500px) {
   #ourserimgs {
+  margin-top: 20px;
   display: block;
   flex-wrap: wrap;
   justify-content: center;
@@ -73,6 +74,7 @@
 }
 @media only screen and (max-width: 600px) {
   #ourserimgs {
+  margin-top: 20px;
   display: block;
   flex-wrap: wrap;
   justify-content: center;
