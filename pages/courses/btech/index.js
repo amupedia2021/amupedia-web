@@ -32,7 +32,7 @@ export default function BTech() {
             </a>
           </Link>
           <a
-            href="https://drive.google.com/drive/folders/1ZPk97HT0reLjyJsVxOJmEw542HugZonY?usp=sharing"
+            href="https://drive.google.com/drive/folders/1Gkjz-kR4J-EbRn-Wf-9bGbh7qH-x5ZDt?usp=drive_link"
             target="_blank"
             rel="noreferrer"
           >
