@@ -33,7 +33,8 @@
     "react-vanilla-tilt": "^1.0.0",
     "sass": "^1.45.1",
     "styled-components": "^5.3.6",
-    "swiper": "^9.3.2"
+    "swiper": "^9.3.2",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
