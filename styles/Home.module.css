@@ -65,7 +65,6 @@
   #ourserimgs {
     margin-top: 20px;
     display: block;
-    flex-wrap: wrap;
     justify-content: center;
     max-width: 300px;
     height: 400px;
