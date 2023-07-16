@@ -66,7 +66,8 @@
   display: block;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 350px;
+  max-width: 300px;
+  height: 400px;
   margin: auto;
 }
 }
@@ -75,7 +76,8 @@
   display: block;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 450px;
+  max-width: 400px;
+  height: 500px;
   margin: auto;
 }
 }
