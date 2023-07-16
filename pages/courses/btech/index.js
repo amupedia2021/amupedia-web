@@ -36,6 +36,15 @@ export default function BTech() {
             target="_blank"
             rel="noreferrer"
           >
+            <div className={styles.brnch} id={styles.ai}>
+              <p>Artificial Intelligence</p>
+            </div>
+          </a>
+          <a
+            href="https://drive.google.com/drive/folders/1ZPk97HT0reLjyJsVxOJmEw542HugZonY?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
             <div className={styles.brnch} id={styles.cs}>
               <p>Computer Engineering</p>
             </div>
