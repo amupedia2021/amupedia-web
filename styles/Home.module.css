@@ -61,7 +61,7 @@
   max-width: 1500px;
   margin: auto;
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (max-width: 500px) {
   #ourserimgs {
   display: block;
   flex-wrap: wrap;
@@ -70,7 +70,7 @@
   margin: auto;
 }
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
   #ourserimgs {
   display: block;
   flex-wrap: wrap;
