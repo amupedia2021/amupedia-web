@@ -63,25 +63,14 @@
 }
 @media only screen and (max-width: 500px) {
   #ourserimgs {
-  margin-top: 20px;
-  display: block;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 300px;
-  height: 400px;
-  margin: auto;
-}
-}
-@media only screen and (max-width: 600px) {
-  #ourserimgs {
-  margin-top: 20px;
-  display: block;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 400px;
-  height: 500px;
-  margin: auto;
-}
+    margin-top: 20px;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 300px;
+    height: 400px;
+    margin: auto;
+  }
 }
 
 #ourserimgs div {
