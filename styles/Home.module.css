@@ -63,10 +63,10 @@
 }
 @media only screen and (max-width: 500px) {
   #ourserv {
-    margin-bottom: 40px; /* Increase the margin-bottom to create space */
+    margin-bottom: 20px; /* Increase the margin-bottom to create space */
   }
   .grabnotes {
-    margin-top: 40px; /* Add margin-top to create space */
+    margin-top: 80px; /* Add margin-top to create space */
   }
 
   #ourserimgs {
