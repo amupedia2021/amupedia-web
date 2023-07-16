@@ -74,12 +74,8 @@
   #ourserimgs div {
     text-align: center;
     margin: 20px;
-    cursor: pointer;
-    animation: float;
-    animation-iteration-count: infinite;
-    animation-duration: 10s;
+    cursor: pointer=
     border-radius: 5%;
-    transition: 0.3s;
     padding: 2% 2%;
     background-color: #ce89dc;
     margin-top: 4%;
@@ -89,6 +85,13 @@
     scale: 1.06;
     box-shadow: #8585e8;
     background-color: #8585e8;
+  }
+  #ourserimgs div p {
+    width: 80%;
+    font-weight: bold;
+    pointer-events: none;
+    max-width: 280px;
+    margin: auto;
   }
 }
 
