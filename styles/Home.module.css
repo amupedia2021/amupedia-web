@@ -62,11 +62,13 @@
   margin: auto;
 }
 @media only screen and (max-width: 500px) {
-  #ourserv {
-    margin-bottom: 20px; /* Increase the margin-bottom to create space */
+  div[data-aos="fade-up"]#ourserv {
+    margin-bottom: 80px;
   }
-  .grabnotes {
-    margin-top: 120px; /* Add margin-top to create space */
+  
+  /* Adjust the margin-top of .grabnotes */
+  div[data-aos="fade-up"].courses {
+    margin-top: 80px;
   }
 
   #ourserimgs {
