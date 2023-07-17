@@ -1,22 +1,31 @@
+import Head from "next/head";
 import Footer from "components/common/Footer";
 import Header from "components/common/Header/Header";
 import OppCard from "components/Opportunities/oppCard";
 import styles from "@styles/oppCard.module.css";
 import Link from "node_modules/next/link";
+import GoToTop from "components/GoToTop";
+import internshipData from "/data/internshipData";
 
-const Index = (dataOpp) => {
+const Index = () => {
   return (
     <div>
+      <GoToTop />
+			<Head>
+				<title>Internships | Amupedia</title>
+				<meta name="description" content="Check out our blog posts." />
+			</Head>
       <Header
         image={"/images/about/about_bg.svg"}
         text={"Opportunities"}
       ></Header>
+
       <article className={styles.mainBody}>
       {
-        dataOpp.result.result.map((data,index)=>(
-          <Link href={`/opportunities/${index}`} key={index}>
-            <a href={`/opportuities/${index}`}>
-          <OppCard key={data.id} data={data} />
+        internshipData.map((data)=>(
+          <Link href={`/opportunities/${data.id}`} key={data.id}>
+            <a href={`/opportuities/${data.id}`}>
+          <OppCard title={data.title} date={data.date} image={data.image} />
           </a>
           </Link>
         )
@@ -29,13 +38,3 @@ const Index = (dataOpp) => {
 };
 
 export default Index;
-
-export const getServerSideProps = async () => {
-  const data = await fetch("http://localhost:3000/api/opportunities/fetchOpportunities");
-  const result = await data.json();
-  return {
-    props: {
-      result
-  }
-}
-}
