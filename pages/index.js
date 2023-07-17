@@ -20,6 +20,8 @@ import GoToTop from 'components/GoToTop';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import Quotes from 'components/Quotes/Quotes';
+
 export default function Home() {
   const { dispatch } = useContext(Store);
 
@@ -265,14 +267,14 @@ export default function Home() {
                 /> 
               </div>
               <button type='submit' id={styles.sub}>
-                {loading ? <Preloader /> : <p>Submit</p>  }  
-                
-              </button>              
+                {loading ? <Preloader /> : <p>Submit</p>  }                
+              </button>          
             </form>
           </div>
           <ToastContainer />
         </section>
       </main>
+      <Quotes />
       <TestimonialCard />
       <Footer />
     </>
