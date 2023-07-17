@@ -6,7 +6,7 @@ const ExamCard = ({ data }) => {
         <>
             <div className={styles.material}>
                 <div className={styles.imageDiv}>
-                    <Image src={`${data.icon}`} width={0} height={0} sizes="100vh"></Image>
+                    <Image loading="lazy" src={`${data.icon}`} width={0} height={0} sizes="100vh"></Image>
                 </div>
                 <div className={styles.detailDiv}>
                     <p>DATE :  {data.date}</p>
