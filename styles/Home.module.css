@@ -289,19 +289,18 @@ input:focus {
 }
 
 
-/* Home.module.css */
 
 /* Styles for the container wrapping the Quotes component */
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Adjust this value based on your layout */
+  height: 50vh; /* Adjust this value based on your layout */
 }
 
 /* Styles for the quotes container */
 .quotes-container {
-  height: 100vh;
+  height: 50vh;
 }
 
 /* Styles for the quote wrapper */
