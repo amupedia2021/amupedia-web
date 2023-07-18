@@ -5,6 +5,7 @@
   border-radius: 50%;
   height: 200px;
   margin-bottom: 20px;
+  margin: auto;
   transition: all 0.3s ease-in-out;
   @media screen and (max-width: 768px) {
     height: 150px;
@@ -21,6 +22,9 @@
   margin: 20px;
   padding: 15px;
   cursor: pointer;
+  width: 250px;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
@@ -35,10 +39,10 @@
 }
 
 .githubIcon{
+  text-align: center;
  display: flex;
  justify-content: center;
   color: white;
-  width: 200px;
   background-color: rgb(45, 44, 44);
   padding: 7px;
   border-radius: 10px;
