@@ -7,7 +7,7 @@ export default function BTech() {
   return (
     <>
       <Header image={image} text="B.Sc" />
-      {/* <!-- content of b.tech section  --> */}
+      {/* <!-- content of B.Sc section  --> */}
       <section id={styles.btcontent}>
         <div className={styles.mission}>
           <h2>B.Sc</h2>
