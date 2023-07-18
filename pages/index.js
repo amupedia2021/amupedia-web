@@ -17,95 +17,113 @@ import 'aos/dist/aos.css';
 import TestimonialCard from 'components/Testimonial/Testimonial';
 import GoToTop from 'components/GoToTop';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export default function Home() {
   const { dispatch } = useContext(Store);
 
-  const onChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const emptyForm = {
+  const [form, setForm] = useState({
     first_name: '',
     last_name: '',
     email: '',
     phone: '',
     address: '',
     message: ''
-  };
+  });
 
   const headerImg = '/images/home/homeback.svg';
-
-  const [form, setForm] = useState(emptyForm);
   const [loading, setLoading] = useState(false);
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [mail, setMail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [address, setAddrees] = useState('');
-  const [message, setMessage] = useState('');
-  const [error, seterror] = useState('');
-  const [success, setsuccess] = useState('');
+  const [success, setSuccess] = useState(false);
 
-  function validEmail(email) {
-    let re =
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (re.test(email)) return true;
-    else return false;
-  }
+  const onChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (firstName === '') {
-      seterror('firstnameerr');
-    } else if (lastName === '') {
-      seterror('lastnameerr');
-    } else if (mail === '') {
-      seterror('emailerr');
-    } else if (!validEmail(mail)) {
-      seterror('validerr');
-    } else if (phone === '') {
-      seterror('phoneerr');
-    } else if (phone.length !== 10) {
-      seterror('numbererr');
-    } else if (address === '') {
-      seterror('addresserr');
-    } else if (message === '') {
-      seterror('messageerr');
-    } else {
-      setLoading(true);
-      try {
-        const res = await axios.post('/api/submitForm', form);
-        const data = await res.data;
-        console.log(data);
-        dispatch({
-          type: {
-            task: 'setAlert',
-            alert: { type: 'noti', message: 'Form Submitted Successfully' }
-          }
-        });
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setLoading(false);
-        setFirstName('');
-        setLastName('');
-        setPhone('');
-        setMail('');
-        setPhone('');
-        setAddrees('');
-        setMessage('');
-        seterror('');
-        setsuccess('Contact form sent successfully!!');
-      }
-      setForm(emptyForm);
-    }
-  };
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000
-    });
-  }, []);
+   // Perform form validation here
+   if (!form.first_name.trim()) {
+    toast.error('Please enter your first name.');
+    return;
+  }
+
+  if (!form.last_name.trim()) {
+    toast.error('Please enter your last name.');
+    return;
+  }
+
+  if (!form.email.trim()) {
+    toast.error('Please enter your email.');
+    return;
+  }
+
+  if (!validEmail(form.email)) {
+    toast.error('Please enter a valid email address.');
+    return;
+  }
+
+  if (!form.phone.trim()) {
+    toast.error('Please enter your phone number.');
+    return;
+  }
+
+  if (form.phone.length !== 10) {
+    toast.error('Phone number should be 10 digits long.');
+    return;
+  }
+
+  if (!form.address.trim()) {
+    toast.error('Please enter your address.');
+    return;
+  }
+
+  if (!form.message.trim()) {
+    toast.error('Please enter your message.');
+    return;
+  }
+
+  setLoading(true);
+
+   try {
+  //   const res = await axios.post('/api/submitForm', form);
+  //   const data = await res.data;
+  //   console.log(data);
+
+    // Show success message and clear form fields after successful submission
+    setSuccess(true);
+    toast.success('Form submitted successfully.');
+
+    setTimeout(() => {
+      setForm({
+        first_name: '',
+        last_name: '',
+        email: '',
+        phone: '',
+        address: '',
+        message: ''
+      });
+      setSuccess(false);
+    }, 5000); // Clear success message after 5 seconds
+  } catch (error) {
+    console.log(error);
+    toast.error('An error occurred. Please try again.');
+   } finally {
+     setLoading(false);
+   }
+};
+
+function validEmail(email) {
+  let re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+
+useEffect(() => {
+  AOS.init({
+    duration: 1000
+  });
+}, []);
 
   return (
     <>
@@ -293,10 +311,12 @@ export default function Home() {
               {loading ? <Preloader /> : <p>Submit</p>}
             </button>
           </form>
+          {success && <p className={styles.successMsg}></p>}
         </section>
       </main>
       <TestimonialCard />
       <Footer />
+      <ToastContainer />
     </>
   );
 }
