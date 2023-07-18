@@ -29,10 +29,11 @@ export default function BlogId() {
   console.log("heelo",blogId);
   
   return (
+    <div className="w-screen">
     <div className={styles.blog}>
       <div className={styles.blogDetail}>
         <div className={styles.blogHeader}>
-          <h2 className="fixed top-0 z-30 w-screen bg-white shadow-xl font-semibold font-mono">{blog.title}</h2>
+          <h2 className=" mb-5 leading-tight py-4 fixed top-0 z-30 w-screen bg-white shadow-xl font-semibold font-mono">{blog.title}</h2>
           <div className={styles.blogHeaderInfo}>
             <div className={styles.blogHeaderInfoLeft}>
               <ul>
@@ -42,15 +43,15 @@ export default function BlogId() {
                     <span> Blogs</span>
                   </a>
                 </li>
-                <li>
+                <li className="-space-x-1">
                   <FontAwesomeIcon icon={faUserCircle} />
                   <span>Test User</span>
                 </li>
-                <li>
+                <li className="-space-x-1">
                   <FontAwesomeIcon icon={faClock} />
                   <span>5 min read</span>
                 </li>
-                <li className="hover:scale-110">
+                <li className="hover:scale-110 -space-x-1">
                   <FontAwesomeIcon icon={faPlayCircle} />
                   <span>Listen</span>
                 </li>
@@ -103,7 +104,7 @@ export default function BlogId() {
           />
         </div>
         <div className={styles.blogBody}>
-            {blog.description}
+            {blog.description} 
         </div>
       </div>
       <div className={styles.otherBlogsCard}>
@@ -122,7 +123,7 @@ export default function BlogId() {
         </div>
       </div>
       <Footer />
-    </div>
+    </div></div>
   );
 }
 
