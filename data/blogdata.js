@@ -10,7 +10,7 @@ const blogData = [
     author:"Ben",
     description:       <>
     <>
-<div class="text-left w-full overflow-y-hidden">
+<div class="text-left w-full overflow-x-hidden">
 <h1 id="how-i-got-hired-contributing-to-open-source-projects" class="text-2xl md:text-3xl lg:text-5xl font-bold mb-2 font-mono w-[100vw]">
   How I Got Hired Contributing to open source projects
 </h1>
@@ -641,7 +641,7 @@ And as it was coined in
     likes: 18,
     author:"Jazz",
     description:<>
-    <div className='overflow-x-scroll'>
+    <div className='overflow-x-hidden'>
     <h1 id="react-design-patterns" className="text-2xl md:text-3xl lg:text-5xl font-bold mb-2 font-mono">React Design Patterns</h1>
     <p className="flex gap-x-2 md:gap-x-4 mb-2">
       <a href="/t/react"  className="text-blue-500 hover:text-blue-900 transition duration-200">#react</a> 
