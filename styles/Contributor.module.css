@@ -33,3 +33,19 @@
   font-weight: 700;
   font-size: large;
 }
+
+.githubIcon{
+ display: flex;
+ justify-content: center;
+  color: white;
+  width: 200px;
+  background-color: rgb(45, 44, 44);
+  padding: 7px;
+  border-radius: 10px;
+}
+.githubName{
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-left: 8px;
+  color: gainsboro;
+}
