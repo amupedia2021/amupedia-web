@@ -21,7 +21,7 @@ export default function About() {
       <main id={styles.content}>
         {/* <!-- About Us Container --> */}
         <div className={styles.whoWeAre}>
-          <h2>What is Amupedia</h2>
+          <h2>What is Amupedia?</h2>
           <p>
             Founded by the students of ZHCET in 2021, Amupedia is the biggest
             platform to help fellow students through their college program. This
