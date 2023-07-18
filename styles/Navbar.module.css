@@ -1,20 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
 
 /* style for logo  */
-.logo {
-  position: absolute;
-  float: left;
-  top: 5.5vw;
-  left: 5vw;
-  z-index: 10;
-  max-width: 150px;
-  filter: drop-shadow(5px 5px 19px #fff);
-}
 
 /* navigation bar style for mobile phone */
 .list {
-  font-family: "Baloo Bhai 2", sans-serif;
+  font-family: 'Baloo Bhai 2', sans-serif;
   opacity: 80%;
   background-color: rgb(255, 255, 255);
   position: fixed;
@@ -53,7 +44,7 @@
 
 /* checkbox for hamburger menu  */
 .menu {
-  position: absolute;
+  position: relative;
   opacity: 0;
   z-index: 20;
   top: 10px;
@@ -63,48 +54,13 @@
 }
 
 /* hamburger menu style  */
-.ham {
-  justify-content: center;
+.hams {
   z-index: 1000;
   position: absolute;
-  top: 5.5vw;
-  right: 20px;
-  width: 10%;
-  height: 10%;
-  background-color: transparent;
-  border-radius: 12px;
-  padding: 10px;
+  top: 20px;
+  right: 23px;
+  font-size: 35px;
   transition: all 0.5s ease;
-}
-
-/* styling of lines present in hamburger menu */
-.hamline {
-  position: absolute;
-  right: 5px;
-  width: 38px;
-  margin: auto;
-  height: 4px;
-  border-radius: 4px;
-  background-color: white;
-  color: white;
-  transition: all 0.5s ease;
-}
-
-/* style for each line of hamburger menu */
-.hamline1 {
-  transition: all 0.4s ease;
-}
-
-/* targeting each line uniquely */
-.hamline2 {
-  top: 23px;
-  transition: all 0.5s ease;
-}
-
-/* line 3 */
-.hamline3 {
-  top: 37px;
-  transition: all 0.4s ease;
 }
 
 /* style for overlay that apprars when nav menu shows up  */
@@ -118,28 +74,15 @@
   transition: all 0.4s ease;
 }
 
-.menu:checked ~ .ham {
-  position: absolute;
-}
-
 /* changes when checkbox is checked  */
 .menu:checked ~ .navbar .list {
   right: 0px;
 }
 
 /* animation after clicking the hamburger icon  */
-.menu:checked ~ .ham > .hamline1 {
-  transform: rotate(135deg);
+.menu:checked ~ .hams {
+  transform: rotate(200deg);
   top: 23px;
-}
-
-.menu:checked ~ .ham > .hamline3 {
-  transform: rotate(-135deg);
-  top: 23px;
-}
-
-.menu:checked ~ .ham > .hamline2 {
-  transform: rotate(135deg);
 }
 
 /* appearance for the overlay in the background when 
@@ -154,7 +97,7 @@ navigation menu opens in mobile phones */
   .logo {
     left: 30px;
   }
-  .ham {
+  .hams {
     display: none;
   }
   .menu {
@@ -183,7 +126,6 @@ navigation menu opens in mobile phones */
     right: 10px;
     top: 17px;
     z-index: 2;
-    
   }
   .listitem {
     background-color: transparent;
@@ -210,19 +152,19 @@ navigation menu opens in mobile phones */
     width: 160px;
     z-index: 999;
   }
-  
+
   .dropdownMenu li {
     padding: 10px 16px;
   }
-  
+
   .dropdownLink {
     color: #333;
     text-decoration: none;
   }
-  
+
   .dropdownLink:hover {
     color: #0070f3;
-    text-shadow: 0 2px 4px #75b2f8 ;
+    text-shadow: 0 2px 4px #75b2f8;
   }
 
   .lnk {
@@ -231,18 +173,15 @@ navigation menu opens in mobile phones */
     color: rgb(255, 255, 255);
     text-shadow: 2px -2px 8px rgba(0, 0, 0, 0.228);
   }
-  .listitem:hover > .lnk {
-    text-shadow: white 2px 2px 10px;
-  }
-  /* .lnk.active {
+
+  .lnk.active {
     text-shadow: white 0px 0px 10px !important;
-  } */
+  }
 
   .nav_active {
     color: rgb(12, 12, 12);
     text-shadow: none !important;
   }
-
 
   .nav_active.active {
     color: white;
@@ -262,7 +201,6 @@ navigation menu opens in mobile phones */
 @media only screen and (max-width: 849px) {
   .navbar {
     height: auto;
-    
   }
 
   .list {
@@ -278,7 +216,6 @@ navigation menu opens in mobile phones */
     border-bottom-left-radius: 15px;
     transition: all 0.5s cubic-bezier(0, 1.21, 1, 0.97);
     z-index: 1000;
-    
   }
 
   .listitem {
@@ -289,59 +226,24 @@ navigation menu opens in mobile phones */
     font-weight: bold;
     text-align: left;
     transition: all 0.5s ease;
-    
   }
-  
+
   .menu {
     position: absolute;
     opacity: 0;
     z-index: 20;
-    top: 10px;
+    top: 15px;
     right: 20px;
     width: 60px;
     height: 60px;
   }
 
-  .ham {
-    justify-content: center;
+  .hams {
+    position: absolute;
     z-index: 1000;
-    position: absolute;
-    top: 5.5vw;
+    top: 25px;
     right: 20px;
-    width: 10%;
-    height: 10%;
-    background-color: transparent;
-    border-radius: 12px;
-    padding: 10px;
     transition: all 0.5s ease;
-  }
-
-  .hamline {
-    position: absolute;
-    right: 5px;
-    width: 38px;
-    margin: auto;
-    height: 4px;
-    border-radius: 4px;
-    background-color: white;
-    color: white;
-    transition: all 0.5s ease;
-  }
-
-  .hamline1 {
-    transition: all 0.4s ease;
-  }
-  
-  /* targeting each line uniquely */
-  .hamline2 {
-    top: 23px;
-    transition: all 0.5s ease;
-  }
-
-  /* line 3 */
-  .hamline3 {
-    top: 37px;
-    transition: all 0.4s ease;
   }
 
   /* overlay on opening the menu in phone */
@@ -355,59 +257,41 @@ navigation menu opens in mobile phones */
     transition: all 0.4s ease;
   }
 
-  .menu:checked ~ .ham {
+  .menu:checked ~ .hams {
     position: absolute;
   }
-  
+
   /* changes when checkbox is checked  */
   .menu:checked ~ .navbar .list {
     right: 0px;
   }
-  
-  /* animation after clicking the hamburger icon  */
-  .menu:checked ~ .ham > .hamline1 {
-    transform: rotate(135deg);
-    top: 23px;
-  }
-  
-  .menu:checked ~ .ham > .hamline3 {
-    transform: rotate(-135deg);
-    top: 23px;
-  }
-  
-  .menu:checked ~ .ham > .hamline2 {
-    transform: rotate(135deg);
-  }
-  
+
   /* appearance for the overlay in the background when 
   navigation menu opens in mobile phones */
   .menu:checked ~ .blackoverlay {
     background-color: rgba(0, 0, 0, 0.403);
     z-index: 900;
   }
-  
 
- 
   .lnk {
-    font-size: 16px; 
+    font-size: 16px;
   }
   .dropdownLink:hover {
     color: #0070f3;
     text-shadow: 0 2px 4px #75b2f8;
   }
-  .dropdownMenu{
+  .dropdownMenu {
     background-color: rgb(248, 246, 246);
     /* display: none; */
     position: absolute;
     top: 80px;
-    left: -110px; 
-    width: 100px;  
+    left: -110px;
+    width: 100px;
     /* background-color: #fff; */
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 8px 16px;
     z-index: 999;
-   
   }
 
   /* for dropdown pointer */
@@ -425,15 +309,12 @@ navigation menu opens in mobile phones */
     transform: rotate(45deg);
   }
 
-  
   .navbar .listitem .dropdown_active {
     display: block;
   }
-  
 }
 
 .imageContainer {
   /* padding: 20px; */
   margin: 5px 1.5%;
 }
-

@@ -32,6 +32,15 @@ export default function BTech() {
             </a>
           </Link>
           <a
+            href="https://drive.google.com/drive/folders/1Gkjz-kR4J-EbRn-Wf-9bGbh7qH-x5ZDt?usp=drive_link"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className={styles.brnch} id={styles.ai}>
+              <p>Artificial Intelligence</p>
+            </div>
+          </a>
+          <a
             href="https://drive.google.com/drive/folders/1ZPk97HT0reLjyJsVxOJmEw542HugZonY?usp=sharing"
             target="_blank"
             rel="noreferrer"
