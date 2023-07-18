@@ -18,7 +18,7 @@
   max-width: 1700px;
   gap: 35px;
   flex-wrap: wrap;
-  margin-top: 6%;
+  margin-top: 8%;
 }
 
 .blogHeaderInfoLeft,
@@ -30,7 +30,7 @@
 
 .blogHeaderInfoLeft > ul {
   display: flex;
-  gap: 35px;
+  gap: 1.25rem;
 }
 
 .blogHeaderInfoLeft > ul li {
@@ -54,12 +54,12 @@
 }
 
 .blogHeaderInfoRight {
-  gap: 50px;
+  gap: 28px;
 }
 
 .socialIcons {
   display: flex;
-  gap: 30px;
+  gap: 1.5rem;
 }
 
 .socialIcons > li {
@@ -88,7 +88,7 @@
 
 .blogBody {
   margin: 0 auto 50px;
-  width: 80%;
+  width: 100%;
   max-width: 1700px;
   font-size: x-large;
 }
@@ -123,4 +123,23 @@
   .blogHeaderInfoLeft > ul li {
     font-size: 18px;
   }
+  .blogBody{
+    font-size: larger;
+  }
+  .blogHeaderInfo {
+    margin-top: 12%;
+  }
+}
+@media screen and (max-width: 468px) {
+  .blogBody{
+    font-size: large;
+    width: 100%;
+  }
+  .blog {
+    padding: 0 10px;
+  }
+  .blogHeaderInfo {
+    margin-top: 28%;
+  }  
+  
 }
