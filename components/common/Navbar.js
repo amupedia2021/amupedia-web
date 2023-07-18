@@ -223,7 +223,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href='/'>
+                  <Link href='/courses/bcom'>
                     <a
                       onClick={() => setDropdown(false)}
                       className={styles.dropdownLink}
@@ -233,7 +233,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href='/'>
+                  <Link href='/courses/bsc'>
                     <a
                       onClick={() => setDropdown(false)}
                       className={styles.dropdownLink}
