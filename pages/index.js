@@ -17,6 +17,9 @@ import 'aos/dist/aos.css';
 import TestimonialCard from 'components/Testimonial/Testimonial';
 import GoToTop from 'components/GoToTop';
 
+import Quotes from 'components/Quotes/Quotes';
+
+
 export default function Home() {
   const { dispatch } = useContext(Store);
 
@@ -295,6 +298,7 @@ export default function Home() {
           </form>
         </section>
       </main>
+      <Quotes />
       <TestimonialCard />
       <Footer />
     </>
