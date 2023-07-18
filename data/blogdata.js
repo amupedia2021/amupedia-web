@@ -10,11 +10,11 @@ const blogData = [
     author:"Ben",
     description:       <>
     <>
-<div class="text-left">
-<h1 id="how-i-got-hired-contributing-to-open-source-projects" class="text-5xl font-bold mb-2 font-mono">
+<div class="text-left w-full overflow-y-hidden">
+<h1 id="how-i-got-hired-contributing-to-open-source-projects" class="text-2xl md:text-3xl lg:text-5xl font-bold mb-2 font-mono w-[100vw]">
   How I Got Hired Contributing to open source projects
 </h1>
-<p class="text-blue-500 flex gap-x-3 mb-4">
+<p class="text-blue-500 flex gap-x-2 lg:gap-x-3 mb-4 flex-wrap">
 <a href="/t/opensource" class="hover:text-blue-900 transition duration-200">#opensource</a>
 <a href="/t/webdev" class="hover:text-blue-900 transition duration-200">#webdev</a>
 <a href="/t/javascript" class="hover:text-blue-900 transition duration-200">#javascript</a>
@@ -56,8 +56,8 @@ due to my lack of experience. So I kept on learning until I got into
 <h2 id="-how-i-got-to-know-about-open-source-how-i-got-to-know-about-open-source" class="text-left font-bold mt-4 text-2xl">
 How I got to know about open source
 </h2>
-<div class="flex space-between mt-4 mb-14">
-<div class="w-1/2 self-center">
+<div class="flex flex-col lg:flex-row gap-x-4 space-between mt-4 mb-14">
+<div class="lg:w-1/2 self-center">
 In a Twitter space by
 <a href="https://twitter.com/ShawnBasquiat"  class="ml-1 text-blue-500 hover:text-blue-900 transition duration-200">@ShawnBasquiat</a>(The HUNT) was
 the first place I heard about open source and ways to contribute to open
@@ -206,20 +206,20 @@ And as it was coined in
     comments: 10,
     likes: 7,
     author:"Lisa",
-    description:<div className="container py-8">
+    description:<div className="container py-1">
   
-    <div className="mt-8 text-left">
-      <h1 class="text-5xl font-bold mb-4 font-mono">
+    <div className="mb-3 lg:mb-8 text-left">
+      <h1 class="text-2xl md:text-3xl lg:text-5xl font-bold mb-4 font-mono">
         How You Can Use AI to Improve Your Code Quality
       </h1>
-      <div class="flex space-between gap-x-4 mt-8">
+      <div class="flex flex-col 2xl:flex-row space-between gap-x-4 mt-8">
       <div>
         <img
       src="https://www.freecodecamp.org/news/content/images/size/w1000/2023/05/image-76.png"
       alt="AI code quality"
-      className="mx-auto"/>
+      className="mx-auto items-center"/>
     </div>
-    <div className="w-2/3 my-auto">
+    <div className="2xl:w-2/3 w-full my-auto">
       <p className="mb-4">
         As a software developer, I've always tried to write flawless code. Great
         code is not just functional – it should also be elegant, efficient, and
@@ -360,14 +360,14 @@ And as it was coined in
     likes: 10,
     author:"David",
     description:<div className="container mx-auto px-4 py-8 text-left">
-    <h1 class="text-5xl font-bold mb-2 font-mono">
+    <h1 class="text-2xl md:text-3xl lg:text-5xl font-bold mb-2 font-mono">
       How to Build a Discord AI Chatbot that Talks Like Your Favorite Character
     </h1>
-    <div className="flex space-between gap-x-6 mt-4">
+    <div className="flex flex-col lg:flex-row space-between gap-x-6 mt-4">
     <img
       src="https://freecodecamp.org/news/content/images/2021/08/discord.gif"
       alt="Discord GIF"
-      className="w-1/2 h-1/2 mb-8"
+      className="w-full lg:w-1/2 lg:h-1/2 mb-8"
     />
     <div className="w-[100%] my-auto">
     <h2 className="text-2xl font-bold mb-2 font-serif">Introduction</h2>
@@ -381,7 +381,7 @@ And as it was coined in
     </p>
     </div>
     </div>
-    <h2 className="text-3xl font-bold mb-2 font-serif mt-2 underline">Outline of this Tutorial</h2>
+    <h2 className="text-lg md:text-xl lg:text-3xl font-bold mb-2 font-serif mt-2 underline">Outline of this Tutorial</h2>
     <ul className="list-disc pl-6 mb-4">
       <li>
         Gather text data for your character using one of these two methods: find
@@ -399,37 +399,37 @@ And as it was coined in
       <li>Host the bot on Repl.it.</li>
       <li>Keep the bot running indefinitely with Uptime Robot.</li>
     </ul>
-    <h2 className="text-3xl font-bold mb-2 font-serif mt-2 underline">How to Prepare the Data ?</h2>
+    <h2 className="text-lg md:text-xl lg:text-3xl font-bold mb-2 font-serif mt-2 underline">How to Prepare the Data ?</h2>
     <p className="mb-4">
       For our chatbot to learn to converse, we need text data in the form of
       dialogues. This is essentially how our chatbot is going to respond to
       different exchanges and contexts.
     </p>
-    <h3 className="text-2xl text-green-900 font-bold mb-2">
+    <h3 className="text-xl md:text-2xl text-green-900 font-bold mb-2">
       Is Your Favorite Character on Kaggle?
     </h3>
     <p className="mb-4">
       There are a lot of interesting datasets on Kaggle for popular cartoons, TV
       shows, and other media.
     </p>
-    <h3 className="text-2xl text-orange-900 font-bold mb-2">
+    <h3 className="text-xl md:text-2xl text-orange-900 font-bold mb-2">
       Can't Find Your Favorite Character on Kaggle?
     </h3>
     <p className="mb-4">
       No worries. We can create datasets from raw transcripts. A great place to
       look for transcripts is Transcript Wiki.
     </p>
-    <h2 className="text-3xl font-bold mb-2 font-serif mt-2 underline">How to Train the Model ?</h2>
+    <h2 className="text-lg md:text-xl lg:text-3xl font-bold mb-2 font-serif mt-2 underline">How to Train the Model ?</h2>
     <p className="mb-4">
       Under the hood, our model will be a Generative Pre-trained Transformer
       (GPT), the most popular language model these days.
     </p>
-    <h3 className="text-orange-600 text-2xl font-semibold mb-2">Upload the File to Google Colab</h3>
+    <h3 className="text-orange-600 text-xl md:text-2xl font-semibold mb-2">Upload the File to Google Colab</h3>
     <p className="mb-4">
       Start by uploading the file to Google Colab. Select the GPU as the runtime
       to speed up the model training process.
     </p>
-    <h3 className="text-orange-600 text-2xl font-semibold mb-2">
+    <h3 className="text-orange-600 text-xl md:text-2xl font-semibold mb-2">
       Change the Dataset and the Target Character
     </h3>
     <p className="mb-4">
@@ -440,21 +440,21 @@ And as it was coined in
         data = pd.read_csv('MY-DATASET.csv'){"\n"}CHARACTER_NAME = 'MY-CHARACTER'
       </code>
     </pre>
-    <h3 className="text-orange-600 text-2xl font-semibold mb-2">Host the Model on Hugging Face</h3>
+    <h3 className="text-orange-600 text-xl md:text-2xl font-semibold mb-2">Host the Model on Hugging Face</h3>
     <p className="mb-4">
       Host the model on Hugging Face, which provides a free API for us to query
       the model. Sign up for Hugging Face, create a new model repository, and
       obtain your API token.
     </p>
-    <div className="flex space-between gap-x-4">
-      <div className="w-2/3">
-      <h2 className="text-3xl font-bold mb-2 font-serif mt-2 underline">How to Build the Discord Bot ?</h2>
+    <div className="flex flex-col xl:flex-row space-between gap-x-4">
+      <div className="xl:w-2/3">
+      <h2 className="text-lg md:text-xl lg:text-3xl font-bold mb-2 font-serif mt-2 underline">How to Build the Discord Bot ?</h2>
       <p className="mb-4">
         Go to the Discord Developer's page, create an application, and add a bot to
         it. Configure the bot's permissions to prevent it from spamming non-bot
         channels.
       </p>
-      <h2 className="text-3xl font-bold mb-2 font-serif mt-2 underline">Conclusion</h2>
+      <h2 className="text-lg md:text-xl lg:text-3xl font-bold mb-2 font-serif mt-2 underline">Conclusion</h2>
       <p className="mb-4">
         In this tutorial, we learned how to build a Discord AI chatbot that can talk
         like your favorite character. We covered gathering text data, training the
@@ -483,7 +483,7 @@ And as it was coined in
       />
       </div>
     </div>
-    <p className="mt-4 mb-2 italic font-semibold text-2xl text-slate-600">
+    <p className="mt-4 mb-2 italic font-semibold text-xl md:text-2xl text-slate-600">
       Happy bot building and enjoy conversing with your favorite character on
       Discord!
     </p>
@@ -500,11 +500,11 @@ And as it was coined in
     description:<div className="container py-8">
     
     <div className="mt-8 text-left">
-      <h1 className="text-5xl font-bold mb-2 font-mono">
+      <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-2 font-mono">
         Machine learning with Julia – How to Build and Deploy a Trained AI Model
         as a Web Service
       </h1>
-      <div className="flex space-between mt-4">
+      <div className="flex flex-col xl:flex-row space-between mt-4">
         <div>
           <p className="mb-4">
           Julia is a general-purpose programming language well-suited for numerical
@@ -534,7 +534,7 @@ And as it was coined in
     />
       </div>
       
-      <p className="mb-4 font-semibold text-3xl">Here's what we'll cover:~</p>
+      <p className="mb-4 font-semibold text-xl md:text-2xl lg:text-3xl">Here's what we'll cover:~</p>
       <ol className="list-decimal list-inside pl-4">
         <li className="mb-4">
           <span className="font-medium text-green-700 underline">What You Should Know in Advance?</span>
@@ -641,8 +641,9 @@ And as it was coined in
     likes: 18,
     author:"Jazz",
     description:<>
-    <h1 id="react-design-patterns" className="text-5xl font-bold mb-2 font-mono">React Design Patterns</h1>
-    <p className="flex gap-x-4 mb-2">
+    <div className='overflow-x-scroll'>
+    <h1 id="react-design-patterns" className="text-2xl md:text-3xl lg:text-5xl font-bold mb-2 font-mono">React Design Patterns</h1>
+    <p className="flex gap-x-2 md:gap-x-4 mb-2">
       <a href="/t/react"  className="text-blue-500 hover:text-blue-900 transition duration-200">#react</a> 
       <a href="/t/webdev" className="text-blue-500 hover:text-blue-900 transition duration-200">#webdev</a>{" "}
       <a href="/t/designpatterns" className="text-blue-500 hover:text-blue-900 transition duration-200">#designpatterns</a>{" "}
@@ -681,7 +682,7 @@ And as it was coined in
     </ul>
     <p>Let's explore them one by one.</p>
     <h3 id="-1-presentational-amp-container-component-1-presentational-container-component" 
-    className="text-3xl mb-2 font-bold text-blue-800 mt-6">
+    className="text-2xl md:text-3xl mb-2 font-bold text-blue-800 mt-6">
       <a href="#1-presentational-amp-container-component" />
       <strong>🎯</strong> 1. Presentational &amp; Container Component
     </h3>
@@ -810,7 +811,7 @@ And as it was coined in
       for rendering the UI based on the provided props, without worrying about the
       data fetching or business logic.
     </p>
-    <h3 id="-2-higher-order-components-2-higher-order-components" className="text-3xl mb-2 font-bold text-blue-800 mt-6">
+    <h3 id="-2-higher-order-components-2-higher-order-components" className="text-2xl md:text-3xl mb-2 font-bold text-blue-800 mt-6">
       <a href="#2-higher-order-components" />
       <strong>🎯</strong> 2. Higher Order Components
     </h3>
@@ -921,7 +922,7 @@ And as it was coined in
       functionality as <code>MyComponent</code>, but it also includes the logging
       behaviour defined in the HOC.
     </p>
-    <h3 id="-3-render-props-3-render-props" className="text-3xl mb-2 font-bold text-blue-800 mt-6">
+    <h3 id="-3-render-props-3-render-props" className="text-2xl md:text-3xl mb-2 font-bold text-blue-800 mt-6">
       <a href="#3-render-props" />
       <strong>🎯</strong> 3. Render props
     </h3>
@@ -1042,7 +1043,7 @@ And as it was coined in
       because it is a prop that specifies how to render a piece of the user
       interface.
     </p>
-    <h3 id="-4-compound-components-4-compound-components" className="text-3xl mb-2 font-bold text-blue-800 mt-6">
+    <h3 id="-4-compound-components-4-compound-components" className="text-2xl md:text-3xl mb-2 font-bold text-blue-800 mt-6">
     
       <a href="#4-compound-components" />
       <strong>🎯</strong> 4. Compound Components
@@ -1201,7 +1202,7 @@ And as it was coined in
       ) components. Also, the user has the flexibility to provide custom content
       inside each list item.
     </p>
-    <h3 id="-5-hooks-5-hooks" className="text-3xl mb-2 font-bold text-blue-800 mt-6">
+    <h3 id="-5-hooks-5-hooks" className="text-2xl md:text-3xl mb-2 font-bold text-blue-800 mt-6">
       <a href="#5-hooks" />
       <strong>🎯</strong> 5. Hooks
     </h3>
@@ -1259,7 +1260,7 @@ And as it was coined in
       <a href="#wrap-up" />
       <strong>🎯</strong> Wrap Up!!
     </h3>
-  
+    </div>
   </>
   
   },
@@ -1273,13 +1274,13 @@ And as it was coined in
     description:
       <>
       <div className="container mx-auto px-4 py-8 text-left">
-  <h1 className="text-5xl font-bold mb-2 font-mono">
+  <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-2 font-mono">
     Learn Serverless on AWS Step-by-Step: SQL with Aurora
   </h1>
   
-  <div className="flex space-between gap-x-4">
-  <div className="my-auto w-4/5">
-    <h2 className="text-2xl font-bold mb-2 text-left font-sans text-green-600">Introduction</h2>
+  <div className="flex flex-col 2xl:flex-row space-between gap-x-4">
+  <div className="my-auto 2xl:w-4/5">
+    <h2 className="text-xl lg:text-2xl font-bold mb-2 text-left font-sans text-green-600">Introduction</h2>
     <p className="mb-4">
       In this tutorial, we will explore how to build a serverless application on
       AWS using SQL with Amazon Aurora. Serverless computing allows developers to
@@ -1296,13 +1297,13 @@ And as it was coined in
     className="w-full max-w-screen-lg mb-8"
   /> 
   </div>
-  <h2 className="text-2xl font-bold mb-2 text-left font-sans text-green-600">Prerequisites</h2>
+  <h2 className="text-xl lg:text-2xl font-bold mb-2 text-left font-sans text-green-600">Prerequisites</h2>
   <p className="mb-4">
     Before diving into this tutorial, you should have basic knowledge of AWS
     services, SQL, and JavaScript. Additionally, make sure you have an AWS
     account set up.
   </p>
-  <h2 className="text-2xl font-bold mb-2 text-left font-sans text-green-600">Table of Contents</h2>
+  <h2 className="text-xl lg:text-2xl font-bold mb-2 text-left font-sans text-green-600">Table of Contents</h2>
   <ol className="list-decimal pl-6 tracking-wide">
     <li>Setting up the AWS Environment</li>
     <li>Creating an Amazon Aurora Serverless Database</li>
@@ -1312,14 +1313,14 @@ And as it was coined in
     <li>Deploying and Testing the Application</li>
     <li>Conclusion</li>
   </ol>
-  <h2 className="text-2xl font-bold mb-2 mt-8 text-left font-sans text-blue-800 tracking-wide" >
+  <h2 className="text-xl lg:text-2xl font-semibold lg:font-bold mb-2 mt-8 text-left font-sans text-blue-800 tracking-wide" >
     Section 1: Setting up the AWS Environment
   </h2>
   <p className="mb-4">
     In this section, we will guide you through the process of setting up your
     AWS environment, including creating an IAM role and installing the AWS CLI.
   </p>
-  <h2 className="text-2xl font-bold mb-2 mt-8 text-left font-sans text-blue-800 tracking-wide">
+  <h2 className="text-xl lg:text-2xl font-semibold lg:font-bold mb-2 mt-8 text-left font-sans text-blue-800 tracking-wide">
     Section 2: Creating an Amazon Aurora Serverless Database
   </h2>
   <p className="mb-4">
@@ -1327,7 +1328,7 @@ And as it was coined in
     Serverless database. We will cover the configuration, security groups, and
     connecting to the database.
   </p>
-  <h2 className="text-2xl font-bold mb-2 mt-8 text-left font-sans text-blue-800 tracking-wide">
+  <h2 className="text-xl lg:text-2xl font-semibold lg:font-bold mb-2 mt-8 text-left font-sans text-blue-800 tracking-wide">
     Section 3: Building the Serverless API
   </h2>
   <p className="mb-4">
@@ -1335,7 +1336,7 @@ And as it was coined in
     Lambda and API Gateway. You will learn how to handle HTTP requests, connect
     to the Aurora database, and perform CRUD operations.
   </p>
-  <h2 className="text-2xl font-bold mb-2 mt-8 text-left font-sans text-blue-800 tracking-wide">
+  <h2 className="text-xl lg:text-2xl font-semibold lg:font-bold mb-2 mt-8 text-left font-sans text-blue-800 tracking-wide">
     Section 4: Creating the Serverless Frontend
   </h2>
   <p className="mb-4">
@@ -1343,7 +1344,7 @@ And as it was coined in
     and the AWS SDK. You will learn how to interact with the API endpoints to
     fetch and display data.
   </p>
-  <h2 className="text-2xl font-bold mb-2 mt-8 text-left font-sans text-blue-800 tracking-wide">
+  <h2 className="text-xl lg:text-2xl font-semibold lg:font-bold mb-2 mt-8 text-left font-sans text-blue-800 tracking-wide">
     Section 5: Styling with Tailwind CSS
   </h2>
   <p className="mb-4 ">
@@ -1351,7 +1352,7 @@ And as it was coined in
     integrate it into your serverless application. We will guide you in setting
     up Tailwind CSS and show you how to style your frontend components.
   </p>
-  <h2 className="text-2xl font-bold mb-2 mt-8 text-left font-sans text-blue-800 tracking-wide">
+  <h2 className="text-xl lg:text-2xl font-semibold lg:font-bold mb-2 mt-8 text-left font-sans text-blue-800 tracking-wide">
     Section 6: Deploying and Testing the Application
   </h2>
   <p className="mb-4">
@@ -1360,13 +1361,13 @@ And as it was coined in
     Gateway, and the frontend to an S3 bucket. We will also guide you in testing
     the application to ensure everything is working as expected.
   </p>
-  <h2 className="text-2xl font-bold mb-2 mt-8 text-left font-sans text-blue-800 tracking-wide">Section 7: Conclusion</h2>
+  <h2 className="text-xl lg:text-2xl font-semibold lg:font-bold mb-2 mt-8 text-left font-sans text-blue-800 tracking-wide">Section 7: Conclusion</h2>
   <p className="mb-4">
     In the final section, we will recap what we have learned throughout the
     tutorial. We will also provide additional resources for further exploration
     and encourage you to experiment and build upon what you have learned.
   </p>
-  <h2 className="text-2xl font-bold mb-2 text-left font-sans text-green-600">Conclusion</h2>
+  <h2 className="text-xl lg:text-2xl font-bold mb-2 text-left font-sans text-green-600">Conclusion</h2>
   <p className="mb-4">
     By following this step-by-step tutorial, you have learned how to build a
     serverless application on AWS using SQL with Amazon Aurora. You have gained
