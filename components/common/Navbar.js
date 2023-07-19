@@ -344,7 +344,7 @@ const Navbar = () => {
               onClick={() => {
                 router.push('/');
                 setTimeout(() => {
-                  const contacts = document.getElementById('contacts');
+                  const contacts = document.getElementById('contactus');
                   if (contacts) contacts.scrollIntoView();
                   //onClick();
                 }, 10);
