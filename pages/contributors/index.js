@@ -4,14 +4,19 @@ import ContCard from 'components/Contributors/ContCard';
 import Footer from 'components/common/Footer';
 import Header from 'components/common/Header/Header';
 import styles from '@styles/scss/contributor.module.scss';
+import SearchResultNotFound from "../../components/common/SearchResultNotFound";
+
 
 const Contributors = () => {
+
   const per_page = 10;
   const [currentPage, setCurrentPage] = useState(1);
   const [allContributors, setAllContributors] = useState([]);
   const [contributors, setContributors] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
   const [username, setUsername] = useState('');
+  const [searchResultFound, setSearchResultFound] = useState(true);
+  
 
   const fetchContributors = async () => {
     try {
@@ -58,13 +63,17 @@ const Contributors = () => {
     const totalPage = Math.ceil(filteredContributors.length / per_page);
     setTotalPages(totalPage);
 
-    setCurrentPage(1)
+    setCurrentPage(1);
+
+    setSearchResultFound(filteredContributors.length > 0); // Update search result found state
   }, [username, allContributors]);
 
   const visibleContributors = contributors.slice(
     (currentPage - 1) * per_page,
     currentPage * per_page
   );
+
+
 
   return (
     <>
@@ -86,25 +95,35 @@ const Contributors = () => {
         />
       </div>
       <div className={styles.container}>
-        {visibleContributors.map((contributor) => (
-          <ContCard
-            key={contributor.id}
-            image={contributor.avatar_url}
-            title={contributor.login}
-            commits={contributor.contributions}
-            profile={contributor.html_url}
-          />
-        ))}
+        {/* Render the SearchResultNotFound component when search result is not found */}
+        {!searchResultFound ? (
+          <SearchResultNotFound query={username} />
+        ) : (
+          visibleContributors.map((contributor) => (
+            <ContCard
+              key={contributor.id}
+              image={contributor.avatar_url}
+              title={contributor.login}
+              commits={contributor.contributions}
+              profile={contributor.html_url}
+            />
+          ))
+        )}
       </div>
-      <div className={styles.pagination}>
-        <button onClick={handlePreviousPage} disabled={currentPage === 1}>
-          Prev
-        </button>
-        <span>{currentPage} / {totalPages}</span>
-        <button onClick={handleNextPage} disabled={currentPage === totalPages}>
-          Next
-        </button>
-      </div>
+      {/* Hide pagination when search result is not found */}
+      {searchResultFound && (
+        <div className={styles.pagination}>
+          <button onClick={handlePreviousPage} disabled={currentPage === 1}>
+            Prev
+          </button>
+          <span>
+            {currentPage} / {totalPages}
+          </span>
+          <button onClick={handleNextPage} disabled={currentPage === totalPages}>
+            Next
+          </button>
+        </div>
+      )}
       <Footer />
     </>
   );
