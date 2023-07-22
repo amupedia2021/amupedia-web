@@ -72,8 +72,8 @@
 
 .blogPicture {
   display: "block";
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   max-width: 1700px;
   max-height: 1100px;
   margin: 20px auto;
@@ -103,7 +103,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 35px;
+  gap: 30px;
 }
 
 @media screen and (max-width: 768px) {
