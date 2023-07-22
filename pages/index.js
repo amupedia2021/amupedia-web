@@ -207,7 +207,7 @@ export default function Home() {
           </div>
 
           {/* <!-- Contact Form  --> */}
-          <h2 id="contactus" className={styles.grabh2}>Get With Us</h2>
+          <h2 id="contactus" className={styles.grabh2}>Get In Touch With Us</h2>
           <form onSubmit={handleSubmit} aria-label="Contact form">
             <div className={styles.cntfrm}>
               <input
