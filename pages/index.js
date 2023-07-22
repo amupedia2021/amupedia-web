@@ -220,6 +220,7 @@ export default function Home() {
           </div>
 
           {/* <!-- Contact Form  --> */}
+
           <h2 className={styles.grabh2}>Get In Touch With Us</h2>
           <form onSubmit={handleSubmit}>
             <div className={styles.cntfrm}>
