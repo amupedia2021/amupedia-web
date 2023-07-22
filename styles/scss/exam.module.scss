@@ -1,0 +1,55 @@
+@import "./config";
+
+.title {
+  text-align: left;
+  margin: 2.5rem 0 2.5rem 0.7rem;
+  font-size: 5.8vmin;
+  font-weight: 600;
+}
+
+.material {
+  width: 95%;
+  margin: auto;
+  @include flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  .imageDiv {
+    width: 30%;
+  }
+
+  .detailDiv {
+    width: 70%;
+    p{
+      font-weight: 800;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .detailDiv p{
+    font-size: 20px;
+  }
+}
+
+.course{
+  width: '40%';  
+  height: '20%';
+}
+
+// styles for pdfshow component
+.pdficon {
+  margin: 1rem 0.5rem 1rem 0.5rem;
+}
+
+.tagLine {
+  text-align: center;
+  font-size: 2.5vmin;
+}
+
+.iconWrapper {
+  width: 13vmin;
+  height: auto;
+}

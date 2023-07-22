@@ -20,6 +20,10 @@ import GoToTop from 'components/GoToTop';
 export default function Home() {
   const { dispatch } = useContext(Store);
 
+  const onChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
   const emptyForm = {
     first_name: '',
     last_name: '',
@@ -33,35 +37,73 @@ export default function Home() {
 
   const [form, setForm] = useState(emptyForm);
   const [loading, setLoading] = useState(false);
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [mail, setMail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [address, setAddrees] = useState('');
+  const [message, setMessage] = useState('');
+  const [error, seterror] = useState('');
+  const [success, setsuccess] = useState('');
 
-  // const onSubmit = async (e) => {
-  //   e.preventDefault();
-  //   setLoading(true);
-  //   try {
-  //     const res = await axios.post('/api/submitForm', form);
-  //     const data = await res.data;
-  //     console.log(data);
-  //     dispatch({
-  //       type: {
-  //         task: 'setAlert',
-  //         alert: { type: 'noti', message: 'Form Submitted Successfully' }
-  //       }
-  //     });
-  //   } catch (error) {
-  //     console.log(error);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  //   setForm(emptyForm);
-  // };
+  function validEmail(email) {
+    let re =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (re.test(email)) return true;
+    else return false;
+  }
 
-  const onChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (firstName === '') {
+      seterror('firstnameerr');
+    } else if (lastName === '') {
+      seterror('lastnameerr');
+    } else if (mail === '') {
+      seterror('emailerr');
+    } else if (!validEmail(mail)) {
+      seterror('validerr');
+    } else if (phone === '') {
+      seterror('phoneerr');
+    } else if (phone.length !== 10) {
+      seterror('numbererr');
+    } else if (address === '') {
+      seterror('addresserr');
+    } else if (message === '') {
+      seterror('messageerr');
+    } else {
+      setLoading(true);
+      try {
+        const res = await axios.post('/api/submitForm', form);
+        const data = await res.data;
+        console.log(data);
+        dispatch({
+          type: {
+            task: 'setAlert',
+            alert: { type: 'noti', message: 'Form Submitted Successfully' }
+          }
+        });
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+        setFirstName('');
+        setLastName('');
+        setPhone('');
+        setMail('');
+        setPhone('');
+        setAddrees('');
+        setMessage('');
+        seterror('');
+        setsuccess('Contact form sent successfully!!');
+      }
+      setForm(emptyForm);
+    }
   };
 
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 1000
     });
   }, []);
 
@@ -72,7 +114,7 @@ export default function Home() {
       <main>
         <section id={styles.content}>
           {/* <!-- Our Mission Container --> */}
-          <div data-aos="zoom-in" className={styles.mission}>
+          <div data-aos='zoom-in' className={styles.mission}>
             <h2>Our Mission</h2>
             <p>
               We are the students of AMU, intending to provide you all the
@@ -84,7 +126,7 @@ export default function Home() {
           </div>
 
           {/* Our Services Section  */}
-          <div data-aos="fade-up" id={styles.ourserv}>
+          <div data-aos='fade-up' id={styles.ourserv}>
             <h2>Our Services</h2>
             <div id={styles.ourserimgs}>
               <div>
@@ -107,7 +149,7 @@ export default function Home() {
           </div>
 
           {/* <!-- grab your notes section  --> */}
-          <div data-aos="fade-up" className={styles.courses} id='courses'>
+          <div data-aos='fade-up' className={styles.courses} id='courses'>
             <h2 className={styles.grabh2}>Grab Your Notes Here</h2>
             <div className={styles.grabnotes}>
               <Link passHref href='/courses/btech'>
@@ -143,110 +185,103 @@ export default function Home() {
 
           {/* <!-- Recent Updates section  --> */}
           {/* <!-- same css as grabnotes section  --> */}
-          <div data-aos="fade-up">
-          <h2 className={styles.grabh2}>Recent Updates</h2>
-          <div className={styles.grabnotes}>
-            <Link passHref href='/'>
-              <Tilt className={styles.tlt}>
-                <div className={styles.rec1}>
-                  <p>App</p>
-                </div>
-              </Tilt>
-            </Link>
-            <Link passHref href='/'>
-              <Tilt className={styles.tlt}>
-                <div className={styles.rec2}>
-                  <p>Blogs</p>
-                </div>
-              </Tilt>
-            </Link>
-            <Link passHref href='/'>
-              <Tilt className={styles.tlt}>
-                <div className={styles.rec3}>
-                  <p>Competitive Exams</p>
-                </div>
-              </Tilt>
-            </Link>
+          <div data-aos='fade-up'>
+            <h2 className={styles.grabh2}>Recent Updates</h2>
+            <div className={styles.grabnotes}>
+              <Link passHref href='/'>
+                <Tilt className={styles.tlt}>
+                  <div className={styles.rec1}>
+                    <p>App</p>
+                  </div>
+                </Tilt>
+              </Link>
+              <Link passHref href='/blog'>
+                <Tilt className={styles.tlt}>
+                  <div className={styles.rec2}>
+                    <p>Blogs</p>
+                  </div>
+                </Tilt>
+              </Link>
+              <Link passHref href='/competitiveExams'>
+                <Tilt className={styles.tlt}>
+                  <div className={styles.rec3}>
+                    <p>Competitive Exams</p>
+                  </div>
+                </Tilt>
+              </Link>
+              <Link passHref href='/interviewprep'>
+                <Tilt className={styles.tlt}>
+                  <div className={styles.rec4}>
+                    <p>Interview Preparation</p>
+                  </div>
+                </Tilt>
+              </Link>
             </div>
           </div>
 
           {/* <!-- Contact Form  --> */}
-          <div data-aos="zoom-in" id='contacts'>
-            <h2 className={styles.grabh2}>Get In Touch With Us</h2>
-            <form action="https://formsubmit.co/{Enter Email}" method="POST">
-              <div className={styles.cntfrm}>
-                <input
-                  value={form.first_name}
-                  onChange={onChange}
-                  required
-                  type='text'
-                  name='first_name'
-                  placeholder='First Name'
-                  className={styles.details}
-                  pattern='[a-zA-Z]+'
-                  title='Please enter Alphabets'
-                />
-                <input
-                  value={form.last_name}
-                  onChange={onChange}
-                  required
-                  name='last_name'
-                  type='text'
-                  placeholder='Last Name'
-                  className={styles.details}
-                  pattern='[a-zA-Z]+'
-                  title='Please enter Alphabets'
-                />
-                <input
-                  value={form.email}
-                  onChange={onChange}
-                  required
-                  pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'
-                  name='email'
-                  type='email'
-                  placeholder='Email'
-                  className={styles.details}
-                />
-                <input
-                  value={form.phone}
-                  onChange={onChange}
-                  onInput={(e) => {
-                    e.target.value = e.target.value.replace(/[^0-9]/g, ''); // Filter out non-numeric characters
-                  }}
-                  name='phone'
-                  placeholder='Phone'
-                  minLength={10}
-                  maxLength={10}
-                  type='tel'
-                  required
-                  className={styles.details}
-                />
-                <textarea
-                  value={form.address}
-                  onChange={onChange}
-                  required
-                  name='address'
-                  type='text'
-                  rows={2}
-                  placeholder='Address'
-                  className={styles.address}
-                />
-                <textarea
-                  value={form.message}
-                  onChange={onChange}
-                  required
-                  name='message'
-                  type='text'
-                  rows={4}
-                  placeholder='Type your message here'
-                  className={styles.msg}
-                />
-              </div>
-              <button type='submit' id={styles.sub}>
-                {loading ? <Preloader /> : <p>Submit</p>}
-              </button>
-            </form>
-          </div>
+
+          <h2 className={styles.grabh2}>Get In Touch With Us</h2>
+          <form onSubmit={handleSubmit}>
+            <div className={styles.cntfrm}>
+              <input
+                value={form.first_name}
+                onChange={onChange}
+                required
+                type='text'
+                name='first_name'
+                placeholder='First Name'
+                className={styles.details}
+              />
+              <input
+                value={form.last_name}
+                onChange={onChange}
+                required
+                name='last_name'
+                type='text'
+                placeholder='Last Name'
+                className={styles.details}
+              />
+              <input
+                value={form.email}
+                onChange={onChange}
+                required
+                name='email'
+                type='email'
+                placeholder='Email'
+                className={styles.details}
+              />
+              <input
+                value={form.phone}
+                onChange={onChange}
+                type='number'
+                name='phone'
+                placeholder='Phone'
+                className={styles.details}
+              />
+              <input
+                value={form.address}
+                onChange={onChange}
+                required
+                name='address'
+                type='text'
+                placeholder='Address'
+                className={styles.address}
+              />
+              <input
+                value={form.message}
+                onChange={onChange}
+                required
+                name='message'
+                type='text'
+                placeholder='Type your message here'
+                className={styles.msg}
+              />
+            </div>
+            <button type='submit' id={styles.sub}>
+              {loading ? <Preloader /> : <p>Submit</p>}
+            </button>
+          </form>
         </section>
       </main>
       <TestimonialCard />

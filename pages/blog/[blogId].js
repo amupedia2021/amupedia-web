@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import { useState ,useEffect} from "react";
 import Image from "next/image";
 import styles from "@styles/BlogDetail.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,21 +12,36 @@ import { faLinkedin } from "node_modules/@fortawesome/free-brands-svg-icons/inde
 import { faLink } from "node_modules/@fortawesome/free-solid-svg-icons/index";
 import { faBookmark } from "node_modules/@fortawesome/free-solid-svg-icons/index";
 import { faEllipsisH } from "node_modules/@fortawesome/free-solid-svg-icons/index";
+import {faArrowLeft} from "node_modules/@fortawesome/free-solid-svg-icons/index";
 import BlogCard from "components/Blogs/BlogCard";
 import blogData from "/data/blogdata";
 import Link from "next/link";
-
+import ReactMarkdown from "react-markdown";
+import md from "markdown-it";
 export default function BlogId() {
   const router = useRouter();
   const { blogId } = router.query;
+  const[Blogid,SetBlogid]=useState(blogId);
+
+  const blog = blogData.find(item => item.id === parseInt(Blogid))
+  console.log(blog)
+  console.log("heelo",blogId);
+  
+  
   return (
     <div className={styles.blog}>
       <div className={styles.blogDetail}>
         <div className={styles.blogHeader}>
-          <h2>Blog Title</h2>
+          <h2>{blog.title}</h2>
           <div className={styles.blogHeaderInfo}>
             <div className={styles.blogHeaderInfoLeft}>
               <ul>
+                <li>
+                  <a href="/blog">
+                    <FontAwesomeIcon icon={faArrowLeft} />
+                    <span> Blogs</span>
+                  </a>
+                </li>
                 <li>
                   <FontAwesomeIcon icon={faUserCircle} />
                   <span>Test User</span>
@@ -80,80 +96,19 @@ export default function BlogId() {
         </div>
         <div className={styles.blogPicture}>
           <Image
-            src="/images/blog/blogDetails/photo1.avif"
-            alt="blogDetailPicture"
-            layout="responsive"
+            src={blog.image}
             width="1500"
-            height="800"
+            height="1000"
           />
         </div>
         <div className={styles.blogBody}>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
-            laudantium harum optio ipsum eligendi corporis maxime facilis in
-            adipisci. Molestias tempora sapiente voluptas. Laboriosam doloribus
-            aliquid dicta quibusdam hic praesentium vitae ducimus aut.
-            Blanditiis quasi consequuntur quidem optio earum dicta? Vel, nulla.
-            Minus, cum cupiditate facere voluptas maxime exercitationem quia
-            quidem illo perferendis aut nisi, quasi repudiandae velit vero
-            ducimus! Velit non sapiente libero vitae dicta delectus? Eveniet
-            assumenda officiis numquam soluta quisquam tempore a. Nesciunt saepe
-            incidunt nostrum, maxime ex blanditiis harum reiciendis dignissimos
-            reprehenderit, labore sed numquam accusamus exercitationem
-            repellendus, soluta eum optio! Numquam adipisci mollitia soluta
-            nesciunt eaque tenetur magni, saepe id voluptatem nam eveniet.
-            Maiores beatae velit in voluptatibus quae dicta dolorum et eaque
-            blanditiis laborum? Harum, debitis repellat architecto laudantium
-            animi vero amet! Tempore, inventore earum quaerat sunt temporibus
-            magnam molestiae accusantium omnis, at rem est iusto culpa dolorem
-            sint delectus? Sed animi repudiandae veritatis!
-          </p>
-          <br />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
-            laudantium harum optio ipsum eligendi corporis maxime facilis in
-            adipisci. Molestias tempora sapiente voluptas. Laboriosam doloribus
-            aliquid dicta quibusdam hic praesentium vitae ducimus aut.
-            Blanditiis quasi consequuntur quidem optio earum dicta? Vel, nulla.
-            Minus, cum cupiditate facere voluptas maxime exercitationem quia
-            quidem illo perferendis aut nisi, quasi repudiandae velit vero
-            ducimus! Velit non sapiente libero vitae dicta delectus? Eveniet
-            assumenda officiis numquam soluta quisquam tempore a. Nesciunt saepe
-            incidunt nostrum, maxime ex blanditiis harum reiciendis dignissimos
-            reprehenderit, labore sed numquam accusamus exercitationem
-            repellendus, soluta eum optio! Numquam adipisci mollitia soluta
-            nesciunt eaque tenetur magni, saepe id voluptatem nam eveniet.
-            Maiores beatae velit in voluptatibus quae dicta dolorum et eaque
-            blanditiis laborum? Harum, debitis repellat architecto laudantium
-            animi vero amet! Tempore, inventore earum quaerat sunt temporibus
-            magnam molestiae accusantium omnis, at rem est iusto culpa dolorem
-            sint delectus? Sed animi repudiandae veritatis!
-          </p>
-          <br />
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Repellendus minus quo sed officia quod veritatis tempore molestiae
-            ab accusantium tempora necessitatibus eligendi saepe est, fugiat qui
-            sequi excepturi aspernatur nulla natus rerum quisquam officiis
-            porro! Quas tempora corrupti provident voluptas ut at amet magni
-            quia, totam quam id voluptate, omnis ipsum nesciunt vel similique
-            dicta eum! Ab molestiae modi vero consectetur ratione perspiciatis
-            ipsum, impedit iste at! Nostrum nisi eum illum sed perferendis
-            distinctio quis reprehenderit iusto, expedita animi alias labore,
-            dicta mollitia molestiae hic totam excepturi sequi? Quod, aperiam
-            delectus, quos quasi officiis quas eaque suscipit minima enim quam
-            tempore beatae aut numquam! Architecto reprehenderit rerum hic
-            voluptatem non ullam et deserunt ducimus, praesentium, voluptatibus
-            quod quae eos laborum accusantium veritatis dicta ex, quasi maiores?
-            Unde, necessitatibus debitis quos culpa porro velit, iure aut
-            dolores repudiandae veniam cupiditate. Non repudiandae quidem
-            soluta? Aspernatur quo ab corporis dicta natus facere!
-          </p>
+{blog.description}
+   
         </div>
       </div>
       <div className={styles.otherBlogsCard}>
-        <h3>See other blog</h3>
+        <h3>See other blogs</h3>
         <div className={styles.blogCards}>
           {blogData.map((blogItem) => (
             <BlogCard
@@ -168,4 +123,10 @@ export default function BlogId() {
       </div>
     </div>
   );
+}
+
+export async function getServerSideProps(context) {
+  return {
+      props: {},
+  };
 }
