@@ -82,7 +82,7 @@ export default function Home() {
           </div>
 
           {/* Our Services Section  */}
-          
+
           <div data-aos="fade-up"  classname={styles.ourserv} id={styles.ourserv}>
             <h2>Our Services</h2>
             <div id={styles.ourserimgs}>
@@ -124,6 +124,7 @@ export default function Home() {
               </Tilt>
             </div>
           </div>
+
 
           {/* <!-- grab your notes section  --> */}
           <div data-aos="fade-up" className={styles.courses} id='courses'>
