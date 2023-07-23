@@ -4,8 +4,24 @@
 
 ## _Simple website that will blow your mind!_
 
-<img width="959" alt="Screenshot 2022-10-06 13-14-32" src="https://user-images.githubusercontent.com/56462749/196167807-122487df-62c4-445f-b58c-7884a26db1ba.png">
-<img width="959" alt="Screenshot 2022-10-06 13-14-19" src="https://user-images.githubusercontent.com/56462749/196167803-bc606c1c-a03f-40c0-9c51-b6f2576234c1.png">
+<img width="1440" alt="Screenshot 2023-07-19 at 3 56 03 PM" src="https://github.com/SnigdhaP2022/Project-Amupedia/assets/102572480/898a4145-2614-4684-a0ee-1536306a9d4f">
+<br>
+<img width="1440" alt="Screenshot 2023-07-19 at 3 56 27 PM" src="https://github.com/SnigdhaP2022/Project-Amupedia/assets/102572480/97f9018a-abb6-4ed8-a15b-126468776f30">
+
+
+## TABLE OF CONTENTS
+
+- [About](#About)
+- [Live Demo](#Live-Demo)
+- [Setup Video](#Setup-Video)
+    - [How to Contribute to this repository](#How-to-Contribute-to-this-repository)
+    - [Building Amupedia](#Building-Amupedia)
+    - [NOTE](#NOTE)
+- [Features](#Features)
+- [Technology Stack](#Technology-Stack)
+- [REPO STATUS](#REPO-STATUS)
+- [OUR CONTRIBUTORS](#OUR-CONTRIBUTORS)
+
 
 ## About
 <div align="center">
@@ -34,6 +50,11 @@ Founded by the students of ZHCET in 2021, Amupedia is the biggest platform to he
 
 Here is the live view of this website. It is hosted on Netlify https://www.amupedia.com/.
 
+## Licenses
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Terms and conditions for use, reproduction and distribution are under the [MIT License](https://opensource.org/license/mit/).
+
 ## Setup Video
 
 
@@ -61,7 +82,9 @@ cd Project-Amupedia
 5. Make your changes
 
 ```markdown
-git add . git commit -m "Your commit Message" git push origin branch-name
+git add .
+git commit -m "Your commit Message"
+git push origin branch-name
 ```
 
 - Make a pull request.
@@ -72,9 +95,11 @@ git add . git commit -m "Your commit Message" git push origin branch-name
 1. Install npm from browser(windows), using ``sudo apt install npm``(linux) in the terminal
 2. In the root directory: `npm install` for downloading all the dependencies needed for the project
 3. Run `npm run build` for building the project
-4. Run `npm start` for starting the server (Amupedia is currently running on `localhost:3000`)
-
-Happy coding :)
+4. Run `npm start` for starting the server (Amupedia is currently running on `localhost:3000`) <br>
+   If you find the server unresponsive, Follow Step : 5 & 6
+5. Run `npm i sharp` to install sharp.
+6. Run `npm run dev` This will start the server.
+Happy coding 😊
 
 ### NOTE
 

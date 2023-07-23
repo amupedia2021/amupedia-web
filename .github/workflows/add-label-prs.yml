@@ -1,0 +1,35 @@
+name: Add Labels to PRs
+
+on:
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  add-labels:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Add 'gssoc23' Label to PRs
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { owner, repo } = context.repo;
+            const prNumber = context.payload.pull_request.number;
+            const label = 'gssoc23';
+
+            const addLabelParams = {
+                owner: owner,
+                repo: repo,
+                issue_number: prNumber,
+                labels: [label]
+            };
+
+            await github.issues.addLabels(addLabelParams);
+
+            console.log(`Added the 'gssoc23' label to PR #${prNumber}.`);
