@@ -37,13 +37,6 @@ export default function Home() {
 
   const [form, setForm] = useState(emptyForm);
   const [loading, setLoading] = useState(false);
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [mail, setMail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [address, setAddrees] = useState('');
-  const [message, setMessage] = useState('');
-  const [error, seterror] = useState('');
   const [success, setsuccess] = useState('');
 
   function validEmail(email) {
@@ -53,51 +46,68 @@ export default function Home() {
     else return false;
   }
 
+
+  const isFormValid = (formData) => {
+    // Simple validation logic for each field
+    if (
+      formData.first_name.trim() === '' ||
+      formData.last_name.trim() === '' ||
+      formData.email.trim() === '' ||
+      formData.phone.trim() === '' ||
+      formData.address.trim() === '' ||
+      formData.message.trim() === ''
+    ) {
+      return false;
+    }
+
+    // Validate contactNumber is 10 digits
+    if (!/^\d{10}$/.test(formData.phone)) {
+      return false;
+    }
+
+    // Validate email format
+    if ( !validEmail(formData.email)) {
+      return false;
+    }
+
+    return true;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (firstName === '') {
-      seterror('firstnameerr');
-    } else if (lastName === '') {
-      seterror('lastnameerr');
-    } else if (mail === '') {
-      seterror('emailerr');
-    } else if (!validEmail(mail)) {
-      seterror('validerr');
-    } else if (phone === '') {
-      seterror('phoneerr');
-    } else if (phone.length !== 10) {
-      seterror('numbererr');
-    } else if (address === '') {
-      seterror('addresserr');
-    } else if (message === '') {
-      seterror('messageerr');
-    } else {
-      setLoading(true);
-      try {
-        const res = await axios.post('/api/submitForm', form);
-        const data = await res.data;
-        console.log(data);
-        dispatch({
-          type: {
-            task: 'setAlert',
-            alert: { type: 'noti', message: 'Form Submitted Successfully' }
-          }
-        });
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setLoading(false);
-        setFirstName('');
-        setLastName('');
-        setPhone('');
-        setMail('');
-        setPhone('');
-        setAddrees('');
-        setMessage('');
-        seterror('');
-        setsuccess('Contact form sent successfully!!');
-      }
+    if(!isFormValid(form)){
+      dispatch({
+        type: {
+          task: 'setAlert',
+          alert: { type: 'noti', message: 'Invaid form' }
+        }
+      });
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const res = await axios.post('/api/submitForm', form);
+      const data = await res.data;
+      console.log(data);
+      dispatch({
+        type: {
+          task: 'setAlert',
+          alert: { type: 'noti', message: 'Form Submitted Successfully' }
+        }
+      });
       setForm(emptyForm);
+    } catch (error) {
+      console.log(error);
+      dispatch({
+        type: {
+          task: 'setAlert',
+          alert: { type: 'noti', message: 'Something went wrong..!' }
+        }
+      });
+    } finally {
+      setLoading(false);
+      setsuccess('Contact form sent successfully!!');
     }
   };
 
@@ -259,12 +269,13 @@ export default function Home() {
               <input
                 value={form.phone}
                 onChange={onChange}
-                type='number'
+                type='tel'
                 name='phone'
                 placeholder='Phone'
                 className={styles.details}
                 aria-label="Phone Input"
                 aria-required="true"
+                pattern="[1-9]{1}[0-9]{9}"
               />
               <input
                 value={form.address}
@@ -276,6 +287,7 @@ export default function Home() {
                 className={styles.address}
                 aria-label="Address Input"
                 aria-required="true"
+
               />
               <input
                 value={form.message}

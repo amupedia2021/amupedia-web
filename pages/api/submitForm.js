@@ -1,10 +1,8 @@
 import db from "db/db";
-import nextConnect from "next-connect";
 import Form from "db/models/Form";
 
-const handler = nextConnect();
-
-handler.post(async (req, res) => {
+const POST = async (req, res) => {
+	//console.log(req.body)
   try {
     await db.connect();
     const data = req.body;
@@ -23,6 +21,7 @@ handler.post(async (req, res) => {
   } catch (error) {
     res.status(500).json({ success: false, error });
   }
-});
+};
 
-export default handler;
+
+export default POST
