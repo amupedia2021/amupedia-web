@@ -81,7 +81,7 @@ the month of August 2022. I got my first PR up on the 3rd of the same month
 
 <p class="text-left">
 <a href="https://res.cloudinary.com/practicaldev/image/fetch/s--tSuwvW8C--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0c2evj5yt5vxmd0anp0d.png">
-  <img loading="lazy"
+  <img
     src="https://res.cloudinary.com/practicaldev/image/fetch/s--tSuwvW8C--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0c2evj5yt5vxmd0anp0d.png"
     alt="My first PR in open source"
     class="mx-auto mt-4"
@@ -111,7 +111,7 @@ and more contributions to the same project 🔥🔥 (all thanks to
 </p>
 <p class="text-center">
 <a href="https://res.cloudinary.com/practicaldev/image/fetch/s--eEr1kLL8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/m4fm4d7d751wlfxwuecm.png">
-  <img loading="lazy"
+  <img
     src="https://res.cloudinary.com/practicaldev/image/fetch/s--eEr1kLL8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/m4fm4d7d751wlfxwuecm.png"
     alt="A message from brian douglas when I made my PR 🍕"
     class="mx-auto mt-4"
@@ -128,7 +128,7 @@ Shortly after my contributions, I got a message from the
 </p>
 <p class="text-left">
 <a href="https://res.cloudinary.com/practicaldev/image/fetch/s--0ccvMeIC--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/688p7osal2ghm1aw1n6k.png">
-  <img loading="lazy"
+  <img
     src="https://res.cloudinary.com/practicaldev/image/fetch/s--0ccvMeIC--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/688p7osal2ghm1aw1n6k.png"
     alt="brian douglas messsage to me about a contract"
     class="mx-auto mt-4"
@@ -210,12 +210,11 @@ And as it was coined in
   
     <div className="mb-3 lg:mb-8 text-left">
       <h1 class="text-2xl md:text-3xl lg:text-5xl font-bold mb-4 font-mono">
-
         How You Can Use AI to Improve Your Code Quality
       </h1>
       <div class="flex flex-col 2xl:flex-row space-between gap-x-4 mt-8">
       <div>
-        <img loading="lazy"
+        <img
       src="https://www.freecodecamp.org/news/content/images/size/w1000/2023/05/image-76.png"
       alt="AI code quality"
       className="mx-auto items-center"/>
@@ -364,9 +363,8 @@ And as it was coined in
     <h1 class="text-2xl md:text-3xl lg:text-5xl font-bold mb-2 font-mono">
       How to Build a Discord AI Chatbot that Talks Like Your Favorite Character
     </h1>
-
     <div className="flex flex-col lg:flex-row space-between gap-x-6 mt-4">
-    <img loading="lazy"
+    <img
       src="https://freecodecamp.org/news/content/images/2021/08/discord.gif"
       alt="Discord GIF"
       className="w-full lg:w-1/2 lg:h-1/2 mb-8"
@@ -447,7 +445,7 @@ And as it was coined in
       Host the model on Hugging Face, which provides a free API for us to query
       the model. Sign up for Hugging Face, create a new model repository, and
       obtain your API token.
-
+    </p>
     <div className="flex flex-col xl:flex-row space-between gap-x-4">
       <div className="xl:w-2/3">
       <h2 className="text-lg md:text-xl lg:text-3xl font-bold mb-2 font-serif mt-2 underline">How to Build the Discord Bot ?</h2>
@@ -486,7 +484,6 @@ And as it was coined in
       </div>
     </div>
     <p className="mt-4 mb-2 italic font-semibold text-xl md:text-2xl text-slate-600">
-
       Happy bot building and enjoy conversing with your favorite character on
       Discord!
     </p>
@@ -501,6 +498,7 @@ And as it was coined in
     likes: 9,
     author:"John",
     description:<div className="container py-8">
+    
     <div className="mt-8 text-left">
       <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-2 font-mono">
         Machine learning with Julia – How to Build and Deploy a Trained AI Model
@@ -529,7 +527,7 @@ And as it was coined in
           ML solutions.
         </p> 
         </div>
-        <img loading="lazy"
+        <img
       src="https://www.freecodecamp.org/news/content/images/size/w1000/2023/02/survived.png"
       alt="Julia machine learning"
       className="mx-auto"
@@ -1279,7 +1277,6 @@ And as it was coined in
   <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-2 font-mono">
     Learn Serverless on AWS Step-by-Step: SQL with Aurora
   </h1>
-
   
   <div className="flex flex-col 2xl:flex-row space-between gap-x-4">
   <div className="my-auto 2xl:w-4/5">
@@ -1294,8 +1291,7 @@ And as it was coined in
       implementation details with relevant images.
     </p>  
   </div>
-
-  <img loading="lazy"
+   <img
     src="https://res.cloudinary.com/practicaldev/image/fetch/s--DdzoSOFB--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://raw.githubusercontent.com/PChol22/kumo-articles/master/blog-posts/learn-serverless/aurora/assets/basic-schema.png"
     alt="Basic Schema"
     className="w-full max-w-screen-lg mb-8"
