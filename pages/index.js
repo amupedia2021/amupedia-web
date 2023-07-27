@@ -168,7 +168,6 @@ export default function Home() {
             </div>
           </div>
 
-          
           {/* <!-- grab your notes section  --> */}
           <div data-aos='fade-up' className={styles.courses} id='courses'>
             <h2 className={styles.grabh2}>Grab Your Notes Here</h2>
