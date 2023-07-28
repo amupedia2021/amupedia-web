@@ -126,25 +126,45 @@ export default function Home() {
           </div>
 
           {/* Our Services Section  */}
-          <div data-aos='fade-up' id={styles.ourserv}>
+          <div data-aos="fade-up"  classname={styles.ourserv} id={styles.ourserv}>
             <h2>Our Services</h2>
             <div id={styles.ourserimgs}>
+             <a href="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpdf.28512047.svg&w=256&q=75">
+             <Image src="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpdf.28512047.svg&w=256&q=75" />
+             </a>
+             <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
               <div>
-                <Image loading="lazy" src={pdf} alt='pdfs' />
-                <p>PDFs OF ALL SUBJECTS</p>
-              </div>
+                <Image src={pdf} />
+                <p>PDFs OF ALL SUBJECTS</p> 
+              </div>           
+               </Tilt>
+              <a href="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fyt.ff6fd1c8.svg&w=256&q=75">
+              <Image src="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fyt.ff6fd1c8.svg&w=256&q=75" />
+              </a>
+              <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
               <div>
-                <Image loading="lazy" src={chap_yt} alt='explaination' />
+                <Image src={chap_yt}  />
                 <p>CHAPTER EXPLANATION BY YOUTUBE VIDEO</p>
               </div>
+              </Tilt>
+              <a href="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftest_and_quiz.33e8767e.svg&w=256&q=75">
+              <Image src="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftest_and_quiz.33e8767e.svg&w=256&q=75" />
+              </a>
+               <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
               <div>
-                <Image loading="lazy" src={quiz} alt='solutions' />
+                <Image src={quiz} />
                 <p>SOLUTION OF TEST AND QUIZZES</p>
               </div>
+              </Tilt>
+              <a href="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fassignment.09926406.svg&w=256&q=75">
+              <Image src="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fassignment.09926406.svg&w=256&q=75" />
+              </a>
+              <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
               <div>
-                <Image loading="lazy" src={assign} alt='assignments' />
+                <Image src={assign}  />
                 <p>ASSIGNMENTS GIVEN</p>
               </div>
+              </Tilt>
             </div>
           </div>
 
