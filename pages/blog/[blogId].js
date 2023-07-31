@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import { useState ,useEffect} from "react";
-import Image from "next/image";
 import styles from "@styles/BlogDetail.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "node_modules/@fortawesome/free-solid-svg-icons/index";
@@ -96,7 +95,7 @@ export default function BlogId() {
           </div>
         </div>
         <div className={styles.blogPicture}>
-          <Image loading="lazy"
+          <img loading="lazy"
             src={blog.image}
             width="100%"
             height="100%"
