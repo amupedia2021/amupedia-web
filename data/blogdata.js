@@ -447,7 +447,7 @@ And as it was coined in
       Host the model on Hugging Face, which provides a free API for us to query
       the model. Sign up for Hugging Face, create a new model repository, and
       obtain your API token.
-
+    </p>
     <div className="flex flex-col xl:flex-row space-between gap-x-4">
       <div className="xl:w-2/3">
       <h2 className="text-lg md:text-xl lg:text-3xl font-bold mb-2 font-serif mt-2 underline">How to Build the Discord Bot ?</h2>
