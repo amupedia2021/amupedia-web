@@ -97,24 +97,37 @@ function MyApp({ Component, pageProps, router }) {
           ></script> */}
 
           <title>Amupedia</title>
+          {/* Primary meta tags */}
+          <meta name="title" content="Amupedia" />
           <meta
             name="description"
             content="Amupedia is an initiative to help college students pursuing B.Tech, B.E or B.Com, especially from AMU."
           />
-          <meta name="keywords" content="B.Tech, B.Com, B.E" />
+          <meta name="keywords" content="B.Tech, B.Com, B.E, Amupedia, college program, academic demands, assistance, students, notes, blogs, events, knowledge, influences, connections, ZHCET" />
+          <meta name="language" content="en" />
+          <meta name="author" content="Anmol Agrawal, Haider Ali, Muhammad Jufry" />
+          <meta name="robots" content="index, follow" />
+          <meta name="revisit-after" content="7 days" />
+          
+          {/* Open Graph / Facebook */}
           <meta
             property="og:image"
             content="https://www.amupedia.com/og-image.webp"
           />
           <meta property="og:image:width" content="150" />
           <meta property="og:image:height" content="150" />
+
+          <meta property="og:type" content="website" />
           <meta property="og:title" content="Amupedia" />
+          <meta property="og:site_name" content="Amupedia" />
           <meta
             property="og:description"
             content="Amupedia is an initiative to help college students pursuing B.Tech, B.E or B.Com, especially from AMU."
           />
-          <meta name="twitter:card" content="summary" />
           <meta property="og:url" content="https://www.amupedia.com" />
+
+          {/* Twitter */}
+          <meta name="twitter:card" content="summary" />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={addProductJsonLd()}

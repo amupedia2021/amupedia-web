@@ -130,19 +130,19 @@ export default function Home() {
             <h2>Our Services</h2>
             <div id={styles.ourserimgs}>
               <div>
-                <Image src={pdf} alt='pdfs' />
+                <Image loading="lazy" src={pdf} alt='pdfs' />
                 <p>PDFs OF ALL SUBJECTS</p>
               </div>
               <div>
-                <Image src={chap_yt} alt='explaination' />
+                <Image loading="lazy" src={chap_yt} alt='explaination' />
                 <p>CHAPTER EXPLANATION BY YOUTUBE VIDEO</p>
               </div>
               <div>
-                <Image src={quiz} alt='solutions' />
+                <Image loading="lazy" src={quiz} alt='solutions' />
                 <p>SOLUTION OF TEST AND QUIZZES</p>
               </div>
               <div>
-                <Image src={assign} alt='assignments' />
+                <Image loading="lazy" src={assign} alt='assignments' />
                 <p>ASSIGNMENTS GIVEN</p>
               </div>
             </div>
@@ -166,14 +166,14 @@ export default function Home() {
                   </div>
                 </Tilt>
               </Link>
-              <Link passHref href='/'>
+              <Link passHref href='/courses/bcom'>
                 <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
                   <div className={styles.grab3}>
                     <p>B.Com</p>
                   </div>
                 </Tilt>
               </Link>
-              <Link passHref href='/'>
+              <Link passHref href='/courses/bsc'>
                 <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
                   <div className={styles.grab4}>
                     <p>B.Sc</p>
@@ -221,7 +221,7 @@ export default function Home() {
 
           {/* <!-- Contact Form  --> */}
           <h2 className={styles.grabh2}>Get In Touch With Us</h2>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} aria-label="Contact form">
             <div className={styles.cntfrm}>
               <input
                 value={form.first_name}
@@ -231,6 +231,8 @@ export default function Home() {
                 name='first_name'
                 placeholder='First Name'
                 className={styles.details}
+                aria-label="First name Input"
+                aria-required="true"
               />
               <input
                 value={form.last_name}
@@ -240,6 +242,8 @@ export default function Home() {
                 type='text'
                 placeholder='Last Name'
                 className={styles.details}
+                aria-label="Last name Input"
+                aria-required="true"
               />
               <input
                 value={form.email}
@@ -249,6 +253,8 @@ export default function Home() {
                 type='email'
                 placeholder='Email'
                 className={styles.details}
+                aria-label="Email Input"
+                aria-required="true"
               />
               <input
                 value={form.phone}
@@ -257,6 +263,8 @@ export default function Home() {
                 name='phone'
                 placeholder='Phone'
                 className={styles.details}
+                aria-label="Phone Input"
+                aria-required="true"
               />
               <input
                 value={form.address}
@@ -266,6 +274,8 @@ export default function Home() {
                 type='text'
                 placeholder='Address'
                 className={styles.address}
+                aria-label="Address Input"
+                aria-required="true"
               />
               <input
                 value={form.message}
@@ -275,6 +285,8 @@ export default function Home() {
                 type='text'
                 placeholder='Type your message here'
                 className={styles.msg}
+                aria-label="Message Input"
+                aria-required="true"
               />
             </div>
             <button type='submit' id={styles.sub}>

@@ -48,11 +48,11 @@ const Login = () => {
         <div className={styles.overlay} onClick={closeLoginPanel}></div>
         <div className={`${styles.container}`}>
           <div className={styles.logo}>
-            <Image src={logo} alt="Amupedia Logo"></Image>
+            <Image loading="lazy" src={logo} alt="Amupedia Logo"></Image>
           </div>
           <div id="googleSignIn" className={styles.googleSignIn}></div>
           <p className={styles.or}>Or</p>
-          <form className={styles.loginForm}>
+          <form className={styles.loginForm} aria-label="Login form">
             <label htmlFor="user">
               <FontAwesomeIcon icon={faUser} className={styles.icon} />
               <input
@@ -62,6 +62,8 @@ const Login = () => {
                 type="email"
                 value={credentials.email}
                 onChange={inputChange}
+                required
+                aria-required="true"
               />
             </label>
             <label htmlFor="pass">
@@ -73,6 +75,8 @@ const Login = () => {
                 type={type}
                 value={credentials.password}
                 onChange={inputChange}
+                required
+                aria-required="true"
               />
               <FontAwesomeIcon
                 icon={faEye}
@@ -80,11 +84,13 @@ const Login = () => {
                   type === "password" && styles.active
                 }`}
                 onClick={changeType}
+                aria-label={type==="password" && "Show Password"}
               />
               <FontAwesomeIcon
                 icon={faEyeSlash}
                 className={`${styles.eye} ${type === "text" && styles.active}`}
                 onClick={changeType}
+                aria-label={type==="text" && "Hide Password"}
               />
               <span>Forgot Password ?</span>
             </label>

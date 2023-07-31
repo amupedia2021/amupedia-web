@@ -123,7 +123,7 @@ const Navbar = () => {
       >
         {/* {TODO: !Logo to be completed } */}
         {/* <div className={styles.logo}>
-					<Image src={logo} alt="Logo"></Image>
+					<Image loading="lazy" src={logo} alt="Logo"></Image>
 				</div> */}
         <Link href='/'>
           <a
@@ -223,7 +223,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href='/'>
+                  <Link href='/courses/bcom'>
                     <a
                       onClick={() => setDropdown(false)}
                       className={styles.dropdownLink}
@@ -233,7 +233,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href='/'>
+                  <Link href='/courses/bsc'>
                     <a
                       onClick={() => setDropdown(false)}
                       className={styles.dropdownLink}
