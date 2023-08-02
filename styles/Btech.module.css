@@ -98,6 +98,57 @@
 #chem {
   background: url("/images/btech/chem.svg") no-repeat center center;
 }
+#ai {
+  background: url("/images/btech/ai.webp") no-repeat center center;
+}
+
+
+#acc {
+  background: url("/images/bcom/acc.webp") no-repeat center center;
+}
+#ae {
+  background: url("/images/bcom/ec.webp") no-repeat center center;
+}
+#bnk {
+  background: url("/images/bcom/bnk.webp") no-repeat center center;
+}
+#ins {
+  background: url("/images/bcom/ins.webp") no-repeat center center;
+}
+#adm {
+  background: url("/images/bcom/adm.webp") no-repeat center center;
+}
+#com {
+  background: url("/images/bcom/com.webp") no-repeat center center;
+}
+#ecom {
+  background: url("/images/bcom/ecom.webp") no-repeat center center;
+}
+#for {
+  background: url("/images/bcom/for.webp") no-repeat center center;
+}
+
+#bio {
+  background: url("/images/bsc/bio.webp") no-repeat center center;
+}
+#csc {
+  background: url("/images/bsc/csc.webp") no-repeat center center;
+}
+#chem {
+  background: url("/images/bsc/chem.webp") no-repeat center center;
+}
+#math {
+  background: url("/images/bsc/math.webp") no-repeat center center;
+}
+#phy {
+  background: url("/images/bsc/phy.webp") no-repeat center center;
+}
+#nur {
+  background: url("/images/bsc/nur.webp") no-repeat center center;
+}
+#agr {
+  background: url("/images/bsc/agr.webp") no-repeat center center;
+}
 
 .brnch:hover {
   text-shadow: -2px -2px 8px rgba(255, 255, 255, 0.906) !important;

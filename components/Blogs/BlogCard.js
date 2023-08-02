@@ -14,7 +14,7 @@ const BlogCard = (props) => {
       >
         <div className={styles.cover}>
           <div className={styles.image}>
-            <Image src={image} alt="data-science-amupedia-blogs"
+            <Image loading="lazy" src={image} alt="data-science-amupedia-blogs"
             layout="responsive"
             width="1500"
             height="1000"/>

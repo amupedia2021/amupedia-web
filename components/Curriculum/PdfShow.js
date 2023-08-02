@@ -9,7 +9,7 @@ const PdfShow = (props) => {
     <div className={styles.pdficon}>
       <a href={link} target='_blank' rel='noreferrer'>
         <div className={styles.iconWrapper}>
-          <Image
+          <Image loading="lazy"
             src={pdfIcon}
             alt='PdfIcon'
             width='99'
