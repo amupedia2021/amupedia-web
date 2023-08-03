@@ -114,6 +114,13 @@ const Navbar = () => {
           dropdown ? styles.overlay_active : ''
         }`}
         id='overlay'
+
+        onClick={() => {
+          const menu = document.querySelector('#menu');
+          if (menu.checked) menu.click();
+          setDropdown(false);
+        }}
+
       ></div>
 
       {/* <!-- navigation bar --> */}
@@ -130,17 +137,23 @@ const Navbar = () => {
             // onClick={onClick}: replace this with below to ensure that the menu is properly closed when the element is clicked.
             onClick={() => {
               const menu = document.querySelector('#menu');
-              if (menu.checked) {
-                setLabelText('&#9776;');
-                menu.click();
-              }
+
+              if (menu.checked){    setLabelText("&#9776;"); menu.click();}
+
             }}
-            className={`${styles.lnk} ${
-              router.pathname === '/' && !courseActive && !contactActive
-                ? styles.active
-                : ''
-            } ${navbar && styles.nav_active}`}
-          ></a>
+            className={`${styles.lnk} ${router.pathname === '/' && !courseActive && !contactActive ? styles.active : ''
+              } ${navbar && styles.nav_active}`}
+          >
+            <div className={styles.imageContainer} >
+              <Image
+                src="/logomain2.png"
+                alt="Logo"
+                width={60}
+                height={60}
+                className={styles.logoImage}
+              />
+            </div>
+          </a>
         </Link>
         <ul className={styles.list}>
           <li
@@ -158,10 +171,9 @@ const Navbar = () => {
                 // onClick={onClick}: replace this with below to ensure that the menu is properly closed when the element is clicked.
                 onClick={() => {
                   const menu = document.querySelector('#menu');
-                  if (menu.checked) {
-                    setLabelText('&#9776;');
-                    menu.click();
-                  }
+
+                  if (menu.checked){    setLabelText("&#9776;"); menu.click();}
+   
                 }}
                 className={`${styles.lnk} ${
                   router.pathname === '/' && !courseActive && !contactActive
