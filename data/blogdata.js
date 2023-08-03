@@ -1,4 +1,5 @@
 let i = 0;
+import 'tailwindcss/tailwind.css'
 const blogData = [
   {
     id: i++,
@@ -9,21 +10,21 @@ const blogData = [
     author:"Ben",
     description:       <>
     <>
-<div class="text-left">
-<h1 id="how-i-got-hired-contributing-to-open-source-projects" class="text-2xl font-bold mb-2">
-How I Got Hired Contributing to open source projects
+<div class="text-left w-full overflow-x-hidden">
+<h1 id="how-i-got-hired-contributing-to-open-source-projects" class="text-2xl md:text-3xl lg:text-5xl font-bold mb-2 font-mono w-[100vw]">
+  How I Got Hired Contributing to open source projects
 </h1>
-<p>
-<a href="/t/opensource" class="mr-2">#opensource</a>
-<a href="/t/webdev" class="mr-2">#webdev</a>
-<a href="/t/javascript" class="mr-2">#javascript</a>
-<a href="/t/career" class="mr-2">#career</a>
+<p class="text-blue-500 flex gap-x-2 lg:gap-x-3 mb-4 flex-wrap">
+<a href="/t/opensource" class="hover:text-blue-900 transition duration-200">#opensource</a>
+<a href="/t/webdev" class="hover:text-blue-900 transition duration-200">#webdev</a>
+<a href="/t/javascript" class="hover:text-blue-900 transition duration-200">#javascript</a>
+<a href="/t/career" class="hover:text-blue-900 transition duration-200">#career</a>
 </p>
 <p class="text-left mt-2">
-<strong class="text-lg">
+<span class="font-semibold">
   In the tech space, getting a job is not totally based on how good you are
   at the technical side of things, but rather your positioning.
-</strong>
+</span>
 This means being able to put yourself out there and show employers how your
 skills and experience can benefit their company.
 </p>
@@ -33,10 +34,10 @@ It is the goal of 90%-if not 100%-of geeks who are in tech to get hired, butwith
 <p class="text-left">
 As you read, I will share my journey on how I got into open source and
 secured my first international role as a software engineer at
-<a href="https://opensauced.pizza">OpenSauced</a> by contributing to their
+<a href="https://opensauced.pizza" class="ml-1 text-blue-500 hover:text-blue-900 transition duration-200">OpenSauced</a> by contributing to their
 open source projects.*
 </p>
-<h2 id="-my-background-and-passion-my-background-and-passion" class="text-left font-bold mt-4 text-2xl">
+<h2 id="-my-background-and-passion-my-background-and-passion" class="font-mono text-left font-bold mt-6 text-2xl">
 My Background and Passion
 </h2>
 <p>
@@ -48,32 +49,36 @@ I took it upon myself to explore this little gadget at my disposal.
 In 2020, during the covid 19 pandemic, I started learning the basics of the
 web (HTML, CSS &amp; Javascript) with a friend (a graphic designer) who also
 was trying to transition into UI/UX design. Luckily, I got my first job at
-<a href="https://softkodesllc.com/">Softkodesllc</a> which didn’t last long
+<a href="https://softkodesllc.com/"  class="ml-1 text-blue-500 hover:text-blue-900 transition duration-200">Softkodesllc</a> which didn’t last long
 due to my lack of experience. So I kept on learning until I got into
-<strong> open source</strong>.
+<span class="font-semibold"> open source</span>
 </p>
 <h2 id="-how-i-got-to-know-about-open-source-how-i-got-to-know-about-open-source" class="text-left font-bold mt-4 text-2xl">
 How I got to know about open source
 </h2>
-<p>
+<div class="flex flex-col lg:flex-row gap-x-4 space-between mt-4 mb-14">
+<div class="lg:w-1/2 self-center">
 In a Twitter space by
-<a href="https://twitter.com/ShawnBasquiat">@ShawnBasquiat</a>(The HUNT) was
+<a href="https://twitter.com/ShawnBasquiat"  class="ml-1 text-blue-500 hover:text-blue-900 transition duration-200">@ShawnBasquiat</a>(The HUNT) was
 the first place I heard about open source and ways to contribute to open
 source. Then I ran into a video on YouTube talking about how to make your
-first contributions to <strong>open source</strong> projects.
-</p>
-<h2 id="-the-lifechanging-move-i-took-that-led-to-the-aha-moment-the-life-changing-move-i-took-that-led-to-the-aha-moment" class="text-lg text-left font-bold mt-4 text-2xl">
+first contributions to <span class="font-semibold">open source</span> projects.
+
+<h2 id="-the-lifechanging-move-i-took-that-led-to-the-aha-moment-the-life-changing-move-i-took-that-led-to-the-aha-moment" 
+class="text-left font-semibold mt-6 text-2xl">
 The life-changing move I took that led to the AHA! moment
 </h2>
 <p>
 After listening to the talks and tips from the space, I decided to set a
 30-days target for myself to make contributions to open source projects in
-the month of August 2022. I got my first PR up on the 3rd of the same month
-<a href="https://github.com/open-sauced/hot/pull/285">
-  https://github.com/open-sauced/hot/pull/285
+the month of August 2022. I got my first PR up on the 3rd of the same month 
+<a href="https://github.com/open-sauced/hot/pull/285" class="ml-1 text-blue-500 hover:text-blue-900 transition duration-200">
+   https://github.com/open-sauced/hot/pull/285
 </a>
 .
 </p>
+</div>
+
 <p class="text-left">
 <a href="https://res.cloudinary.com/practicaldev/image/fetch/s--tSuwvW8C--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0c2evj5yt5vxmd0anp0d.png">
   <img loading="lazy"
@@ -83,25 +88,26 @@ the month of August 2022. I got my first PR up on the 3rd of the same month
   />
 </a>
 </p>
+</div>
 <p class="text-left">The second and third PR followed on the 4th</p>
 <ul class="list-disc list-inside">
 <li>
-  <a href="https://github.com/open-sauced/hot/pull/290">
+  <a href="https://github.com/open-sauced/hot/pull/290" class="text-blue-500 hover:text-blue-900 transition duration-200">
     https://github.com/open-sauced/hot/pull/290
   </a>
 </li>
 <li>
-  <a href="https://github.com/open-sauced/hot/pull/292">
+  <a href="https://github.com/open-sauced/hot/pull/292" class="text-blue-500 hover:text-blue-900 transition duration-200">
     https://github.com/open-sauced/hot/pull/292
   </a>
 </li>
 </ul>
-<p class="text-center">
+<p class="text-center mt-4">
 At first, I was confused about how to start, but when I took up the courage
 to pick up my first issue, it all started making sense 😇😇😇. I got a warm
 welcome on my first contribution which resulted in me wanting to make more
 and more contributions to the same project 🔥🔥 (all thanks to
-<a href="https://dev.to/bdougieyo">@bdougieyo</a>).
+<a href="https://dev.to/bdougieyo" class="ml-1 text-blue-500 hover:text-blue-900 transition duration-200">@bdougieyo</a>).
 </p>
 <p class="text-center">
 <a href="https://res.cloudinary.com/practicaldev/image/fetch/s--eEr1kLL8--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/m4fm4d7d751wlfxwuecm.png">
@@ -112,15 +118,15 @@ and more contributions to the same project 🔥🔥 (all thanks to
   />
 </a>
 </p>
-<h2 id="-the-aha-moment-the-aha-moment" class="text-lg text-left font-bold mt-4">
+<h2 id="-the-aha-moment-the-aha-moment" class="text-lg text-left font-bold mt-6">
 The AHA! moment
 </h2>
 <p>
 Shortly after my contributions, I got a message from the
-<a href="https://insights.opensauced.pizza/user/bdougie">CEO</a> of
-<a href="https://opensauced.pizza">OpenSauced</a>.
+<a href="https://insights.opensauced.pizza/user/bdougie" class="ml-1 text-blue-500 hover:text-blue-900 transition duration-200">CEO</a> of
+<a href="https://opensauced.pizza" class="ml-1 text-blue-500 hover:text-blue-900 transition duration-200">OpenSauced</a>.
 </p>
-<p class="text-center text-left">
+<p class="text-left">
 <a href="https://res.cloudinary.com/practicaldev/image/fetch/s--0ccvMeIC--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/688p7osal2ghm1aw1n6k.png">
   <img loading="lazy"
     src="https://res.cloudinary.com/practicaldev/image/fetch/s--0ccvMeIC--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/688p7osal2ghm1aw1n6k.png"
@@ -129,7 +135,7 @@ Shortly after my contributions, I got a message from the
   />
 </a>
 </p>
-<p class="text-lg text-left mt-2 ">
+<p class="text-2xl italic text-left mt-4">
 It all seemed like magic to me at first 😊😊...but it was reality! My first
 step towards working in public earned me a
 <strong> Software Engineering</strong> role 🍕🍕
@@ -138,7 +144,7 @@ step towards working in public earned me a
 That's my short story on how I got hired making open-source contributions
 💫💫
 </p>
-<h2 id="-tips-tips" class="text-lg font-bold mt-4 mb-2">
+<h2 id="-tips-tips" class="text-left text-3xl font-bold mt-5 mb-2 border-b-2 w-[10%]">
 Tips
 </h2>
 <p class="mb-2 ">
@@ -147,37 +153,37 @@ get started:
 </p>
 <ul class="list-disc list-inside ">
 <li>
-<strong>Choose a Project that Aligns with Your Interests</strong>: Start by identifying open-source projects that align with your passions and skills. Whether it's web development, machine learning, or design, finding a project that excites you will keep you motivated and engaged.
+<strong class="text-blue-800">Choose a Project that Aligns with Your Interests</strong>: Start by identifying open-source projects that align with your passions and skills. Whether it's web development, machine learning, or design, finding a project that excites you will keep you motivated and engaged.
 </li>
 <li>
-<strong>Start Small and Contribute</strong>: Begin by tackling small tasks or bugs within the project. This allows you to familiarize yourself with the codebase and workflow. Look for "good first issue" or "beginner-friendly" tags that indicate suitable tasks for newcomers.
+<strong class="text-blue-800">Start Small and Contribute</strong>: Begin by tackling small tasks or bugs within the project. This allows you to familiarize yourself with the codebase and workflow. Look for "good first issue" or "beginner-friendly" tags that indicate suitable tasks for newcomers.
 </li>
 <li>
-<strong>Engage with the Community</strong>: Join the project's community forums, mailing lists, or chat channels. Introduce yourself, ask questions, and seek guidance from experienced contributors. Engaging with the community not only helps you learn but also opens doors to collaboration and mentorship opportunities.
+<strong class="text-blue-800">Engage with the Community</strong>: Join the project's community forums, mailing lists, or chat channels. Introduce yourself, ask questions, and seek guidance from experienced contributors. Engaging with the community not only helps you learn but also opens doors to collaboration and mentorship opportunities.
 </li>
 <li>
-<strong>Read Documentation and Code</strong>: Invest time in understanding the project's documentation and codebase. Familiarize yourself with the project's structure, coding conventions, and guidelines. This knowledge will help you navigate the code more efficiently and contribute effectively.
+<strong class="text-blue-800">Read Documentation and Code</strong>: Invest time in understanding the project's documentation and codebase. Familiarize yourself with the project's structure, coding conventions, and guidelines. This knowledge will help you navigate the code more efficiently and contribute effectively.
 </li>
 <li>
-<strong>Embrace Feedback and Learn from Others</strong>: Open source is a collaborative environment, so be open to feedback from experienced contributors. Take constructive criticism positively and use it to improve your skills. Learning from others' code and approaches will also broaden your understanding of best practices.
+<strong class="text-blue-800">Embrace Feedback and Learn from Others</strong>: Open source is a collaborative environment, so be open to feedback from experienced contributors. Take constructive criticism positively and use it to improve your skills. Learning from others' code and approaches will also broaden your understanding of best practices.
 </li>
 </ul>
 
-<p class="text-left italic mt-2 mb-3">
+<p class="text-left italic mt-4 mb-3">
 With these few tips listed, you can kick-start your journey into open
 source.
 </p>
-<p class="text-left italic font-bold">
+<p class="text-left italic font-semibold mt-6">
 If you find this article helpful, then click on the follow button to get
 more updates and helpful resources on JavaScript, Reactjs, and Next.js. You
 can also follow me on Twitter
-<a href="https://twitter.com/OgDev_01">@OgDev-01</a> to get useful resources
+<a href="https://twitter.com/OgDev_01" class="ml-1 text-blue-500 hover:text-blue-900 transition duration-200">@OgDev-01</a> to get useful resources
 and tech trends or on
-<a href="https://insights.opensauced.pizza/user/OgDev-01/">OpenSauced</a> to
+<a href="https://insights.opensauced.pizza/user/OgDev-01/" class="ml-1 text-blue-500 hover:text-blue-900 transition duration-200">OpenSauced</a> to
 see what contributions I've been making and the ones I highlight! Stay
 saucy! 🍕🍕
 </p>
-<p class="text-left italic font-bold">
+<p class="text-left italic font-semibold">
 * This is not fiction. However, this piece does not guarantee the desired
 result you might need. It is designed to point you toward the right path.
 And as it was coined in
@@ -200,16 +206,21 @@ And as it was coined in
     comments: 10,
     likes: 7,
     author:"Lisa",
-    description:<div className="container py-8">
-    <img loading="lazy"
-      src="https://www.freecodecamp.org/news/content/images/size/w1000/2023/05/image-76.png"
-      alt="AI code quality"
-      className="mx-auto"
-    />
-    <div className="mt-8 text-left">
-      <h1 className="text-3xl font-bold mb-4">
+    description:<div className="container py-1">
+  
+    <div className="mb-3 lg:mb-8 text-left">
+      <h1 class="text-2xl md:text-3xl lg:text-5xl font-bold mb-4 font-mono">
+
         How You Can Use AI to Improve Your Code Quality
       </h1>
+      <div class="flex flex-col 2xl:flex-row space-between gap-x-4 mt-8">
+      <div>
+        <img loading="lazy"
+      src="https://www.freecodecamp.org/news/content/images/size/w1000/2023/05/image-76.png"
+      alt="AI code quality"
+      className="mx-auto items-center"/>
+    </div>
+    <div className="2xl:w-2/3 w-full my-auto">
       <p className="mb-4">
         As a software developer, I've always tried to write flawless code. Great
         code is not just functional – it should also be elegant, efficient, and
@@ -231,13 +242,13 @@ And as it was coined in
         Well, my friends, you can supercharge your coding skills if you know how
         to use these new AI tools effectively.
       </p>
-      <p className="mb-4">
+      <p className="mb-6">
         In this article, I want to share with you the six most common ways I've
         been leveraging AI to enhance my code quality. It's been a game-changer,
         unleashing new levels of efficiency, accuracy, and creativity in my
         development process. So let's jump in and see how you can do the same.
       </p>
-      <p className="mb-4 font-bold">A Disclaimer Before We Start</p>
+      <p className="mb-2 font-bold font-serif">A Disclaimer Before We Start</p>
       <p className="mb-4">
         As it currently stands, I wouldn't recommend using AI to code out your
         projects in full. I've tried my hand at several projects, and you'll
@@ -249,11 +260,13 @@ And as it was coined in
         AI. When it comes to menial and maintenance tasks, such as improving code
         quality as we'll talk about here, that's where AI currently shines.
       </p>
-      <p className="mb-4">So with that out of the way, let's get started.</p>
-      <p className="mb-4 font-bold">Ways to Use AI When Writing Code</p>
+    </div>
+    </div>
+      <p className="mt-4 mb-4 italic">So with that out of the way, let's get started,</p>
+      <p className="mb-4 font-bold font-sans text-3xl">Ways to Use AI When Writing Code</p>
       <ol className="list-decimal list-inside pl-4">
         <li className="mb-4">
-          <p>Idea Generation</p>
+          <span className="font-semibold text-3xl text-slate-700">Idea Generation</span>
           <p className="mb-2">
             I'll be the first to admit that I don't always come up with the best
             solutions for a coding problem. I can recall too many times that I've
@@ -282,7 +295,7 @@ And as it was coined in
             Here is an example of me asking it the question from this Stack
             Overflow thread, and it gave a pretty helpful response:
           </p>
-          <blockquote className="border-l-4 pl-4 italic text-gray-700">
+          <blockquote className="border-l-4 pl-8 italic text-blue-400 mb-2">
             <p>
               "The error you're encountering is because the player.find() method
               is returning None for some elements, which means it couldn't find a
@@ -305,7 +318,7 @@ And as it was coined in
           </p>
         </li>
         <li className="mb-4">
-          <p>Leveraging AI for Code Reviews</p>
+          <span className="font-semibold text-3xl text-slate-700">Leveraging AI for Code Reviews</span >
           <p className="mb-2">
             The next great way I've been using AI is in reviewing my code. This is
             especially useful for newer programmers who are trying to find their
@@ -348,16 +361,18 @@ And as it was coined in
     likes: 10,
     author:"David",
     description:<div className="container mx-auto px-4 py-8 text-left">
-    <h1 className="text-3xl font-bold mb-4">
+    <h1 class="text-2xl md:text-3xl lg:text-5xl font-bold mb-2 font-mono">
       How to Build a Discord AI Chatbot that Talks Like Your Favorite Character
     </h1>
+
+    <div className="flex flex-col lg:flex-row space-between gap-x-6 mt-4">
     <img loading="lazy"
       src="https://freecodecamp.org/news/content/images/2021/08/discord.gif"
-   style={{height:"300px",width:"300px"}}
       alt="Discord GIF"
-      className="w-full max-w-screen-lg mb-8"
+      className="w-full lg:w-1/2 lg:h-1/2 mb-8"
     />
-    <h2 className="text-2xl font-bold mb-2">Introduction</h2>
+    <div className="w-[100%] my-auto">
+    <h2 className="text-2xl font-bold mb-2 font-serif">Introduction</h2>
     <p className="mb-4">
       My chatbot project started as a joke with a friend when we were playing
       video games. I'm honestly surprised by how popular it became – there were
@@ -366,7 +381,9 @@ And as it was coined in
       crashing the bot. 😳 You can read more about my deployment post-mortem in
       this post.
     </p>
-    <h2 className="text-2xl font-bold mb-2">Outline of this Tutorial</h2>
+    </div>
+    </div>
+    <h2 className="text-lg md:text-xl lg:text-3xl font-bold mb-2 font-serif mt-2 underline">Outline of this Tutorial</h2>
     <ul className="list-disc pl-6 mb-4">
       <li>
         Gather text data for your character using one of these two methods: find
@@ -384,84 +401,92 @@ And as it was coined in
       <li>Host the bot on Repl.it.</li>
       <li>Keep the bot running indefinitely with Uptime Robot.</li>
     </ul>
-    <h2 className="text-2xl font-bold mb-2">How to Prepare the Data</h2>
+    <h2 className="text-lg md:text-xl lg:text-3xl font-bold mb-2 font-serif mt-2 underline">How to Prepare the Data ?</h2>
     <p className="mb-4">
       For our chatbot to learn to converse, we need text data in the form of
       dialogues. This is essentially how our chatbot is going to respond to
       different exchanges and contexts.
     </p>
-    <h3 className="text-xl font-bold mb-2">
+    <h3 className="text-xl md:text-2xl text-green-900 font-bold mb-2">
       Is Your Favorite Character on Kaggle?
     </h3>
     <p className="mb-4">
       There are a lot of interesting datasets on Kaggle for popular cartoons, TV
       shows, and other media.
     </p>
-    <h3 className="text-xl font-bold mb-2">
+    <h3 className="text-xl md:text-2xl text-orange-900 font-bold mb-2">
       Can't Find Your Favorite Character on Kaggle?
     </h3>
     <p className="mb-4">
       No worries. We can create datasets from raw transcripts. A great place to
       look for transcripts is Transcript Wiki.
     </p>
-    <h2 className="text-2xl font-bold mb-2">How to Train the Model</h2>
+    <h2 className="text-lg md:text-xl lg:text-3xl font-bold mb-2 font-serif mt-2 underline">How to Train the Model ?</h2>
     <p className="mb-4">
       Under the hood, our model will be a Generative Pre-trained Transformer
       (GPT), the most popular language model these days.
     </p>
-    <h3 className="text-xl font-bold mb-2">Upload the File to Google Colab</h3>
+    <h3 className="text-orange-600 text-xl md:text-2xl font-semibold mb-2">Upload the File to Google Colab</h3>
     <p className="mb-4">
       Start by uploading the file to Google Colab. Select the GPU as the runtime
       to speed up the model training process.
     </p>
-    <h3 className="text-xl font-bold mb-2">
+    <h3 className="text-orange-600 text-xl md:text-2xl font-semibold mb-2">
       Change the Dataset and the Target Character
     </h3>
     <p className="mb-4">
       Modify the dataset and the target character in code snippets like:
     </p>
-    <pre className="bg-gray-200 p-2 mb-4">
-      <code className="text-sm">
+    <pre className="bg-gray-200 p-2 pl-4 mb-4 overflow-x-scroll">
+      <code className="text-sm ">
         data = pd.read_csv('MY-DATASET.csv'){"\n"}CHARACTER_NAME = 'MY-CHARACTER'
       </code>
     </pre>
-    <h3 className="text-xl font-bold mb-2">Host the Model on Hugging Face</h3>
+    <h3 className="text-orange-600 text-xl md:text-2xl font-semibold mb-2">Host the Model on Hugging Face</h3>
     <p className="mb-4">
       Host the model on Hugging Face, which provides a free API for us to query
       the model. Sign up for Hugging Face, create a new model repository, and
       obtain your API token.
     </p>
-    <h2 className="text-2xl font-bold mb-2">How to Build the Discord Bot</h2>
-    <p className="mb-4">
-      Go to the Discord Developer's page, create an application, and add a bot to
-      it. Configure the bot's permissions to prevent it from spamming non-bot
-      channels.
-    </p>
-    <h2 className="text-2xl font-bold mb-2">Conclusion</h2>
-    <p className="mb-4">
-      In this tutorial, we learned how to build a Discord AI chatbot that can talk
-      like your favorite character. We covered gathering text data, training the
-      model, hosting it on Hugging Face, and building the Discord bot. By
-      following the steps outlined in this tutorial, you can create your own
-      personalized chatbot that brings your favorite character to life on Discord.
-    </p>
-    <p className="mb-4">
-      To access the full tutorial, please visit{" "}
-      <a href="https://www.freecodecamp.org/news/discord-ai-chatbot/">
-        this link
-      </a>
-      .
-    </p>
-    <img loading="lazy"
-      src="https://freecodecamp.org/news/content/images/2021/08/discord.gif"
-      alt="Discord GIF"
-      className="w-full max-w-screen-lg mb-8"
-    />
-    <p className="mb-4">
-      Remember to check out the original blog post for detailed code snippets and
-      step-by-step instructions.
-    </p>
-    <p className="mb-4">
+    <div className="flex flex-col xl:flex-row space-between gap-x-4">
+      <div className="xl:w-2/3">
+      <h2 className="text-lg md:text-xl lg:text-3xl font-bold mb-2 font-serif mt-2 underline">How to Build the Discord Bot ?</h2>
+      <p className="mb-4">
+        Go to the Discord Developer's page, create an application, and add a bot to
+        it. Configure the bot's permissions to prevent it from spamming non-bot
+        channels.
+      </p>
+      <h2 className="text-lg md:text-xl lg:text-3xl font-bold mb-2 font-serif mt-2 underline">Conclusion</h2>
+      <p className="mb-4">
+        In this tutorial, we learned how to build a Discord AI chatbot that can talk
+        like your favorite character. We covered gathering text data, training the
+        model, hosting it on Hugging Face, and building the Discord bot. By
+        following the steps outlined in this tutorial, you can create your own
+        personalized chatbot that brings your favorite character to life on Discord.
+      </p>
+      <p className="mb-4">
+        To access the full tutorial, please visit{" "}
+        <a class="text-blue-500 hover:text-blue-900 transition duration-200" href="https://www.freecodecamp.org/news/discord-ai-chatbot/">
+          this link
+        </a>
+        .
+      </p>
+      
+      <p className="mb-4">
+        Remember to check out the original blog post for detailed code snippets and
+        step-by-step instructions.
+      </p>
+      </div>
+      <div className='my-auto'>
+      <img
+        src="https://freecodecamp.org/news/content/images/2021/08/discord.gif"
+        alt="Discord GIF"
+        className="w-full max-w-screen-lg mb-8"
+      />
+      </div>
+    </div>
+    <p className="mt-4 mb-2 italic font-semibold text-xl md:text-2xl text-slate-600">
+
       Happy bot building and enjoy conversing with your favorite character on
       Discord!
     </p>
@@ -476,40 +501,45 @@ And as it was coined in
     likes: 9,
     author:"John",
     description:<div className="container py-8">
-    <img loading="lazy"
+    <div className="mt-8 text-left">
+      <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-2 font-mono">
+        Machine learning with Julia – How to Build and Deploy a Trained AI Model
+        as a Web Service
+      </h1>
+      <div className="flex flex-col xl:flex-row space-between mt-4">
+        <div>
+          <p className="mb-4">
+          Julia is a general-purpose programming language well-suited for numerical
+          analysis and computational science. Some consider it the future of machine
+          learning and the most natural replacement for Python in this field.
+        </p>
+        <p className="mb-4">
+          This article introduces the Julia language and its ecosystem. You'll learn
+          how to use it to solve a Titanic machine learning competition and submit
+          it to Kaggle.
+        </p>
+        <p className="mb-4">
+          You'll also learn how to deploy your machine learning model to production
+          as a web service and create a web interface to send prediction requests to
+          this service from a web browser.
+        </p>
+        <p className="mb-4">
+          By the end of the article, you will create a simple AI-powered web
+          application that you can use as a template for creating more complex Julia
+          ML solutions.
+        </p> 
+        </div>
+        <img loading="lazy"
       src="https://www.freecodecamp.org/news/content/images/size/w1000/2023/02/survived.png"
       alt="Julia machine learning"
       className="mx-auto"
     />
-    <div className="mt-8 text-left">
-      <h1 className="text-3xl font-bold mb-4">
-        Machine learning with Julia – How to Build and Deploy a Trained AI Model
-        as a Web Service
-      </h1>
-      <p className="mb-4">
-        Julia is a general-purpose programming language well-suited for numerical
-        analysis and computational science. Some consider it the future of machine
-        learning and the most natural replacement for Python in this field.
-      </p>
-      <p className="mb-4">
-        This article introduces the Julia language and its ecosystem. You'll learn
-        how to use it to solve a Titanic machine learning competition and submit
-        it to Kaggle.
-      </p>
-      <p className="mb-4">
-        You'll also learn how to deploy your machine learning model to production
-        as a web service and create a web interface to send prediction requests to
-        this service from a web browser.
-      </p>
-      <p className="mb-4">
-        By the end of the article, you will create a simple AI-powered web
-        application that you can use as a template for creating more complex Julia
-        ML solutions.
-      </p>
-      <p className="mb-4 font-bold">Here's what we'll cover:</p>
+      </div>
+      
+      <p className="mb-4 font-semibold text-xl md:text-2xl lg:text-3xl">Here's what we'll cover:~</p>
       <ol className="list-decimal list-inside pl-4">
         <li className="mb-4">
-          <p>What You Should Know in Advance</p>
+          <span className="font-medium text-green-700 underline">What You Should Know in Advance?</span>
           <p className="mb-2">
             This is not a book, but only an article. I won't cover everything and
             assume that you already have some base knowledge so you can get the
@@ -531,7 +561,7 @@ And as it was coined in
           <p className="mb-2">
             Additionally, it would be great if you've previously participated in
             Kaggle competitions, because to understand and run all code of this
-            article you need to have an account on https://kaggle.com.
+            article you need to have an account on <a href="https://kaggle.com" className="text-blue-500 hover:text-blue-900 transition duration-200">https://kaggle.com</a>.
           </p>
           <p className="mb-2">
             There are a lot of books already written, and many courses already
@@ -542,7 +572,7 @@ And as it was coined in
           </p>
         </li>
         <li className="mb-4">
-          <p>Why Use Julia for Machine Learning?</p>
+          <span className="font-medium text-green-700 underline">Why Use Julia for Machine Learning?</span>
           <p className="mb-2">
             For a long time, Python has been a standard for data science and
             machine learning because of its simplicity and a great set of
@@ -595,7 +625,7 @@ And as it was coined in
               want it compiled." - Source: The Julia blog.
             </p>
           </blockquote>
-          <p className="mb-2">
+          <p className="mb-2 mt-2 text-normal">
             So, from an ML perspective, Julia got the best of both worlds. It was
             built to be as fast as C and as simple as Python.
           </p>
@@ -613,15 +643,16 @@ And as it was coined in
     likes: 18,
     author:"Jazz",
     description:<>
-    <h1 id="react-design-patterns" className="text-2xl font-bold">React Design Patterns</h1>
-    <p className="text-blue mb-2">
-      <a href="/t/react" >#react</a> <a href="/t/webdev">#webdev</a>{" "}
-      <a href="/t/designpatterns">#designpatterns</a>{" "}
-      <a href="/t/beginners">#beginners</a>
+    <div className='overflow-x-hidden'>
+    <h1 id="react-design-patterns" className="text-2xl md:text-3xl lg:text-5xl font-bold mb-2 font-mono">React Design Patterns</h1>
+    <p className="flex gap-x-2 md:gap-x-4 mb-2">
+      <a href="/t/react"  className="text-blue-500 hover:text-blue-900 transition duration-200">#react</a> 
+      <a href="/t/webdev" className="text-blue-500 hover:text-blue-900 transition duration-200">#webdev</a>{" "}
+      <a href="/t/designpatterns" className="text-blue-500 hover:text-blue-900 transition duration-200">#designpatterns</a>{" "}
+      <a href="/t/beginners" className="text-blue-500 hover:text-blue-900 transition duration-200">#beginners</a>
     </p>
-
    
-    <p className="font-bold mb-3">
+    <p className="font-bold mb-3 font-sans text-green-600">
       Hello developers!! While developing apps in React, I'm sure you have come
       across different use cases which cannot be easy to solve using the same
       older approach.
@@ -634,7 +665,7 @@ And as it was coined in
       React provides different design patterns to solve common problems. The list
       of commonly used design patterns in React are:
     </p>
-    <ul className="font-bold mt-2 mb-2">
+    <ul className="font-semibold list-disc ml-6 mt-2 mb-2 text-slate-600">
       <li>
         <p>Presentational &amp; Container Component</p>
       </li>
@@ -652,7 +683,8 @@ And as it was coined in
       </li>
     </ul>
     <p>Let's explore them one by one.</p>
-    <h3 id="-1-presentational-amp-container-component-1-presentational-container-component" className="text-2xl mb-2">
+    <h3 id="-1-presentational-amp-container-component-1-presentational-container-component" 
+    className="text-2xl md:text-3xl mb-2 font-bold text-blue-800 mt-6">
       <a href="#1-presentational-amp-container-component" />
       <strong>🎯</strong> 1. Presentational &amp; Container Component
     </h3>
@@ -661,10 +693,10 @@ And as it was coined in
       the other is displaying data on screen.
     </p>
     <p>
-      This pattern helps <strong>separate concerns</strong> by splitting
-      components into two categories. <strong>Container components</strong> handle
+      This pattern helps <span className='font-semibold'>separate concerns</span> by splitting
+      components into two categories. <span className='font-semibold'>Container components</span> handle
       the logic and state management, while{" "}
-      <strong>Presentational components</strong> focus on rendering the UI based
+      <span className='font-semibold'>Presentational components</span> focus on rendering the UI based
       on the provided props.
     </p>
     <pre style={{backgroundColor:"black",color:"green"}}>
@@ -781,7 +813,7 @@ And as it was coined in
       for rendering the UI based on the provided props, without worrying about the
       data fetching or business logic.
     </p>
-    <h3 id="-2-higher-order-components-2-higher-order-components">
+    <h3 id="-2-higher-order-components-2-higher-order-components" className="text-2xl md:text-3xl mb-2 font-bold text-blue-800 mt-6">
       <a href="#2-higher-order-components" />
       <strong>🎯</strong> 2. Higher Order Components
     </h3>
@@ -790,7 +822,7 @@ And as it was coined in
       additional functionalities as an output. It allows you to reuse component
       logic by wrapping components with additional functionality.
     </p>
-    <p>
+    <p className='mb-4'>
       By using HOCs, we can easily add common functionality to multiple components
       without duplicating code.
     </p>
@@ -892,7 +924,7 @@ And as it was coined in
       functionality as <code>MyComponent</code>, but it also includes the logging
       behaviour defined in the HOC.
     </p>
-    <h3 id="-3-render-props-3-render-props">
+    <h3 id="-3-render-props-3-render-props" className="text-2xl md:text-3xl mb-2 font-bold text-blue-800 mt-6">
       <a href="#3-render-props" />
       <strong>🎯</strong> 3. Render props
     </h3>
@@ -1013,7 +1045,7 @@ And as it was coined in
       because it is a prop that specifies how to render a piece of the user
       interface.
     </p>
-    <h3 id="-4-compound-components-4-compound-components"   className="mt-4">
+    <h3 id="-4-compound-components-4-compound-components" className="text-2xl md:text-3xl mb-2 font-bold text-blue-800 mt-6">
     
       <a href="#4-compound-components" />
       <strong>🎯</strong> 4. Compound Components
@@ -1172,7 +1204,7 @@ And as it was coined in
       ) components. Also, the user has the flexibility to provide custom content
       inside each list item.
     </p>
-    <h3 id="-5-hooks-5-hooks" className="mt-4">
+    <h3 id="-5-hooks-5-hooks" className="text-2xl md:text-3xl mb-2 font-bold text-blue-800 mt-6">
       <a href="#5-hooks" />
       <strong>🎯</strong> 5. Hooks
     </h3>
@@ -1226,11 +1258,11 @@ And as it was coined in
       You can read about the most commonly used built-in react hooks{" "}
       <a href="https://react.dev/reference/react">here</a>.
     </p>
-    <h3 id="-wrap-up-wrap-up-" className="mt-2"> 
+    <h3 id="-wrap-up-wrap-up-" className=" text-medium text-red-800 mt-2"> 
       <a href="#wrap-up" />
       <strong>🎯</strong> Wrap Up!!
     </h3>
-  
+    </div>
   </>
   
   },
@@ -1244,32 +1276,39 @@ And as it was coined in
     description:
       <>
       <div className="container mx-auto px-4 py-8 text-left">
-  <h1 className="text-3xl font-bold mb-4">
+  <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-2 font-mono">
     Learn Serverless on AWS Step-by-Step: SQL with Aurora
   </h1>
+
+  
+  <div className="flex flex-col 2xl:flex-row space-between gap-x-4">
+  <div className="my-auto 2xl:w-4/5">
+    <h2 className="text-xl lg:text-2xl font-bold mb-2 text-left font-sans text-green-600">Introduction</h2>
+    <p className="mb-4">
+      In this tutorial, we will explore how to build a serverless application on
+      AWS using SQL with Amazon Aurora. Serverless computing allows developers to
+      focus on writing code without worrying about server management. We will
+      leverage the power of AWS Lambda, API Gateway, and Aurora Serverless to
+      create a scalable and cost-efficient application. Throughout this tutorial,
+      we will use Tailwind CSS for styling and demonstrate the code and
+      implementation details with relevant images.
+    </p>  
+  </div>
+
   <img loading="lazy"
     src="https://res.cloudinary.com/practicaldev/image/fetch/s--DdzoSOFB--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://raw.githubusercontent.com/PChol22/kumo-articles/master/blog-posts/learn-serverless/aurora/assets/basic-schema.png"
     alt="Basic Schema"
     className="w-full max-w-screen-lg mb-8"
-  />
-  <h2 className="text-2xl font-bold mb-2 text-left">Introduction</h2>
-  <p className="mb-4">
-    In this tutorial, we will explore how to build a serverless application on
-    AWS using SQL with Amazon Aurora. Serverless computing allows developers to
-    focus on writing code without worrying about server management. We will
-    leverage the power of AWS Lambda, API Gateway, and Aurora Serverless to
-    create a scalable and cost-efficient application. Throughout this tutorial,
-    we will use Tailwind CSS for styling and demonstrate the code and
-    implementation details with relevant images.
-  </p>
-  <h2 className="text-2xl font-bold mb-2 text-left">Prerequisites</h2>
+  /> 
+  </div>
+  <h2 className="text-xl lg:text-2xl font-bold mb-2 text-left font-sans text-green-600">Prerequisites</h2>
   <p className="mb-4">
     Before diving into this tutorial, you should have basic knowledge of AWS
     services, SQL, and JavaScript. Additionally, make sure you have an AWS
     account set up.
   </p>
-  <h2 className="text-2xl font-bold mb-2 text-left">Table of Contents</h2>
-  <ol className="list-decimal pl-6">
+  <h2 className="text-xl lg:text-2xl font-bold mb-2 text-left font-sans text-green-600">Table of Contents</h2>
+  <ol className="list-decimal pl-6 tracking-wide">
     <li>Setting up the AWS Environment</li>
     <li>Creating an Amazon Aurora Serverless Database</li>
     <li>Building the Serverless API</li>
@@ -1278,14 +1317,14 @@ And as it was coined in
     <li>Deploying and Testing the Application</li>
     <li>Conclusion</li>
   </ol>
-  <h2 className="text-2xl font-bold mb-2 mt-8 text-left" >
+  <h2 className="text-xl lg:text-2xl font-semibold lg:font-bold mb-2 mt-8 text-left font-sans text-blue-800 tracking-wide" >
     Section 1: Setting up the AWS Environment
   </h2>
   <p className="mb-4">
     In this section, we will guide you through the process of setting up your
     AWS environment, including creating an IAM role and installing the AWS CLI.
   </p>
-  <h2 className="text-2xl font-bold mb-2 text-left">
+  <h2 className="text-xl lg:text-2xl font-semibold lg:font-bold mb-2 mt-8 text-left font-sans text-blue-800 tracking-wide">
     Section 2: Creating an Amazon Aurora Serverless Database
   </h2>
   <p className="mb-4">
@@ -1293,7 +1332,7 @@ And as it was coined in
     Serverless database. We will cover the configuration, security groups, and
     connecting to the database.
   </p>
-  <h2 className="text-2xl font-bold mb-2 text-left">
+  <h2 className="text-xl lg:text-2xl font-semibold lg:font-bold mb-2 mt-8 text-left font-sans text-blue-800 tracking-wide">
     Section 3: Building the Serverless API
   </h2>
   <p className="mb-4">
@@ -1301,7 +1340,7 @@ And as it was coined in
     Lambda and API Gateway. You will learn how to handle HTTP requests, connect
     to the Aurora database, and perform CRUD operations.
   </p>
-  <h2 className="text-2xl font-bold mb-2 text-left">
+  <h2 className="text-xl lg:text-2xl font-semibold lg:font-bold mb-2 mt-8 text-left font-sans text-blue-800 tracking-wide">
     Section 4: Creating the Serverless Frontend
   </h2>
   <p className="mb-4">
@@ -1309,7 +1348,7 @@ And as it was coined in
     and the AWS SDK. You will learn how to interact with the API endpoints to
     fetch and display data.
   </p>
-  <h2 className="text-2xl font-bold mb-2 text-left">
+  <h2 className="text-xl lg:text-2xl font-semibold lg:font-bold mb-2 mt-8 text-left font-sans text-blue-800 tracking-wide">
     Section 5: Styling with Tailwind CSS
   </h2>
   <p className="mb-4 ">
@@ -1317,7 +1356,7 @@ And as it was coined in
     integrate it into your serverless application. We will guide you in setting
     up Tailwind CSS and show you how to style your frontend components.
   </p>
-  <h2 className="text-2xl font-bold mb-2 text-left">
+  <h2 className="text-xl lg:text-2xl font-semibold lg:font-bold mb-2 mt-8 text-left font-sans text-blue-800 tracking-wide">
     Section 6: Deploying and Testing the Application
   </h2>
   <p className="mb-4">
@@ -1326,13 +1365,13 @@ And as it was coined in
     Gateway, and the frontend to an S3 bucket. We will also guide you in testing
     the application to ensure everything is working as expected.
   </p>
-  <h2 className="text-2xl font-bold mb-2 text-left">Section 7: Conclusion</h2>
+  <h2 className="text-xl lg:text-2xl font-semibold lg:font-bold mb-2 mt-8 text-left font-sans text-blue-800 tracking-wide">Section 7: Conclusion</h2>
   <p className="mb-4">
     In the final section, we will recap what we have learned throughout the
     tutorial. We will also provide additional resources for further exploration
     and encourage you to experiment and build upon what you have learned.
   </p>
-  <h2 className="text-2xl font-bold mb-2 mt-8 text-left">Conclusion</h2>
+  <h2 className="text-xl lg:text-2xl font-bold mb-2 text-left font-sans text-green-600">Conclusion</h2>
   <p className="mb-4">
     By following this step-by-step tutorial, you have learned how to build a
     serverless application on AWS using SQL with Amazon Aurora. You have gained
@@ -1343,12 +1382,12 @@ And as it was coined in
   </p>
   <p className="mb-4">
     Remember to refer to the original blog post at{" "}
-    <a href="https://dev.to/kumo/learn-serverless-on-aws-step-by-step-sql-with-aurora-5hn1">
+    <a className="text-blue-500 hover:text-blue-900 transition duration-200" href="https://dev.to/kumo/learn-serverless-on-aws-step-by-step-sql-with-aurora-5hn1">
       https://dev.to/kumo/learn-serverless-on-aws-step-by-step-sql-with-aurora-5hn1
     </a>{" "}
     for detailed code snippets, images, and step-by-step instructions.
   </p>
-  <p className="mb-4">Happy coding and serverless development on AWS!</p>
+  <p className="mb-4 font-semibold text-slate-600">Happy coding and serverless development on AWS!</p>
 </div>
 
       </>
