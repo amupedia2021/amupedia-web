@@ -53,3 +53,28 @@
   width: 13vmin;
   height: auto;
 }
+
+.custom-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+}
+
+.custom-table td,
+.custom-table th {
+  padding: 8px;
+  border-bottom: 9px solid #161313;
+  /* Add margin to create space between rows */
+
+}
+
+.custom-table th {
+  text-align: left;
+}
+
+.custom-table tr{
+  margin: 98px 0;
+}
+.custom-table tbody tr:last-child td {
+  border-bottom: none;
+}
