@@ -130,7 +130,7 @@ export default function Home() {
             <h2>Our Services</h2>
             <div id={styles.ourserimgs}>
              <a href="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpdf.28512047.svg&w=256&q=75">
-             <Image src="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpdf.28512047.svg&w=256&q=75" />
+             <Image src="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpdf.28512047.svg&w=256&q=75" layout="fill" />
              </a>
              <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
               <div>
@@ -139,7 +139,7 @@ export default function Home() {
               </div>           
                </Tilt>
               <a href="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fyt.ff6fd1c8.svg&w=256&q=75">
-              <Image src="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fyt.ff6fd1c8.svg&w=256&q=75" />
+              <Image src="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fyt.ff6fd1c8.svg&w=256&q=75"  layout="fill"/>
               </a>
               <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
               <div>
@@ -148,7 +148,7 @@ export default function Home() {
               </div>
               </Tilt>
               <a href="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftest_and_quiz.33e8767e.svg&w=256&q=75">
-              <Image src="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftest_and_quiz.33e8767e.svg&w=256&q=75" />
+              <Image src="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftest_and_quiz.33e8767e.svg&w=256&q=75"  layout="fill"/>
               </a>
                <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
               <div>
@@ -157,7 +157,7 @@ export default function Home() {
               </div>
               </Tilt>
               <a href="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fassignment.09926406.svg&w=256&q=75">
-              <Image src="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fassignment.09926406.svg&w=256&q=75" />
+              <Image src="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fassignment.09926406.svg&w=256&q=75" layout="fill" />
               </a>
               <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
               <div>
