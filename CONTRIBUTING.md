@@ -31,6 +31,22 @@
 - Then push
 
         git push devolp new-branch
+
+# Set Up Locally:
+
+- Install Dependencies:
+
+```bash
+npm install
+```
+- Build the project:
+```bash
+npm run buld
+```
+- Start dev server:
+```bash
+npm run dev
+```
     
 ## Learn More
 
