@@ -1,7 +1,7 @@
-import Document from "next/document";
+import Document from 'next/document';
 //highlight-next-line
 
-import { ServerStyleSheet } from "styled-components";
+import { ServerStyleSheet } from 'styled-components';
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     //highlight-next-line
@@ -11,7 +11,9 @@ export default class MyDocument extends Document {
       ctx.renderPage = () =>
         originalRenderPage({
           //highlight-next-line
-          enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
+
+          enhanceApp: (App) => (props) =>
+            sheet.collectStyles(<App {...props} />)
         });
       const initialProps = await Document.getInitialProps(ctx);
       return {
@@ -22,7 +24,7 @@ export default class MyDocument extends Document {
             {sheet.getStyleElement()}
           </>
         )
-      }
+      };
     } finally {
       sheet.seal();
     }

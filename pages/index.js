@@ -126,44 +126,48 @@ export default function Home() {
           </div>
 
           {/* Our Services Section  */}
-          <div data-aos="fade-up"  classname={styles.ourserv} id={styles.ourserv}>
+          <div
+            data-aos='fade-up'
+            className={styles.ourserv}
+            id={styles.ourserv}
+          >
             <h2>Our Services</h2>
             <div id={styles.ourserimgs}>
-             <a href="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpdf.28512047.svg&w=256&q=75">
-             <Image src="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpdf.28512047.svg&w=256&q=75" />
-             </a>
-             <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
-              <div>
-                <Image src={pdf} />
-                <p>PDFs OF ALL SUBJECTS</p> 
-              </div>           
-               </Tilt>
-              <a href="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fyt.ff6fd1c8.svg&w=256&q=75">
-              <Image src="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fyt.ff6fd1c8.svg&w=256&q=75" />
+              <a href='https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpdf.28512047.svg&w=256&q=75'>
+                {/* <Image src="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpdf.28512047.svg&w=256&q=75" /> */}
               </a>
               <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
-              <div>
-                <Image src={chap_yt}  />
-                <p>CHAPTER EXPLANATION BY YOUTUBE VIDEO</p>
-              </div>
+                <div>
+                  <Image src={pdf} />
+                  <p>PDFs OF ALL SUBJECTS</p>
+                </div>
               </Tilt>
-              <a href="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftest_and_quiz.33e8767e.svg&w=256&q=75">
-              <Image src="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftest_and_quiz.33e8767e.svg&w=256&q=75" />
-              </a>
-               <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
-              <div>
-                <Image src={quiz} />
-                <p>SOLUTION OF TEST AND QUIZZES</p>
-              </div>
-              </Tilt>
-              <a href="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fassignment.09926406.svg&w=256&q=75">
-              <Image src="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fassignment.09926406.svg&w=256&q=75" />
+              <a href='https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fyt.ff6fd1c8.svg&w=256&q=75'>
+                {/* <Image src="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fyt.ff6fd1c8.svg&w=256&q=75" /> */}
               </a>
               <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
-              <div>
-                <Image src={assign}  />
-                <p>ASSIGNMENTS GIVEN</p>
-              </div>
+                <div>
+                  <Image src={chap_yt} />
+                  <p>CHAPTER EXPLANATION BY YOUTUBE VIDEO</p>
+                </div>
+              </Tilt>
+              <a href='https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftest_and_quiz.33e8767e.svg&w=256&q=75'>
+                {/* <Image src="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftest_and_quiz.33e8767e.svg&w=256&q=75" /> */}
+              </a>
+              <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
+                <div>
+                  <Image src={quiz} />
+                  <p>SOLUTION OF TEST AND QUIZZES</p>
+                </div>
+              </Tilt>
+              <a href='https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fassignment.09926406.svg&w=256&q=75'>
+                {/* <Image src="https://www.amupedia.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fassignment.09926406.svg&w=256&q=75" /> */}
+              </a>
+              <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
+                <div>
+                  <Image src={assign} />
+                  <p>ASSIGNMENTS GIVEN</p>
+                </div>
               </Tilt>
             </div>
           </div>
@@ -240,8 +244,10 @@ export default function Home() {
           </div>
 
           {/* <!-- Contact Form  --> */}
-          <h2 id="contactus" className={styles.grabh2}>Get In Touch With Us</h2>
-          <form onSubmit={handleSubmit} aria-label="Contact form">
+          <h2 id='contactus' className={styles.grabh2}>
+            Get In Touch With Us
+          </h2>
+          <form onSubmit={handleSubmit} aria-label='Contact form'>
             <div className={styles.cntfrm}>
               <input
                 value={form.first_name}
@@ -251,8 +257,8 @@ export default function Home() {
                 name='first_name'
                 placeholder='First Name'
                 className={styles.details}
-                aria-label="First name Input"
-                aria-required="true"
+                aria-label='First name Input'
+                aria-required='true'
               />
               <input
                 value={form.last_name}
@@ -262,8 +268,8 @@ export default function Home() {
                 type='text'
                 placeholder='Last Name'
                 className={styles.details}
-                aria-label="Last name Input"
-                aria-required="true"
+                aria-label='Last name Input'
+                aria-required='true'
               />
               <input
                 value={form.email}
@@ -273,8 +279,8 @@ export default function Home() {
                 type='email'
                 placeholder='Email'
                 className={styles.details}
-                aria-label="Email Input"
-                aria-required="true"
+                aria-label='Email Input'
+                aria-required='true'
               />
               <input
                 value={form.phone}
@@ -283,8 +289,8 @@ export default function Home() {
                 name='phone'
                 placeholder='Phone'
                 className={styles.details}
-                aria-label="Phone Input"
-                aria-required="true"
+                aria-label='Phone Input'
+                aria-required='true'
               />
               <input
                 value={form.address}
@@ -294,8 +300,8 @@ export default function Home() {
                 type='text'
                 placeholder='Address'
                 className={styles.address}
-                aria-label="Address Input"
-                aria-required="true"
+                aria-label='Address Input'
+                aria-required='true'
               />
               <input
                 value={form.message}
@@ -305,8 +311,8 @@ export default function Home() {
                 type='text'
                 placeholder='Type your message here'
                 className={styles.msg}
-                aria-label="Message Input"
-                aria-required="true"
+                aria-label='Message Input'
+                aria-required='true'
               />
             </div>
             <button type='submit' id={styles.sub}>
