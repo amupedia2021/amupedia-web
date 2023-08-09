@@ -94,12 +94,12 @@ git push origin branch-name
 
 1. Install npm from browser(windows), using ``sudo apt install npm``(linux) in the terminal
 2. In the root directory: `npm install` for downloading all the dependencies needed for the project
-3. Run `npm run build` for building the project <br>
-<!-- 4. Run `npm start` for starting the server (Amupedia is currently running on `localhost:3000`) <br> -->
-   If you find the server unresponsive, Follow Step : 5 & 6
-4. Run `npm i sharp` to install sharp.
-5. Run `npm run dev` This will start the server on localhost:3000
+3. Run `npm run build` for building the project
+4. Run `npm run dev` This will start the server on localhost:3000
+   
 Happy coding 😊
+<!-- 4. Run `npm start` for starting the server (Amupedia is currently running on `localhost:3000`) <br> -->
+
 
 ### NOTE
 
