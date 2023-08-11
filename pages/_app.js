@@ -10,6 +10,9 @@ import Alert from "components/common/Alert";
 import Script from "node_modules/next/script";
 // import Login from 'components/Login';
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function addProductJsonLd() {
   return {
     __html: `{
@@ -70,6 +73,34 @@ function MyApp({ Component, pageProps, router }) {
   // 		console.log(error);
   // 	}
   // }, []);
+
+   // New features added
+   const onSubmit = async (e) => {
+    e.preventDefault();
+
+    // Validate the form fields
+    if (form.first_name.trim() === "") {
+      toast.error("Please enter a valid first name.");
+      return;
+    }
+
+    if (form.last_name.trim() === "") {
+      toast.error("Please enter a valid last name.");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      // Form submission logic...
+      toast.success("Form submitted successfully!");
+     } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+    setForm(emptyForm);
+  };
+
 
   return (
     <StoreProvider>
@@ -149,6 +180,7 @@ function MyApp({ Component, pageProps, router }) {
           ></Script>
         </section>
       </motion.div>
+      <ToastContainer />
     </StoreProvider>
   );
 }
