@@ -18,6 +18,7 @@
   max-width: 1700px;
   gap: 35px;
   flex-wrap: wrap;
+  margin-top: 8%;
 }
 
 .blogHeaderInfoLeft,
@@ -29,7 +30,7 @@
 
 .blogHeaderInfoLeft > ul {
   display: flex;
-  gap: 35px;
+  gap: 1.25rem;
 }
 
 .blogHeaderInfoLeft > ul li {
@@ -45,15 +46,20 @@
 .blogHeaderInfoLeft > ul li:last-child {
   color: green;
   fill: green;
+  transition: 0.3s;
+}
+.blogHeaderInfoLeft > ul li:last-child:hover{
+  color: rgb(69, 207, 69);
+  fill: rgb(69, 207, 69);
 }
 
 .blogHeaderInfoRight {
-  gap: 50px;
+  gap: 28px;
 }
 
 .socialIcons {
   display: flex;
-  gap: 30px;
+  gap: 1.5rem;
 }
 
 .socialIcons > li {
@@ -71,18 +77,20 @@
 }
 
 .blogPicture {
-  display: "block";
+  display: block;
   width: 100%;
   height: 100%;
   max-width: 1700px;
   max-height: 1100px;
   margin: 20px auto;
+  border: 3px solid black;
 }
 
 .blogBody {
   margin: 0 auto 50px;
   width: 100%;
   max-width: 1700px;
+  font-size: x-large;
 }
 
 .otherBlogsCard {
@@ -109,9 +117,29 @@
 @media screen and (max-width: 768px) {
   .blogHeaderInfo {
     justify-content: center;
+    margin-top: 15%;
   }
 
   .blogHeaderInfoLeft > ul li {
     font-size: 18px;
   }
+  .blogBody{
+    font-size: larger;
+  }
+  .blogHeaderInfo {
+    margin-top: 12%;
+  }
+}
+@media screen and (max-width: 468px) {
+  .blogBody{
+    font-size: large;
+    width: 100%;
+  }
+  .blog {
+    padding: 0 10px;
+  }
+  .blogHeaderInfo {
+    margin-top: 28%;
+  }  
+  
 }
