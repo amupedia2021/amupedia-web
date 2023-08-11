@@ -1,20 +1,21 @@
 import db from 'db/db';
 import Opportunities from 'db/models/Opportunities';
 import nextConnect from 'next-connect';
+import opportunitiesSchema from 'validation/opportunities';
 const handler = nextConnect();
 
 handler.post(async (req, res) => {
   try {
     await db.connect();
-
-    console.log(data);
+    const payload = await opportunitiesSchema.validateAsync(req.body);
+    const {id, image, title, date, applyNow, description} = payload
     const result = await Opportunities.create({
-      id: data.id,
-      image: data.image,
-      title: data.title,
-      date: data.date,
-      applyNow: data.applyNow,
-      description: data.description,
+      id,
+      image,
+      title,
+      date,
+      applyNow,
+      description
     });
     await db.disconnect();
     res.status(200).json({ success: true, result: result });

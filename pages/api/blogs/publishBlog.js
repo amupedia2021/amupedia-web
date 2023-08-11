@@ -1,18 +1,19 @@
 import db from "db/db";
 import Blog from "db/models/Blog";
 import nextConnect from "next-connect";
+import blogSchema from "validation/blog";
 const handler = nextConnect();
 
 handler.post(async (req, res) => {
   try {
     await db.connect();
-    const data = req.body;
-    console.log(data);
+    const payload  = await blogSchema.validateAsync(req.body);
+    const {userId, title, coverImg, content} = payload
     const result = await Blog.create({
-      userId: req.body.userId,
-      title: req.body.title,
-      coverImg: req.body.coverImg,
-      content: req.body.content,
+      userId,
+      title,
+      coverImg,
+      content
     });
     await db.disconnect();
     res.status(200).json({ success: true, result: result });
