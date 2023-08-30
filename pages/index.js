@@ -96,9 +96,9 @@ export default function Home() {
         setMessage('');
         seterror('');
         setsuccess('Contact form sent successfully!!');
-        setForm(emptyForm);
+
       }
-      
+      setForm(emptyForm);
     }
   };
 
