@@ -37,12 +37,6 @@ export default function Home() {
 
   const [form, setForm] = useState(emptyForm);
   const [loading, setLoading] = useState(false);
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [mail, setMail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [address, setAddrees] = useState('');
-  const [message, setMessage] = useState('');
   const [error, seterror] = useState('');
   const [success, setsuccess] = useState('');
 
@@ -55,21 +49,22 @@ export default function Home() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (firstName === '') {
+    if (form.first_name ===  '') {
       seterror('firstnameerr');
-    } else if (lastName === '') {
+    } else if (form.last_name === '') {
       seterror('lastnameerr');
-    } else if (mail === '') {
+    } else if (form.email === '') {
       seterror('emailerr');
-    } else if (!validEmail(mail)) {
+    } else if (!validEmail(form.email)) {
       seterror('validerr');
-    } else if (phone === '') {
+    } else if (form.phone === '') {
       seterror('phoneerr');
-    } else if (phone.length !== 10) {
+    } else if (form.phone.length !== 10) {
+      console.log("phone error");
       seterror('numbererr');
-    } else if (address === '') {
+    } else if (form.address === '') {
       seterror('addresserr');
-    } else if (message === '') {
+    } else if (form.message === '') {
       seterror('messageerr');
     } else {
       setLoading(true);
@@ -87,14 +82,6 @@ export default function Home() {
         console.log(error);
       } finally {
         setLoading(false);
-        setFirstName('');
-        setLastName('');
-        setPhone('');
-        setMail('');
-        setPhone('');
-        setAddrees('');
-        setMessage('');
-        seterror('');
         setsuccess('Contact form sent successfully!!');
 
       }
