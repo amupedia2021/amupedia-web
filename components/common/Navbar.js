@@ -362,7 +362,7 @@ const Navbar = () => {
                 }, 10);
               }}
               className={`${styles.lnk} ${contactActive ? styles.active : ''} ${
-                navbar && styles.nav_active
+                navbar && styles.nav_active 
               }`}
             >
               Contact Us 
