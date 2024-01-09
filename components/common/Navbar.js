@@ -365,7 +365,7 @@ const Navbar = () => {
                 navbar && styles.nav_active
               }`}
             >
-              Contact Us
+              Contact Us 
             </a>
           </li>
         </ul>
