@@ -356,16 +356,16 @@ const Navbar = () => {
               onClick={() => {
                 router.push('/');
                 setTimeout(() => {
-                  const contacts = document.getElementById('contactus');
+                  const contacts = document.getElementById('contact_us');
                   if (contacts) contacts.scrollIntoView();
                   //onClick();
                 }, 10);
               }}
-              className={`${styles.lnk} ${contactActive ? styles.active : ''} ${
-                navbar && styles.nav_active
+              className={`${styles.lnk} ${contactActive ? styles.active : ' '} ${
+                navbar && styles.nav_active 
               }`}
             >
-              Contact Us
+              Contact Us 
             </a>
           </li>
         </ul>
