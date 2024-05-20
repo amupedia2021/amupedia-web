@@ -32,7 +32,7 @@ body:
       description: Please select the program you are contributing for.
       multiple: true
       options:
-        - GSSoC2023
+        - GSSoC2024
         - Other
     validations:
       required: true

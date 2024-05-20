@@ -50,7 +50,7 @@ body:
       label: Are you contributing for a program?
       multiple: true
       options:
-        - GSSoC2023
+        - GSSoC2024
         - Other
     validations:
       required: true

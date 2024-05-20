@@ -7,5 +7,5 @@ policy:
       - id: ['contribution']
         block-list: ['Other']
         label:
-          - name: 'gssoc23'
-            keys: ['GSSoc23', 'GSSoC2023', 'GSSoC 2023', 'GSSoC 23', 'GSSoC-2023', 'GSSoC-23']
+          - name: 'gssoc24'
+            keys: ['GSSoc24', 'GSSoC2024', 'GSSoC 2024', 'GSSoC 24', 'GSSoC-2024', 'GSSoC-24']
