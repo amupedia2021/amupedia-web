@@ -102,7 +102,7 @@ const Navbar = () => {
       <label
         htmlFor='menu'
         className={`${styles.hams} ${dropdown ? styles.overlay_active : ''} `}
-        style={!dropdown ? { top: 10, fontSize: 50, color: 'white' } : null}
+        style={!dropdown ? { top: 10, fontSize: 50, color: 'black' } : null}
         id='ham'
         dangerouslySetInnerHTML={{ __html: labelText }}
       ></label>
