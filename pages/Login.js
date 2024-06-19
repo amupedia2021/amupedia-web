@@ -10,6 +10,7 @@ import {
 } from "node_modules/@fortawesome/free-solid-svg-icons/index";
 import { useContext, useState } from "react";
 import { Store } from "utils/Store/Store";
+import Link from 'next/link'
 
 const Login = () => {
   const { state, dispatch } = useContext(Store);
@@ -95,6 +96,10 @@ const Login = () => {
               <span>Forgot Password ?</span>
             </label>
             <button>Sign In</button>
+            <h1 className="font-bold text-lg p-4">Or</h1>
+           <Link href='/Signup'>
+              <a className="font-sans text-sm  font-bold text-white hover:italic bg-gradient-to-r from-indigo-800 to-purple-600 rounded-md px-24 py-1">Signup</a>
+            </Link>
           </form>
         </div>
       </main>

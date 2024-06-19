@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Navbar from '../Navbar';
 import { IconContainer, IconsDiv, StyledHeader } from './HeaderStyles';
 import { getRandomBackground, icons } from './config';
-
+ 
 const Header = (props) => {
   const { image, text } = props;
   return (

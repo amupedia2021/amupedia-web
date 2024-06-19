@@ -3,6 +3,7 @@ import BlogCard from "components/Blogs/BlogCard";
 import Footer from "components/common/Footer";
 import Header from "components/common/Header/Header";
 import styles from "@styles/scss/blog.module.scss";
+<<<<<<< HEAD
 import blogData from "/data/blogdata";
 import GoToTop from "components/GoToTop";
 import WriteBlog from "./writeblog";
@@ -19,6 +20,20 @@ export default function Blogs() {
 		  blogItem.title.toLowerCase().includes(query.toLowerCase())
 	  );
 	
+=======
+// import blogData from "/data/blogdata";
+
+export const getStaticProps = async () => {
+	const res = await fetch('http://localhost:3000/api/blogs/fetchBlogs');
+	const blogsData = await res.json();
+
+	return {
+		props: { blogsData }
+	}
+}
+
+export default function Blogs({ blogsData }) {
+>>>>>>> 2e3ced3f1a6c1a70341b50aee0bde119b118a150
 	return (
 		<>
 			<GoToTop />
@@ -40,6 +55,7 @@ export default function Blogs() {
 			</div>
 			{/* <Link href="/blog/writeblog">Write a blog</Link> */}
 			<div className={styles.container}>
+<<<<<<< HEAD
         {filteredBlogData.length > 0 ? (
           filteredBlogData.map((blogItem) => (
             <BlogCard
@@ -56,6 +72,19 @@ export default function Blogs() {
           <SearchResultNotFound query={query} />
         )}
       </div>
+=======
+				{blogsData.result.map((blogItem, index) => (
+					<BlogCard
+						key={blogItem.userId}
+						id={index}
+						title={blogItem.title}
+						image={blogItem.coverImg}
+						comments={blogItem.numberOfComments}
+						likes={blogItem.like}
+					/>
+				))}
+			</div>
+>>>>>>> 2e3ced3f1a6c1a70341b50aee0bde119b118a150
 			<Footer />
 		</>
 	);

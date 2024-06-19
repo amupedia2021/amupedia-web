@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import styles from '@styles/Navbar.module.css';
 import { useState, useEffect, useRef } from 'react';
 import Image from 'node_modules/next/image';
+import { FaKey } from 'react-icons/fa';
 
 const Navbar = () => {
   const checkboxRef = useRef();
@@ -366,6 +367,14 @@ const Navbar = () => {
               }`}
             >
               Contact Us
+            </a>
+          </li>
+          <li>
+          <a
+              onClick={() => router.push('/Login')}
+              className="flex py-2 px-2 text-white hover:bg-sky-400 hover:text-black rounded-lg transition duration-500"
+            >
+              <FaKey />
             </a>
           </li>
         </ul>
