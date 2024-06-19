@@ -31,7 +31,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 800px;
+  max-width: 1500px;
   margin: auto;
 }
 
@@ -97,6 +97,9 @@
 }
 #chem {
   background: url("/images/btech/chem.svg") no-repeat center center;
+}
+#food{
+  background: url("/images/btech/food.jpg") no-repeat center center;
 }
 #ai {
   background: url("/images/btech/ai.webp") no-repeat center center;

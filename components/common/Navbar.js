@@ -220,17 +220,17 @@ const Navbar = () => {
                       onClick={() => setDropdown(false)}
                       className={styles.dropdownLink}
                     >
-                      B.Tech
+                      B.Tech/B.E
                     </a>
                   </Link>
                 </li>
                 <li>
-                  <Link href='/'>
+                  <Link href='/courses/mbbs'>
                     <a
                       onClick={() => setDropdown(false)}
                       className={styles.dropdownLink}
                     >
-                      BE
+                      MBBS
                     </a>
                   </Link>
                 </li>

@@ -1,3 +1,4 @@
+
 export const firstYearSems = [
   {
     name: null,
@@ -5,7 +6,7 @@ export const firstYearSems = [
       {
         name: "Applied Mathematics 1",
         slug: "applied-mathematics-1",
-        img: null,
+        // img:(  ),
         linkToPage: "/courses/btech/first-year/applied-mathematics-1",
       },
       {

@@ -23,15 +23,15 @@ export default function BTech() {
 
         <h2>Choose Your Branch</h2>
         <div id={styles.branches}>
-          <Link passHref href="/courses/btech/first-year">
+          {/* <Link passHref href="/courses/btech/first-year">
             <a>
               <div className={styles.brnch} id={styles.firstyear}>
                 <p>First </p>
                 <p>Year</p>
               </div>
             </a>
-          </Link>
-          <a
+          </Link> */}
+          {/* <a
             href="https://drive.google.com/drive/folders/1Gkjz-kR4J-EbRn-Wf-9bGbh7qH-x5ZDt?usp=drive_link"
             target="_blank"
             rel="noreferrer"
@@ -39,9 +39,11 @@ export default function BTech() {
             <div className={styles.brnch} id={styles.ai}>
               <p>Artificial Intelligence</p>
             </div>
-          </a>
+          </a> */}
+
+        <Link passHref href="/courses/btech/ComputerEngineering">  
           <a
-            href="https://drive.google.com/drive/folders/1ZPk97HT0reLjyJsVxOJmEw542HugZonY?usp=sharing"
+            href=""
             target="_blank"
             rel="noreferrer"
           >
@@ -49,8 +51,10 @@ export default function BTech() {
               <p>Computer Engineering</p>
             </div>
           </a>
+          </Link>
+          <Link passHref href="/courses/btech/ElectronicsEngineering">  
           <a
-            href="https://drive.google.com/drive/folders/1zBbCWFSqLRdBudn0BZxLx6BMuhCx86eX?usp=sharing"
+            // href="https://drive.google.com/drive/folders/1zBbCWFSqLRdBudn0BZxLx6BMuhCx86eX?usp=sharing"
             target="_blank"
             rel="noreferrer"
           >
@@ -58,6 +62,8 @@ export default function BTech() {
               <p>Electronics Engineering</p>
             </div>
           </a>
+            </Link>
+            <Link passHref href="/courses/btech/ElectricalEngineering"> 
           <a
             href="https://drive.google.com/drive/folders/1cdbwEwPktPVo5ejCK37Q7NLQaawOrRxJ?usp=sharing"
             target="_blank"
@@ -67,6 +73,8 @@ export default function BTech() {
               <p>Electrical Engineering</p>
             </div>
           </a>
+          </Link>
+          <Link passHref href="/courses/btech/MechanicalEngineering"> 
           <a
             href="https://drive.google.com/drive/folders/1QzaqFWmk7hk7cN7CuSLhBcKYOwxeDspg?usp=sharing"
             target="_blank"
@@ -76,6 +84,8 @@ export default function BTech() {
               <p>Mechanical Engineering</p>
             </div>
           </a>
+          </Link>
+          <Link passHref href="/courses/btech/CivilEngineering"> 
           <a
             href="https://drive.google.com/drive/folders/1pCPek9WPzilXKngSa3FFYq-BxudXjZXg?usp=sharing"
             target="_blank"
@@ -86,6 +96,8 @@ export default function BTech() {
               <p>Engineering</p>
             </div>
           </a>
+          </Link>
+          <Link passHref href="/courses/btech/ChemicalEngineering"> 
           <a
             href="https://drive.google.com/drive/folders/1fCciCZhLUx7dFFP_n1hfE0lJEBC53xq6?usp=sharing"
             target="_blank"
@@ -95,16 +107,20 @@ export default function BTech() {
               <p>Chemical Engineering</p>
             </div>
           </a>
+          </Link>
+          <Link passHref href="/courses/btech/FoodEngineering"> 
           <a
             href="https://drive.google.com/drive/folders/1U6XgFEsH6aMi30hDQlwBPJSOPLZUmgtM?usp=sharing"
             target="_blank"
             rel="noreferrer"
           >
-            <div className={styles.brnch} id={styles.chem}>
+            <div className={styles.brnch} id={styles.food}>
               <p>Food</p>
               <p>Technology</p>
             </div>
           </a>
+          </Link>
+          <Link passHref href="/courses/btech/EceEngineering"> 
           <a
             href="https://drive.google.com/drive/folders/1YVAoa4S8cJ5Jh1E1WJjedEdLTqvNPVjl?usp=sharing"
             target="_blank"
@@ -116,6 +132,7 @@ export default function BTech() {
 
             </div>
           </a>
+          </Link>
         </div>
       </section>
       <Footer />

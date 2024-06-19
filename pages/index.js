@@ -180,14 +180,14 @@ export default function Home() {
               <Link passHref href='/courses/btech'>
                 <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
                   <div className={styles.grab1}>
-                    <p>B.Tech</p>
+                    <p>B.Tech/B.E</p>
                   </div>
                 </Tilt>
               </Link>
-              <Link passHref href='/'>
+              <Link passHref href='/courses/mbbs'>
                 <Tilt options={{ max: 60, glare: true }} className={styles.tlt}>
                   <div className={styles.grab2}>
-                    <p>B.E</p>
+                    <p>M.B.B.S</p>
                   </div>
                 </Tilt>
               </Link>
