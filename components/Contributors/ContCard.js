@@ -1,10 +1,8 @@
 import React from 'react';
 import styles from '@styles/Contributor.module.css';
-import { FaGithub } from 'react-icons/fa';
-
 const ContCard = (props) => {
   var x = '';
-  const { image, title, commits, profile, githubUsername } = props;
+  const { image, title, commits, profile} = props;
   if (commits === 1) {
     var x = 'commit';
   } else {
@@ -27,12 +25,6 @@ const ContCard = (props) => {
           <p>
             {commits} {x}
           </p>
-        </div>
-        <div className={styles.githubIcon} >
-          <a  href={`https://github.com/${githubUsername}`} target="_blank" rel="noopener noreferrer">
-            <FaGithub size={31} />
-          </a>
-          <span className={styles.githubName}>Github</span>
         </div>
       </div>
     </>
