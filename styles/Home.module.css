@@ -287,3 +287,41 @@ input:focus {
 #sub:hover > div > div {
   background: rgb(159, 154, 255) !important;
 }
+
+
+
+
+
+/* Styles for the container wrapping the Quotes component */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* Adjust this value based on your layout */
+}
+
+/* Styles for the quotes container */
+.quotes-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  overflow: hidden;
+  justify-content: center;
+}
+
+/* Styles for the quote wrapper */
+.quote-wrapper {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 30px;
+  /* max-width: 500px; */
+  text-align: center;
+}
+
+/* Styles for the quote text */
+.quote-text {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
