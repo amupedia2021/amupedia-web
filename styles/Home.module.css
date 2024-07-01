@@ -52,7 +52,6 @@
   font-weight: bold;
   margin: 10px;
 }
-
 /* styling for images used in our service section  */
 #ourserimgs {
   display: flex;
@@ -60,6 +59,47 @@
   justify-content: center;
   max-width: 1100px;
   margin: auto;
+}
+@media only screen and (max-width: 500px) {
+  div[data-aos="fade-up"]#ourserv {
+    margin-bottom: 100px;
+  }
+  
+  /* Adjust the margin-top of .grabnotes */
+  div[data-aos="fade-up"].courses {
+    margin-top: 150px;
+  }
+
+  #ourserimgs {
+    margin-top: 20px;
+    display: block;
+    justify-content: center;
+    max-width: 300px;
+    height: 400px;
+    margin: auto;
+  }
+  #ourserimgs div {
+    text-align: center;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 5%;
+    padding: 2% 2%;
+    background-color: #ce89dc;
+    margin-top: 4%;
+    margin-bottom: -2%;
+  }
+  #ourserimgs div:hover{
+    scale: 1.06;
+    box-shadow: #8585e8;
+    background-color: #8585e8;
+  }
+  #ourserimgs div p {
+    width: 80%;
+    font-weight: bold;
+    pointer-events: none;
+    max-width: 280px;
+    margin: auto;
+  }
 }
 
 #ourserimgs div {
