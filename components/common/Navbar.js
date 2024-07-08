@@ -225,7 +225,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href='/'>
+                  <Link href='/courses/be'>
                     <a
                       onClick={() => setDropdown(false)}
                       className={styles.dropdownLink}

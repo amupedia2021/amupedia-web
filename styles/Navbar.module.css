@@ -145,26 +145,33 @@ navigation menu opens in mobile phones */
     position: absolute;
     top: 100%;
     /* right: 10px; */
-    background-color: #fff;
+    background-color: rgb(62, 62, 252,1) ;
     border-radius: 14px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 8px 0;
     width: 160px;
     z-index: 999;
+    
   }
 
   .dropdownMenu li {
     padding: 10px 16px;
+    border-radius: 5px;
   }
 
   .dropdownLink {
-    color: #333;
+    color: white;
     text-decoration: none;
+   
   }
 
-  .dropdownLink:hover {
-    color: #0070f3;
-    text-shadow: 0 2px 4px #75b2f8;
+  .dropdownMenu li:hover {
+    color: white;
+    background-color:black;
+    transition: all 0.5s;
+
+
+    /* text-shadow: 0 2px 4px #75b2f8; */
   }
 
   .lnk {
